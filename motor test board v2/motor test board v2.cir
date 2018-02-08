@@ -1,0 +1,18 @@
+* C:\Users\Hauckhowser\Documents\KiCAD\motor test board\motor test board v2\motor test board v2.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 1/28/2018 2:53:32 PM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  GND Net-_J2-Pad4_ Net-_J2-Pad1_ ? ? Net-_J1-Pad1_ ? Net-_C1-Pad1_ ? Net-_J3-Pad2_ ? ? Net-_J2-Pad7_ ? Net-_J1-Pad2_ Net-_C2-Pad1_ Net-_C3-Pad1_ Net-_J2-Pad6_ Net-_J2-Pad2_ Net-_J2-Pad3_ MC33887		
+J3  Net-_C2-Pad1_ Net-_J3-Pad2_ Conn_01x02		
+J1  Net-_J1-Pad1_ Net-_J1-Pad2_ Conn_01x02		
+J2  Net-_J2-Pad1_ Net-_J2-Pad2_ Net-_J2-Pad3_ Net-_J2-Pad4_ Net-_C1-Pad1_ Net-_J2-Pad6_ Net-_J2-Pad7_ Conn_01x07		
+R1  Net-_C1-Pad1_ Net-_J3-Pad2_ 100		
+C3  Net-_C3-Pad1_ GND 33nF		
+C2  Net-_C2-Pad1_ GND 100uF		
+C1  Net-_C1-Pad1_ GND 1uF		
+
+.end

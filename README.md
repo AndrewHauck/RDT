@@ -1,2 +1,2 @@
-# Kicad-motor
-Kicad PCB design
+# LRDT Repo
+-Kicad PCB design

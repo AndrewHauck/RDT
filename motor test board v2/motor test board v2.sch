@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:motor test board-cache
 LIBS:motor test board v2-cache
 EELAYER 25 0
 EELAYER END
@@ -293,6 +294,4 @@ Text Notes 5600 2250 0    60   ~ 0
 Motor\n
 Text Notes 8100 4900 0    60   ~ 0
 Power\n
-Text Notes 7400 5750 0    60   ~ 0
-test text
 $EndSCHEMATC

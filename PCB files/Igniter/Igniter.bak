@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:Igniter-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
@@ -45,8 +46,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 11400 2350 0    60   ~ 0
-Requirements:\n
 $Comp
 L Conn_01x02 J?
 U 1 1 5AB41D24
@@ -145,24 +144,11 @@ Wire Wire Line
 Wire Wire Line
 	5850 3950 5850 3650
 Text Notes 6100 3800 0    60   ~ 0
-1-5V\n2-GND\n3-Tiva A0\n4-Spark plug GND\n5-Fet Gate\n6-\n7-\n8 
+1-5V\n2-GND\n3-Tiva A0\n4-Spark plug GND\n5-Fet Gate\n6-Tiva Analog\n7-GND\n8-5V
 Text Notes 3400 4000 0    60   ~ 0
 1-5V\n2-GND\n3-Tiva analog pin
-$Comp
-L Conn_01x01 J?
-U 1 1 5AB4411D
-P 4950 4400
-F 0 "J?" H 4950 4500 50  0000 C CNN
-F 1 "Conn_01x01" H 4950 4300 50  0000 C CNN
-F 2 "" H 4950 4400 50  0001 C CNN
-F 3 "" H 4950 4400 50  0001 C CNN
-	1    4950 4400
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5650 4400 5900 4400
-Wire Wire Line
-	5150 4400 5350 4400
 $Comp
 L Q_NMOS_DGS Q?
 U 1 1 5AB444ED
@@ -174,4 +160,8 @@ F 3 "" H 6100 4400 50  0001 C CNN
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5350 4400 5350 3650
+Wire Wire Line
+	5350 3650 5550 3650
 $EndSCHEMATC

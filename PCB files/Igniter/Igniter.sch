@@ -68,8 +68,6 @@ F 3 "" H 6050 4750 50  0001 C CNN
 	1    6050 4750
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5900 4400 5900 4750
 $Comp
 L Conn_02x04_Counter_Clockwise J?
 U 1 1 5AB4216C
@@ -103,13 +101,6 @@ F 3 "" H 5500 4400 50  0001 C CNN
 	1    5500 4400
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7350 4500 7350 4200
-Wire Wire Line
-	7350 4200 6200 4200
-Wire Wire Line
-	7450 4500 8000 4500
-Connection ~ 6200 4750
 $Comp
 L Conn_01x03_Female J?
 U 1 1 5AB42CE4
@@ -121,16 +112,40 @@ F 3 "" H 4400 3850 50  0001 C CNN
 	1    4400 3850
 	-1   0    0    1   
 $EndComp
+Text Notes 6100 3800 0    60   ~ 0
+1-5V (SD)\n2-GND (SD)\n3-Tiva A0\n4-Spark plug GND?\n5-Fet Gate\n6-Tiva ADC\n7-GND\n8-5V
+Text Notes 3400 4000 0    60   ~ 0
+1-5V\n2-GND\n3-Tiva analog pin
+$Comp
+L Q_NMOS_DGS Q?
+U 1 1 5AB444ED
+P 6100 4400
+F 0 "Q?" H 6300 4450 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 6300 4350 50  0000 L CNN
+F 2 "" H 6300 4500 50  0001 C CNN
+F 3 "" H 6100 4400 50  0001 C CNN
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+Text Notes 3225 3500 0    60   ~ 0
+-Run P transducer signal directly to tiva?
+Text GLabel 5850 3150 1    60   Input ~ 0
+SD-5v
+Text GLabel 5750 3150 1    60   Input ~ 0
+SD-GND
+Wire Wire Line
+	5900 4400 5900 4750
+Wire Wire Line
+	7350 4500 7350 4200
+Wire Wire Line
+	7350 4200 6200 4200
+Wire Wire Line
+	7450 4500 8000 4500
+Connection ~ 6200 4750
 Wire Wire Line
 	6200 4600 6200 4750
 Wire Wire Line
-	8100 4500 8100 4400
-Wire Wire Line
-	8100 4400 6800 4400
-Wire Wire Line
-	6800 4400 6800 4750
-Wire Wire Line
-	6800 4750 6200 4750
+	6200 4750 6800 4750
 Wire Wire Line
 	4600 3750 5650 3750
 Wire Wire Line
@@ -143,25 +158,22 @@ Wire Wire Line
 	4600 3950 5850 3950
 Wire Wire Line
 	5850 3950 5850 3650
-Text Notes 6100 3800 0    60   ~ 0
-1-5V\n2-GND\n3-Tiva A0\n4-Spark plug GND\n5-Fet Gate\n6-Tiva Analog\n7-GND\n8-5V
-Text Notes 3400 4000 0    60   ~ 0
-1-5V\n2-GND\n3-Tiva analog pin
 Wire Wire Line
 	5650 4400 5900 4400
-$Comp
-L Q_NMOS_DGS Q?
-U 1 1 5AB444ED
-P 6100 4400
-F 0 "Q?" H 6300 4450 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 6300 4350 50  0000 L CNN
-F 2 "" H 6300 4500 50  0001 C CNN
-F 3 "" H 6100 4400 50  0001 C CNN
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5350 4400 5350 3650
 Wire Wire Line
 	5350 3650 5550 3650
+Wire Wire Line
+	8100 4500 8350 4500
+Wire Wire Line
+	8350 4500 8350 5050
+Wire Wire Line
+	8350 5050 6800 5050
+Wire Wire Line
+	6800 5050 6800 4750
+Text Notes 7675 4375 0    60   ~ 0
+Ground spark plug to neg. terminal of battery?
+Text GLabel 5650 3150 1    60   Input ~ 0
+->TivaADC
 $EndSCHEMATC

@@ -174,6 +174,4 @@ Wire Wire Line
 	6800 5050 6800 4750
 Text Notes 7675 4375 0    60   ~ 0
 Ground spark plug to neg. terminal of battery?
-Text GLabel 5650 3150 1    60   Input ~ 0
-->TivaADC
 $EndSCHEMATC

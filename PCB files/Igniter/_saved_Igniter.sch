@@ -113,7 +113,7 @@ F 3 "" H 4400 3850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Notes 6100 3800 0    60   ~ 0
-1-5V (SD)\n2-GND (SD)\n3-Tiva A0\n4-Spark plug GND?\n5-Fet Gate\n6-Tiva ADC\n7-GND\n8-5V
+1-5V (SD)\n2-GND (SD)\n3-\n4-Spark plug GND?\n5-Fet Gate\n6-Tiva ADC\n7-GND\n8-5V
 Text Notes 3400 4000 0    60   ~ 0
 1-5V\n2-GND\n3-Tiva analog pin
 $Comp
@@ -174,6 +174,4 @@ Wire Wire Line
 	6800 5050 6800 4750
 Text Notes 7675 4375 0    60   ~ 0
 Ground spark plug to neg. terminal of battery?
-Text GLabel 5650 3150 1    60   Input ~ 0
-->TivaADC
 $EndSCHEMATC

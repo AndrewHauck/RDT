@@ -127,8 +127,6 @@ F 3 "" H 6100 4400 50  0001 C CNN
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-Text Notes 3225 3500 0    60   ~ 0
--Run P transducer signal directly to tiva?
 Text GLabel 5850 3150 1    60   Input ~ 0
 SD-5v
 Text GLabel 5750 3150 1    60   Input ~ 0

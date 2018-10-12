@@ -60,12 +60,12 @@ $EndComp
 $Comp
 L R R2
 U 1 1 5AB41E9B
-P 6050 4750
-F 0 "R2" V 6130 4750 50  0000 C CNN
-F 1 "10k" V 6050 4750 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 4750 50  0001 C CNN
-F 3 "" H 6050 4750 50  0001 C CNN
-	1    6050 4750
+P 6050 5050
+F 0 "R2" V 6130 5050 50  0000 C CNN
+F 1 "10k" V 6050 5050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5980 5050 50  0001 C CNN
+F 3 "" H 6050 5050 50  0001 C CNN
+	1    6050 5050
 	0    1    1    0   
 $EndComp
 $Comp
@@ -80,30 +80,19 @@ F 3 "" H 7450 4700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R1
-U 1 1 5AB4244F
-P 5775 4250
-F 0 "R1" V 5855 4250 50  0000 C CNN
-F 1 "1k" V 5775 4250 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5705 4250 50  0001 C CNN
-F 3 "" H 5775 4250 50  0001 C CNN
-	1    5775 4250
-	-1   0    0    1   
-$EndComp
-$Comp
 L Conn_01x03_Female J1
 U 1 1 5AB42CE4
-P 5350 3700
-F 0 "J1" H 5350 3900 50  0000 C CNN
-F 1 "P_Transducer" H 5350 3500 50  0000 C CNN
-F 2 "" H 5350 3700 50  0001 C CNN
-F 3 "" H 5350 3700 50  0001 C CNN
-	1    5350 3700
+P 5550 3450
+F 0 "J1" H 5550 3650 50  0000 C CNN
+F 1 "P_Transducer" H 5550 3250 50  0000 C CNN
+F 2 "" H 5550 3450 50  0001 C CNN
+F 3 "" H 5550 3450 50  0001 C CNN
+	1    5550 3450
 	-1   0    0    1   
 $EndComp
-Text Notes 7400 4000 0    60   ~ 0
-1-5V (SD)\n2-GND (SD)\n3-Tiva ADC\n4-PT GND\n5-PT 5v\n6-Fet Gate\n\n
-Text Notes 5325 3825 2    60   ~ 0
+Text Notes 7600 3750 0    60   ~ 0
+1-5V (SD)\n2-GND (SD)\n3-Tiva ADC\n4-PT GND\n5-PT 5v\n6-Fet Input\n\n
+Text Notes 5525 3575 2    60   ~ 0
 1-5V\n2-GND\n3-Tiva analog pin
 $Comp
 L Q_NMOS_DGS Q1
@@ -116,23 +105,25 @@ F 3 "" H 6100 4400 50  0001 C CNN
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 7100 3400 0    55   Input ~ 0
+Text GLabel 7300 3150 0    55   Input ~ 0
 SD-5v
-Text GLabel 7100 3500 0    55   Input ~ 0
+Text GLabel 7300 3250 0    55   Input ~ 0
 SD-GND
 Wire Wire Line
-	5900 4400 5900 4750
+	5900 3650 5900 4400
+Wire Wire Line
+	5900 4400 5900 5050
 Wire Wire Line
 	7350 4500 7350 4200
 Wire Wire Line
 	7350 4200 6200 4200
 Wire Wire Line
 	7450 4500 8000 4500
-Connection ~ 6200 4750
+Connection ~ 6200 5050
 Wire Wire Line
-	6200 4600 6200 4750
+	6200 4600 6200 5050
 Wire Wire Line
-	6200 4750 6800 4750
+	6200 5050 6800 5050
 Wire Wire Line
 	8100 4500 8350 4500
 Wire Wire Line
@@ -140,36 +131,27 @@ Wire Wire Line
 Wire Wire Line
 	8350 5050 6800 5050
 Wire Wire Line
-	6800 5050 6800 4750
+	6800 5050 6800 5050
 $Comp
 L Conn_01x06 J2
 U 1 1 5AD3D686
-P 7300 3600
-F 0 "J2" H 7300 3900 50  0000 C CNN
-F 1 "Conn_01x06" H 7300 3200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm" H 7300 3600 50  0001 C CNN
-F 3 "" H 7300 3600 50  0001 C CNN
-	1    7300 3600
+P 7500 3350
+F 0 "J2" H 7500 3650 50  0000 C CNN
+F 1 "Conn_01x06" H 7500 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x06_Pitch2.54mm" H 7500 3350 50  0001 C CNN
+F 3 "" H 7500 3350 50  0001 C CNN
+	1    7500 3350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 3700 7100 3700
+	5750 3450 7300 3450
 Wire Wire Line
-	5550 3600 7100 3600
+	5750 3350 7300 3350
 Wire Wire Line
-	5900 4400 5775 4400
+	4425 4300 4425 4300
 Wire Wire Line
-	5775 4100 5775 4100
+	5750 3550 7300 3550
 Wire Wire Line
-	5550 3800 7100 3800
-Wire Wire Line
-	7100 3900 5775 3900
-Wire Wire Line
-<<<<<<< HEAD
-	6800 5050 6800 4750
-Text Notes 7675 4375 0    60   ~ 0
-Ground spark plug to neg. terminal of battery?
-=======
-	5775 3900 5775 4100
->>>>>>> 3982b39f41a01a2be05f98ca14b954f971702d66
+	5900 3650 7300 3650
+Connection ~ 5900 4400
 $EndSCHEMATC

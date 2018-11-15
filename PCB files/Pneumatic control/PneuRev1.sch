@@ -1,0 +1,190 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TPS1H000AQDGNRQ1 U?
+U 1 1 5BECF8AF
+P 6100 3725
+F 0 "U?" H 6100 3225 60  0000 C CNN
+F 1 "TPS1H000AQDGNRQ1" H 6100 4375 60  0000 C CNN
+F 2 "" H 6100 3725 60  0001 C CNN
+F 3 "" H 6100 3725 60  0001 C CNN
+	1    6100 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5BECF8E3
+P 4675 3325
+F 0 "R?" V 4755 3325 50  0000 C CNN
+F 1 "R" V 4675 3325 50  0000 C CNN
+F 2 "" V 4605 3325 50  0001 C CNN
+F 3 "" H 4675 3325 50  0001 C CNN
+	1    4675 3325
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5BECF983
+P 5050 4075
+F 0 "R?" V 5130 4075 50  0000 C CNN
+F 1 "R" V 5050 4075 50  0000 C CNN
+F 2 "" V 4980 4075 50  0001 C CNN
+F 3 "" H 5050 4075 50  0001 C CNN
+	1    5050 4075
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 5BECFA51
+P 6900 4075
+F 0 "C?" H 6925 4175 50  0000 L CNN
+F 1 "C" H 6925 3975 50  0000 L CNN
+F 2 "" H 6938 3925 50  0001 C CNN
+F 3 "" H 6900 4075 50  0001 C CNN
+	1    6900 4075
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BECFB91
+P 6900 4475
+F 0 "#PWR?" H 6900 4225 50  0001 C CNN
+F 1 "GND" H 6900 4325 50  0000 C CNN
+F 2 "" H 6900 4475 50  0001 C CNN
+F 3 "" H 6900 4475 50  0001 C CNN
+	1    6900 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5BECFDE5
+P 5025 3525
+F 0 "R?" V 5105 3525 50  0000 C CNN
+F 1 "R" V 5025 3525 50  0000 C CNN
+F 2 "" V 4955 3525 50  0001 C CNN
+F 3 "" H 5025 3525 50  0001 C CNN
+	1    5025 3525
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5BECFE76
+P 5025 3675
+F 0 "#PWR?" H 5025 3425 50  0001 C CNN
+F 1 "GND" H 5025 3525 50  0000 C CNN
+F 2 "" H 5025 3675 50  0001 C CNN
+F 3 "" H 5025 3675 50  0001 C CNN
+	1    5025 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L +24V #PWR?
+U 1 1 5BED01EB
+P 6900 3050
+F 0 "#PWR?" H 6900 2900 50  0001 C CNN
+F 1 "+24V" H 6900 3190 50  0000 C CNN
+F 2 "" H 6900 3050 50  0001 C CNN
+F 3 "" H 6900 3050 50  0001 C CNN
+	1    6900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 3325 5550 3325
+Wire Wire Line
+	5200 3925 5550 3925
+Wire Wire Line
+	6650 3925 6900 3925
+Wire Wire Line
+	6900 4225 6900 4475
+Wire Wire Line
+	5025 3375 5025 3325
+Connection ~ 5025 3325
+Wire Wire Line
+	5200 3925 5200 4075
+Wire Wire Line
+	6900 3050 6900 3325
+Wire Wire Line
+	6900 3325 6650 3325
+$Comp
+L +5V #PWR?
+U 1 1 5BED02C0
+P 4125 3125
+F 0 "#PWR?" H 4125 2975 50  0001 C CNN
+F 1 "+5V" H 4125 3265 50  0000 C CNN
+F 2 "" H 4125 3125 50  0001 C CNN
+F 3 "" H 4125 3125 50  0001 C CNN
+	1    4125 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 3125 4125 3325
+Wire Wire Line
+	4125 3325 4525 3325
+Wire Wire Line
+	6650 3725 7200 3725
+Wire Wire Line
+	7200 3725 7200 4425
+Wire Wire Line
+	7200 4425 6900 4425
+Connection ~ 6900 4425
+$Comp
+L GND #PWR?
+U 1 1 5BED065C
+P 4775 4500
+F 0 "#PWR?" H 4775 4250 50  0001 C CNN
+F 1 "GND" H 4775 4350 50  0000 C CNN
+F 2 "" H 4775 4500 50  0001 C CNN
+F 3 "" H 4775 4500 50  0001 C CNN
+	1    4775 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4075 4775 4075
+Wire Wire Line
+	4775 4075 4775 4500
+$EndSCHEMATC

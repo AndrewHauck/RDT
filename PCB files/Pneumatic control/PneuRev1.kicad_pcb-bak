@@ -478,7 +478,7 @@
   )
 
   (module dualopamp:SOIC127P600X175-8N (layer F.Cu) (tedit 0) (tstamp 5C4412EC)
-    (at 122.1486 61.3664)
+    (at 162.941 66.2178)
     (path /5C089B2D)
     (attr smd)
     (fp_text reference U3 (at -0.73144 -3.54195) (layer F.SilkS)
@@ -518,7 +518,7 @@
   )
 
   (module dualopamp:SOIC127P600X175-8N (layer F.Cu) (tedit 0) (tstamp 5C4412F8)
-    (at 164.973 62.1792)
+    (at 143.6482 69.5452)
     (path /5C08AEA3)
     (attr smd)
     (fp_text reference U4 (at -0.73144 -3.54195) (layer F.SilkS)
@@ -558,7 +558,7 @@
   )
 
   (module dualopamp:SOIC127P600X175-8N (layer F.Cu) (tedit 0) (tstamp 5C441304)
-    (at 80.2244 99.568)
+    (at 174.8648 77.1906)
     (path /5C08C730)
     (attr smd)
     (fp_text reference U5 (at -0.73144 -3.54195) (layer F.SilkS)
@@ -598,7 +598,7 @@
   )
 
   (module dualopamp:SOIC127P600X175-8N (layer F.Cu) (tedit 0) (tstamp 5C441310)
-    (at 118.9736 98.2472)
+    (at 196.7088 74.0918)
     (path /5C08C8DF)
     (attr smd)
     (fp_text reference U6 (at -0.73144 -3.54195) (layer F.SilkS)
@@ -638,7 +638,7 @@
   )
 
   (module dualopamp:SOIC127P600X175-8N (layer F.Cu) (tedit 0) (tstamp 5C44131C)
-    (at 164.7698 96.8502)
+    (at 140.3096 96.3168)
     (path /5C08C9C3)
     (attr smd)
     (fp_text reference U7 (at -0.73144 -3.54195) (layer F.SilkS)
@@ -678,7 +678,7 @@
   )
 
   (module dualopamp:SOIC127P600X175-8N (layer F.Cu) (tedit 0) (tstamp 5C441328)
-    (at 199.4662 95.4786)
+    (at 210.885 62.0014)
     (path /5C02371B)
     (attr smd)
     (fp_text reference U8 (at -0.73144 -3.54195) (layer F.SilkS)

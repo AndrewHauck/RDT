@@ -768,7 +768,7 @@ NoConn ~ 6300 3375
 Wire Wire Line
 	6500 3075 7000 3075
 Wire Wire Line
-	5500 2975 5900 2975
+	5400 2975 5900 2975
 Wire Wire Line
 	5750 4100 5750 4025
 $Comp
@@ -855,7 +855,7 @@ NoConn ~ 6350 4925
 Wire Wire Line
 	6550 4625 7000 4625
 Wire Wire Line
-	5550 4525 5950 4525
+	5400 4525 5950 4525
 Wire Wire Line
 	5800 5650 5800 5575
 $Comp
@@ -1029,7 +1029,7 @@ NoConn ~ 8050 3375
 Wire Wire Line
 	8250 3075 8675 3075
 Wire Wire Line
-	7250 2975 7650 2975
+	7100 2975 7650 2975
 Wire Wire Line
 	7500 4100 7500 4025
 $Comp
@@ -1116,7 +1116,7 @@ NoConn ~ 8100 4925
 Wire Wire Line
 	8300 4625 8675 4625
 Wire Wire Line
-	7300 4525 7700 4525
+	7100 4525 7700 4525
 Wire Wire Line
 	7550 5650 7550 5575
 $Comp
@@ -1574,4 +1574,22 @@ IN5
 Connection ~ 3975 4525
 Text Label 3750 4525 0    60   ~ 0
 IN6
+Text Label 5400 1400 0    60   ~ 0
+IN7
+Connection ~ 5500 2975
+Text Label 5400 2975 0    60   ~ 0
+IN8
+Connection ~ 5550 4525
+Text Label 5400 4525 0    60   ~ 0
+IN9
+Connection ~ 7250 2975
+Text Label 7100 1400 0    60   ~ 0
+IN10
+Text Label 7100 2975 0    60   ~ 0
+IN11
+Connection ~ 7300 4525
+Text Label 7100 4525 0    60   ~ 0
+IN12
+Text Label 8750 1400 0    60   ~ 0
+IN13
 $EndSCHEMATC

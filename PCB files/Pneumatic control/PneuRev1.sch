@@ -150,12 +150,12 @@ $EndComp
 $Comp
 L Conn_01x02 J2
 U 1 1 5C020053
-P 1500 800
-F 0 "J2" H 1500 900 50  0000 C CNN
-F 1 "BATT_IN" H 1500 600 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 1500 800 50  0001 C CNN
-F 3 "" H 1500 800 50  0001 C CNN
-	1    1500 800 
+P 900 800
+F 0 "J2" H 900 900 50  0000 C CNN
+F 1 "BATT_IN" H 900 600 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 900 800 50  0001 C CNN
+F 3 "" H 900 800 50  0001 C CNN
+	1    900  800 
 	-1   0    0    1   
 $EndComp
 NoConn ~ 2900 1800
@@ -1539,15 +1539,7 @@ F 3 "" H 2350 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 700  1700 700 
-Wire Wire Line
-	1700 800  2075 800 
-Wire Wire Line
-	2075 800  2075 1100
-Wire Wire Line
-	2075 1100 2350 1100
-Wire Wire Line
-	2350 1100 2350 1000
+	2350 1025 2350 1000
 Wire Wire Line
 	2650 700  2900 700 
 Text Label 1850 4525 0    60   ~ 0
@@ -1592,4 +1584,52 @@ Text Label 7100 4525 0    60   ~ 0
 IN12
 Text Label 8750 1400 0    60   ~ 0
 IN13
+$Comp
+L R R40
+U 1 1 5C537FB4
+P 1375 875
+F 0 "R40" V 1455 875 50  0000 C CNN
+F 1 "3k5" V 1375 875 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1305 875 50  0001 C CNN
+F 3 "" H 1375 875 50  0001 C CNN
+	1    1375 875 
+	0    1    -1   0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 5C538514
+P 1750 875
+F 0 "D1" H 1750 975 50  0000 C CNN
+F 1 "LED" H 1750 775 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 1750 875 50  0001 C CNN
+F 3 "" H 1750 875 50  0001 C CNN
+	1    1750 875 
+	-1   0    0    1   
+$EndComp
+Text Notes 1325 675  0    60   ~ 0
+PWR Indicator
+Wire Wire Line
+	2350 1025 1100 1025
+Wire Wire Line
+	1100 1025 1100 800 
+Wire Wire Line
+	1600 875  1525 875 
+Wire Wire Line
+	1225 875  1225 700 
+Wire Wire Line
+	1100 700  2050 700 
+Connection ~ 1225 700 
+$Comp
+L GND #PWR040
+U 1 1 5C53B4F9
+P 1950 875
+F 0 "#PWR040" H 1950 625 50  0001 C CNN
+F 1 "GND" H 1950 725 50  0000 C CNN
+F 2 "" H 1950 875 50  0001 C CNN
+F 3 "" H 1950 875 50  0001 C CNN
+	1    1950 875 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1950 875  1900 875 
 $EndSCHEMATC

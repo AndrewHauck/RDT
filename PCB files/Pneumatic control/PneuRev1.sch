@@ -1539,7 +1539,7 @@ F 3 "" H 2350 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2350 1025 2350 1000
+	2350 1000 2350 1100
 Wire Wire Line
 	2650 700  2900 700 
 Text Label 1850 4525 0    60   ~ 0
@@ -1632,4 +1632,16 @@ F 3 "" H 1950 875 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1950 875  1900 875 
+$Comp
+L GND #PWR?
+U 1 1 5C53AC5E
+P 2350 1100
+F 0 "#PWR?" H 2350 850 50  0001 C CNN
+F 1 "GND" H 2350 950 50  0000 C CNN
+F 2 "" H 2350 1100 50  0001 C CNN
+F 3 "" H 2350 1100 50  0001 C CNN
+	1    2350 1100
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 1025
 $EndSCHEMATC

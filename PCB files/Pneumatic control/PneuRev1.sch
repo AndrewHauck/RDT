@@ -158,8 +158,6 @@ F 3 "" H 900 800 50  0001 C CNN
 	1    900  800 
 	-1   0    0    1   
 $EndComp
-NoConn ~ 2900 1800
-NoConn ~ 3000 1800
 Wire Wire Line
 	3200 1500 3625 1500
 Wire Wire Line
@@ -1589,7 +1587,7 @@ L R R40
 U 1 1 5C537FB4
 P 1375 875
 F 0 "R40" V 1455 875 50  0000 C CNN
-F 1 "3k5" V 1375 875 50  0000 C CNN
+F 1 "3k" V 1375 875 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1305 875 50  0001 C CNN
 F 3 "" H 1375 875 50  0001 C CNN
 	1    1375 875 

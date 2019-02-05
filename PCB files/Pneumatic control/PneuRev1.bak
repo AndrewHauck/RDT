@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:PneuRev1-rescue
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -158,8 +159,6 @@ F 3 "" H 900 800 50  0001 C CNN
 	1    900  800 
 	-1   0    0    1   
 $EndComp
-NoConn ~ 2900 1800
-NoConn ~ 3000 1800
 Wire Wire Line
 	3200 1500 3625 1500
 Wire Wire Line
@@ -415,8 +414,6 @@ F 3 "" H 4175 2525 50  0001 C CNN
 	1    4175 2525
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4625 1800
-NoConn ~ 4725 1800
 Wire Wire Line
 	4925 1500 5325 1500
 Wire Wire Line

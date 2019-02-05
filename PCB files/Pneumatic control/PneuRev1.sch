@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:PneuRev1-rescue
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -413,8 +414,6 @@ F 3 "" H 4175 2525 50  0001 C CNN
 	1    4175 2525
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4625 1800
-NoConn ~ 4725 1800
 Wire Wire Line
 	4925 1500 5325 1500
 Wire Wire Line
@@ -1631,10 +1630,10 @@ $EndComp
 Wire Wire Line
 	1950 875  1900 875 
 $Comp
-L GND #PWR?
+L GND #PWR041
 U 1 1 5C53AC5E
 P 2350 1100
-F 0 "#PWR?" H 2350 850 50  0001 C CNN
+F 0 "#PWR041" H 2350 850 50  0001 C CNN
 F 1 "GND" H 2350 950 50  0000 C CNN
 F 2 "" H 2350 1100 50  0001 C CNN
 F 3 "" H 2350 1100 50  0001 C CNN
@@ -1642,4 +1641,9 @@ F 3 "" H 2350 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2350 1025
+Wire Wire Line
+	3675 1200 3675 4325
+Connection ~ 3675 1200
+Connection ~ 3675 2775
+Connection ~ 3675 4325
 $EndSCHEMATC

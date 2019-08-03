@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PneuRev1-rescue)(type Legacy)(uri ${KIPRJMOD}/PneuRev1-rescue.lib)(options "")(descr ""))
+)

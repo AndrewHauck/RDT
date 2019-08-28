@@ -1,0 +1,77 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM321 U?
+U 1 1 5D536DEC
+P 5785 3845
+F 0 "U?" H 6129 3891 50  0000 L CNN
+F 1 "LM321" H 6129 3800 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5785 3845 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm321.pdf" H 5785 3845 50  0001 C CNN
+	1    5785 3845
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5485 3945 5335 3945
+Wire Wire Line
+	5335 3945 5335 4165
+$Comp
+L Device:R R?
+U 1 1 5D537979
+P 5335 4330
+F 0 "R?" H 5405 4376 50  0000 L CNN
+F 1 "R" H 5405 4285 50  0000 L CNN
+F 2 "" V 5265 4330 50  0001 C CNN
+F 3 "~" H 5335 4330 50  0001 C CNN
+	1    5335 4330
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D538C75
+P 5950 4165
+F 0 "R?" V 5743 4165 50  0000 C CNN
+F 1 "R" V 5834 4165 50  0000 C CNN
+F 2 "" V 5880 4165 50  0001 C CNN
+F 3 "~" H 5950 4165 50  0001 C CNN
+	1    5950 4165
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 4165 5335 4165
+Connection ~ 5335 4165
+Wire Wire Line
+	5335 4165 5335 4180
+Wire Wire Line
+	6100 4165 6100 3845
+Wire Wire Line
+	6100 3845 6085 3845
+$Comp
+L power:GND #PWR?
+U 1 1 5D53A344
+P 5335 4535
+F 0 "#PWR?" H 5335 4285 50  0001 C CNN
+F 1 "GND" H 5340 4362 50  0000 C CNN
+F 2 "" H 5335 4535 50  0001 C CNN
+F 3 "" H 5335 4535 50  0001 C CNN
+	1    5335 4535
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5335 4535 5335 4480
+NoConn ~ 5685 3545
+NoConn ~ 5485 3745
+$EndSCHEMATC

@@ -23,6 +23,7 @@
  by Usman Bajwa
  last modified 2 April 2018
  by Usman Bajwa
+ last modified 24 August 2019
 
  */
 
@@ -36,12 +37,18 @@ const int switchOff = PUSH2;              // Button on Tiva designated as the of
 const int OUTPUT2MOSFET = PF_1;           // Output pin to start the spark
 const int TRANSDUCER = A0;                // Analog pin number for the pressure transducer
 const int MAX_ATTEMPTS = 5;               // Maximum number of times to try to spark
-const int DELAY = 100;                    // Delay between each data collection and ignition attempt
+//const int DELAY = 100;                    // Delay between each data collection and ignition attempt
+const int FREQ = 100;
+float Period;
+int DELAY;
 int attempts = 0;                         // Number of times a spark has been attempted
 bool ignite;                              // Condition for ignition
 
 void setup()
 {
+	Period = 1/(FREQ);
+	DELAY = Period/2;
+
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
   while (!Serial)
@@ -107,7 +114,7 @@ void loop()
   if(ignite)
   {
     digitalWrite(OUTPUT2MOSFET, 1);  // Start ignition; attempt a spark
-    attempts++;                      // Increment attempt counter
+    
   }
   else
     if(!ignite)
@@ -115,13 +122,13 @@ void loop()
 
   // Open the file and record data. Note that only one file can be open at a time,
   // so you have to close this one before opening another.
-  File dataFile = SD.open(FILE_NAME, FILE_WRITE);
+  //File dataFile = SD.open(FILE_NAME, FILE_WRITE);
 
   // If the file is available, write to it:
-  if (dataFile)
-  {
+  //if (dataFile)
+  //{
     // Record sensor values to a .csv file
-    dataFile.print(millis()/1000.0);     // Time of reading
+    /*dataFile.print(millis()/1000.0);     // Time of reading
     dataFile.print(", ");
     dataFile.print(sensor);              // Raw signal
     dataFile.print(", ");
@@ -139,19 +146,18 @@ void loop()
     Serial.print(", ");
     Serial.print(voltage);
     Serial.print(", ");
-    Serial.print(pressure_psi);
+    Serial.print(pressure_psi);*/
     if(digitalRead(OUTPUT2MOSFET))
     {
       Serial.print(", Ignite!");         // Record when the spark was attempted
       digitalWrite(OUTPUT2MOSFET, 0);
     }
     Serial.println("");
-  }
+  //}
   // If the file isn't open, pop up an error:
-  else
-    Serial.println("error opening " + FILE_NAME);
+  //else
+  //  Serial.println("error opening " + FILE_NAME);
 
-  delay(DELAY);
 }
 
 

@@ -36,16 +36,22 @@ const int switchOn = PUSH1;               // Button on Tiva designated as the on
 const int switchOff = PUSH2;              // Button on Tiva designated as the off-button
 const int OUTPUT2MOSFET = PF_1;           // Output pin to start the spark
 const int TRANSDUCER = A0;                // Analog pin number for the pressure transducer
-const int MAX_ATTEMPTS = 5;               // Maximum number of times to try to spark
+//const int MAX_ATTEMPTS = 5;               // Maximum number of times to try to spark
 //const int DELAY = 100;                    // Delay between each data collection and ignition attempt
 const int FREQ = 100;
 float Period;
 int DELAY;
-int attempts = 0;                         // Number of times a spark has been attempted
+//int attempts = 0;                         // Number of times a spark has been attempted
 bool ignite;                              // Condition for ignition
 
 void setup()
 {
+	  // Initialize inputs and outputs
+  pinMode(switchOn, INPUT_PULLUP);
+  pinMode(switchOff, INPUT_PULLUP);
+  pinMode(OUTPUT2MOSFET, OUTPUT);
+  ignite = false;
+
 	Period = 1/(FREQ);
 	DELAY = Period/2;
 
@@ -56,10 +62,10 @@ void setup()
     ; // Wait for serial port to connect. Needed for native USB port only
   }
 
-
-  Serial.print("Initializing SD card...");
+  //Serial.print("Initializing SD card...");
 
   // See if the card is present and can be initialized:
+  /*
   if (!SD.begin(chipSelect))
   {
     Serial.println("Card failed, or not present");
@@ -83,24 +89,19 @@ void setup()
   }
   else
     Serial.println("Error opening " + FILE_NAME);
-
-  // Initialize inputs and outputs
-  pinMode(switchOn, INPUT_PULLUP);
-  pinMode(switchOff, INPUT_PULLUP);
-  pinMode(OUTPUT2MOSFET, OUTPUT);
-
-  ignite = false;
+	*/
 }
 
 void loop()
 {
+	//Translate switch On/Off state to ignite On/Off boolean
   if(!digitalRead(switchOn))
     ignite = true;
 
   if(!digitalRead(switchOff))
     ignite = false;
   
-  digitalWrite(OUTPUT2MOSFET, 0);                     // Spark attempts are stopped
+  digitalWrite(OUTPUT2MOSFET, 0); // Spark attempts are stopped when output waveform is not being generated                     
 
   // Pressure transducer data is taken and coverted to psi
   int sensor = analogRead(TRANSDUCER) - 520;                   // Raw pressure data should be about 100 with no added pressure
@@ -113,13 +114,20 @@ void loop()
   // with where the ignition conditions are being set to true or false.
   if(ignite)
   {
-    digitalWrite(OUTPUT2MOSFET, 1);  // Start ignition; attempt a spark
+  	//Create a square wave at the output with the desired frequency
+    digitalWrite(OUTPUT2MOSFET, 1); 
+    delay(DELAY);
+    digitalWrite(OUTPUT2MOSFET, 0);
+    delay(DELAY);
     
   }
   else
     if(!ignite)
-      attempts = 0;                  // Reset attempt count to allow the switch to flipped again for more attempts
+      digitalWrite(OUTPUT2MOSFET, 0);	// Spark attempts are stopped when output waveform is not being generated                  
 
+  //
+  // SD DATA COLLECTION CODE BELOW
+  //
   // Open the file and record data. Note that only one file can be open at a time,
   // so you have to close this one before opening another.
   //File dataFile = SD.open(FILE_NAME, FILE_WRITE);
@@ -147,12 +155,13 @@ void loop()
     Serial.print(voltage);
     Serial.print(", ");
     Serial.print(pressure_psi);*/
+
     if(digitalRead(OUTPUT2MOSFET))
     {
       Serial.print(", Ignite!");         // Record when the spark was attempted
-      digitalWrite(OUTPUT2MOSFET, 0);
     }
     Serial.println("");
+  
   //}
   // If the file isn't open, pop up an error:
   //else

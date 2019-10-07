@@ -5,11 +5,11 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -20,256 +20,71 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Switch:SW_SPST SW?
-U 1 1 5D62ABB9
-P 3175 4195
-F 0 "SW?" H 3175 4430 50  0001 C CNN
-F 1 "Tiva GPIO pin" H 3185 4075 50  0000 C CNN
-F 2 "" H 3175 4195 50  0001 C CNN
-F 3 "~" H 3175 4195 50  0001 C CNN
-	1    3175 4195
+L Connector_Generic:Conn_02x10_Counter_Clockwise J?
+U 1 1 5D9ADB7C
+P 3195 2185
+F 0 "J?" H 3245 2802 50  0000 C CNN
+F 1 "Conn_02x10_Counter_Clockwise" H 3245 2711 50  0000 C CNN
+F 2 "" H 3195 2185 50  0001 C CNN
+F 3 "~" H 3195 2185 50  0001 C CNN
+	1    3195 2185
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
-U 1 1 5D62B810
-P 2695 4195
-F 0 "R?" V 2488 4195 50  0001 C CNN
-F 1 "1k" V 2580 4195 50  0000 C CNN
-F 2 "" V 2625 4195 50  0001 C CNN
-F 3 "~" H 2695 4195 50  0001 C CNN
-	1    2695 4195
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5D62C1F6
-P 4055 4695
-F 0 "R?" V 3848 4695 50  0001 C CNN
-F 1 "10k" V 3940 4695 50  0000 C CNN
-F 2 "" V 3985 4695 50  0001 C CNN
-F 3 "~" H 4055 4695 50  0001 C CNN
-	1    4055 4695
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:Q_NMOS_GDS Q?
-U 1 1 5D62D9AB
-P 4110 4195
-F 0 "Q?" H 4316 4241 50  0001 L CNN
-F 1 "N MOSFET" H 4316 4195 50  0000 L CNN
-F 2 "" H 4310 4295 50  0001 C CNN
-F 3 "~" H 4110 4195 50  0001 C CNN
-	1    4110 4195
+L Connector_Generic:Conn_02x10_Counter_Clockwise J?
+U 1 1 5D9AE2A8
+P 3235 5600
+F 0 "J?" H 3285 6217 50  0000 C CNN
+F 1 "Conn_02x10_Counter_Clockwise" H 3285 6126 50  0000 C CNN
+F 2 "" H 3235 5600 50  0001 C CNN
+F 3 "~" H 3235 5600 50  0001 C CNN
+	1    3235 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4210 4395 4210 4695
-Wire Wire Line
-	4210 4695 4205 4695
-Wire Wire Line
-	3375 4195 3650 4195
-Wire Wire Line
-	2845 4195 2975 4195
-Wire Wire Line
-	2545 4195 2250 4195
-Wire Wire Line
-	3905 4695 3650 4695
-Wire Wire Line
-	3650 4695 3650 4195
-Connection ~ 3650 4195
-Wire Wire Line
-	3650 4195 3910 4195
 $Comp
-L power:GND #PWR?
-U 1 1 5D6324CD
-P 4210 5115
-F 0 "#PWR?" H 4210 4865 50  0001 C CNN
-F 1 "GND" H 4215 4942 50  0000 C CNN
-F 2 "" H 4210 5115 50  0001 C CNN
-F 3 "" H 4210 5115 50  0001 C CNN
-	1    4210 5115
+L Connector_Generic:Conn_02x10_Counter_Clockwise J?
+U 1 1 5D9AFF6C
+P 6870 5545
+F 0 "J?" H 6920 6162 50  0000 C CNN
+F 1 "Conn_02x10_Counter_Clockwise" H 6920 6071 50  0000 C CNN
+F 2 "" H 6870 5545 50  0001 C CNN
+F 3 "~" H 6870 5545 50  0001 C CNN
+	1    6870 5545
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4210 4695 4210 5115
-Connection ~ 4210 4695
+$Sheet
+S 4505 3105 1275 1455
+U 5D9BEB88
+F0 "Sheet5D9BEB87" 50
+F1 "IgniterDriver.sch" 50
+F2 "Vin" I L 4505 3275 50 
+$EndSheet
 $Comp
-L Device:Transformer_1P_1S T?
-U 1 1 5D63328C
-P 4615 3400
-F 0 "T?" H 4615 3645 50  0001 C CNN
-F 1 "Ignition Coil" H 4630 3740 50  0000 C CNN
-F 2 "" H 4615 3400 50  0001 C CNN
-F 3 "~" H 4615 3400 50  0001 C CNN
-	1    4615 3400
+L Connector_Generic:Conn_02x10_Counter_Clockwise J?
+U 1 1 5D9AF146
+P 6970 2185
+F 0 "J?" H 7020 2802 50  0000 C CNN
+F 1 "Conn_02x10_Counter_Clockwise" H 7020 2711 50  0000 C CNN
+F 2 "" H 6970 2185 50  0001 C CNN
+F 3 "~" H 6970 2185 50  0001 C CNN
+	1    6970 2185
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4210 3600 4215 3600
-Text Notes 2055 4220 0    50   ~ 0
-3.3V
 $Comp
-L Switch:SW_SPST SW?
-U 1 1 5D634C2D
-P 3255 3200
-F 0 "SW?" H 3255 2975 50  0001 C CNN
-F 1 "Keylock" H 3255 3067 50  0000 C CNN
-F 2 "" H 3255 3200 50  0001 C CNN
-F 3 "~" H 3255 3200 50  0001 C CNN
-	1    3255 3200
+L Connector:Conn_01x03_Female J?
+U 1 1 5D9DC3E6
+P 1695 2065
+F 0 "J?" H 1587 1740 50  0000 C CNN
+F 1 "PT1" H 1587 1831 50  0000 C CNN
+F 2 "" H 1695 2065 50  0001 C CNN
+F 3 "~" H 1695 2065 50  0001 C CNN
+	1    1695 2065
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5D63C03C
-P 2540 3320
-F 0 "#PWR?" H 2540 3070 50  0001 C CNN
-F 1 "GND" H 2545 3147 50  0000 C CNN
-F 2 "" H 2540 3320 50  0001 C CNN
-F 3 "" H 2540 3320 50  0001 C CNN
-	1    2540 3320
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:SPARK_GAP E?
-U 1 1 5D63D14B
-P 5330 3400
-F 0 "E?" V 5285 3500 50  0001 L CNN
-F 1 "Spark Plug" V 5025 3215 50  0000 L CNN
-F 2 "" H 5330 3330 50  0001 C CNN
-F 3 "~" V 5330 3400 50  0001 C CNN
-	1    5330 3400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5015 3200 5330 3200
-Wire Wire Line
-	5015 3600 5330 3600
-Wire Notes Line
-	5250 3170 5250 3690
-Wire Notes Line
-	5250 3690 5405 3690
-Wire Notes Line
-	5405 3690 5405 3170
-Wire Notes Line
-	5405 3170 5250 3170
-Wire Notes Line
-	5030 3625 4190 3625
-Wire Notes Line
-	4190 3625 4190 3120
-Wire Notes Line
-	4190 3120 5030 3120
-Wire Notes Line
-	5030 3120 5030 3625
-Text Notes 4335 3280 0    50   ~ 0
-+
-Text Notes 4835 3280 0    50   ~ 0
-+
-Text Notes 4335 3530 0    50   ~ 0
--\n
-Text Notes 4830 3535 0    50   ~ 0
--\n
-$Comp
-L Device:LED D?
-U 1 1 5D866431
-P 4670 4985
-F 0 "D?" V 4708 4868 50  0000 R CNN
-F 1 "IGN_LED" V 4617 4868 50  0000 R CNN
-F 2 "" H 4670 4985 50  0001 C CNN
-F 3 "~" H 4670 4985 50  0001 C CNN
-	1    4670 4985
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5D86646F
-P 3655 3705
-F 0 "D?" V 3693 3588 50  0000 R CNN
-F 1 "ARM_LED" V 3602 3588 50  0000 R CNN
-F 2 "" H 3655 3705 50  0001 C CNN
-F 3 "~" H 3655 3705 50  0001 C CNN
-	1    3655 3705
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2940 3200 3055 3200
-$Comp
-L Device:Battery BT?
-U 1 1 5D637211
-P 2740 3200
-F 0 "BT?" V 2495 3200 50  0001 C CNN
-F 1 "12V" V 2587 3200 50  0000 C CNN
-F 2 "" V 2740 3260 50  0001 C CNN
-F 3 "~" V 2740 3260 50  0001 C CNN
-	1    2740 3200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2540 3320 2540 3200
-Wire Wire Line
-	3455 3200 3655 3200
-$Comp
-L Device:R R?
-U 1 1 5D8671DF
-P 3655 3350
-F 0 "R?" V 3448 3350 50  0001 C CNN
-F 1 "1k" V 3540 3350 50  0000 C CNN
-F 2 "" V 3585 3350 50  0001 C CNN
-F 3 "~" H 3655 3350 50  0001 C CNN
-	1    3655 3350
-	-1   0    0    1   
-$EndComp
-Connection ~ 3655 3200
-Wire Wire Line
-	3655 3200 4215 3200
-Wire Wire Line
-	3655 3555 3655 3500
-Wire Wire Line
-	4210 3600 4210 3995
-$Comp
-L power:GND #PWR?
-U 1 1 5D8678F5
-P 3655 3885
-F 0 "#PWR?" H 3655 3635 50  0001 C CNN
-F 1 "GND" H 3520 3805 50  0000 C CNN
-F 2 "" H 3655 3885 50  0001 C CNN
-F 3 "" H 3655 3885 50  0001 C CNN
-	1    3655 3885
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3655 3885 3655 3855
-$Comp
-L Device:R R?
-U 1 1 5D86804B
-P 4445 4695
-F 0 "R?" V 4238 4695 50  0001 C CNN
-F 1 "1k" V 4330 4695 50  0000 C CNN
-F 2 "" V 4375 4695 50  0001 C CNN
-F 3 "~" H 4445 4695 50  0001 C CNN
-	1    4445 4695
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4295 4695 4210 4695
-Wire Wire Line
-	4595 4695 4670 4695
-Wire Wire Line
-	4670 4695 4670 4835
-$Comp
-L power:GND #PWR?
-U 1 1 5D86845A
-P 4670 5135
-F 0 "#PWR?" H 4670 4885 50  0001 C CNN
-F 1 "GND" H 4675 4962 50  0000 C CNN
-F 2 "" H 4670 5135 50  0001 C CNN
-F 3 "" H 4670 5135 50  0001 C CNN
-	1    4670 5135
-	1    0    0    -1  
-$EndComp
-Text Notes 4770 4895 0    50   ~ 0
-Vf = 2.2V\n
-Text Notes 3770 3620 0    50   ~ 0
-Vf = 2.2V\n
+Text Notes 1530 1995 0    50   ~ 0
+Vin
+Text Notes 1530 2095 0    50   ~ 0
+Vo
+Text Notes 1485 2200 0    50   ~ 0
+GND
 $EndSCHEMATC

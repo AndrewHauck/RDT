@@ -1,0 +1,225 @@
+EESchema Schematic File Version 4
+LIBS:power
+LIBS:device
+LIBS:74xx
+LIBS:audio
+LIBS:interface
+LIBS:Igniter-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR?
+U 1 1 5D9D4B7B
+P 5920 4925
+F 0 "#PWR?" H 5920 4675 50  0001 C CNN
+F 1 "GND" H 5925 4752 50  0000 C CNN
+F 2 "" H 5920 4925 50  0001 C CNN
+F 3 "" H 5920 4925 50  0001 C CNN
+	1    5920 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5D9D4B81
+P 6380 4795
+F 0 "D?" V 6418 4678 50  0000 R CNN
+F 1 "IGN_LED" V 6327 4678 50  0000 R CNN
+F 2 "" H 6380 4795 50  0001 C CNN
+F 3 "~" H 6380 4795 50  0001 C CNN
+	1    6380 4795
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6380 4505 6380 4645
+$Comp
+L power:GND #PWR?
+U 1 1 5D9D4B88
+P 6380 4945
+F 0 "#PWR?" H 6380 4695 50  0001 C CNN
+F 1 "GND" H 6385 4772 50  0000 C CNN
+F 2 "" H 6380 4945 50  0001 C CNN
+F 3 "" H 6380 4945 50  0001 C CNN
+	1    6380 4945
+	1    0    0    -1  
+$EndComp
+Text Notes 6480 4705 0    50   ~ 0
+Vf = 2.2V\n
+Wire Wire Line
+	5920 3210 6140 3210
+Wire Wire Line
+	5365 3010 6140 3010
+$Comp
+L Connector:Barrel_Jack J?
+U 1 1 5D9D4B91
+P 6440 3110
+AR Path="/5D9D4B91" Ref="J?"  Part="1" 
+AR Path="/5D9BEB88/5D9D4B91" Ref="J?"  Part="1" 
+F 0 "J?" H 6210 3068 50  0000 R CNN
+F 1 "IgnitionCoil" H 6210 3159 50  0000 R CNN
+F 2 "" H 6490 3070 50  0001 C CNN
+F 3 "~" H 6490 3070 50  0001 C CNN
+	1    6440 3110
+	-1   0    0    1   
+$EndComp
+Text Notes 5480 3430 0    50   ~ 0
+Vf = 2.2V\n
+Wire Wire Line
+	6305 4505 6380 4505
+Wire Wire Line
+	6005 4505 5920 4505
+$Comp
+L Device:R R?
+U 1 1 5D9D4B9A
+P 6155 4505
+F 0 "R?" V 5948 4505 50  0001 C CNN
+F 1 "1k" V 6040 4505 50  0000 C CNN
+F 2 "" V 6085 4505 50  0001 C CNN
+F 3 "~" H 6155 4505 50  0001 C CNN
+	1    6155 4505
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5365 3695 5365 3665
+$Comp
+L power:GND #PWR?
+U 1 1 5D9D4BA1
+P 5365 3695
+F 0 "#PWR?" H 5365 3445 50  0001 C CNN
+F 1 "GND" H 5230 3615 50  0000 C CNN
+F 2 "" H 5365 3695 50  0001 C CNN
+F 3 "" H 5365 3695 50  0001 C CNN
+	1    5365 3695
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5920 3210 5920 3805
+Wire Wire Line
+	5365 3365 5365 3310
+Connection ~ 5365 3010
+$Comp
+L Device:R R?
+U 1 1 5D9D4BAA
+P 5365 3160
+F 0 "R?" V 5158 3160 50  0001 C CNN
+F 1 "1k" V 5250 3160 50  0000 C CNN
+F 2 "" V 5295 3160 50  0001 C CNN
+F 3 "~" H 5365 3160 50  0001 C CNN
+	1    5365 3160
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5165 3010 5365 3010
+Wire Wire Line
+	4250 3130 4250 3010
+$Comp
+L Device:Battery BT?
+U 1 1 5D9D4BB2
+P 4450 3010
+F 0 "BT?" V 4205 3010 50  0001 C CNN
+F 1 "12V" V 4297 3010 50  0000 C CNN
+F 2 "" V 4450 3070 50  0001 C CNN
+F 3 "~" V 4450 3070 50  0001 C CNN
+	1    4450 3010
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 3010 4765 3010
+$Comp
+L Device:LED D?
+U 1 1 5D9D4BB9
+P 5365 3515
+F 0 "D?" V 5403 3398 50  0000 R CNN
+F 1 "ARM_LED" V 5312 3398 50  0000 R CNN
+F 2 "" H 5365 3515 50  0001 C CNN
+F 3 "~" H 5365 3515 50  0001 C CNN
+	1    5365 3515
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D9D4BBF
+P 4250 3130
+F 0 "#PWR?" H 4250 2880 50  0001 C CNN
+F 1 "GND" H 4255 2957 50  0000 C CNN
+F 2 "" H 4250 3130 50  0001 C CNN
+F 3 "" H 4250 3130 50  0001 C CNN
+	1    4250 3130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5D9D4BC5
+P 4965 3010
+F 0 "SW?" H 4965 2785 50  0001 C CNN
+F 1 "Keylock" H 4965 2877 50  0000 C CNN
+F 2 "" H 4965 3010 50  0001 C CNN
+F 3 "~" H 4965 3010 50  0001 C CNN
+	1    4965 3010
+	-1   0    0    1   
+$EndComp
+Connection ~ 5920 4505
+Wire Wire Line
+	5920 4505 5920 4925
+Wire Wire Line
+	5360 4005 5620 4005
+Connection ~ 5360 4005
+Wire Wire Line
+	5360 4505 5360 4005
+Wire Wire Line
+	5490 4505 5360 4505
+Wire Wire Line
+	4255 4005 3960 4005
+Wire Wire Line
+	5920 4505 5790 4505
+Wire Wire Line
+	5920 4205 5920 4505
+$Comp
+L Device:Q_NMOS_GDS Q?
+U 1 1 5D9D4BD7
+P 5820 4005
+F 0 "Q?" H 6026 4051 50  0001 L CNN
+F 1 "N MOSFET" H 6026 4005 50  0000 L CNN
+F 2 "" H 6020 4105 50  0001 C CNN
+F 3 "~" H 5820 4005 50  0001 C CNN
+	1    5820 4005
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D9D4BDD
+P 5640 4505
+F 0 "R?" V 5433 4505 50  0001 C CNN
+F 1 "10k" V 5525 4505 50  0000 C CNN
+F 2 "" V 5570 4505 50  0001 C CNN
+F 3 "~" H 5640 4505 50  0001 C CNN
+	1    5640 4505
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D9D4BE3
+P 4405 4005
+F 0 "R?" V 4198 4005 50  0001 C CNN
+F 1 "1k" V 4290 4005 50  0000 C CNN
+F 2 "" V 4335 4005 50  0001 C CNN
+F 3 "~" H 4405 4005 50  0001 C CNN
+	1    4405 4005
+	0    1    1    0   
+$EndComp
+Text HLabel 3960 4005 0    50   Input ~ 0
+Vin
+Wire Wire Line
+	4555 4005 5360 4005
+$EndSCHEMATC

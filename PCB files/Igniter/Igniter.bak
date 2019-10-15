@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -19,39 +19,165 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Sheet
-S 3445 3375 1275 1455
-U 5D9BEB88
-F0 "Igniter" 50
-F1 "IgniterDriver.sch" 50
-F2 "Vin" I L 3445 3545 50 
-$EndSheet
 $Comp
 L Connector:Conn_01x03_Female J1
 U 1 1 5D9DC3E6
-P 2115 2700
-F 0 "J1" H 2007 2375 50  0000 C CNN
-F 1 "PT1" H 2007 2466 50  0000 C CNN
-F 2 "" H 2115 2700 50  0001 C CNN
-F 3 "~" H 2115 2700 50  0001 C CNN
-	1    2115 2700
+P 2190 3180
+F 0 "J1" H 2082 2855 50  0000 C CNN
+F 1 "PT1" H 2082 2946 50  0000 C CNN
+F 2 "" H 2190 3180 50  0001 C CNN
+F 3 "~" H 2190 3180 50  0001 C CNN
+	1    2190 3180
 	-1   0    0    1   
 $EndComp
-Text Notes 1950 2630 0    50   ~ 0
+Text Notes 2025 3110 0    50   ~ 0
 Vin
-Text Notes 1950 2730 0    50   ~ 0
+Text Notes 2025 3210 0    50   ~ 0
 Vo
-Text Notes 1905 2835 0    50   ~ 0
+Text Notes 1980 3315 0    50   ~ 0
 GND
 $Comp
 L MCU_Module:Arduino_UNO_R2 A1
 U 1 1 5DA12355
-P 7280 4010
-F 0 "A1" H 7280 5191 50  0000 C CNN
-F 1 "Arduino_UNO_R2" H 7280 5100 50  0000 C CNN
-F 2 "Module:Arduino_UNO_R2" H 7430 2960 50  0001 L CNN
-F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 7080 5060 50  0001 C CNN
-	1    7280 4010
+P 5490 3550
+F 0 "A1" H 5490 4731 50  0000 C CNN
+F 1 "Arduino_UNO_R2" H 5490 4640 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R2" H 5640 2500 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 5290 4600 50  0001 C CNN
+	1    5490 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J2
+U 1 1 5DA6174F
+P 2860 3165
+F 0 "J2" H 2752 2840 50  0000 C CNN
+F 1 "PT2" H 2752 2931 50  0000 C CNN
+F 2 "" H 2860 3165 50  0001 C CNN
+F 3 "~" H 2860 3165 50  0001 C CNN
+	1    2860 3165
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J3
+U 1 1 5DA617F3
+P 2215 4050
+F 0 "J3" H 2107 3725 50  0000 C CNN
+F 1 "PT3" H 2107 3816 50  0000 C CNN
+F 2 "" H 2215 4050 50  0001 C CNN
+F 3 "~" H 2215 4050 50  0001 C CNN
+	1    2215 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J4
+U 1 1 5DA6183F
+P 2885 4040
+F 0 "J4" H 2777 3715 50  0000 C CNN
+F 1 "PT4" H 2777 3806 50  0000 C CNN
+F 2 "" H 2885 4040 50  0001 C CNN
+F 3 "~" H 2885 4040 50  0001 C CNN
+	1    2885 4040
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 5DA61BF6
+P 5490 4720
+F 0 "#PWR0101" H 5490 4470 50  0001 C CNN
+F 1 "GNDREF" H 5495 4547 50  0000 C CNN
+F 2 "" H 5490 4720 50  0001 C CNN
+F 3 "" H 5490 4720 50  0001 C CNN
+	1    5490 4720
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5390 4650 5390 4720
+Wire Wire Line
+	5390 4720 5490 4720
+Wire Wire Line
+	5490 4650 5490 4720
+Connection ~ 5490 4720
+Wire Wire Line
+	5590 4650 5590 4720
+Wire Wire Line
+	5590 4720 5490 4720
+$Sheet
+S 7590 3245 620  610 
+U 5D9BEB88
+F0 "Igniter" 50
+F1 "IgniterDriver.sch" 50
+F2 "Vin" I L 7590 3415 50 
+F3 "Vdd" I L 7590 3315 50 
+$EndSheet
+$Comp
+L Device:Battery BT1
+U 1 1 5DA63507
+P 7080 3315
+F 0 "BT1" V 6835 3315 50  0000 C CNN
+F 1 "Battery" V 6926 3315 50  0000 C CNN
+F 2 "" V 7080 3375 50  0001 C CNN
+F 3 "~" V 7080 3375 50  0001 C CNN
+	1    7080 3315
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7280 3315 7590 3315
+$Comp
+L power:GNDREF #PWR01
+U 1 1 5DA63712
+P 6810 3315
+F 0 "#PWR01" H 6810 3065 50  0001 C CNN
+F 1 "GNDREF" H 6815 3142 50  0000 C CNN
+F 2 "" H 6810 3315 50  0001 C CNN
+F 3 "" H 6810 3315 50  0001 C CNN
+	1    6810 3315
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6810 3315 6880 3315
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DA63C3F
+P 2390 3280
+F 0 "#PWR?" H 2390 3030 50  0001 C CNN
+F 1 "GNDREF" H 2395 3107 50  0000 C CNN
+F 2 "" H 2390 3280 50  0001 C CNN
+F 3 "" H 2390 3280 50  0001 C CNN
+	1    2390 3280
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DA63E38
+P 3060 3265
+F 0 "#PWR?" H 3060 3015 50  0001 C CNN
+F 1 "GNDREF" H 3065 3092 50  0000 C CNN
+F 2 "" H 3060 3265 50  0001 C CNN
+F 3 "" H 3060 3265 50  0001 C CNN
+	1    3060 3265
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DA63E9D
+P 2415 4150
+F 0 "#PWR?" H 2415 3900 50  0001 C CNN
+F 1 "GNDREF" H 2420 3977 50  0000 C CNN
+F 2 "" H 2415 4150 50  0001 C CNN
+F 3 "" H 2415 4150 50  0001 C CNN
+	1    2415 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DA63EF6
+P 3085 4140
+F 0 "#PWR?" H 3085 3890 50  0001 C CNN
+F 1 "GNDREF" H 3090 3967 50  0000 C CNN
+F 2 "" H 3085 4140 50  0001 C CNN
+F 3 "" H 3085 4140 50  0001 C CNN
+	1    3085 4140
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

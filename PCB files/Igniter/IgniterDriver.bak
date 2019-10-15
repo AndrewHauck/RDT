@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -122,19 +122,6 @@ $EndComp
 Wire Wire Line
 	5165 3010 5365 3010
 Wire Wire Line
-	4250 3130 4250 3010
-$Comp
-L Device:Battery BT1
-U 1 1 5D9D4BB2
-P 4450 3010
-F 0 "BT1" V 4205 3010 50  0001 C CNN
-F 1 "12V" V 4297 3010 50  0000 C CNN
-F 2 "" V 4450 3070 50  0001 C CNN
-F 3 "~" V 4450 3070 50  0001 C CNN
-	1    4450 3010
-	0    1    1    0   
-$EndComp
-Wire Wire Line
 	4650 3010 4765 3010
 $Comp
 L Device:LED D1
@@ -146,17 +133,6 @@ F 2 "LED_THT:LED_D3.0mm" H 5365 3515 50  0001 C CNN
 F 3 "~" H 5365 3515 50  0001 C CNN
 	1    5365 3515
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR01
-U 1 1 5D9D4BBF
-P 4250 3130
-F 0 "#PWR01" H 4250 2880 50  0001 C CNN
-F 1 "GND" H 4255 2957 50  0000 C CNN
-F 2 "" H 4250 3130 50  0001 C CNN
-F 3 "" H 4250 3130 50  0001 C CNN
-	1    4250 3130
-	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_SPST SW1
@@ -222,4 +198,8 @@ Text HLabel 3960 4005 0    50   Input ~ 0
 Vin
 Wire Wire Line
 	4555 4005 5360 4005
+Text HLabel 4650 3010 0    50   Input ~ 0
+Vdd
+Text Notes 3475 3045 0    50   ~ 0
+12V battery connection
 $EndSCHEMATC

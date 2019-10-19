@@ -79,7 +79,7 @@ L power:GNDREF #PWR0101
 U 1 1 5DA61BF6
 P 4675 5415
 F 0 "#PWR0101" H 4675 5165 50  0001 C CNN
-F 1 "GNDREF" H 4680 5242 50  0000 C CNN
+F 1 "GNDREF" H 4680 5242 50  0001 C CNN
 F 2 "" H 4675 5415 50  0001 C CNN
 F 3 "" H 4675 5415 50  0001 C CNN
 	1    4675 5415
@@ -258,14 +258,14 @@ Connection ~ 8140 4820
 Wire Wire Line
 	8140 4820 8140 5240
 Wire Wire Line
-	7580 4320 7840 4320
-Connection ~ 7580 4320
+	7750 4320 7840 4320
+Connection ~ 7750 4320
 Wire Wire Line
-	7580 4820 7580 4320
+	7750 4820 7750 4320
 Wire Wire Line
-	7710 4820 7580 4820
+	7775 4820 7750 4820
 Wire Wire Line
-	8140 4820 8010 4820
+	8140 4820 8075 4820
 Wire Wire Line
 	8140 4520 8140 4820
 $Comp
@@ -284,31 +284,31 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 5DAB751B
-P 7860 4820
+P 7925 4820
 AR Path="/5D9BEB88/5DAB751B" Ref="R?"  Part="1" 
 AR Path="/5DAB751B" Ref="R3"  Part="1" 
-F 0 "R3" V 7653 4820 50  0001 C CNN
-F 1 "10k" V 7745 4820 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7790 4820 50  0001 C CNN
-F 3 "~" H 7860 4820 50  0001 C CNN
-	1    7860 4820
+F 0 "R3" V 7718 4820 50  0001 C CNN
+F 1 "10k" V 7810 4820 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7855 4820 50  0001 C CNN
+F 3 "~" H 7925 4820 50  0001 C CNN
+	1    7925 4820
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5DAB7521
-P 7285 4320
+P 7550 4320
 AR Path="/5D9BEB88/5DAB7521" Ref="R?"  Part="1" 
 AR Path="/5DAB7521" Ref="R1"  Part="1" 
-F 0 "R1" V 7078 4320 50  0001 C CNN
-F 1 "1k" V 7170 4320 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7215 4320 50  0001 C CNN
-F 3 "~" H 7285 4320 50  0001 C CNN
-	1    7285 4320
+F 0 "R1" V 7343 4320 50  0001 C CNN
+F 1 "1k" V 7435 4320 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7480 4320 50  0001 C CNN
+F 3 "~" H 7550 4320 50  0001 C CNN
+	1    7550 4320
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7435 4320 7580 4320
+	7700 4320 7750 4320
 Text Notes 4015 7870 0    50   ~ 0
 actuate solenoids through code\n1 arm switch\n1 ignition switch to trigger code\nIdeal: actuate everything through interface\nIf time does not allow: use analog valve switching\n
 $Comp
@@ -360,10 +360,10 @@ F 3 "" H 6890 3325 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6890 3325 6985 3325
-Text GLabel 6990 4320 0    50   Input ~ 0
-Vin
+Text GLabel 7200 4320 0    50   Input ~ 0
+Ignition
 Text GLabel 4175 3945 0    50   Input ~ 0
-Vin
+Ignition
 $Comp
 L power:GNDREF #PWR013
 U 1 1 5DABC72F
@@ -404,16 +404,14 @@ PT1
 $Comp
 L power:+5V #PWR011
 U 1 1 5DABF86E
-P 4875 3220
-F 0 "#PWR011" H 4875 3070 50  0001 C CNN
-F 1 "+5V" H 4890 3393 50  0000 C CNN
-F 2 "" H 4875 3220 50  0001 C CNN
-F 3 "" H 4875 3220 50  0001 C CNN
-	1    4875 3220
+P 4875 3245
+F 0 "#PWR011" H 4875 3095 50  0001 C CNN
+F 1 "+5V" H 4985 3320 50  0000 C CNN
+F 2 "" H 4875 3245 50  0001 C CNN
+F 3 "" H 4875 3245 50  0001 C CNN
+	1    4875 3245
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4875 3245 4875 3220
 $Comp
 L power:+5V #PWR09
 U 1 1 5DAC0085
@@ -466,8 +464,6 @@ Wire Wire Line
 	3330 1445 3415 1445
 Wire Wire Line
 	3345 2060 3420 2060
-Wire Wire Line
-	7135 4320 6990 4320
 Text GLabel 3420 2160 0    50   Input ~ 0
 PT3
 Text GLabel 4085 2160 2    50   Input ~ 0
@@ -488,7 +484,7 @@ Wire Notes Line
 	4295 2405 4295 1145
 Wire Notes Line
 	4295 1145 3140 1145
-Text Notes 5390 1070 0    50   ~ 0
+Text Notes 5305 1110 0    50   ~ 0
 Status Indicators
 $Comp
 L power:+5V #PWR016
@@ -572,8 +568,6 @@ Wire Wire Line
 	6020 1410 6020 1470
 Wire Wire Line
 	6020 1770 6020 1820
-Text Notes 5285 1850 1    50   ~ 0
-Drive this with\n a transistor??
 $Comp
 L power:GNDREF #PWR019
 U 1 1 5DAC5505
@@ -599,8 +593,7 @@ $EndComp
 NoConn ~ 5175 3645
 NoConn ~ 5175 3845
 NoConn ~ 5175 4045
-NoConn ~ 4775 3245
-Text Notes 3530 3975 0    50   ~ 0
+Text Notes 3370 3985 0    50   ~ 0
 Igniter PWM
 Text Notes 4345 2950 0    50   ~ 0
 Arduino shield pins
@@ -630,4 +623,45 @@ Wire Notes Line
 	9380 5510 9380 2970
 Wire Notes Line
 	9380 2970 6715 2970
+Wire Wire Line
+	7400 4320 7200 4320
+$Comp
+L power:+3V3 #PWR021
+U 1 1 5DABA0D7
+P 4775 3245
+F 0 "#PWR021" H 4775 3095 50  0001 C CNN
+F 1 "+3V3" H 4640 3320 50  0000 C CNN
+F 2 "" H 4775 3245 50  0001 C CNN
+F 3 "" H 4775 3245 50  0001 C CNN
+	1    4775 3245
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5DABA4E8
+P 3910 4945
+AR Path="/5D9BEB88/5DABA4E8" Ref="SW?"  Part="1" 
+AR Path="/5DABA4E8" Ref="SW2"  Part="1" 
+F 0 "SW2" H 3910 4720 50  0001 C CNN
+F 1 "Ignite" H 3910 4812 50  0000 C CNN
+F 2 "" H 3910 4945 50  0001 C CNN
+F 3 "~" H 3910 4945 50  0001 C CNN
+	1    3910 4945
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4110 4945 4175 4945
+Wire Wire Line
+	3710 4945 3670 4945
+$Comp
+L power:+5V #PWR020
+U 1 1 5DABCADF
+P 3670 4945
+F 0 "#PWR020" H 3670 4795 50  0001 C CNN
+F 1 "+5V" H 3780 5020 50  0000 C CNN
+F 2 "" H 3670 4945 50  0001 C CNN
+F 3 "" H 3670 4945 50  0001 C CNN
+	1    3670 4945
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC

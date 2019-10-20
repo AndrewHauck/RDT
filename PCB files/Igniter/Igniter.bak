@@ -33,12 +33,12 @@ $EndComp
 $Comp
 L MCU_Module:Arduino_UNO_R2 A1
 U 1 1 5DA12355
-P 4675 4245
-F 0 "A1" H 4320 3180 50  0000 C CNN
-F 1 "Arduino_UNO_R2" H 5160 3190 50  0000 C CNN
-F 2 "Module:Arduino_UNO_R2" H 4825 3195 50  0001 L CNN
-F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 4475 5295 50  0001 C CNN
-	1    4675 4245
+P 5040 4240
+F 0 "A1" H 4685 3175 50  0000 C CNN
+F 1 "Arduino_UNO_R2" H 5525 3185 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R2" H 5190 3190 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 4840 5290 50  0001 C CNN
+	1    5040 4240
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -77,25 +77,25 @@ $EndComp
 $Comp
 L power:GNDREF #PWR0101
 U 1 1 5DA61BF6
-P 4675 5415
-F 0 "#PWR0101" H 4675 5165 50  0001 C CNN
-F 1 "GNDREF" H 4680 5242 50  0001 C CNN
-F 2 "" H 4675 5415 50  0001 C CNN
-F 3 "" H 4675 5415 50  0001 C CNN
-	1    4675 5415
+P 5040 5410
+F 0 "#PWR0101" H 5040 5160 50  0001 C CNN
+F 1 "GNDREF" H 5045 5237 50  0001 C CNN
+F 2 "" H 5040 5410 50  0001 C CNN
+F 3 "" H 5040 5410 50  0001 C CNN
+	1    5040 5410
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4575 5345 4575 5415
+	4940 5340 4940 5410
 Wire Wire Line
-	4575 5415 4675 5415
+	4940 5410 5040 5410
 Wire Wire Line
-	4675 5345 4675 5415
-Connection ~ 4675 5415
+	5040 5340 5040 5410
+Connection ~ 5040 5410
 Wire Wire Line
-	4775 5345 4775 5415
+	5140 5340 5140 5410
 Wire Wire Line
-	4775 5415 4675 5415
+	5140 5410 5040 5410
 $Comp
 L power:GNDREF #PWR01
 U 1 1 5DA63712
@@ -360,9 +360,9 @@ F 3 "" H 6890 3325 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6890 3325 6985 3325
-Text GLabel 6990 4320 0    50   Input ~ 0
+Text GLabel 7200 4320 0    50   Input ~ 0
 Ignition
-Text GLabel 4175 3945 0    50   Input ~ 0
+Text GLabel 4540 3940 0    50   Input ~ 0
 Ignition
 $Comp
 L power:GNDREF #PWR013
@@ -399,17 +399,17 @@ F 3 "" H 8600 5260 50  0001 C CNN
 $EndComp
 Text GLabel 3415 1545 0    50   Input ~ 0
 PT1
-Text GLabel 4175 3845 0    50   Input ~ 0
+Text GLabel 4540 3840 0    50   Input ~ 0
 PT1
 $Comp
 L power:+5V #PWR011
 U 1 1 5DABF86E
-P 4875 3245
-F 0 "#PWR011" H 4875 3095 50  0001 C CNN
-F 1 "+5V" H 4985 3320 50  0000 C CNN
-F 2 "" H 4875 3245 50  0001 C CNN
-F 3 "" H 4875 3245 50  0001 C CNN
-	1    4875 3245
+P 5240 3240
+F 0 "#PWR011" H 5240 3090 50  0001 C CNN
+F 1 "+5V" H 5350 3315 50  0000 C CNN
+F 2 "" H 5240 3240 50  0001 C CNN
+F 3 "" H 5240 3240 50  0001 C CNN
+	1    5240 3240
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -470,11 +470,11 @@ Text GLabel 4085 2160 2    50   Input ~ 0
 PT4
 Text GLabel 4050 1540 2    50   Input ~ 0
 PT2
-Text GLabel 4175 4045 0    50   Input ~ 0
+Text GLabel 4540 4040 0    50   Input ~ 0
 PT2
-Text GLabel 4175 4145 0    50   Input ~ 0
+Text GLabel 4540 4140 0    50   Input ~ 0
 PT3
-Text GLabel 4175 4245 0    50   Input ~ 0
+Text GLabel 4540 4240 0    50   Input ~ 0
 PT4
 Wire Notes Line
 	3140 1145 3140 2405
@@ -590,21 +590,21 @@ F 3 "" H 5365 2130 50  0001 C CNN
 	1    5365 2130
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5175 3645
-NoConn ~ 5175 3845
-NoConn ~ 5175 4045
-Text Notes 3370 3985 0    50   ~ 0
+NoConn ~ 5540 3640
+NoConn ~ 5540 3840
+NoConn ~ 5540 4040
+Text Notes 3735 3980 0    50   ~ 0
 Igniter PWM
-Text Notes 4345 2950 0    50   ~ 0
+Text Notes 4480 2940 0    50   ~ 0
 Arduino shield pins
 Wire Notes Line
-	3325 5640 5775 5640
+	3690 5635 6140 5635
 Wire Notes Line
-	5775 2980 3325 2980
+	6140 2975 3690 2975
 Wire Notes Line
-	5775 2980 5775 5640
+	6140 2975 6140 5635
 Wire Notes Line
-	3325 2980 3325 5640
+	3690 2975 3690 5635
 Wire Notes Line
 	6290 1135 4885 1135
 Wire Notes Line
@@ -624,44 +624,134 @@ Wire Notes Line
 Wire Notes Line
 	9380 2970 6715 2970
 Wire Wire Line
-	7400 4320 6990 4320
-$Comp
-L power:+3V3 #PWR021
-U 1 1 5DABA0D7
-P 4775 3245
-F 0 "#PWR021" H 4775 3095 50  0001 C CNN
-F 1 "+3V3" H 4640 3320 50  0000 C CNN
-F 2 "" H 4775 3245 50  0001 C CNN
-F 3 "" H 4775 3245 50  0001 C CNN
-	1    4775 3245
-	1    0    0    -1  
-$EndComp
+	7400 4320 7200 4320
 $Comp
 L Switch:SW_SPST SW?
 U 1 1 5DABA4E8
-P 3910 4945
+P 4275 4940
 AR Path="/5D9BEB88/5DABA4E8" Ref="SW?"  Part="1" 
 AR Path="/5DABA4E8" Ref="SW2"  Part="1" 
-F 0 "SW2" H 3910 4720 50  0001 C CNN
-F 1 "Ignite" H 3910 4812 50  0000 C CNN
-F 2 "" H 3910 4945 50  0001 C CNN
-F 3 "~" H 3910 4945 50  0001 C CNN
-	1    3910 4945
+F 0 "SW2" H 4275 4715 50  0001 C CNN
+F 1 "Ignite" H 4275 4807 50  0000 C CNN
+F 2 "" H 4275 4940 50  0001 C CNN
+F 3 "~" H 4275 4940 50  0001 C CNN
+	1    4275 4940
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4110 4945 4175 4945
+	4475 4940 4540 4940
 Wire Wire Line
-	3710 4945 3670 4945
+	4075 4940 4035 4940
 $Comp
 L power:+5V #PWR020
 U 1 1 5DABCADF
-P 3670 4945
-F 0 "#PWR020" H 3670 4795 50  0001 C CNN
-F 1 "+5V" H 3780 5020 50  0000 C CNN
-F 2 "" H 3670 4945 50  0001 C CNN
-F 3 "" H 3670 4945 50  0001 C CNN
-	1    3670 4945
+P 4035 4940
+F 0 "#PWR020" H 4035 4790 50  0001 C CNN
+F 1 "+5V" H 4145 5015 50  0000 C CNN
+F 2 "" H 4035 4940 50  0001 C CNN
+F 3 "" H 4035 4940 50  0001 C CNN
+	1    4035 4940
 	-1   0    0    -1  
 $EndComp
+Text Notes 1535 3375 0    50   ~ 0
+Solenoid Driver
+Text Notes 6895 4455 0    50   ~ 0
+5V 50% PWM
+Text Notes 8220 3675 0    50   ~ 0
+Do we need a flyback?
+$Comp
+L Device:L L?
+U 1 1 5DACCB29
+P 1915 3945
+F 0 "L?" H 1968 3991 50  0000 L CNN
+F 1 "L" H 1968 3900 50  0000 L CNN
+F 2 "" H 1915 3945 50  0001 C CNN
+F 3 "~" H 1915 3945 50  0001 C CNN
+	1    1915 3945
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5DACCE11
+P 1595 3945
+F 0 "D?" V 1549 4024 50  0000 L CNN
+F 1 "D" V 1640 4024 50  0000 L CNN
+F 2 "" H 1595 3945 50  0001 C CNN
+F 3 "~" H 1595 3945 50  0001 C CNN
+	1    1595 3945
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1915 3795 1595 3795
+Wire Wire Line
+	1595 4095 1915 4095
+Connection ~ 1915 3795
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DACEC22
+P 5140 3240
+F 0 "#PWR?" H 5140 3090 50  0001 C CNN
+F 1 "+3V3" H 5155 3413 50  0000 C CNN
+F 2 "" H 5140 3240 50  0001 C CNN
+F 3 "" H 5140 3240 50  0001 C CNN
+	1    5140 3240
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1170 4410 1315 4410
+$Comp
+L power:+12V #PWR?
+U 1 1 5DACF811
+P 1915 3690
+F 0 "#PWR?" H 1915 3540 50  0001 C CNN
+F 1 "+12V" H 1930 3863 50  0000 C CNN
+F 2 "" H 1915 3690 50  0001 C CNN
+F 3 "" H 1915 3690 50  0001 C CNN
+	1    1915 3690
+	1    0    0    -1  
+$EndComp
+Text Notes 2080 4025 0    50   ~ 0
+Solenoid\nValve
+Text GLabel 1170 4410 0    50   Input ~ 0
+PWM1
+Wire Wire Line
+	1915 3690 1915 3795
+$Comp
+L Transistor_BJT:2N2219 Q?
+U 1 1 5DAD2A09
+P 1815 4410
+F 0 "Q?" H 2006 4456 50  0000 L CNN
+F 1 "2N2219" H 2006 4365 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 2015 4335 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 1815 4410 50  0001 L CNN
+	1    1815 4410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1915 4210 1915 4095
+Connection ~ 1915 4095
+$Comp
+L Device:R R?
+U 1 1 5DAD3EB1
+P 1465 4410
+F 0 "R?" V 1258 4410 50  0000 C CNN
+F 1 "1k" V 1349 4410 50  0000 C CNN
+F 2 "" V 1395 4410 50  0001 C CNN
+F 3 "~" H 1465 4410 50  0001 C CNN
+	1    1465 4410
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DAD49EC
+P 1915 4675
+F 0 "#PWR?" H 1915 4425 50  0001 C CNN
+F 1 "GNDREF" H 1920 4502 50  0001 C CNN
+F 2 "" H 1915 4675 50  0001 C CNN
+F 3 "" H 1915 4675 50  0001 C CNN
+	1    1915 4675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1915 4610 1915 4675
 $EndSCHEMATC

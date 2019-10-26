@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 3)
+    (drawings 4)
     (tracks 0)
     (zones 0)
     (modules 17)
@@ -1106,6 +1106,7 @@
       (net 100 "Net-(XA1-PadMISO)"))
   )
 
+  (gr_poly (pts (xy 220.345 101.6) (xy 220.345 71.12) (xy 245.745 71.12) (xy 245.745 101.6)) (layer Cmts.User) (width 0.15))
   (gr_line (start 129.0828 118.5545) (end 129.0828 118.5418) (layer Edge.Cuts) (width 0.05) (tstamp 5DA17BF1))
   (gr_line (start 129.0828 118.5799) (end 129.0828 118.5545) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 129.0828 64.7065) (end 129.1336 64.6557) (layer Edge.Cuts) (width 0.05))

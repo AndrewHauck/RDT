@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -154,9 +154,7 @@ $EndComp
 Text Notes 3585 700  0    50   ~ 0
 Pressure Transducers
 Wire Wire Line
-	8440 4785 8660 4785
-Wire Wire Line
-	8125 4585 8660 4585
+	8125 4585 8440 4585
 $Comp
 L Connector:Barrel_Jack J6
 U 1 1 5DAB74DD
@@ -165,7 +163,7 @@ AR Path="/5DAB74DD" Ref="J6"  Part="1"
 AR Path="/5D9BEB88/5DAB74DD" Ref="J?"  Part="1" 
 F 0 "J6" H 8730 4643 50  0000 R CNN
 F 1 "IgnitionCoil" H 8730 4734 50  0000 R CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 9010 4645 50  0001 C CNN
+F 2 "Connector:Banana_Jack_2Pin" H 9010 4645 50  0001 C CNN
 F 3 "~" H 9010 4645 50  0001 C CNN
 	1    8960 4685
 	-1   0    0    1   
@@ -174,8 +172,6 @@ Text Notes 7670 4995 0    50   ~ 0
 Vf = 2.2V\n
 Wire Wire Line
 	8125 5270 8125 5240
-Wire Wire Line
-	8440 4785 8440 5380
 Wire Wire Line
 	8125 4940 8125 4885
 Connection ~ 8125 4585
@@ -572,8 +568,6 @@ Text Notes 2475 2295 0    50   ~ 0
 Solenoid Drivers
 Text Notes 7095 5530 0    50   ~ 0
 5V 50% PWM
-Text Notes 8520 4935 0    50   ~ 0
-Do we need a flyback?
 $Comp
 L Device:L L1
 U 1 1 5DACCB29
@@ -638,7 +632,7 @@ U 1 1 5DAD3EB1
 P 1360 3310
 F 0 "R4" V 1153 3310 50  0000 C CNN
 F 1 "1k" V 1244 3310 50  0000 C CNN
-F 2 "" V 1290 3310 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1290 3310 50  0001 C CNN
 F 3 "~" H 1360 3310 50  0001 C CNN
 	1    1360 3310
 	0    1    1    0   
@@ -738,9 +732,6 @@ Wire Notes Line
 	7390 845  7390 3510
 Wire Notes Line
 	7390 850  10055 850 
-Connection ~ 8660 4585
-Wire Wire Line
-	8660 4585 8900 4585
 Text Notes 3655 2105 0    50   ~ 0
 Draw: 24mA
 Text Notes 5240 2075 0    50   ~ 0
@@ -798,7 +789,7 @@ U 1 1 5DAEE719
 P 1355 4785
 F 0 "R7" V 1148 4785 50  0000 C CNN
 F 1 "1k" V 1239 4785 50  0000 C CNN
-F 2 "" V 1285 4785 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1285 4785 50  0001 C CNN
 F 3 "~" H 1355 4785 50  0001 C CNN
 	1    1355 4785
 	0    1    1    0   
@@ -869,7 +860,7 @@ U 1 1 5DAEF463
 P 3470 3340
 F 0 "R9" V 3263 3340 50  0000 C CNN
 F 1 "1k" V 3354 3340 50  0000 C CNN
-F 2 "" V 3400 3340 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3400 3340 50  0001 C CNN
 F 3 "~" H 3470 3340 50  0001 C CNN
 	1    3470 3340
 	0    1    1    0   
@@ -942,7 +933,7 @@ U 1 1 5DAEF492
 P 3465 4815
 F 0 "R8" V 3258 4815 50  0000 C CNN
 F 1 "1k" V 3349 4815 50  0000 C CNN
-F 2 "" V 3395 4815 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3395 4815 50  0001 C CNN
 F 3 "~" H 3465 4815 50  0001 C CNN
 	1    3465 4815
 	0    1    1    0   
@@ -1081,7 +1072,7 @@ U 1 1 5DAE9029
 P 1330 6335
 F 0 "R11" V 1123 6335 50  0000 C CNN
 F 1 "1k" V 1214 6335 50  0000 C CNN
-F 2 "" V 1260 6335 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 1260 6335 50  0001 C CNN
 F 3 "~" H 1330 6335 50  0001 C CNN
 	1    1330 6335
 	0    1    1    0   
@@ -1124,4 +1115,38 @@ Wire Notes Line
 	4955 6795 4955 5325
 Wire Notes Line
 	595  2325 595  6795
+$Comp
+L Connector:SD_Card J7
+U 1 1 5DB27E46
+P 6130 2985
+F 0 "J7" H 6130 3650 50  0000 C CNN
+F 1 "SD_Card" H 6130 3559 50  0000 C CNN
+F 2 "" H 6130 2985 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 6130 2985 50  0001 C CNN
+	1    6130 2985
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D9
+U 1 1 5DB2A47F
+P 8440 4735
+F 0 "D9" V 8394 4814 50  0000 L CNN
+F 1 "D" V 8485 4814 50  0000 L CNN
+F 2 "" H 8440 4735 50  0001 C CNN
+F 3 "~" H 8440 4735 50  0001 C CNN
+	1    8440 4735
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8440 4885 8440 4890
+Wire Wire Line
+	8440 4890 8660 4890
+Wire Wire Line
+	8660 4890 8660 4785
+Connection ~ 8440 4890
+Wire Wire Line
+	8440 4890 8440 5380
+Wire Wire Line
+	8660 4585 8440 4585
+Connection ~ 8440 4585
 $EndSCHEMATC

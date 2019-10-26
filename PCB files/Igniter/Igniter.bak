@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -163,7 +163,7 @@ AR Path="/5DAB74DD" Ref="J6"  Part="1"
 AR Path="/5D9BEB88/5DAB74DD" Ref="J?"  Part="1" 
 F 0 "J6" H 8730 4643 50  0000 R CNN
 F 1 "IgnitionCoil" H 8730 4734 50  0000 R CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 9010 4645 50  0001 C CNN
+F 2 "Connector:Banana_Jack_2Pin" H 9010 4645 50  0001 C CNN
 F 3 "~" H 9010 4645 50  0001 C CNN
 	1    8960 4685
 	-1   0    0    1   
@@ -959,10 +959,6 @@ Text GLabel 8595 1910 0    50   Input ~ 0
 SOL3
 Text GLabel 8595 2210 0    50   Input ~ 0
 SOL4
-Wire Notes Line
-	595  2325 4955 2325
-Wire Notes Line
-	4955 2325 4955 5315
 Text Notes 6690 7725 0    50   ~ 0
 Igniter Arduino Shield
 Text Notes 2025 2530 0    50   ~ 0
@@ -1109,12 +1105,6 @@ Text Notes 2170 7745 0    50   ~ 0
 NEED:\n-SD card connection
 Text Notes 7365 3640 0    50   ~ 0
 -Find elegoo 2560 footprint and symbol
-Wire Notes Line
-	595  6795 4955 6795
-Wire Notes Line
-	4955 6795 4955 5325
-Wire Notes Line
-	595  2325 595  6795
 $Comp
 L Connector:SD_Card J7
 U 1 1 5DB27E46
@@ -1149,4 +1139,23 @@ Wire Wire Line
 Wire Wire Line
 	8660 4585 8440 4585
 Connection ~ 8440 4585
+$Comp
+L arduino:Arduino_Mega2560_Shield XA?
+U 1 1 5DB49E1D
+P 12640 4335
+F 0 "XA?" H 12640 1955 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 12640 1849 60  0000 C CNN
+F 2 "" H 13340 7085 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 13340 7085 60  0001 C CNN
+	1    12640 4335
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4455 2320 595  2320
+Wire Notes Line
+	595  2320 595  6795
+Wire Notes Line
+	4455 2320 4455 6795
+Wire Notes Line
+	595  6790 4455 6790
 $EndSCHEMATC

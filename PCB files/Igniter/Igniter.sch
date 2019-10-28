@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -524,7 +524,7 @@ Wire Wire Line
 	9470 4720 8930 4720
 Connection ~ 8930 4720
 $Comp
-L arduino:Arduino_Mega2560_Shield XA1
+L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
 U 1 1 5DB49E1D
 P 5045 4260
 F 0 "XA1" H 5045 1880 60  0000 C CNN
@@ -655,7 +655,7 @@ Wire Wire Line
 Connection ~ 8930 5070
 Wire Wire Line
 	8930 5070 8930 5515
-Text Notes 9105 4840 0    50   ~ 0
+Text Notes 9095 4930 0    157  ~ 31
 *
 $Comp
 L Connector:Conn_01x08_Male J7
@@ -696,7 +696,7 @@ $Comp
 L Mechanical:MountingHole MH4
 U 1 1 5DB4BEEA
 P 2015 1740
-F 0 "MH4" H 1915 1740 50  0000 R CNN
+F 0 "MH4" H 1915 1740 50  0001 R CNN
 F 1 "MountingHole" H 2115 1695 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 2015 1740 50  0001 C CNN
 F 3 "~" H 2015 1740 50  0001 C CNN
@@ -752,4 +752,72 @@ F 3 "" H 2975 2110 50  0001 C CNN
 	1    2975 2110
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DB69B91
+P 1805 1730
+F 0 "#PWR?" H 1805 1580 50  0001 C CNN
+F 1 "+5V" H 1820 1903 50  0000 C CNN
+F 2 "" H 1805 1730 50  0001 C CNN
+F 3 "" H 1805 1730 50  0001 C CNN
+	1    1805 1730
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1505 1630
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DB6CE1B
+P 1660 1530
+F 0 "#PWR?" H 1660 1280 50  0001 C CNN
+F 1 "GNDREF" H 1665 1357 50  0001 C CNN
+F 2 "" H 1660 1530 50  0001 C CNN
+F 3 "" H 1660 1530 50  0001 C CNN
+	1    1660 1530
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1660 1530 1505 1530
+Wire Wire Line
+	1505 1730 1805 1730
+NoConn ~ 1505 1030
+Text GLabel 4995 1660 1    50   Input ~ 0
+CLK
+Text GLabel 1505 1430 2    50   Input ~ 0
+CLK
+Text GLabel 1505 1330 2    50   Input ~ 0
+DO
+Text GLabel 1505 1230 2    50   Input ~ 0
+DI
+Text GLabel 1505 1130 2    50   Input ~ 0
+CS
+Text GLabel 6345 6410 2    50   Input ~ 0
+CS
+Text GLabel 4895 1660 1    50   Input ~ 0
+DI
+Text GLabel 4795 1660 1    50   Input ~ 0
+DO
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DB796A8
+P 5265 1485
+F 0 "#PWR?" H 5265 1235 50  0001 C CNN
+F 1 "GNDREF" H 5270 1312 50  0001 C CNN
+F 2 "" H 5265 1485 50  0001 C CNN
+F 3 "" H 5265 1485 50  0001 C CNN
+	1    5265 1485
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5195 1660 5195 1485
+Wire Wire Line
+	5195 1485 5265 1485
+NoConn ~ 3745 5010
+Wire Wire Line
+	3745 6310 3745 6210
+Wire Wire Line
+	3745 6110 3745 6210
+Connection ~ 3745 6110
+Connection ~ 3745 6210
+NoConn ~ 3745 6010
+NoConn ~ 6345 2710
 $EndSCHEMATC

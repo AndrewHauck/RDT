@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -303,8 +303,6 @@ F 3 "" H 7275 4570 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7275 4505 7275 4570
-Text Notes 5385 2020 0    50   ~ 0
-MOSFETs:\n24V, 0.4A, about 10W dissipated by solenoid\n
 $Comp
 L Device:Q_NMOS_GDS Q?
 U 1 1 5DB4DFB4

@@ -819,4 +819,5 @@ Wire Wire Line
 Connection ~ 3745 6110
 Connection ~ 3745 6210
 NoConn ~ 3745 6010
+NoConn ~ 6345 2710
 $EndSCHEMATC

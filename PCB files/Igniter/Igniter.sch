@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -599,7 +599,7 @@ U 1 1 5DB57AA9
 P 9115 1205
 F 0 "F1" H 9175 1251 50  0000 L CNN
 F 1 "Fuse" H 9175 1160 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9045 1205 50  0001 C CNN
+F 2 "IgniterCustom:FuseHolder" V 9045 1205 50  0001 C CNN
 F 3 "~" H 9115 1205 50  0001 C CNN
 	1    9115 1205
 	1    0    0    -1  

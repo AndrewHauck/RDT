@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -379,7 +379,7 @@ AR Path="/5D9BEB88/5DAB7515" Ref="Q?"  Part="1"
 AR Path="/5DAB7515" Ref="Q1"  Part="1" 
 F 0 "Q1" H 8991 5686 50  0001 L CNN
 F 1 "N MOSFET" H 8991 5640 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 8985 5740 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin2" H 8985 5740 50  0001 C CNN
 F 3 "~" H 8785 5640 50  0001 C CNN
 	1    8785 5640
 	1    0    0    -1  
@@ -542,45 +542,45 @@ Text Notes 795  1645 0    49   ~ 0
 $Comp
 L Mechanical:MountingHole MH2
 U 1 1 5DB4BD1A
-P 760 815
-F 0 "MH2" H 860 815 50  0000 L CNN
-F 1 "MountingHole" H 860 770 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 760 815 50  0001 C CNN
-F 3 "~" H 760 815 50  0001 C CNN
-	1    760  815 
+P 3230 805
+F 0 "MH2" H 3330 805 50  0000 L CNN
+F 1 "MountingHole" H 3330 760 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 3230 805 50  0001 C CNN
+F 3 "~" H 3230 805 50  0001 C CNN
+	1    3230 805 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole MH3
 U 1 1 5DB4BE36
-P 755 1735
-F 0 "MH3" H 855 1735 50  0000 L CNN
-F 1 "MountingHole" H 855 1690 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 755 1735 50  0001 C CNN
-F 3 "~" H 755 1735 50  0001 C CNN
-	1    755  1735
+P 3225 990
+F 0 "MH3" H 3325 990 50  0000 L CNN
+F 1 "MountingHole" H 3325 945 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 3225 990 50  0001 C CNN
+F 3 "~" H 3225 990 50  0001 C CNN
+	1    3225 990 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole MH4
 U 1 1 5DB4BEEA
-P 2015 1740
-F 0 "MH4" H 1915 1740 50  0001 R CNN
-F 1 "MountingHole" H 2115 1695 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2015 1740 50  0001 C CNN
-F 3 "~" H 2015 1740 50  0001 C CNN
-	1    2015 1740
+P 3035 990
+F 0 "MH4" H 2935 990 50  0000 R CNN
+F 1 "MountingHole" H 3135 945 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 3035 990 50  0001 C CNN
+F 3 "~" H 3035 990 50  0001 C CNN
+	1    3035 990 
 	1    0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole MH1
 U 1 1 5DB4BFCA
-P 2000 810
-F 0 "MH1" V 2000 550 50  0000 L CNN
-F 1 "MountingHole" H 2100 765 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2000 810 50  0001 C CNN
-F 3 "~" H 2000 810 50  0001 C CNN
-	1    2000 810 
+P 3035 810
+F 0 "MH1" V 3035 550 50  0000 L CNN
+F 1 "MountingHole" H 3135 765 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 3035 810 50  0001 C CNN
+F 3 "~" H 3035 810 50  0001 C CNN
+	1    3035 810 
 	0    1    -1   0   
 $EndComp
 Text Notes 1090 685  0    50   ~ 0
@@ -599,7 +599,7 @@ U 1 1 5DB57AA9
 P 9115 1205
 F 0 "F1" H 9175 1251 50  0000 L CNN
 F 1 "Fuse" H 9175 1160 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9045 1205 50  0001 C CNN
+F 2 "IgniterCustom:FuseHolder" V 9045 1205 50  0001 C CNN
 F 3 "~" H 9115 1205 50  0001 C CNN
 	1    9115 1205
 	1    0    0    -1  

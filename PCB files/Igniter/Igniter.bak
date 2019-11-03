@@ -25,7 +25,7 @@ U 1 1 5D9DC3E6
 P 1475 3240
 F 0 "J3" H 1367 2915 50  0000 C CNN
 F 1 "PT2" H 1367 3006 50  0000 C CNN
-F 2 "" H 1475 3240 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 1475 3240 50  0001 C CNN
 F 3 "~" H 1475 3240 50  0001 C CNN
 	1    1475 3240
 	-1   0    0    1   
@@ -36,7 +36,7 @@ U 1 1 5DA6174F
 P 1240 3245
 F 0 "J4" H 1132 2920 50  0000 C CNN
 F 1 "PT1" H 1132 3011 50  0000 C CNN
-F 2 "" H 1240 3245 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 1240 3245 50  0001 C CNN
 F 3 "~" H 1240 3245 50  0001 C CNN
 	1    1240 3245
 	1    0    0    1   
@@ -47,7 +47,7 @@ U 1 1 5DA617F3
 P 1510 3860
 F 0 "J6" H 1402 3535 50  0000 C CNN
 F 1 "PT4" H 1402 3626 50  0000 C CNN
-F 2 "" H 1510 3860 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 1510 3860 50  0001 C CNN
 F 3 "~" H 1510 3860 50  0001 C CNN
 	1    1510 3860
 	-1   0    0    1   
@@ -58,7 +58,7 @@ U 1 1 5DA6183F
 P 1245 3860
 F 0 "J5" H 1137 3535 50  0000 C CNN
 F 1 "PT3" H 1137 3626 50  0000 C CNN
-F 2 "" H 1245 3860 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 1245 3860 50  0001 C CNN
 F 3 "~" H 1245 3860 50  0001 C CNN
 	1    1245 3860
 	1    0    0    1   
@@ -140,7 +140,7 @@ AR Path="/5D9BEB88/5DAB751B" Ref="R?"  Part="1"
 AR Path="/5DAB751B" Ref="R6"  Part="1" 
 F 0 "R6" V 8463 6140 50  0001 C CNN
 F 1 "10k" V 8555 6140 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 8600 6140 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 8600 6140 50  0001 C CNN
 F 3 "~" H 8670 6140 50  0001 C CNN
 	1    8670 6140
 	0    1    1    0   
@@ -153,7 +153,7 @@ AR Path="/5D9BEB88/5DAB7521" Ref="R?"  Part="1"
 AR Path="/5DAB7521" Ref="R5"  Part="1" 
 F 0 "R5" V 8088 5640 50  0001 C CNN
 F 1 "1k" V 8180 5640 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 8225 5640 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 8225 5640 50  0001 C CNN
 F 3 "~" H 8295 5640 50  0001 C CNN
 	1    8295 5640
 	0    1    1    0   
@@ -283,7 +283,7 @@ AR Path="/5D9BEB88/5DAC3984" Ref="R?"  Part="1"
 AR Path="/5DAC3984" Ref="R3"  Part="1" 
 F 0 "R3" V 8988 2565 50  0001 C CNN
 F 1 "300" V 9080 2565 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9125 2565 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9125 2565 50  0001 C CNN
 F 3 "~" H 9195 2565 50  0001 C CNN
 	1    9195 2565
 	-1   0    0    1   
@@ -309,7 +309,7 @@ AR Path="/5D9BEB88/5DAC3A5E" Ref="R?"  Part="1"
 AR Path="/5DAC3A5E" Ref="R4"  Part="1" 
 F 0 "R4" V 9643 2570 50  0001 C CNN
 F 1 "1200" V 9735 2570 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9780 2570 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 9780 2570 50  0001 C CNN
 F 3 "~" H 9850 2570 50  0001 C CNN
 	1    9850 2570
 	-1   0    0    1   
@@ -448,7 +448,7 @@ AR Path="/5D9BEB88/5DB51A4D" Ref="R?"  Part="1"
 AR Path="/5DB51A4D" Ref="R2"  Part="1" 
 F 0 "R2" V 3308 2260 50  0001 C CNN
 F 1 "300" V 3510 2260 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3445 2260 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 3445 2260 50  0001 C CNN
 F 3 "~" H 3515 2260 50  0001 C CNN
 	1    3515 2260
 	-1   0    0    1   
@@ -708,7 +708,7 @@ AR Path="/5D9BEB88/5DBA787B" Ref="R?"  Part="1"
 AR Path="/5DBA787B" Ref="R1"  Part="1" 
 F 0 "R1" V 2698 2260 50  0001 C CNN
 F 1 "10k" V 2900 2260 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2835 2260 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" V 2835 2260 50  0001 C CNN
 F 3 "~" H 2905 2260 50  0001 C CNN
 	1    2905 2260
 	-1   0    0    1   
@@ -820,4 +820,6 @@ Wire Notes Line
 	8750 1635 10205 1635
 Text Notes 8235 5495 0    157  ~ 0
 ?
+Text Notes 2705 680  0    50   ~ 0
+Board Corner Standoffs
 $EndSCHEMATC

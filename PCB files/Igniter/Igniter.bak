@@ -822,4 +822,6 @@ Text Notes 8235 5495 0    157  ~ 0
 ?
 Text Notes 2705 680  0    50   ~ 0
 Board Corner Standoffs
+Text Notes 2385 1850 0    50   ~ 0
+Remove this and do software control
 $EndSCHEMATC

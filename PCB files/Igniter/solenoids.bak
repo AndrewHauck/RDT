@@ -22,10 +22,10 @@ $EndDescr
 Text Notes 5775 2255 0    50   ~ 0
 Solenoid Drivers
 $Comp
-L Device:L L2
+L Device:L L1
 U 1 1 5DB4DF08
 P 4360 2815
-F 0 "L2" H 4413 2861 50  0000 L CNN
+F 0 "L1" H 4413 2861 50  0000 L CNN
 F 1 "L" H 4413 2770 50  0000 L CNN
 F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 4360 2815 50  0001 C CNN
 F 3 "~" H 4360 2815 50  0001 C CNN
@@ -71,10 +71,10 @@ $EndComp
 Wire Wire Line
 	4360 3480 4360 3545
 $Comp
-L Device:L L4
+L Device:L L3
 U 1 1 5DB4DF33
 P 4355 4290
-F 0 "L4" H 4408 4336 50  0000 L CNN
+F 0 "L3" H 4408 4336 50  0000 L CNN
 F 1 "L" H 4408 4245 50  0000 L CNN
 F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 4355 4290 50  0001 C CNN
 F 3 "~" H 4355 4290 50  0001 C CNN
@@ -120,10 +120,10 @@ $EndComp
 Wire Wire Line
 	4355 4955 4355 5020
 $Comp
-L Device:L L3
+L Device:L L2
 U 1 1 5DB4DF5E
 P 6020 2815
-F 0 "L3" H 6073 2861 50  0000 L CNN
+F 0 "L2" H 6073 2861 50  0000 L CNN
 F 1 "L" H 6073 2770 50  0000 L CNN
 F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 6020 2815 50  0001 C CNN
 F 3 "~" H 6020 2815 50  0001 C CNN
@@ -167,10 +167,10 @@ $EndComp
 Wire Wire Line
 	6020 3480 6020 3545
 $Comp
-L Device:L L5
+L Device:L L4
 U 1 1 5DB4DF88
 P 6015 4290
-F 0 "L5" H 6068 4336 50  0000 L CNN
+F 0 "L4" H 6068 4336 50  0000 L CNN
 F 1 "L" H 6068 4245 50  0000 L CNN
 F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 6015 4290 50  0001 C CNN
 F 3 "~" H 6015 4290 50  0001 C CNN
@@ -272,10 +272,10 @@ F 3 "~" H 4255 4755 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L1
+L Device:L L5
 U 1 1 5DB4DFCC
 P 7715 2800
-F 0 "L1" H 7768 2846 50  0000 L CNN
+F 0 "L5" H 7768 2846 50  0000 L CNN
 F 1 "L" H 7768 2755 50  0000 L CNN
 F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical" H 7715 2800 50  0001 C CNN
 F 3 "~" H 7715 2800 50  0001 C CNN

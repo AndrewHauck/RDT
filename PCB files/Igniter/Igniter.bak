@@ -665,10 +665,10 @@ Board Corner Standoffs
 Text Notes 3425 610  0    79   ~ 0
 Make unused pins available from the top of shield
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR04
 U 1 1 5DC4F427
 P 3235 6000
-F 0 "#PWR?" H 3235 5850 50  0001 C CNN
+F 0 "#PWR04" H 3235 5850 50  0001 C CNN
 F 1 "+3V3" H 3235 6140 50  0000 C CNN
 F 2 "" H 3235 6000 50  0001 C CNN
 F 3 "" H 3235 6000 50  0001 C CNN

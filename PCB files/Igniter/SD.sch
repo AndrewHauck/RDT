@@ -1,0 +1,155 @@
+EESchema Schematic File Version 4
+LIBS:power
+LIBS:device
+LIBS:74xx
+LIBS:audio
+LIBS:interface
+LIBS:Igniter-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DC66520
+P 5340 3355
+AR Path="/5DC66520" Ref="#PWR?"  Part="1" 
+AR Path="/5DC64D13/5DC66520" Ref="#PWR010"  Part="1" 
+F 0 "#PWR010" H 5340 3205 50  0001 C CNN
+F 1 "+3V3" H 5340 3495 50  0000 C CNN
+F 2 "" H 5340 3355 50  0001 C CNN
+F 3 "" H 5340 3355 50  0001 C CNN
+	1    5340 3355
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 7400-ic:74HC4050 IC1
+U 1 1 5DC6652F
+P 4115 3865
+F 0 "IC1" H 4115 4602 60  0000 C CNN
+F 1 "74HC4050" H 4115 4496 60  0000 C CNN
+F 2 "" H 4015 3865 60  0001 C CNN
+F 3 "" H 4065 3865 60  0001 C CNN
+	1    4115 3865
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR06
+U 1 1 5DC66536
+P 3715 3615
+F 0 "#PWR06" H 3715 3365 50  0001 C CNN
+F 1 "GNDREF" H 3720 3442 50  0001 C CNN
+F 2 "" H 3715 3615 50  0001 C CNN
+F 3 "" H 3715 3615 50  0001 C CNN
+	1    3715 3615
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR05
+U 1 1 5DC6653C
+P 3715 3415
+F 0 "#PWR05" H 3715 3265 50  0001 C CNN
+F 1 "+3V3" H 3715 3555 50  0000 C CNN
+F 2 "" H 3715 3415 50  0001 C CNN
+F 3 "" H 3715 3415 50  0001 C CNN
+	1    3715 3415
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DC66546
+P 5340 4390
+AR Path="/5DC66546" Ref="#PWR?"  Part="1" 
+AR Path="/5DC64D13/5DC66546" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 5340 4140 50  0001 C CNN
+F 1 "GNDREF" H 5345 4217 50  0001 C CNN
+F 2 "" H 5340 4390 50  0001 C CNN
+F 3 "" H 5340 4390 50  0001 C CNN
+	1    5340 4390
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Micro_SD_Card J1
+U 1 1 5DC67EC9
+P 6385 3750
+F 0 "J1" H 6335 2933 50  0000 C CNN
+F 1 "Micro_SD_Card" H 6335 3024 50  0000 C CNN
+F 2 "" H 7535 4050 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 6385 3750 50  0001 C CNN
+	1    6385 3750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5485 4150
+NoConn ~ 5485 3450
+NoConn ~ 4515 4315
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DC6A1C2
+P 3715 4315
+AR Path="/5DC6A1C2" Ref="#PWR?"  Part="1" 
+AR Path="/5DC64D13/5DC6A1C2" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 3715 4065 50  0001 C CNN
+F 1 "GNDREF" H 3720 4142 50  0001 C CNN
+F 2 "" H 3715 4315 50  0001 C CNN
+F 3 "" H 3715 4315 50  0001 C CNN
+	1    3715 4315
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4515 4015 4890 4015
+Wire Wire Line
+	4890 4015 4890 3550
+Wire Wire Line
+	4890 3550 5485 3550
+Wire Wire Line
+	4515 3815 4750 3815
+Wire Wire Line
+	4515 3915 4945 3915
+Wire Wire Line
+	4945 3915 4945 3650
+Wire Wire Line
+	4945 3650 5485 3650
+NoConn ~ 4515 4215
+Wire Wire Line
+	3715 4215 3715 4315
+Connection ~ 3715 4315
+Wire Wire Line
+	4515 4115 5285 4115
+Text HLabel 3715 3815 0    50   Input ~ 0
+CLK
+Text HLabel 3715 3915 0    50   Input ~ 0
+DI
+Text HLabel 3715 4015 0    50   Input ~ 0
+CS
+Text HLabel 3715 4115 0    50   Input ~ 0
+DO
+Text Notes 2970 3390 0    50   ~ 0
+10's of mA draw?
+Wire Wire Line
+	5485 3750 5340 3750
+Wire Wire Line
+	5340 3750 5340 3355
+Wire Wire Line
+	5485 3950 5340 3950
+Wire Wire Line
+	5340 3950 5340 4390
+Wire Wire Line
+	5285 4115 5285 4050
+Wire Wire Line
+	5285 4050 5485 4050
+Wire Wire Line
+	5485 3850 4750 3850
+Wire Wire Line
+	4750 3850 4750 3815
+NoConn ~ 7185 4350
+$EndSCHEMATC

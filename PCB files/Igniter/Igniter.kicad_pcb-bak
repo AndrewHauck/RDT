@@ -2092,7 +2092,7 @@
   )
 
   (module Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS (layer F.Cu) (tedit 5A1DBFB5) (tstamp 5DD25C6F)
-    (at 222.7072 119.7864 90)
+    (at 225.3488 119.3546 90)
     (descr "Micro SD, SMD, reverse on-board, right-angle, push-pull (https://www.hirose.com/product/en/download_file/key_name/DM3BT-DSF-PEJS/category/Drawing%20(2D)/doc_file_id/44097/?file_category_id=6&item_id=06090029900&is_series=)")
     (tags "Micro SD")
     (path /5DC64D13/5DC67EC9)

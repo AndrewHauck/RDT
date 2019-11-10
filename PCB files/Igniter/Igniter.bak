@@ -120,29 +120,29 @@ F 3 "" H 1805 5790 50  0001 C CNN
 $EndComp
 Text Notes 1740 4650 0    50   ~ 0
 Pressure Transducers
-Connection ~ 9075 6200
+Connection ~ 8735 5940
 Wire Wire Line
-	9075 6200 9075 6295
+	8735 5940 8735 6035
 Wire Wire Line
-	8685 5700 8775 5700
-Connection ~ 8685 5700
+	8345 5440 8435 5440
+Connection ~ 8345 5440
 Wire Wire Line
-	8685 6200 8685 5700
+	8345 5940 8345 5440
 Wire Wire Line
-	8710 6200 8685 6200
+	8370 5940 8345 5940
 Wire Wire Line
-	9075 6200 9010 6200
+	8735 5940 8670 5940
 $Comp
 L Device:R R?
 U 1 1 5DAB751B
-P 8860 6200
+P 8520 5940
 AR Path="/5D9BEB88/5DAB751B" Ref="R?"  Part="1" 
 AR Path="/5DAB751B" Ref="R6"  Part="1" 
-F 0 "R6" V 8653 6200 50  0001 C CNN
-F 1 "10k" V 8745 6200 50  0000 C CNN
-F 2 "Resistor_SMD:R_1210_3225Metric" V 8790 6200 50  0001 C CNN
-F 3 "~" H 8860 6200 50  0001 C CNN
-	1    8860 6200
+F 0 "R6" V 8313 5940 50  0001 C CNN
+F 1 "10k" V 8405 5940 50  0000 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric" V 8450 5940 50  0001 C CNN
+F 3 "~" H 8520 5940 50  0001 C CNN
+	1    8520 5940
 	0    1    1    0   
 $EndComp
 $Comp
@@ -164,17 +164,17 @@ Wire Notes Line
 	10360 640  8905 640 
 Text Notes 9275 615  0    50   ~ 0
 24V battery connection
-Text GLabel 8570 5700 0    50   Input ~ 0
+Text GLabel 8230 5440 0    50   Input ~ 0
 IGNITE
 $Comp
 L power:GNDREF #PWR024
 U 1 1 5DABC8A2
-P 9075 6295
-F 0 "#PWR024" H 9075 6045 50  0001 C CNN
-F 1 "GNDREF" H 9080 6122 50  0000 C CNN
-F 2 "" H 9075 6295 50  0001 C CNN
-F 3 "" H 9075 6295 50  0001 C CNN
-	1    9075 6295
+P 8735 6035
+F 0 "#PWR024" H 8735 5785 50  0001 C CNN
+F 1 "GNDREF" H 8740 5862 50  0000 C CNN
+F 2 "" H 8735 6035 50  0001 C CNN
+F 3 "" H 8735 6035 50  0001 C CNN
+	1    8735 6035
 	1    0    0    -1  
 $EndComp
 Text GLabel 1800 5075 0    50   Input ~ 0
@@ -287,27 +287,27 @@ F 3 "" H 1965 1720 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	2890 1935 2890 725 
-Text Notes 8805 4390 0    50   ~ 0
+Text Notes 8465 4130 0    50   ~ 0
 Igniter Driver
 $Comp
 L Device:Q_NMOS_GDS Q?
 U 1 1 5DAB7515
-P 8975 5700
+P 8635 5440
 AR Path="/5D9BEB88/5DAB7515" Ref="Q?"  Part="1" 
 AR Path="/5DAB7515" Ref="Q1"  Part="1" 
-F 0 "Q1" H 9181 5746 50  0001 L CNN
-F 1 "N MOSFET" H 9181 5700 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin2" H 9175 5800 50  0001 C CNN
-F 3 "~" H 8975 5700 50  0001 C CNN
-	1    8975 5700
+F 0 "Q1" H 8841 5486 50  0001 L CNN
+F 1 "N MOSFET" H 8841 5440 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin2" H 8835 5540 50  0001 C CNN
+F 3 "~" H 8635 5440 50  0001 C CNN
+	1    8635 5440
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9075 5900 9075 6200
+	8735 5640 8735 5940
 Wire Notes Line
-	9860 6610 9860 4425
+	9520 6350 9520 4165
 Wire Notes Line
-	8135 4435 8135 6620
+	7795 4175 7795 6360
 Text Notes 6690 7725 0    50   ~ 0
 Igniter Arduino Shield
 $Comp
@@ -458,14 +458,14 @@ Text Notes 9110 1055 0    50   ~ 0
 $Comp
 L Connector:Barrel_Jack J7
 U 1 1 5DAB74DD
-P 9375 4865
+P 9035 4605
 AR Path="/5DAB74DD" Ref="J7"  Part="1" 
 AR Path="/5D9BEB88/5DAB74DD" Ref="J?"  Part="1" 
-F 0 "J7" H 9145 4823 50  0000 R CNN
-F 1 "IgnitionCoil" H 9590 5065 50  0000 R CNN
-F 2 "Igniter:BananaJack15.5mm" H 9425 4825 50  0001 C CNN
-F 3 "~" H 9425 4825 50  0001 C CNN
-	1    9375 4865
+F 0 "J7" H 8805 4563 50  0000 R CNN
+F 1 "IgnitionCoil" H 9250 4805 50  0000 R CNN
+F 2 "Igniter:BananaJack15.5mm" H 9085 4565 50  0001 C CNN
+F 3 "~" H 9085 4565 50  0001 C CNN
+	1    9035 4605
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -493,12 +493,12 @@ $EndComp
 $Comp
 L power:+24V #PWR021
 U 1 1 5DBB7502
-P 9075 4705
-F 0 "#PWR021" H 9075 4555 50  0001 C CNN
-F 1 "+24V" H 9090 4878 50  0000 C CNN
-F 2 "" H 9075 4705 50  0001 C CNN
-F 3 "" H 9075 4705 50  0001 C CNN
-	1    9075 4705
+P 8735 4445
+F 0 "#PWR021" H 8735 4295 50  0001 C CNN
+F 1 "+24V" H 8750 4618 50  0000 C CNN
+F 2 "" H 8735 4445 50  0001 C CNN
+F 3 "" H 8735 4445 50  0001 C CNN
+	1    8735 4445
 	1    0    0    -1  
 $EndComp
 Text Notes 1810 6055 0    50   ~ 0
@@ -560,15 +560,15 @@ CS
 Text Notes 11115 2840 0    118  ~ 0
 Vcc 200mA max current draw for ATmega2560\n-Keep total current draw below this value\n-SD card powered by atmega 3V3 pin\n-Everything else powered by 5V regulator
 Wire Wire Line
-	9075 4965 9075 5500
+	8735 4705 8735 5240
 Wire Wire Line
-	9075 4765 9075 4705
+	8735 4505 8735 4445
 Wire Wire Line
-	8570 5700 8685 5700
+	8230 5440 8345 5440
 Wire Notes Line
-	8135 4435 9860 4435
+	7795 4175 9520 4175
 Wire Notes Line
-	8135 6610 9860 6610
+	7795 6350 9520 6350
 Text Notes 1885 3390 0    50   ~ 0
 5V regulator
 $Comp
@@ -828,7 +828,7 @@ F 3 "" H 7450 2650 50  0001 C CNN
 	1    7450 2650
 	-1   0    0    -1  
 $EndComp
-Text Notes 8670 1760 0    39   ~ 0
+Text Notes 8620 1675 0    39   ~ 0
 Solenoid indicators
 Wire Notes Line
 	865  1935 865  725 
@@ -1140,4 +1140,12 @@ Text GLabel 8030 3095 0    50   Input ~ 0
 SOL3
 Text GLabel 8030 2895 0    50   Input ~ 0
 SOL4
+Wire Notes Line
+	7280 1730 7280 3665
+Wire Notes Line
+	7280 3665 10420 3665
+Wire Notes Line
+	10420 3665 10420 1730
+Wire Notes Line
+	10420 1730 7280 1730
 $EndSCHEMATC

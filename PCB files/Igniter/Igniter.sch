@@ -287,7 +287,7 @@ F 3 "" H 1965 1720 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	2890 1935 2890 725 
-Text Notes 8465 4130 0    50   ~ 0
+Text Notes 8455 4145 0    50   ~ 0
 Igniter Driver
 $Comp
 L Device:Q_NMOS_GDS Q?
@@ -828,7 +828,7 @@ F 3 "" H 7450 2650 50  0001 C CNN
 	1    7450 2650
 	-1   0    0    -1  
 $EndComp
-Text Notes 8620 1675 0    39   ~ 0
+Text Notes 8500 1695 0    50   ~ 0
 Solenoid indicators
 Wire Notes Line
 	865  1935 865  725 

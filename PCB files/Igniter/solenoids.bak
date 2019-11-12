@@ -409,4 +409,6 @@ F 3 "~" H 6020 2815 50  0001 C CNN
 	1    6020 2815
 	1    0    0    -1  
 $EndComp
+Text Notes 6365 5730 0    50   ~ 0
+If these are fail open, we need an emergency stop\nbutton on the board aside from just using the 24V \npower switch as a stop switch
 $EndSCHEMATC

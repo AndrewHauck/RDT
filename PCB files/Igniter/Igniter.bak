@@ -1169,4 +1169,17 @@ Wire Wire Line
 	2400 3785 2400 3745
 Text Notes 11065 4645 0    50   ~ 0
 Disassembly:\n-Remove power to board FIRST\n-Then remove spark plug\nNEVER remove spark plug with energized primary
+$Comp
+L Igniter-rescue:BladeFuse U?
+U 1 1 5DCD7AF2
+P 7685 1210
+F 0 "U?" H 7685 1435 50  0000 C CNN
+F 1 "BladeFuse" H 7685 1344 50  0000 C CNN
+F 2 "" H 7685 1210 50  0001 C CNN
+F 3 "" H 7685 1210 50  0001 C CNN
+	1    7685 1210
+	1    0    0    -1  
+$EndComp
+Text Notes 11145 940  0    50   ~ 0
+Add manual switches for sequencing:\n-Switches to initiate:\nARM\nFIRE\nPURGE\n-Do not need this if we can do\nit with software
 $EndSCHEMATC

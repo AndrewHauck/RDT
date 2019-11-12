@@ -1182,4 +1182,6 @@ F 3 "" H 7685 1210 50  0001 C CNN
 $EndComp
 Text Notes 11090 1195 0    50   ~ 0
 Add manual switches for sequencing:\n-Switches to initiate:\nARM\nFIRE\nPURGE\n-Do not need this if we can do\nit with software
+Text Notes 7120 4890 0    50   ~ 0
+test
 $EndSCHEMATC

@@ -520,7 +520,7 @@ Wire Notes Line
 	8190 1715 9645 1715
 Text Notes 595  7525 0    50   ~ 0
 Board Corner Standoffs
-Text Notes 11090 2090 0    118  ~ 0
+Text Notes 11030 2770 0    118  ~ 0
 -Make unused pins available from the top of shield
 $Comp
 L power:+3V3 #PWR04
@@ -553,7 +553,7 @@ Text GLabel 1270 2390 0    50   Input ~ 0
 CLK
 Text GLabel 1270 2600 0    50   Input ~ 0
 CS
-Text Notes 11115 2840 0    118  ~ 0
+Text Notes 11055 3520 0    118  ~ 0
 Vcc 200mA max current draw for ATmega2560\n-Keep total current draw below this value\n-SD card powered by atmega 3V3 pin\n-Everything else powered by 5V regulator
 Wire Wire Line
 	8855 4730 8855 5265
@@ -730,9 +730,9 @@ Wire Wire Line
 Wire Wire Line
 	2485 3985 2595 3985
 Connection ~ 2485 3985
-Text Notes 11105 1860 0    118  ~ 0
+Text Notes 11045 2540 0    118  ~ 0
 -Board sits at test operator area
-Text Notes 11110 1585 0    118  ~ 24
+Text Notes 11050 2265 0    118  ~ 24
 NOTES
 $Comp
 L Device:LED D?
@@ -1180,6 +1180,6 @@ F 3 "" H 7685 1210 50  0001 C CNN
 	1    7685 1210
 	1    0    0    -1  
 $EndComp
-Text Notes 11145 940  0    50   ~ 0
+Text Notes 11090 1195 0    50   ~ 0
 Add manual switches for sequencing:\n-Switches to initiate:\nARM\nFIRE\nPURGE\n-Do not need this if we can do\nit with software
 $EndSCHEMATC

@@ -156,13 +156,7 @@ F 3 "~" H 9310 1470 50  0001 C CNN
 	1    9310 1470
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	8190 905  8190 1715
-Wire Notes Line
-	9645 1715 9645 905 
-Wire Notes Line
-	9645 905  8190 905 
-Text Notes 8560 880  0    50   ~ 0
+Text Notes 8470 620  0    50   ~ 0
 24V battery connection
 Text GLabel 8350 5465 0    50   Input ~ 0
 IGNITE
@@ -408,17 +402,6 @@ F 3 "~" H 925 7655 50  0001 C CNN
 	1    925  7655
 	0    1    -1   0   
 $EndComp
-$Comp
-L Device:Fuse F1
-U 1 1 5DB57AA9
-P 8555 1285
-F 0 "F1" H 8615 1331 50  0000 L CNN
-F 1 "Fuse" H 8615 1240 50  0000 L CNN
-F 2 "IgniterCustom:FuseHolder" V 8485 1285 50  0001 C CNN
-F 3 "~" H 8555 1285 50  0001 C CNN
-	1    8555 1285
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9110 1590 9110 1570
 Text GLabel 5215 1540 1    50   Input ~ 0
@@ -449,7 +432,7 @@ NoConn ~ 3965 5190
 NoConn ~ 3965 5090
 Wire Wire Line
 	9035 1470 9110 1470
-Text Notes 8395 1320 0    50   ~ 0
+Text Notes 8245 1220 0    50   ~ 0
 5A
 $Comp
 L Connector:Barrel_Jack J7
@@ -467,12 +450,12 @@ $EndComp
 $Comp
 L power:+24V #PWR01
 U 1 1 5DBB64EE
-P 8555 1135
-F 0 "#PWR01" H 8555 985 50  0001 C CNN
-F 1 "+24V" H 8570 1308 50  0000 C CNN
-F 2 "" H 8555 1135 50  0001 C CNN
-F 3 "" H 8555 1135 50  0001 C CNN
-	1    8555 1135
+P 8555 925
+F 0 "#PWR01" H 8555 775 50  0001 C CNN
+F 1 "+24V" H 8570 1098 50  0000 C CNN
+F 2 "" H 8555 925 50  0001 C CNN
+F 3 "" H 8555 925 50  0001 C CNN
+	1    8555 925 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -514,8 +497,6 @@ F 3 "~" H 8835 1470 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8555 1470 8635 1470
-Wire Wire Line
-	8555 1470 8555 1435
 Wire Notes Line
 	8190 1715 9645 1715
 Text Notes 595  7525 0    50   ~ 0
@@ -1169,17 +1150,47 @@ Wire Wire Line
 	2400 3785 2400 3745
 Text Notes 11065 4645 0    50   ~ 0
 Disassembly:\n-Remove power to board FIRST\n-Then remove spark plug\nNEVER remove spark plug with energized primary
-$Comp
-L Igniter-rescue:BladeFuse U?
-U 1 1 5DCD7AF2
-P 7685 1210
-F 0 "U?" H 7685 1435 50  0000 C CNN
-F 1 "BladeFuse" H 7685 1344 50  0000 C CNN
-F 2 "" H 7685 1210 50  0001 C CNN
-F 3 "" H 7685 1210 50  0001 C CNN
-	1    7685 1210
-	1    0    0    -1  
-$EndComp
 Text Notes 11090 1195 0    50   ~ 0
 Add manual switches for sequencing:\n-Switches to initiate:\nARM\nFIRE\nPURGE\n-Do not need this if we can do\nit with software
+$Comp
+L Igniter-rescue:BladeFuse F1
+U 1 1 5DCA7861
+P 8705 1175
+F 0 "F1" V 8659 1263 50  0000 L CNN
+F 1 "BladeFuse" V 8750 1263 50  0000 L CNN
+F 2 "IgniterCustom:FuseHolder" H 8705 1175 50  0001 C CNN
+F 3 "" H 8705 1175 50  0001 C CNN
+	1    8705 1175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8555 1425 8605 1425
+Wire Wire Line
+	8555 1425 8555 1470
+Wire Wire Line
+	8405 1425 8505 1425
+Wire Wire Line
+	8505 1425 8555 1425
+Connection ~ 8505 1425
+Connection ~ 8555 1425
+Wire Wire Line
+	8605 1425 8705 1425
+Connection ~ 8605 1425
+Wire Wire Line
+	8405 925  8505 925 
+Wire Wire Line
+	8505 925  8555 925 
+Connection ~ 8505 925 
+Wire Wire Line
+	8555 925  8605 925 
+Connection ~ 8555 925 
+Wire Wire Line
+	8605 925  8705 925 
+Connection ~ 8605 925 
+Wire Notes Line
+	8190 665  9645 665 
+Wire Notes Line
+	8190 665  8190 1715
+Wire Notes Line
+	9645 665  9645 1715
 $EndSCHEMATC

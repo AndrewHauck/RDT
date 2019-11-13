@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -33,7 +33,7 @@ F 3 "" H 5340 3355 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L 7400-ic:74HC4050 IC1
+L Igniter-rescue:74HC4050-7400-ic IC1
 U 1 1 5DC6652F
 P 4115 3900
 F 0 "IC1" H 4115 4637 60  0000 C CNN
@@ -79,7 +79,7 @@ F 3 "" H 5340 4390 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Micro_SD_Card J1
+L Igniter-rescue:Micro_SD_Card-Connector J1
 U 1 1 5DC67EC9
 P 6385 3750
 F 0 "J1" H 6335 2933 50  0000 C CNN

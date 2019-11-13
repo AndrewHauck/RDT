@@ -432,7 +432,7 @@ NoConn ~ 3965 5190
 NoConn ~ 3965 5090
 Wire Wire Line
 	9035 1470 9110 1470
-Text Notes 8245 1220 0    50   ~ 0
+Text Notes 8510 1205 0    50   ~ 0
 5A
 $Comp
 L Connector:Barrel_Jack J7

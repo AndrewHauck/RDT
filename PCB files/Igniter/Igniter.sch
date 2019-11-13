@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -682,7 +682,7 @@ F 3 "" H 1405 985 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:MIC3490 U1
+L Igniter-rescue:MIC3490-Regulator_Linear U1
 U 1 1 5DC7966B
 P 2000 3885
 F 0 "U1" H 2000 4252 50  0000 C CNN

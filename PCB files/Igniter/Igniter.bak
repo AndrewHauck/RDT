@@ -432,19 +432,19 @@ NoConn ~ 3965 5190
 NoConn ~ 3965 5090
 Wire Wire Line
 	9035 1470 9110 1470
-Text Notes 8245 1220 0    50   ~ 0
+Text Notes 8510 1205 0    50   ~ 0
 5A
 $Comp
 L Connector:Barrel_Jack J7
 U 1 1 5DAB74DD
-P 9155 4630
+P 9325 4640
 AR Path="/5DAB74DD" Ref="J7"  Part="1" 
 AR Path="/5D9BEB88/5DAB74DD" Ref="J?"  Part="1" 
-F 0 "J7" H 8925 4588 50  0000 R CNN
-F 1 "IgnitionCoil" H 9370 4830 50  0000 R CNN
-F 2 "Igniter:BananaJack15.5mm" H 9205 4590 50  0001 C CNN
-F 3 "~" H 9205 4590 50  0001 C CNN
-	1    9155 4630
+F 0 "J7" H 9095 4598 50  0000 R CNN
+F 1 "IgnitionCoil" H 9540 4840 50  0000 R CNN
+F 2 "Igniter:BananaJack15.5mm" H 9375 4600 50  0001 C CNN
+F 3 "~" H 9375 4600 50  0001 C CNN
+	1    9325 4640
 	-1   0    0    1   
 $EndComp
 $Comp

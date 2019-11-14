@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.0)")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.2)-2")
 
   (general
     (thickness 1.6)
@@ -39,8 +39,6 @@
     (zone_clearance 0.508)
     (zone_45_only no)
     (trace_min 0.2)
-    (segment_width 0.2)
-    (edge_width 0.05)
     (via_size 0.8)
     (via_drill 0.4)
     (via_min_size 0.4)
@@ -50,6 +48,8 @@
     (uvias_allowed no)
     (uvia_min_size 0.2)
     (uvia_min_drill 0.1)
+    (edge_width 0.05)
+    (segment_width 0.2)
     (pcb_text_width 0.3)
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.12)
@@ -185,7 +185,7 @@
     (add_net SOL5)
   )
 
-  (module IgniterCustom:FuseHolder (layer F.Cu) (tedit 5DC9F454) (tstamp 5DBF33C3)
+  (module IgniterCustom:FuseHolder (layer F.Cu) (tedit 5DCB80D8) (tstamp 5DBF33C3)
     (at 208.9404 107.0356)
     (path /5DCA7861)
     (fp_text reference F1 (at 0 4.1529) (layer F.SilkS)
@@ -198,7 +198,7 @@
     (fp_line (start -9.7155 -3) (end 10.24128 -3) (layer F.SilkS) (width 0.15))
     (fp_line (start -9.7155 3) (end -9.7155 -3) (layer F.SilkS) (width 0.15))
     (fp_line (start 10.24128 3) (end 10.24128 -3) (layer F.SilkS) (width 0.15))
-    (pad "" thru_hole circle (at 0 0) (size 2.5 2.5) (drill 2.4) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at 0 0) (size 2.5 2.5) (drill 2.4) (layers *.Cu *.Mask))
     (pad 1 thru_hole circle (at -6.4 -1.25 90) (size 1.75 1.75) (drill 1.4) (layers *.Cu *.Mask)
       (net 13 +24V))
     (pad 2 thru_hole circle (at -2.9 -1.25 90) (size 1.75 1.75) (drill 1.4) (layers *.Cu *.Mask)

@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -216,7 +216,7 @@ L power:GNDREF #PWR022
 U 1 1 5DB58C89
 P 3855 5180
 F 0 "#PWR022" H 3855 4930 50  0001 C CNN
-F 1 "GNDREF" H 3860 5007 50  0000 C CNN
+F 1 "GNDREF" H 3860 5007 50  0001 C CNN
 F 2 "" H 3855 5180 50  0001 C CNN
 F 3 "" H 3855 5180 50  0001 C CNN
 	1    3855 5180
@@ -240,46 +240,46 @@ NoConn ~ 4050 6080
 $Comp
 L Mechanical:MountingHole MH2
 U 1 1 5DB4BD1A
-P 1120 7650
-F 0 "MH2" H 1220 7650 50  0000 L CNN
-F 1 "MountingHole" H 1220 7605 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7650 50  0001 C CNN
-F 3 "~" H 1120 7650 50  0001 C CNN
-	1    1120 7650
+P 1120 7645
+F 0 "MH2" H 1220 7645 50  0000 L CNN
+F 1 "MountingHole" H 1220 7600 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7645 50  0001 C CNN
+F 3 "~" H 1120 7645 50  0001 C CNN
+	1    1120 7645
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole MH3
 U 1 1 5DB4BE36
-P 1115 7835
-F 0 "MH3" H 1215 7835 50  0000 L CNN
-F 1 "MountingHole" H 1215 7790 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1115 7835 50  0001 C CNN
-F 3 "~" H 1115 7835 50  0001 C CNN
-	1    1115 7835
+P 1120 7825
+F 0 "MH3" H 1220 7825 50  0000 L CNN
+F 1 "MountingHole" H 1220 7780 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7825 50  0001 C CNN
+F 3 "~" H 1120 7825 50  0001 C CNN
+	1    1120 7825
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole MH4
 U 1 1 5DB4BEEA
-P 925 7835
-F 0 "MH4" H 825 7835 50  0000 R CNN
-F 1 "MountingHole" H 1025 7790 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 925 7835 50  0001 C CNN
-F 3 "~" H 925 7835 50  0001 C CNN
-	1    925  7835
-	1    0    0    1   
+P 745 7825
+F 0 "MH4" H 645 7825 50  0000 R CNN
+F 1 "MountingHole" H 845 7780 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7825 50  0001 C CNN
+F 3 "~" H 745 7825 50  0001 C CNN
+	1    745  7825
+	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole MH1
 U 1 1 5DB4BFCA
-P 925 7655
-F 0 "MH1" V 925 7395 50  0000 L CNN
-F 1 "MountingHole" H 1025 7610 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 925 7655 50  0001 C CNN
-F 3 "~" H 925 7655 50  0001 C CNN
-	1    925  7655
-	0    1    -1   0   
+P 745 7645
+F 0 "MH1" V 745 7385 50  0000 L CNN
+F 1 "MountingHole" H 845 7600 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7645 50  0001 C CNN
+F 3 "~" H 745 7645 50  0001 C CNN
+	1    745  7645
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	1770 7140 1770 7120
@@ -376,8 +376,8 @@ Wire Wire Line
 	1215 7020 1295 7020
 Wire Notes Line
 	850  7265 2305 7265
-Text Notes 600  7530 0    50   ~ 0
-Board Corner Standoffs
+Text Notes 930  7535 0    50   ~ 0
+Board Standoffs
 Text Notes 11030 2770 0    118  ~ 0
 -Make unused pins available from the top of shield
 $Comp
@@ -1123,7 +1123,7 @@ DF AE 48 ED 27 65 BA 9B 53 1F FE 7F 92 B3 3F E1 7A 59 39 6F 00 00 00 00 49 45 4E
 EndData
 $EndBitmap
 $Bitmap
-Pos 7215 7105
+Pos 7190 7070
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 1D 00 00 00 B0 08 02 00 00 00 24 1F 4B 
@@ -2086,10 +2086,10 @@ FF 01 19 E2 CA 14 FF BF 05 C1 00 00 00 00 49 45 4E 44 AE 42 60 82
 EndData
 $EndBitmap
 $Comp
-L Switch:SW_SPST SW?
+L Switch:SW_SPST SW2
 U 1 1 5DCFA410
 P 1080 3860
-F 0 "SW?" V 1034 3958 50  0000 L CNN
+F 0 "SW2" V 1034 3958 50  0000 L CNN
 F 1 "SW_SPST" V 1125 3958 50  0000 L CNN
 F 2 "" H 1080 3860 50  0001 C CNN
 F 3 "~" H 1080 3860 50  0001 C CNN
@@ -2097,10 +2097,10 @@ F 3 "~" H 1080 3860 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5DD1EB59
 P 1080 4290
-F 0 "R?" V 1000 4240 50  0000 L CNN
+F 0 "R2" V 1000 4240 50  0000 L CNN
 F 1 "10k" V 1080 4220 50  0000 L CNN
 F 2 "" V 1010 4290 50  0001 C CNN
 F 3 "~" H 1080 4290 50  0001 C CNN
@@ -2108,10 +2108,10 @@ F 3 "~" H 1080 4290 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDREF #PWR?
+L power:GNDREF #PWR014
 U 1 1 5DD204DC
 P 1080 4440
-F 0 "#PWR?" H 1080 4190 50  0001 C CNN
+F 0 "#PWR014" H 1080 4190 50  0001 C CNN
 F 1 "GNDREF" H 1085 4267 50  0001 C CNN
 F 2 "" H 1080 4440 50  0001 C CNN
 F 3 "" H 1080 4440 50  0001 C CNN
@@ -2119,10 +2119,10 @@ F 3 "" H 1080 4440 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR013
 U 1 1 5DD25D15
 P 1080 3660
-F 0 "#PWR?" H 1080 3510 50  0001 C CNN
+F 0 "#PWR013" H 1080 3510 50  0001 C CNN
 F 1 "+3V3" H 1080 3800 50  0000 C CNN
 F 2 "" H 1080 3660 50  0001 C CNN
 F 3 "" H 1080 3660 50  0001 C CNN
@@ -2445,10 +2445,40 @@ F 3 "~" H 9840 1795 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	640  7560 640  7920
+$Comp
+L Mechanical:MountingHole MH5
+U 1 1 5DCE1DB8
+P 1490 7645
+F 0 "MH5" H 1590 7645 50  0000 L CNN
+F 1 "MountingHole" H 1590 7600 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7645 50  0001 C CNN
+F 3 "~" H 1490 7645 50  0001 C CNN
+	1    1490 7645
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH6
+U 1 1 5DCE1DBE
+P 1490 7825
+F 0 "MH6" H 1590 7825 50  0000 L CNN
+F 1 "MountingHole" H 1590 7780 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7825 50  0001 C CNN
+F 3 "~" H 1490 7825 50  0001 C CNN
+	1    1490 7825
+	1    0    0    -1  
+$EndComp
 Wire Notes Line
-	640  7920 1410 7920
+	1780 7550 1780 7920
 Wire Notes Line
-	1410 7920 1410 7550
+	640  7920 1780 7920
 Wire Notes Line
-	1410 7550 640  7550
+	640  7550 1780 7550
+Text Notes 2250 5190 0    157  ~ 31
+*
+Text Notes 2470 7895 0    157  ~ 31
+*
+Text Notes 2615 7910 0    50   ~ 0
+Not necessary, if using MOSFETs as LED switches\nP transducers now use 24V not 5V
+Text Notes 9555 5690 0    157  ~ 31
+*
 $EndSCHEMATC

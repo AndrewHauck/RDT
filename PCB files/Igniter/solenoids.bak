@@ -2278,4 +2278,6 @@ Wire Wire Line
 	8225 3760 8225 3660
 Connection ~ 8225 3760
 Connection ~ 8225 3660
+Text Notes 1535 5065 0    50   ~ 0
+Add pulldowns to each SOLx net
 $EndSCHEMATC

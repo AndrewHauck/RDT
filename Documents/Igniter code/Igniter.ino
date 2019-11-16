@@ -57,7 +57,7 @@ void setup()
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
-/*
+
   Serial.print("Initializing SD card...");
 
   if (!SD.begin(CS)) {
@@ -81,7 +81,7 @@ void setup()
     Serial.print("Writing to SD...");
     myFile.println("Testing");
     myFile.close();
-  } */
+  }
 }
 
 void loop()

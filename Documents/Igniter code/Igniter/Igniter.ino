@@ -8,7 +8,7 @@ This .ino file is the main program to be run on the 2560 board
  ** CLK - pin 52
  ** CS - pin 53
 
- */
+*/
 #include <SPI.h>
 #include <SD.h>
 
@@ -43,8 +43,8 @@ int sleep=200;
 
 //Define SPI pins for SD card interface
 int CS = 53;
-int MOSI = 51;
-int MISO = 50;
+int MOSi = 51;
+int MISo = 50;
 int CLK = 52;
 
 void setup()

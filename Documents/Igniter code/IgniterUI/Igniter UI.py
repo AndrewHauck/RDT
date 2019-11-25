@@ -39,7 +39,10 @@ stages = [[sg.Text('STAGES')],
           sg.Button('CLOSE ALL', button_color=('White', 'Red'), key='CLOSE ALL')]]
 
 # Sensor reading text elements
-readings = [[sg.Text('Pressure 1:'), sg.Text('0000000000', key='P1'), sg.Text('PSI')]]
+readings = [[sg.Text('Pressure 1:'), sg.Text('0000000000', key='P1'), sg.Text('PSI')],
+            [sg.Text('Pressure 2:'), sg.Text('0000000000', key='P2'), sg.Text('PSI')],
+            [sg.Text('Pressure 3:'), sg.Text('0000000000', key='P3'), sg.Text('PSI')],
+            [sg.Text('Pressure 4:'), sg.Text('0000000000', key='P4'), sg.Text('PSI')]]
 
 # Combination of all elements
 layout = valves + diagram + stages + readings
@@ -56,56 +59,56 @@ print(ser.name)
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
-    event, values = window.read()
+    event, values = window.read(timeout=100)
     # Button Reactions
     if event is None:
         break
     if event == 'ARM':
-        print('ARMED')
+        #print('ARMED')
         isValveOpen[1] = True
         isValveOpen[2] = True
         # ser.write('1')
     elif event == 'FIRE':
-        print('FIRING')
+        #print('FIRING')
         # timer = threading.Timer(1, igniterLoop)
         # timer.start()
         isValveOpen[3] = True
         isValveOpen[4] = True
         isValveOpen[0] = True
         time.sleep(6)
-        print('Valve 1 closed. Valve 2 closed. Exciter off')
+        #print('Valve 1 closed. Valve 2 closed. Exciter off')
         isValveOpen[1] = False
         isValveOpen[2] = False
         isValveOpen[0] = False
         # ser.write('2')
     elif event == 'PURGE':
-        print('Valve 5 open')
+        #print('Valve 5 open')
         isValveOpen[5] = True
         # ser.write('3')
     elif event == 'CLOSE ALL':
-        print('Valve 5 closed')
-        print('Valve 3 closed. Valve 4 closed.')
+        #print('Valve 5 closed')
+        #print('Valve 3 closed. Valve 4 closed.')
         for x in range(5):
             isValveOpen[x] = False
         # ser.write('4')
 
     # Updating GUI to reflect valve states
+
     for x in range(5):
-        if x == 0:
-            print("Exciter = ", isValveOpen[x])
-        else:
-            print("Valve ", x, " = ", isValveOpen[x])
+        #if x == 0:
+            #print("Exciter = ", isValveOpen[x])
+        #else:
+            #print("Valve ", x, " = ", isValveOpen[x])
 
         if isValveOpen[x] == True:
             window.FindElement(x).Update(button_color=('White', 'Green'))
         else:
             window.FindElement(x).Update(button_color=('White', 'Red'))
 
-    # read from serial port
-    if 1:
-        val = ser.read(12)
-        window.Element('P1').Update(val)
+    # Update pressure readings
+    window.Element('P1').Update(ser.readline())
 
-    print("\n")
+
+    #print("\n")
 window.close()
 

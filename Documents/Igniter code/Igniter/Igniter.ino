@@ -40,7 +40,7 @@ float P4;
 
 //Time in msec for delay function
 int sleep=200;
-const int WAIT = 2000; 
+const int TIMEOUT = 5000; 
 
 //Define SPI pins for SD card interface
 int CS = 53;
@@ -65,7 +65,7 @@ void setup()
   if (!SD.begin(CS)) {
     Serial.println("initialization failed!");
     int a = 0;
-    while(a < WAIT)
+    while(a < TIMEOUT)
     {
     	a++;
     };

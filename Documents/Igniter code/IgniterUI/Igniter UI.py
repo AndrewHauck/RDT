@@ -27,7 +27,6 @@ valves = [[sg.Text('VALVES')],
           sg.Button('Fire GOX (4)', button_color=('White', 'Red'), key=4),
           sg.Button('Purge (5)', button_color=('White', 'Red'), key=5),
           sg.Button('Igniter (0)', button_color=('White', 'Red'), key=0)]]
-# test test test
 
 # Igniter diagram
 diagram = [[sg.Image('IgniterDiagram.png', key='DIAGRAM', size=(400, 400))]]
@@ -39,15 +38,21 @@ stages = [[sg.Text('STAGES')],
           sg.Button('PURGE', button_color=('White', 'Red'), key='PURGE'),
           sg.Button('CLOSE ALL', button_color=('White', 'Red'), key='CLOSE ALL')]]
 
+# Sensor reading text elements
+readings = [[sg.Text('Pressure 1:'), sg.Text('0000000000', key='P1'), sg.Text('PSI')]]
+
 # Combination of all elements
-layout = valves + diagram + stages
+layout = valves + diagram + stages + readings
 
 # Valve states
 
 isValveOpen = [False, False, False, False, False, False]
 # Create the Window and Finalize it. Then fullscreen
 window = sg.Window('Igniter GUI', layout, grab_anywhere=True)
-#ser = serial.Serial('COM3', baudrate=9600)
+
+# Open serial port and print which port is connected
+ser = serial.Serial('COM8',9600)
+print(ser.name)
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -95,6 +100,12 @@ while True:
             window.FindElement(x).Update(button_color=('White', 'Green'))
         else:
             window.FindElement(x).Update(button_color=('White', 'Red'))
+
+    # read from serial port
+    if 1:
+        val = ser.read(12)
+        window.Element('P1').Update(val)
+
     print("\n")
 window.close()
 

@@ -53,6 +53,7 @@ void setup()
   pinMode(3, OUTPUT);
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
+  
   while (!Serial)
   {
     ; // wait for serial port to connect. Needed for native USB port only
@@ -87,6 +88,7 @@ void setup()
     myFile.println("Testing");
     myFile.close();
   }
+
 }
 
 void loop()
@@ -94,11 +96,19 @@ void loop()
   pdata1 = analogRead(PT1);
   V1 = pdata1*(5.0/1023.0);
   P1 = (14000/2500)*V1;
-  //Serial.print("Raw value: ");
-  //Serial.print(raw);
-  //Serial.print(", Voltage out: ");
-  //Serial.println(Vo);
-  //Serial.print(", Pressure(psi): ");
-  Serial.println(P1);
+
+  pdata2 = analogRead(PT2);
+  V2 = pdata2*(5.0/1023.0);
+  P2 = (14000/2500)*V2;
+
+  pdata3 = analogRead(PT3);
+  V3 = pdata3*(5.0/1023.0);
+  P3 = (14000/2500)*V3;
+
+  pdata4 = analogRead(PT4);
+  V4 = pdata4*(5.0/1023.0);
+  P4 = (14000/2500)*V4;
+ 
+  Serial.println(String(P1)+';'+String(P2)+';'+String(P3)+';'+String(P4));
   delay(sleep);
 }

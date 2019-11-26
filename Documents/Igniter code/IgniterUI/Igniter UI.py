@@ -48,13 +48,12 @@ readings = [[sg.Text('Pressure 1:'), sg.Text('0000000000', key='P1'), sg.Text('P
 layout = valves + diagram + stages + readings
 
 # Valve states
-
 isValveOpen = [False, False, False, False, False, False]
 # Create the Window and Finalize it. Then fullscreen
 window = sg.Window('Igniter GUI', layout, grab_anywhere=True)
 
 # Open serial port and print which port is connected
-# Also declare variables to store serial data and count sensor readings
+# Also declare buffer string to store serial data
 ser = serial.Serial('COM8',9600,timeout=1)
 print(ser.name)
 buffer = ""
@@ -131,18 +130,6 @@ while True:
         window.Element('P4').Update(buffer)
         buffer = ""
 
-    #print(buffer)
-
-    """
-    stream = ser.readline()
-    window.Element('P1').Update(stream)
-    stream = ser.readline()
-    window.Element('P2').Update(stream)
-    stream = ser.readline()
-    window.Element('P3').Update(stream)
-    stream = ser.readline()
-    window.Element('P4').Update(stream)
-    """
     #print("\n")
 window.close()
 

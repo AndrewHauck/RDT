@@ -109,6 +109,6 @@ void loop()
   V4 = pdata4*(5.0/1023.0);
   P4 = (14000/2500)*V4;
  
-  Serial.println(String(P1)+';'+String(P2)+';'+String(P3)+';'+String(P4));
+  Serial.print(String(P1)+'a'+String(P2)+'b'+String(P3)+'c'+String(P4)+'d');
   delay(sleep);
 }

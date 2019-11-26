@@ -54,6 +54,7 @@ isValveOpen = [False, False, False, False, False, False]
 window = sg.Window('Igniter GUI', layout, grab_anywhere=True)
 
 # Open serial port and print which port is connected
+# Also declare variables to store serial data and count sensor readings
 ser = serial.Serial('COM8',9600,timeout=1)
 print(ser.name)
 buffer = ""
@@ -107,11 +108,29 @@ while True:
             window.FindElement(x).Update(button_color=('White', 'Red'))
 
     # Update pressure readings
-    #buffer = buffer + ser.read().decode('utf-8')
-    #print(buffer)
-    #if buffer.endswith(';') == 0:
-     #   window.Element('P1').Update(buffer)
-      #  buffer = ""
+    buffer = buffer + ser.read().decode('utf-8')
+    print(buffer)
+    if (buffer.endswith('a') == 1):
+        length = len(buffer)
+        buffer = buffer[0:(length-1)]
+        window.Element('P1').Update(buffer)
+        buffer = ""
+    if (buffer.endswith('b') == 1):
+        length = len(buffer)
+        buffer = buffer[0:(length - 1)]
+        window.Element('P2').Update(buffer)
+        buffer = ""
+    if (buffer.endswith('c') == 1):
+        length = len(buffer)
+        buffer = buffer[0:(length - 1)]
+        window.Element('P3').Update(buffer)
+        buffer = ""
+    if (buffer.endswith('d') == 1):
+        length = len(buffer)
+        buffer = buffer[0:(length - 1)]
+        window.Element('P4').Update(buffer)
+        buffer = ""
+
     #print(buffer)
 
     """

@@ -60,31 +60,31 @@ void setup()
   }
 
 
-  Serial.print("Initializing SD card...");
+  //Serial.print("Initializing SD card...");
 
   if (!SD.begin(CS)) {
-    Serial.println("initialization failed!");
+    //Serial.println("initialization failed!");
     int a = 0;
     while(a < TIMEOUT)
     {
     	a++;
     };
   }
-  Serial.println("initialization done.");
+  //Serial.println("initialization done.");
 
   if (SD.exists("example.txt")) {
-    Serial.println("example.txt exists.");
+    //Serial.println("example.txt exists.");
   } else {
-    Serial.println("example.txt doesn't exist.");
+    //Serial.println("example.txt doesn't exist.");
   }
 
   // open a new file and immediately close it:
-  Serial.println("Creating example.txt...");
+  //Serial.println("Creating example.txt...");
   myFile = SD.open("example.txt", FILE_WRITE);
 
   if (myFile)
   {
-    Serial.print("Writing to SD...");
+    //Serial.print("Writing to SD...");
     myFile.println("Testing");
     myFile.close();
   }

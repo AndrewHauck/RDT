@@ -57,6 +57,8 @@ window = sg.Window('Igniter GUI', layout, grab_anywhere=True)
 ser = serial.Serial('COM8',9600,timeout=1)
 print(ser.name)
 buffer = ""
+# Command to open valve 1
+sendn = "\n V2 \n"
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -68,7 +70,8 @@ while True:
         #print('ARMED')
         isValveOpen[1] = True
         isValveOpen[2] = True
-        # ser.write('1')
+        # Send command to open valve 1
+        ser.write(bytearray(sendn, 'utf-8'))
     elif event == 'FIRE':
         #print('FIRING')
         # timer = threading.Timer(1, igniterLoop)

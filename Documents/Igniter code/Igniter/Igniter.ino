@@ -48,6 +48,9 @@ int MOSi = 51;
 int MISo = 50;
 int CLK = 52;
 
+//String to receive python UI input
+String receive;
+
 void setup()
 {
   pinMode(3, OUTPUT);
@@ -89,10 +92,13 @@ void setup()
     myFile.close();
   }
 
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 void loop()
 {
+  // Calculate pressure readings from raw values
   pdata1 = analogRead(PT1);
   V1 = pdata1*(5.0/1023.0);
   P1 = (14000/2500)*V1;
@@ -108,7 +114,15 @@ void loop()
   pdata4 = analogRead(PT4);
   V4 = pdata4*(5.0/1023.0);
   P4 = (14000/2500)*V4;
- 
+
+  // Print pressure readings to serial bus to be read by the UI
   Serial.print(String(P1)+'a'+String(P2)+'b'+String(P3)+'c'+String(P4)+'d');
-  //delay(sleep);
+
+  // Listen for commands sent from UI over serial
+  if (Serial.find("V1"))
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {digitalWrite(LED_BUILTIN, LOW);}  
 }

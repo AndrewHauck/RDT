@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -138,17 +138,6 @@ Wire Notes Line
 	8350 1150 8350 3335
 Text Notes 6690 7725 0    50   ~ 0
 Igniter Arduino Shield
-$Comp
-L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
-U 1 1 5DB49E1D
-P 5350 3930
-F 0 "XA1" H 5350 1550 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 5350 1444 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Shield" H 6050 6680 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 6050 6680 60  0001 C CNN
-	1    5350 3930
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GNDREF #PWR022
 U 1 1 5DB58C89
@@ -406,8 +395,6 @@ Wire Notes Line
 	940  5290 1730 5290
 Text Notes 11065 4645 0    50   ~ 0
 Disassembly:\n-Remove power to board FIRST\n-Then remove spark plug\nNEVER remove spark plug with energized primary
-Text Notes 11090 1195 0    50   ~ 0
-Add manual switches for sequencing:\n-Switches to initiate:\nARM\nFIRE\nPURGE\n-Do not need this if we can do\nit with software
 $Comp
 L Igniter-rescue:BladeFuse F1
 U 1 1 5DCA7861
@@ -1970,59 +1957,6 @@ F4 70 04 05 7D 39 1C 24 B1 C9 CB 05 58 AE 60 30 18 0C C6 9B 60 3D 0E 83 C1 60 30
 FF 01 19 E2 CA 14 FF BF 05 C1 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-$Comp
-L Switch:SW_SPST SW2
-U 1 1 5DCFA410
-P 7995 4220
-F 0 "SW2" H 7949 4318 50  0000 L CNN
-F 1 "SW_SPST" H 8040 4318 50  0001 L CNN
-F 2 "" H 7995 4220 50  0001 C CNN
-F 3 "~" H 7995 4220 50  0001 C CNN
-	1    7995 4220
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5DD1EB59
-P 7995 4650
-F 0 "R2" V 7915 4600 50  0000 L CNN
-F 1 "10k" V 7995 4580 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 7925 4650 50  0001 C CNN
-F 3 "~" H 7995 4650 50  0001 C CNN
-	1    7995 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR014
-U 1 1 5DD204DC
-P 7995 4800
-F 0 "#PWR014" H 7995 4550 50  0001 C CNN
-F 1 "GNDREF" H 8000 4627 50  0001 C CNN
-F 2 "" H 7995 4800 50  0001 C CNN
-F 3 "" H 7995 4800 50  0001 C CNN
-	1    7995 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR013
-U 1 1 5DD25D15
-P 7995 4020
-F 0 "#PWR013" H 7995 3870 50  0001 C CNN
-F 1 "+3V3" H 7995 4160 50  0000 C CNN
-F 2 "" H 7995 4020 50  0001 C CNN
-F 3 "" H 7995 4020 50  0001 C CNN
-	1    7995 4020
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7995 4420 7995 4460
-Wire Wire Line
-	7935 4460 7995 4460
-Connection ~ 7995 4460
-Wire Wire Line
-	7995 4460 7995 4500
-Text Notes 9415 3760 2    50   ~ 0
-Momentary Switches
 Wire Notes Line
 	985  930  2175 930 
 Wire Notes Line
@@ -2243,10 +2177,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 1330 5100 1220
 Wire Wire Line
-	7180 2280 7180 2415
-Wire Wire Line
-	6650 2280 7180 2280
-Wire Wire Line
 	9290 2615 9290 2695
 Wire Wire Line
 	8925 2695 8925 2415
@@ -2276,7 +2206,7 @@ Wire Wire Line
 Text Label 6650 6080 0    50   ~ 0
 CS
 Wire Wire Line
-	7180 2415 8925 2415
+	8180 2415 8925 2415
 Text Notes 6130 7845 2    118  ~ 0
 Figure out a Kicad BoM, not just google drive
 $Comp
@@ -2303,229 +2233,18 @@ Wire Wire Line
 Wire Wire Line
 	5300 905  4815 905 
 $Comp
-L Switch:SW_SPST SW3
-U 1 1 5DD16B8C
-P 8490 4220
-F 0 "SW3" H 8444 4318 50  0000 L CNN
-F 1 "SW_SPST" V 8535 4318 50  0001 L CNN
-F 2 "" H 8490 4220 50  0001 C CNN
-F 3 "~" H 8490 4220 50  0001 C CNN
-	1    8490 4220
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5DD16B92
-P 8490 4650
-F 0 "R3" V 8410 4600 50  0000 L CNN
-F 1 "10k" V 8490 4580 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 8420 4650 50  0001 C CNN
-F 3 "~" H 8490 4650 50  0001 C CNN
-	1    8490 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR012
-U 1 1 5DD16B98
-P 8490 4800
-F 0 "#PWR012" H 8490 4550 50  0001 C CNN
-F 1 "GNDREF" H 8495 4627 50  0001 C CNN
-F 2 "" H 8490 4800 50  0001 C CNN
-F 3 "" H 8490 4800 50  0001 C CNN
-	1    8490 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR07
-U 1 1 5DD16B9E
-P 8490 4020
-F 0 "#PWR07" H 8490 3870 50  0001 C CNN
-F 1 "+3V3" H 8490 4160 50  0000 C CNN
-F 2 "" H 8490 4020 50  0001 C CNN
-F 3 "" H 8490 4020 50  0001 C CNN
-	1    8490 4020
+L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
+U 1 1 5DB49E1D
+P 5350 3930
+F 0 "XA1" H 5350 1550 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 5350 1444 60  0000 C CNN
+F 2 "Arduino:Arduino_Mega2560_Shield" H 6050 6680 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 6050 6680 60  0001 C CNN
+	1    5350 3930
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8490 4420 8490 4460
+	6650 2880 8180 2880
 Wire Wire Line
-	8430 4460 8490 4460
-Connection ~ 8490 4460
-Wire Wire Line
-	8490 4460 8490 4500
-$Comp
-L Switch:SW_SPST SW4
-U 1 1 5DD17F13
-P 8985 4220
-F 0 "SW4" H 8939 4318 50  0000 L CNN
-F 1 "SW_SPST" V 9030 4318 50  0001 L CNN
-F 2 "" H 8985 4220 50  0001 C CNN
-F 3 "~" H 8985 4220 50  0001 C CNN
-	1    8985 4220
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R11
-U 1 1 5DD17F19
-P 8985 4650
-F 0 "R11" V 8905 4600 50  0000 L CNN
-F 1 "10k" V 8985 4580 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 8915 4650 50  0001 C CNN
-F 3 "~" H 8985 4650 50  0001 C CNN
-	1    8985 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR036
-U 1 1 5DD17F1F
-P 8985 4800
-F 0 "#PWR036" H 8985 4550 50  0001 C CNN
-F 1 "GNDREF" H 8990 4627 50  0001 C CNN
-F 2 "" H 8985 4800 50  0001 C CNN
-F 3 "" H 8985 4800 50  0001 C CNN
-	1    8985 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR023
-U 1 1 5DD17F25
-P 8985 4020
-F 0 "#PWR023" H 8985 3870 50  0001 C CNN
-F 1 "+3V3" H 8985 4160 50  0000 C CNN
-F 2 "" H 8985 4020 50  0001 C CNN
-F 3 "" H 8985 4020 50  0001 C CNN
-	1    8985 4020
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8985 4420 8985 4460
-Wire Wire Line
-	8925 4460 8985 4460
-Connection ~ 8985 4460
-Wire Wire Line
-	8985 4460 8985 4500
-$Comp
-L Switch:SW_SPST SW5
-U 1 1 5DD17F2F
-P 9530 4220
-F 0 "SW5" H 9484 4318 50  0000 L CNN
-F 1 "SW_SPST" V 9575 4318 50  0001 L CNN
-F 2 "" H 9530 4220 50  0001 C CNN
-F 3 "~" H 9530 4220 50  0001 C CNN
-	1    9530 4220
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 5DD17F35
-P 9530 4650
-F 0 "R12" V 9450 4600 50  0000 L CNN
-F 1 "10k" V 9530 4580 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 9460 4650 50  0001 C CNN
-F 3 "~" H 9530 4650 50  0001 C CNN
-	1    9530 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR038
-U 1 1 5DD17F3B
-P 9530 4800
-F 0 "#PWR038" H 9530 4550 50  0001 C CNN
-F 1 "GNDREF" H 9535 4627 50  0001 C CNN
-F 2 "" H 9530 4800 50  0001 C CNN
-F 3 "" H 9530 4800 50  0001 C CNN
-	1    9530 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR037
-U 1 1 5DD17F41
-P 9530 4020
-F 0 "#PWR037" H 9530 3870 50  0001 C CNN
-F 1 "+3V3" H 9530 4160 50  0000 C CNN
-F 2 "" H 9530 4020 50  0001 C CNN
-F 3 "" H 9530 4020 50  0001 C CNN
-	1    9530 4020
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9530 4420 9530 4460
-Wire Wire Line
-	9470 4460 9530 4460
-Connection ~ 9530 4460
-Wire Wire Line
-	9530 4460 9530 4500
-$Comp
-L Switch:SW_SPST SW6
-U 1 1 5DD1955D
-P 9995 4220
-F 0 "SW6" H 9949 4318 50  0000 L CNN
-F 1 "SW_SPST" V 10040 4318 50  0001 L CNN
-F 2 "" H 9995 4220 50  0001 C CNN
-F 3 "~" H 9995 4220 50  0001 C CNN
-	1    9995 4220
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R13
-U 1 1 5DD19563
-P 9995 4650
-F 0 "R13" V 9915 4600 50  0000 L CNN
-F 1 "10k" V 9995 4580 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 9925 4650 50  0001 C CNN
-F 3 "~" H 9995 4650 50  0001 C CNN
-	1    9995 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR048
-U 1 1 5DD19569
-P 9995 4800
-F 0 "#PWR048" H 9995 4550 50  0001 C CNN
-F 1 "GNDREF" H 10000 4627 50  0001 C CNN
-F 2 "" H 9995 4800 50  0001 C CNN
-F 3 "" H 9995 4800 50  0001 C CNN
-	1    9995 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR039
-U 1 1 5DD1956F
-P 9995 4020
-F 0 "#PWR039" H 9995 3870 50  0001 C CNN
-F 1 "+3V3" H 9995 4160 50  0000 C CNN
-F 2 "" H 9995 4020 50  0001 C CNN
-F 3 "" H 9995 4020 50  0001 C CNN
-	1    9995 4020
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9995 4420 9995 4460
-Wire Wire Line
-	9935 4460 9995 4460
-Connection ~ 9995 4460
-Wire Wire Line
-	9995 4460 9995 4500
-Text Label 6650 2980 0    50   ~ 0
-PUSH1
-Text Label 6650 3080 0    50   ~ 0
-PUSH2
-Text Label 6650 3180 0    50   ~ 0
-PUSH3
-Text Label 6650 3280 0    50   ~ 0
-PUSH4
-Text Label 6650 3380 0    50   ~ 0
-PUSH5
-Text Label 7935 4460 2    50   ~ 0
-PUSH1
-Text Label 8430 4460 2    50   ~ 0
-PUSH2
-Text Label 8925 4460 2    50   ~ 0
-PUSH3
-Text Label 9470 4460 2    50   ~ 0
-PUSH4
-Text Label 9935 4460 2    50   ~ 0
-PUSH5
-Wire Notes Line
-	10055 3920 10055 3905
+	8180 2415 8180 2880
 $EndSCHEMATC

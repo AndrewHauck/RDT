@@ -58,7 +58,7 @@ ser = serial.Serial('COM8',9600,timeout=1)
 print(ser.name)
 buffer = ""
 # Command to open valve 1
-sendn = "\n V2 \n"
+sendn = "\n V1 \n"
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -79,7 +79,7 @@ while True:
         isValveOpen[3] = True
         isValveOpen[4] = True
         isValveOpen[0] = True
-        time.sleep(6)
+        #time.sleep(6)
         #print('Valve 1 closed. Valve 2 closed. Exciter off')
         isValveOpen[1] = False
         isValveOpen[2] = False

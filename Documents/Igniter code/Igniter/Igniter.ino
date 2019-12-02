@@ -50,6 +50,8 @@ int CLK = 52;
 
 //String to receive python UI input
 String receive;
+char ARM[] = "V1V2";
+
 
 void setup()
 {
@@ -119,10 +121,31 @@ void loop()
   Serial.print(String(P1)+'a'+String(P2)+'b'+String(P3)+'c'+String(P4)+'d');
 
   // Listen for commands sent from UI over serial
-  if (Serial.find("V1"))
+  if (Serial.find(ARM))
   {
     digitalWrite(LED_BUILTIN, HIGH);
   }
   else
   {digitalWrite(LED_BUILTIN, LOW);}  
+
+  if (Serial.find("V3"))
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {digitalWrite(LED_BUILTIN, LOW);} 
+
+  if (Serial.find("V4"))
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {digitalWrite(LED_BUILTIN, LOW);} 
+
+  if (Serial.find("V5"))
+  {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  else
+  {digitalWrite(LED_BUILTIN, LOW);} 
 }

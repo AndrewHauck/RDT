@@ -51,7 +51,7 @@ int CLK = 52;
 //String to receive python UI input
 String receive;
 char ARM[] = "V1V2";
-
+char FIRE[] = "FIRE";
 
 void setup()
 {
@@ -63,7 +63,6 @@ void setup()
   {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-
 
   //Serial.print("Initializing SD card...");
 
@@ -120,32 +119,26 @@ void loop()
   // Print pressure readings to serial bus to be read by the UI
   Serial.print(String(P1)+'a'+String(P2)+'b'+String(P3)+'c'+String(P4)+'d');
 
+}
+
+void serialEvent()
+{
+  String buff;
+  while(Serial.available())
+  {
+  char inChar = Serial.read();
+  buff += inChar;
   // Listen for commands sent from UI over serial
-  if (Serial.find(ARM))
+  }
+  if (buff == ARM)
   {
     digitalWrite(LED_BUILTIN, HIGH);
+    buff = "";
   }
-  else
-  {digitalWrite(LED_BUILTIN, LOW);}  
-
-  if (Serial.find("V3"))
+  if (buff == FIRE)
   {
-    digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(LED_BUILTIN, LOW);
+    buff = "";
   }
-  else
-  {digitalWrite(LED_BUILTIN, LOW);} 
-
-  if (Serial.find("V4"))
-  {
-    digitalWrite(LED_BUILTIN, HIGH);
-  }
-  else
-  {digitalWrite(LED_BUILTIN, LOW);} 
-
-  if (Serial.find("V5"))
-  {
-    digitalWrite(LED_BUILTIN, HIGH);
-  }
-  else
-  {digitalWrite(LED_BUILTIN, LOW);} 
+  
 }

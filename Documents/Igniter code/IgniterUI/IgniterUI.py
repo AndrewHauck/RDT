@@ -54,7 +54,7 @@ window = sg.Window('RocketView', layout, grab_anywhere=True)
 
 # Open serial port and print which port is connected
 # Also declare buffer string to store serial data
-ser = serial.Serial('COM4',9600,timeout=1)
+ser = serial.Serial('COM4',19200,timeout=1)
 print(ser.name)
 buffer = ""
 
@@ -69,7 +69,7 @@ while True:
     if event is None:
         break
     if event == 'ARM':
-        print('ARMED')
+        #print('ARMED')
         isValveOpen[1] = True
         isValveOpen[2] = True
         # Send command to arm
@@ -82,18 +82,18 @@ while True:
         isValveOpen[4] = True
         isValveOpen[0] = True
         #time.sleep(6)
-        print('Valve 1 closed. Valve 2 closed. Exciter off')
+        #print('Valve 1 closed. Valve 2 closed. Exciter off')
         isValveOpen[1] = False
         isValveOpen[2] = False
         isValveOpen[0] = False
         ser.write(bytearray(fire, 'utf-8'))
     elif event == 'PURGE':
-        print('Valve 5 open')
+        #print('Valve 5 open')
         isValveOpen[5] = True
         # ser.write('3')
     elif event == 'CLOSE ALL':
-        print('Valve 5 closed')
-        print('Valve 3 closed. Valve 4 closed.')
+        #print('Valve 5 closed')
+        #print('Valve 3 closed. Valve 4 closed.')
         for x in range(6):
             isValveOpen[x] = False
         # ser.write('4')
@@ -135,6 +135,6 @@ while True:
         window.Element('P4').Update(buffer)
         buffer = ""
 
-    print("NO EVENT")
+    #print("NO EVENT")
 window.close()
 

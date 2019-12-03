@@ -57,7 +57,7 @@ void setup()
 {
   pinMode(3, OUTPUT);
   // Open serial communications and wait for port to open:
-  Serial.begin(9600);
+  Serial.begin(19200);
   
   while (!Serial)
   {
@@ -140,5 +140,5 @@ void serialEvent()
     digitalWrite(LED_BUILTIN, LOW);
     buff = "";
   }
-  
+
 }

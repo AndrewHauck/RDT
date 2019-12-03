@@ -50,11 +50,11 @@ layout = valves + diagram + stages + readings
 # Valve states
 isValveOpen = [False, False, False, False, False, False]
 # Create the Window and Finalize it. Then fullscreen
-window = sg.Window('Igniter GUI', layout, grab_anywhere=True)
+window = sg.Window('RocketView', layout, grab_anywhere=True)
 
 # Open serial port and print which port is connected
 # Also declare buffer string to store serial data
-ser = serial.Serial('COM8',9600,timeout=1)
+ser = serial.Serial('COM4',9600,timeout=1)
 print(ser.name)
 buffer = ""
 # Command to open valves for ARM event

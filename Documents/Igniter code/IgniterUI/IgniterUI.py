@@ -59,7 +59,7 @@ print(ser.name)
 buffer = ""
 
 # Command to open valves for ARM event
-arm = "V1V2"
+arm = "eee"
 fire = "FIRE"
 
 # Event Loop to process "events" and get the "values" of the inputs
@@ -99,13 +99,7 @@ while True:
         # ser.write('4')
 
     # Updating GUI to reflect valve states
-
     for x in range(6):
-        #if x == 0:
-            #print("Exciter = ", isValveOpen[x])
-        #else:
-            #print("Valve ", x, " = ", isValveOpen[x])
-
         if isValveOpen[x] == True:
             window.FindElement(x).Update(button_color=('White', 'Green'))
         else:

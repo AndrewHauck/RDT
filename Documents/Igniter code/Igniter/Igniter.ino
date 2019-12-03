@@ -129,8 +129,8 @@ void serialEvent()
   char inChar = Serial.read();
   buff += inChar;
   // Listen for commands sent from UI over serial
-  }
-  if (buff == ARM)
+  
+  if (buff.endsWith('e'))
   {
     digitalWrite(LED_BUILTIN, HIGH);
     buff = "";
@@ -140,5 +140,5 @@ void serialEvent()
     digitalWrite(LED_BUILTIN, LOW);
     buff = "";
   }
-
+  }
 }

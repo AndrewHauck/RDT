@@ -354,8 +354,8 @@
     (add_net "Net-(D6-Pad2)")
   )
 
-  (module "Board images:RocketLogo" (layer F.Cu) (tedit 0) (tstamp 5DE3A173)
-    (at 184.7215 148.1709)
+  (module "Board images:RocketLogo" (layer F.Cu) (tedit 0) (tstamp 5DE3B556)
+    (at 194.0179 172.9359)
     (fp_text reference G*** (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)))
     )
@@ -1016,7 +1016,7 @@
   )
 
   (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DC0F634)
-    (at 90.424 69.1261)
+    (at 89.1921 81.3054)
     (descr "Mounting Hole 2.2mm, no annular, M2")
     (tags "mounting hole 2.2mm no annular m2")
     (path /5DB4BFCA)
@@ -1036,7 +1036,7 @@
   )
 
   (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DC0F63C)
-    (at 205.4987 69.1261)
+    (at 204.2668 81.3054)
     (descr "Mounting Hole 2.2mm, no annular, M2")
     (tags "mounting hole 2.2mm no annular m2")
     (path /5DB4BD1A)
@@ -1080,7 +1080,7 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask))
   )
 
-  (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DC0F64C)
+  (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DE3B15A)
     (at 203.6572 150.6982)
     (descr "Mounting Hole 2.2mm, no annular, M2")
     (tags "mounting hole 2.2mm no annular m2")
@@ -1140,7 +1140,7 @@
       (net 1 "Net-(D1-Pad2)"))
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36D6) (tstamp 5DD65E31)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36D6) (tstamp 5DE3AFAB)
     (at 133.604846 144.2593)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
@@ -1213,7 +1213,7 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36D0) (tstamp 5DD65D92)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36D0) (tstamp 5DE3B0E9)
     (at 122.77598 144.2593)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
@@ -1286,7 +1286,7 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36DB) (tstamp 5DD65ED0)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36DB) (tstamp 5DE3B23C)
     (at 144.433712 144.2593)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
@@ -1359,7 +1359,7 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36DE) (tstamp 5DD65F6F)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5DBF36DE) (tstamp 5DE3B19D)
     (at 155.26258 144.2593)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
@@ -1432,8 +1432,8 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DCB6B91)
-    (at 118.4529 81.8007 180)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DE3B04A)
+    (at 32.5882 152.0952 180)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
     (path /5DB4D508/5DB4DF08)
@@ -1504,8 +1504,8 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DCB6BC7)
-    (at 129.047875 81.8007 180)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DE3B419)
+    (at 43.183175 152.0952 180)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
     (path /5DB4D508/5DB4DF5E)
@@ -1576,8 +1576,8 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DCB6BFD)
-    (at 139.64285 81.8007 180)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DE3B4CD)
+    (at 53.77815 152.0952 180)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
     (path /5DB4D508/5DB4DF33)
@@ -1648,8 +1648,8 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DBF5604)
-    (at 150.237825 81.8007 180)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DE3B2DB)
+    (at 64.373125 152.0952 180)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
     (path /5DB4D508/5DB4DF88)
@@ -1720,8 +1720,8 @@
     )
   )
 
-  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DCB6C69)
-    (at 160.8328 81.8007 180)
+  (module Connector_Molex:Molex_Mini-Fit_Jr_5566-04A_2x02_P4.20mm_Vertical (layer F.Cu) (tedit 5A15CC62) (tstamp 5DE3B37A)
+    (at 74.9681 152.0952 180)
     (descr "Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5566-04A, example for new mpn: 39-28-x04x, 2 Pins per row, Mounting:  (http://www.molex.com/pdm_docs/sd/039281043_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex Mini-Fit_Jr side entry")
     (path /5DB4D508/5DB4DFCC)
@@ -2372,7 +2372,7 @@
   )
 
   (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DD9F5E3)
-    (at 147.96135 69.1261)
+    (at 146.72945 81.3054)
     (descr "Mounting Hole 2.2mm, no annular, M2")
     (tags "mounting hole 2.2mm no annular m2")
     (path /5DCE1DB8)
@@ -2391,7 +2391,7 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 2.2 2.2) (drill 2.2) (layers *.Cu *.Mask))
   )
 
-  (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DD9F5EB)
+  (module MountingHole:MountingHole_2.2mm_M2 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5DE3B48A)
     (at 165.8366 150.6982)
     (descr "Mounting Hole 2.2mm, no annular, M2")
     (tags "mounting hole 2.2mm no annular m2")
@@ -3422,7 +3422,7 @@
   )
 
   (gr_arc (start 87.185296 153.631747) (end 85.089797 153.606348) (angle -90.7) (layer Edge.Cuts) (width 0.05) (tstamp 5DE419F4))
-  (gr_arc (start 207.911699 153.631901) (end 207.8863 155.7274) (angle -90.69446062) (layer Edge.Cuts) (width 0.05) (tstamp 5DE419F4))
+  (gr_arc (start 207.911699 153.631901) (end 207.8863 155.7274) (angle -90.69446062) (layer Edge.Cuts) (width 0.05) (tstamp 5DE3B595))
   (gr_arc (start 207.911701 66.700401) (end 210.0072 66.7258) (angle -90.7) (layer Edge.Cuts) (width 0.05) (tstamp 5DE419F4))
   (gr_arc (start 87.211053 66.700196) (end 87.236452 64.604697) (angle -90.7) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 85.1154 95.7072) (end 85.1154 66.7004) (layer Edge.Cuts) (width 0.05))
@@ -3537,8 +3537,8 @@
     (fill (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 87.3379 65.1256) (xy 85.8647 66.4591) (xy 85.7123 153.5176) (xy 87.1093 155.1686) (xy 207.4672 155.0924)
-        (xy 209.5881 153.3779) (xy 209.4103 66.6623) (xy 207.7085 65.2526)
+        (xy 87.8205 76.7588) (xy 86.0171 78.1431) (xy 85.7123 153.5176) (xy 87.1093 155.1686) (xy 207.4672 155.0924)
+        (xy 209.5881 153.3779) (xy 208.8642 77.3557) (xy 206.7433 76.5683)
       )
     )
   )

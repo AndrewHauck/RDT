@@ -139,17 +139,6 @@ Wire Notes Line
 Text Notes 6690 7725 0    50   ~ 0
 Igniter Arduino Shield
 $Comp
-L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
-U 1 1 5DB49E1D
-P 5350 3930
-F 0 "XA1" H 5350 1550 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 5350 1444 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Shield" H 6050 6680 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 6050 6680 60  0001 C CNN
-	1    5350 3930
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GNDREF #PWR022
 U 1 1 5DB58C89
 P 3855 5180
@@ -2188,10 +2177,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 1330 5100 1220
 Wire Wire Line
-	7180 2280 7180 2415
-Wire Wire Line
-	6650 2280 7180 2280
-Wire Wire Line
 	9290 2615 9290 2695
 Wire Wire Line
 	8925 2695 8925 2415
@@ -2221,7 +2206,7 @@ Wire Wire Line
 Text Label 6650 6080 0    50   ~ 0
 CS
 Wire Wire Line
-	7180 2415 8925 2415
+	8180 2415 8925 2415
 Text Notes 6130 7845 2    118  ~ 0
 Figure out a Kicad BoM, not just google drive
 $Comp
@@ -2247,14 +2232,19 @@ Wire Wire Line
 	5200 1010 4815 1010
 Wire Wire Line
 	5300 905  4815 905 
-Text Label 6650 2980 0    50   ~ 0
-PUSH1
-Text Label 6650 3080 0    50   ~ 0
-PUSH2
-Text Label 6650 3180 0    50   ~ 0
-PUSH3
-Text Label 6650 3280 0    50   ~ 0
-PUSH4
-Text Label 6650 3380 0    50   ~ 0
-PUSH5
+$Comp
+L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
+U 1 1 5DB49E1D
+P 5350 3930
+F 0 "XA1" H 5350 1550 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 5350 1444 60  0000 C CNN
+F 2 "Arduino:Arduino_Mega2560_Shield" H 6050 6680 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 6050 6680 60  0001 C CNN
+	1    5350 3930
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2880 8180 2880
+Wire Wire Line
+	8180 2415 8180 2880
 $EndSCHEMATC

@@ -30,22 +30,22 @@ F 3 "" H 1780 6515 50  0001 C CNN
 	1    1780 6515
 	1    0    0    -1  
 $EndComp
-Connection ~ 9290 2695
+Connection ~ 9292 3159
 Wire Wire Line
-	9290 2695 9290 2790
+	9292 3159 9292 3254
 Wire Wire Line
-	9290 2695 9225 2695
+	9292 3159 9227 3159
 $Comp
 L Device:R R?
 U 1 1 5DAB751B
-P 9075 2695
+P 9077 3159
 AR Path="/5D9BEB88/5DAB751B" Ref="R?"  Part="1" 
 AR Path="/5DAB751B" Ref="R6"  Part="1" 
-F 0 "R6" V 8868 2695 50  0001 C CNN
-F 1 "10k" V 8960 2695 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 9005 2695 50  0001 C CNN
-F 3 "~" H 9075 2695 50  0001 C CNN
-	1    9075 2695
+F 0 "R6" V 8870 3159 50  0001 C CNN
+F 1 "10k" V 8962 3159 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9007 3159 50  0001 C CNN
+F 3 "~" H 9077 3159 50  0001 C CNN
+	1    9077 3159
 	0    1    1    0   
 $EndComp
 $Comp
@@ -64,12 +64,12 @@ Text Notes 1190 5555 0    50   ~ 0
 $Comp
 L power:GNDREF #PWR024
 U 1 1 5DABC8A2
-P 9290 2790
-F 0 "#PWR024" H 9290 2540 50  0001 C CNN
-F 1 "GNDREF" H 9295 2617 50  0000 C CNN
-F 2 "" H 9290 2790 50  0001 C CNN
-F 3 "" H 9290 2790 50  0001 C CNN
-	1    9290 2790
+P 9292 3254
+F 0 "#PWR024" H 9292 3004 50  0001 C CNN
+F 1 "GNDREF" H 9297 3081 50  0000 C CNN
+F 2 "" H 9292 3254 50  0001 C CNN
+F 3 "" H 9292 3254 50  0001 C CNN
+	1    9292 3254
 	1    0    0    -1  
 $EndComp
 Text Notes 1025 4060 0    50   ~ 0
@@ -117,25 +117,25 @@ F 3 "" H 1525 5055 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	1730 5290 1730 4080
-Text Notes 9010 1120 0    50   ~ 0
+Text Notes 9012 1584 0    50   ~ 0
 Igniter Driver
 $Comp
 L Device:Q_NMOS_GDS Q?
 U 1 1 5DAB7515
-P 9190 2415
+P 9192 2879
 AR Path="/5D9BEB88/5DAB7515" Ref="Q?"  Part="1" 
 AR Path="/5DAB7515" Ref="Q1"  Part="1" 
-F 0 "Q1" H 9396 2461 50  0000 L CNN
-F 1 "N MOSFET" H 9396 2415 50  0001 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 9390 2515 50  0001 C CNN
-F 3 "~" H 9190 2415 50  0001 C CNN
-	1    9190 2415
+F 0 "Q1" H 9398 2925 50  0000 L CNN
+F 1 "N MOSFET" H 9398 2879 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 9392 2979 50  0001 C CNN
+F 3 "~" H 9192 2879 50  0001 C CNN
+	1    9192 2879
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	10075 3325 10075 1140
+	10077 3789 10077 1604
 Wire Notes Line
-	8350 1150 8350 3335
+	8352 1614 8352 3799
 Text Notes 6690 7725 0    50   ~ 0
 Igniter Arduino Shield
 $Comp
@@ -231,14 +231,14 @@ Text Notes 1180 6130 0    50   ~ 0
 $Comp
 L Connector:Barrel_Jack J7
 U 1 1 5DAB74DD
-P 9590 1580
+P 9592 2044
 AR Path="/5DAB74DD" Ref="J7"  Part="1" 
 AR Path="/5D9BEB88/5DAB74DD" Ref="J?"  Part="1" 
-F 0 "J7" H 9360 1538 50  0000 R CNN
-F 1 "IgnitionCoil" H 9805 1780 50  0000 R CNN
-F 2 "Igniter:BananaJack15.5mm" H 9640 1540 50  0001 C CNN
-F 3 "~" H 9640 1540 50  0001 C CNN
-	1    9590 1580
+F 0 "J7" H 9362 2002 50  0000 R CNN
+F 1 "IgnitionCoil" H 9807 2244 50  0000 R CNN
+F 2 "Igniter:BananaJack15.5mm" H 9642 2004 50  0001 C CNN
+F 3 "~" H 9642 2004 50  0001 C CNN
+	1    9592 2044
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -266,12 +266,12 @@ $EndComp
 $Comp
 L power:+24V #PWR021
 U 1 1 5DBB7502
-P 9290 1420
-F 0 "#PWR021" H 9290 1270 50  0001 C CNN
-F 1 "+24V" H 9305 1593 50  0000 C CNN
-F 2 "" H 9290 1420 50  0001 C CNN
-F 3 "" H 9290 1420 50  0001 C CNN
-	1    9290 1420
+P 9292 1884
+F 0 "#PWR021" H 9292 1734 50  0001 C CNN
+F 1 "+24V" H 9307 2057 50  0000 C CNN
+F 2 "" H 9292 1884 50  0001 C CNN
+F 3 "" H 9292 1884 50  0001 C CNN
+	1    9292 1884
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -321,13 +321,13 @@ $EndSheet
 Text Notes 11055 3520 0    118  ~ 0
 Vcc 200mA max current draw for ATmega2560\n-Keep total current draw below this value\n-SD card powered by atmega 3V3 pin\n-Everything else powered by 5V regulator
 Wire Wire Line
-	9290 1680 9290 2215
+	9292 2144 9292 2679
 Wire Wire Line
-	9290 1480 9290 1420
+	9292 1944 9292 1884
 Wire Notes Line
-	8350 1150 10075 1150
+	8352 1614 10077 1614
 Wire Notes Line
-	8350 3325 10075 3325
+	8352 3789 10077 3789
 NoConn ~ 4050 5780
 NoConn ~ 4050 5880
 NoConn ~ 4050 5980
@@ -2177,12 +2177,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 1330 5100 1220
 Wire Wire Line
-	9290 2615 9290 2695
-Wire Wire Line
-	8925 2695 8925 2415
-Connection ~ 8925 2415
-Wire Wire Line
-	8925 2415 8990 2415
+	9292 3079 9292 3159
 Text Label 1260 1330 2    50   ~ 0
 PT1
 Text Label 4050 3080 2    50   ~ 0
@@ -2205,27 +2200,25 @@ Wire Wire Line
 	4865 1115 4815 1115
 Text Label 6650 6080 0    50   ~ 0
 CS
-Wire Wire Line
-	8180 2415 8925 2415
 Text Notes 6130 7845 2    118  ~ 0
 Figure out a Kicad BoM, not just google drive
 $Comp
 L Device:D_Small D1
 U 1 1 5DD0D731
-P 9205 1580
-F 0 "D1" V 9205 1430 50  0000 L CNN
-F 1 "D_Small" V 9250 1648 50  0001 L CNN
-F 2 "Diode_SMD:D_SOD-123F" V 9205 1580 50  0001 C CNN
-F 3 "~" V 9205 1580 50  0001 C CNN
-	1    9205 1580
+P 9207 2044
+F 0 "D1" V 9207 1894 50  0000 L CNN
+F 1 "D_Small" V 9252 2112 50  0001 L CNN
+F 2 "Diode_SMD:D_SOD-123F" V 9207 2044 50  0001 C CNN
+F 3 "~" V 9207 2044 50  0001 C CNN
+	1    9207 2044
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9205 1480 9290 1480
-Connection ~ 9290 1480
+	9207 1944 9292 1944
+Connection ~ 9292 1944
 Wire Wire Line
-	9205 1680 9290 1680
-Connection ~ 9290 1680
+	9207 2144 9292 2144
+Connection ~ 9292 2144
 Wire Wire Line
 	5100 1220 4815 1220
 Wire Wire Line
@@ -2246,5 +2239,12 @@ $EndComp
 Wire Wire Line
 	6650 2880 8180 2880
 Wire Wire Line
-	8180 2415 8180 2880
+	8180 2879 8180 2880
+Wire Wire Line
+	8180 2879 8927 2879
+Wire Wire Line
+	8927 3159 8927 2879
+Connection ~ 8927 2879
+Wire Wire Line
+	8927 2879 8992 2879
 $EndSCHEMATC

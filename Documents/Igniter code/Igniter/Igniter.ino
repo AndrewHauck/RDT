@@ -130,11 +130,6 @@ void serialEvent()
   buff += inChar;
   // Listen for commands sent from UI over serial
   
-  if (buff.endsWith('e'))
-  {
-    digitalWrite(LED_BUILTIN, HIGH);
-    buff = "";
-  }
   if (buff == FIRE)
   {
     digitalWrite(LED_BUILTIN, LOW);

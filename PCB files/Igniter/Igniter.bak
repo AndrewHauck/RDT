@@ -2098,137 +2098,141 @@ Wire Wire Line
 Wire Wire Line
 	8166 4121 8166 4216
 Connection ~ 8166 4121
-$Comp
-L Igniter-rescue:74HC4050-7400-ic IC?
-U 1 1 5DF09A68
-P -709 1335
-F 0 "IC?" H -709 2072 60  0000 C CNN
-F 1 "74HC4050" H -709 1966 60  0000 C CNN
-F 2 "Package_SO:SOP-16_4.4x10.4mm_P1.27mm" H -809 1335 60  0001 C CNN
-F 3 "" H -759 1335 60  0001 C CNN
-	1    -709 1335
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR?
-U 1 1 5DF09A6E
-P -309 1085
-F 0 "#PWR?" H -309 835 50  0001 C CNN
-F 1 "GNDREF" H -304 912 50  0001 C CNN
-F 2 "" H -309 1085 50  0001 C CNN
-F 3 "" H -309 1085 50  0001 C CNN
-	1    -309 1085
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5DF09A74
-P -309 885
-F 0 "#PWR?" H -309 735 50  0001 C CNN
-F 1 "+3V3" H -309 1025 50  0000 C CNN
-F 2 "" H -309 885 50  0001 C CNN
-F 3 "" H -309 885 50  0001 C CNN
-	1    -309 885 
-	-1   0    0    -1  
-$EndComp
-NoConn ~ -1109 1785
-$Comp
-L power:GNDREF #PWR?
-U 1 1 5DF09A89
-P -309 1785
-AR Path="/5DF09A89" Ref="#PWR?"  Part="1" 
-AR Path="/5DC64D13/5DF09A89" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H -309 1535 50  0001 C CNN
-F 1 "GNDREF" H -304 1612 50  0001 C CNN
-F 2 "" H -309 1785 50  0001 C CNN
-F 3 "" H -309 1785 50  0001 C CNN
-	1    -309 1785
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	-1109 1485 -1484 1485
+	2794 1753 2794 1853
+NoConn ~ 978  2053
 Wire Wire Line
-	-1109 1385 -1539 1385
-NoConn ~ -1109 1685
+	2794 1753 2678 1753
 Wire Wire Line
-	-309 1685 -309 1785
-Connection ~ -309 1785
+	2739 1653 2739 2093
 Wire Wire Line
-	-1109 1585 -1879 1585
-Text HLabel -309 1285 2    50   Input ~ 0
-CLK
-Text HLabel -309 1385 2    50   Input ~ 0
-DI
+	2678 1653 2739 1653
 Wire Wire Line
-	-1109 1285 -1995 1285
+	2739 1453 2739 1058
 Wire Wire Line
-	-1879 1485 -1879 1585
-Wire Wire Line
-	-1484 985  -1484 1485
-Wire Wire Line
-	-1539 1085 -1539 1385
-NoConn ~ -3695 1785
-Wire Wire Line
-	-1879 1485 -1995 1485
-Wire Wire Line
-	-1934 1385 -1934 1825
-Wire Wire Line
-	-1995 1385 -1934 1385
-Wire Wire Line
-	-1934 1185 -1934 790 
-Wire Wire Line
-	-1995 1185 -1934 1185
-Wire Wire Line
-	-1539 1085 -1995 1085
-Wire Wire Line
-	-1484 985  -1995 985 
-NoConn ~ -1995 885 
-NoConn ~ -1995 1585
+	2678 1453 2739 1453
+NoConn ~ 2678 1153
+NoConn ~ 2678 1853
 $Comp
 L Igniter-rescue:Micro_SD_Card-Connector J?
 U 1 1 5DF09A80
-P -2895 1185
+P 1778 1453
 AR Path="/5DC64D13/5DF09A80" Ref="J?"  Part="1" 
 AR Path="/5DF09A80" Ref="J?"  Part="1" 
-F 0 "J?" H -2945 368 50  0000 C CNN
-F 1 "Micro_SD_Card" H -2945 459 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H -1745 1485 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H -2895 1185 50  0001 C CNN
-	1    -2895 1185
+F 0 "J?" H 1728 636 50  0000 C CNN
+F 1 "Micro_SD_Card" H 1728 727 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H 2928 1753 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1778 1453 50  0001 C CNN
+	1    1778 1453
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GNDREF #PWR?
 U 1 1 5DF09A7A
-P -1934 1825
+P 2739 2093
 AR Path="/5DF09A7A" Ref="#PWR?"  Part="1" 
 AR Path="/5DC64D13/5DF09A7A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H -1934 1575 50  0001 C CNN
-F 1 "GNDREF" H -1929 1652 50  0001 C CNN
-F 2 "" H -1934 1825 50  0001 C CNN
-F 3 "" H -1934 1825 50  0001 C CNN
-	1    -1934 1825
+F 0 "#PWR?" H 2739 1843 50  0001 C CNN
+F 1 "GNDREF" H 2744 1920 50  0001 C CNN
+F 2 "" H 2739 2093 50  0001 C CNN
+F 3 "" H 2739 2093 50  0001 C CNN
+	1    2739 2093
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5DF09A62
-P -1934 790
+P 2739 1058
 AR Path="/5DF09A62" Ref="#PWR?"  Part="1" 
 AR Path="/5DC64D13/5DF09A62" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H -1934 640 50  0001 C CNN
-F 1 "+3V3" H -1934 930 50  0000 C CNN
-F 2 "" H -1934 790 50  0001 C CNN
-F 3 "" H -1934 790 50  0001 C CNN
-	1    -1934 790 
+F 0 "#PWR?" H 2739 908 50  0001 C CNN
+F 1 "+3V3" H 2739 1198 50  0000 C CNN
+F 2 "" H 2739 1058 50  0001 C CNN
+F 3 "" H 2739 1058 50  0001 C CNN
+	1    2739 1058
 	1    0    0    -1  
 $EndComp
-Text HLabel -309 1585 2    50   Input ~ 0
-DO
-Text Label -309 1485 0    50   ~ 0
+Wire Wire Line
+	2800 1353 2800 1653
+Wire Wire Line
+	2800 1353 2678 1353
+Wire Wire Line
+	2882 1253 2882 1753
+Wire Wire Line
+	2882 1253 2678 1253
+$Comp
+L Igniter-rescue:74HC4050-7400-ic IC?
+U 1 1 5DF09A68
+P 3391 1603
+AR Path="/5DC64D13/5DF09A68" Ref="IC?"  Part="1" 
+AR Path="/5DF09A68" Ref="IC?"  Part="1" 
+F 0 "IC?" H 3391 2340 60  0000 C CNN
+F 1 "74HC4050" H 3391 2234 60  0000 C CNN
+F 2 "Package_SO:SOP-16_4.4x10.4mm_P1.27mm" H 3291 1603 60  0001 C CNN
+F 3 "" H 3341 1603 60  0001 C CNN
+	1    3391 1603
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DF09A74
+P 3791 1153
+F 0 "#PWR?" H 3791 1003 50  0001 C CNN
+F 1 "+3V3" H 3791 1293 50  0000 C CNN
+F 2 "" H 3791 1153 50  0001 C CNN
+F 3 "" H 3791 1153 50  0001 C CNN
+	1    3791 1153
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2991 1853 2794 1853
+Wire Wire Line
+	3791 1953 3791 2053
+NoConn ~ 2991 1953
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DF09A89
+P 3791 2053
+AR Path="/5DF09A89" Ref="#PWR?"  Part="1" 
+AR Path="/5DC64D13/5DF09A89" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3791 1803 50  0001 C CNN
+F 1 "GNDREF" H 3796 1880 50  0001 C CNN
+F 2 "" H 3791 2053 50  0001 C CNN
+F 3 "" H 3791 2053 50  0001 C CNN
+	1    3791 2053
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3791 2053
+NoConn ~ 2991 2053
+Wire Wire Line
+	2991 1553 2678 1553
+Wire Wire Line
+	2991 1653 2800 1653
+Wire Wire Line
+	2991 1753 2882 1753
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5DF09A6E
+P 3791 1353
+F 0 "#PWR?" H 3791 1103 50  0001 C CNN
+F 1 "GNDREF" H 3796 1180 50  0001 C CNN
+F 2 "" H 3791 1353 50  0001 C CNN
+F 3 "" H 3791 1353 50  0001 C CNN
+	1    3791 1353
+	-1   0    0    -1  
+$EndComp
+Text Label 3791 1753 0    50   ~ 0
 CS
-Text Notes 3856 2327 0    50   ~ 0
-DO
-Text Notes 3993 2327 0    50   ~ 0
-DI
+Wire Wire Line
+	3791 1853 3974 1853
+Wire Wire Line
+	3974 1853 3974 2292
+Wire Wire Line
+	3791 1653 4074 1653
+Wire Wire Line
+	4074 1653 4074 2292
+Wire Wire Line
+	3791 1553 4174 1553
+Wire Wire Line
+	4174 1553 4174 2292
 $EndSCHEMATC

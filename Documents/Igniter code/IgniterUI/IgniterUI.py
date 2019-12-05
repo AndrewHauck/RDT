@@ -54,7 +54,7 @@ window = sg.Window('RocketView', layout, grab_anywhere=True)
 
 # Open serial port and print which port is connected
 # Also declare buffer string to store serial data
-ser = serial.Serial('COM4',19200,timeout=1)
+ser = serial.Serial('COM8',19200,timeout=1)
 print(ser.name)
 buffer = ""
 
@@ -64,7 +64,7 @@ fire = "FIRE"
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
-    event, values = window.read(timeout=100)
+    event, values = window.read(timeout=10)
     # Button Reactions
     if event is None:
         break

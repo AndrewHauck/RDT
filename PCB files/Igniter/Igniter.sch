@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -28,17 +28,6 @@ F 1 "GNDREF" H 1606 7051 50  0001 C CNN
 F 2 "" H 1601 7224 50  0001 C CNN
 F 3 "" H 1601 7224 50  0001 C CNN
 	1    1601 7224
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Female J2
-U 1 1 5DAB9C23
-P 1801 7104
-F 0 "J2" H 1828 7080 50  0000 L CNN
-F 1 "Battery" H 1828 6989 50  0000 L CNN
-F 2 "Igniter:BananaJack15.5mm" H 1801 7104 50  0001 C CNN
-F 3 "~" H 1801 7104 50  0001 C CNN
-	1    1801 7104
 	1    0    0    -1  
 $EndComp
 Text Notes 1011 6264 0    50   ~ 0
@@ -92,47 +81,25 @@ Text Notes 6690 7725 0    50   ~ 0
 Igniter Arduino Shield
 $Comp
 L Mechanical:MountingHole MH2
-U 1 1 5DB4BD1A
-P 1120 7645
-F 0 "MH2" H 1220 7645 50  0000 L CNN
-F 1 "MountingHole" H 1220 7600 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7645 50  0001 C CNN
-F 3 "~" H 1120 7645 50  0001 C CNN
-	1    1120 7645
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MH3
 U 1 1 5DB4BE36
-P 1120 7825
-F 0 "MH3" H 1220 7825 50  0000 L CNN
-F 1 "MountingHole" H 1220 7780 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7825 50  0001 C CNN
-F 3 "~" H 1120 7825 50  0001 C CNN
-	1    1120 7825
+P 1120 7649
+F 0 "MH2" H 1220 7649 50  0000 L CNN
+F 1 "MountingHole" H 1220 7604 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7649 50  0001 C CNN
+F 3 "~" H 1120 7649 50  0001 C CNN
+	1    1120 7649
 	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MH4
-U 1 1 5DB4BEEA
-P 745 7825
-F 0 "MH4" H 645 7825 50  0000 R CNN
-F 1 "MountingHole" H 845 7780 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7825 50  0001 C CNN
-F 3 "~" H 745 7825 50  0001 C CNN
-	1    745  7825
-	-1   0    0    1   
 $EndComp
 $Comp
 L Mechanical:MountingHole MH1
-U 1 1 5DB4BFCA
-P 745 7645
-F 0 "MH1" V 745 7385 50  0000 L CNN
-F 1 "MountingHole" H 845 7600 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7645 50  0001 C CNN
-F 3 "~" H 745 7645 50  0001 C CNN
-	1    745  7645
-	0    -1   -1   0   
+U 1 1 5DB4BEEA
+P 745 7649
+F 0 "MH1" H 645 7649 50  0000 R CNN
+F 1 "MountingHole" H 845 7604 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7649 50  0001 C CNN
+F 3 "~" H 745 7649 50  0001 C CNN
+	1    745  7649
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1601 7224 1601 7204
@@ -170,7 +137,7 @@ AR Path="/5D9BEB88/5DAB7506" Ref="SW?"  Part="1"
 AR Path="/5DAB7506" Ref="SW1"  Part="1" 
 F 0 "SW1" H 1326 6879 50  0001 C CNN
 F 1 "ARM" H 1326 7229 50  0000 C CNN
-F 2 "" H 1326 7104 50  0001 C CNN
+F 2 "Button_Switch_THT:KSA_Tactile_SPST" H 1326 7104 50  0001 C CNN
 F 3 "~" H 1326 7104 50  0001 C CNN
 	1    1326 7104
 	-1   0    0    1   
@@ -1814,25 +1781,14 @@ $EndBitmap
 Wire Notes Line
 	640  7560 640  7920
 $Comp
-L Mechanical:MountingHole MH5
-U 1 1 5DCE1DB8
-P 1490 7645
-F 0 "MH5" H 1590 7645 50  0000 L CNN
-F 1 "MountingHole" H 1590 7600 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7645 50  0001 C CNN
-F 3 "~" H 1490 7645 50  0001 C CNN
-	1    1490 7645
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MH6
+L Mechanical:MountingHole MH3
 U 1 1 5DCE1DBE
-P 1490 7825
-F 0 "MH6" H 1590 7825 50  0000 L CNN
-F 1 "MountingHole" H 1590 7780 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7825 50  0001 C CNN
-F 3 "~" H 1490 7825 50  0001 C CNN
-	1    1490 7825
+P 1490 7649
+F 0 "MH3" H 1590 7649 50  0000 L CNN
+F 1 "MountingHole" H 1590 7604 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7649 50  0001 C CNN
+F 3 "~" H 1490 7649 50  0001 C CNN
+	1    1490 7649
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1882,10 +1838,10 @@ F 3 "" H 2458 3942 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x06_Female J3
+L Connector:Conn_01x06_Female J5
 U 1 1 5DEB9566
 P 2258 4142
-F 0 "J3" H 2286 4118 50  0000 L CNN
+F 0 "J5" H 2286 4118 50  0000 L CNN
 F 1 "PT" H 2286 4027 50  0000 L CNN
 F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.54mm_EdgePinOffset9.40mm" H 2258 4142 50  0001 C CNN
 F 3 "~" H 2258 4142 50  0001 C CNN
@@ -1909,17 +1865,15 @@ U 1 1 5DB49E1D
 P 4224 4892
 F 0 "XA1" H 4224 2512 60  0000 C CNN
 F 1 "Arduino_Mega2560_Shield" H 4224 2406 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Shield" H 4924 7642 60  0001 C CNN
+F 2 "Arduino:Arduino_Mega2560_Modified" H 4924 7642 60  0001 C CNN
 F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4924 7642 60  0001 C CNN
 	1    4224 4892
 	1    0    0    -1  
 $EndComp
-Connection ~ 8166 3106
 Wire Wire Line
 	8081 3106 8166 3106
-Connection ~ 8166 2906
 Wire Wire Line
-	8081 2906 8166 2906
+	8081 2906 8165 2906
 $Comp
 L Device:D_Small D1
 U 1 1 5DD0D731
@@ -1996,19 +1950,6 @@ F 2 "" H 8166 2846 50  0001 C CNN
 F 3 "" H 8166 2846 50  0001 C CNN
 	1    8166 2846
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Barrel_Jack J7
-U 1 1 5DAB74DD
-P 8466 3006
-AR Path="/5DAB74DD" Ref="J7"  Part="1" 
-AR Path="/5D9BEB88/5DAB74DD" Ref="J?"  Part="1" 
-F 0 "J7" H 8236 2964 50  0000 R CNN
-F 1 "IgnitionCoil" H 8681 3206 50  0000 R CNN
-F 2 "Igniter:BananaJack15.5mm" H 8516 2966 50  0001 C CNN
-F 3 "~" H 8516 2966 50  0001 C CNN
-	1    8466 3006
-	-1   0    0    1   
 $EndComp
 NoConn ~ 2924 5842
 NoConn ~ 2924 5942
@@ -2118,8 +2059,8 @@ L Igniter-rescue:Micro_SD_Card-Connector J?
 U 1 1 5DF09A80
 P 1778 1453
 AR Path="/5DC64D13/5DF09A80" Ref="J?"  Part="1" 
-AR Path="/5DF09A80" Ref="J?"  Part="1" 
-F 0 "J?" H 1728 636 50  0000 C CNN
+AR Path="/5DF09A80" Ref="J1"  Part="1" 
+F 0 "J1" H 1728 636 50  0000 C CNN
 F 1 "Micro_SD_Card" H 1728 727 50  0000 C CNN
 F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H 2928 1753 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1778 1453 50  0001 C CNN
@@ -2127,12 +2068,12 @@ F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1778 1453 50  
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GNDREF #PWR?
+L power:GNDREF #PWR06
 U 1 1 5DF09A7A
 P 2739 2093
-AR Path="/5DF09A7A" Ref="#PWR?"  Part="1" 
+AR Path="/5DF09A7A" Ref="#PWR06"  Part="1" 
 AR Path="/5DC64D13/5DF09A7A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2739 1843 50  0001 C CNN
+F 0 "#PWR06" H 2739 1843 50  0001 C CNN
 F 1 "GNDREF" H 2744 1920 50  0001 C CNN
 F 2 "" H 2739 2093 50  0001 C CNN
 F 3 "" H 2739 2093 50  0001 C CNN
@@ -2140,12 +2081,12 @@ F 3 "" H 2739 2093 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR05
 U 1 1 5DF09A62
 P 2739 1058
-AR Path="/5DF09A62" Ref="#PWR?"  Part="1" 
+AR Path="/5DF09A62" Ref="#PWR05"  Part="1" 
 AR Path="/5DC64D13/5DF09A62" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2739 908 50  0001 C CNN
+F 0 "#PWR05" H 2739 908 50  0001 C CNN
 F 1 "+3V3" H 2739 1198 50  0000 C CNN
 F 2 "" H 2739 1058 50  0001 C CNN
 F 3 "" H 2739 1058 50  0001 C CNN
@@ -2165,8 +2106,8 @@ L Igniter-rescue:74HC4050-7400-ic IC?
 U 1 1 5DF09A68
 P 3391 1603
 AR Path="/5DC64D13/5DF09A68" Ref="IC?"  Part="1" 
-AR Path="/5DF09A68" Ref="IC?"  Part="1" 
-F 0 "IC?" H 3391 2340 60  0000 C CNN
+AR Path="/5DF09A68" Ref="IC1"  Part="1" 
+F 0 "IC1" H 3391 2340 60  0000 C CNN
 F 1 "74HC4050" H 3391 2234 60  0000 C CNN
 F 2 "Package_SO:SOP-16_4.4x10.4mm_P1.27mm" H 3291 1603 60  0001 C CNN
 F 3 "" H 3341 1603 60  0001 C CNN
@@ -2174,10 +2115,10 @@ F 3 "" H 3341 1603 60  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR09
 U 1 1 5DF09A74
 P 3791 1153
-F 0 "#PWR?" H 3791 1003 50  0001 C CNN
+F 0 "#PWR09" H 3791 1003 50  0001 C CNN
 F 1 "+3V3" H 3791 1293 50  0000 C CNN
 F 2 "" H 3791 1153 50  0001 C CNN
 F 3 "" H 3791 1153 50  0001 C CNN
@@ -2190,12 +2131,12 @@ Wire Wire Line
 	3791 1953 3791 2053
 NoConn ~ 2991 1953
 $Comp
-L power:GNDREF #PWR?
+L power:GNDREF #PWR013
 U 1 1 5DF09A89
 P 3791 2053
-AR Path="/5DF09A89" Ref="#PWR?"  Part="1" 
+AR Path="/5DF09A89" Ref="#PWR013"  Part="1" 
 AR Path="/5DC64D13/5DF09A89" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3791 1803 50  0001 C CNN
+F 0 "#PWR013" H 3791 1803 50  0001 C CNN
 F 1 "GNDREF" H 3796 1880 50  0001 C CNN
 F 2 "" H 3791 2053 50  0001 C CNN
 F 3 "" H 3791 2053 50  0001 C CNN
@@ -2211,10 +2152,10 @@ Wire Wire Line
 Wire Wire Line
 	2991 1753 2882 1753
 $Comp
-L power:GNDREF #PWR?
+L power:GNDREF #PWR010
 U 1 1 5DF09A6E
 P 3791 1353
-F 0 "#PWR?" H 3791 1103 50  0001 C CNN
+F 0 "#PWR010" H 3791 1103 50  0001 C CNN
 F 1 "GNDREF" H 3796 1180 50  0001 C CNN
 F 2 "" H 3791 1353 50  0001 C CNN
 F 3 "" H 3791 1353 50  0001 C CNN
@@ -2235,4 +2176,65 @@ Wire Wire Line
 	3791 1553 4174 1553
 Wire Wire Line
 	4174 1553 4174 2292
+$Comp
+L Connector:Conn_01x01_Female J2
+U 1 1 5DEA7B33
+P 1801 7104
+F 0 "J2" H 1833 7104 50  0000 L CNN
+F 1 "Battery +" H 1828 7039 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 1801 7104 50  0001 C CNN
+F 3 "~" H 1801 7104 50  0001 C CNN
+	1    1801 7104
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J3
+U 1 1 5DEA7B7D
+P 1801 7204
+F 0 "J3" H 1829 7204 50  0000 L CNN
+F 1 "Battery -" H 1828 7139 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 1801 7204 50  0001 C CNN
+F 3 "~" H 1801 7204 50  0001 C CNN
+	1    1801 7204
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J6
+U 1 1 5DEA8937
+P 8365 2906
+F 0 "J6" H 8397 2906 50  0000 L CNN
+F 1 "Ignition Coil +" H 8392 2841 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 8365 2906 50  0001 C CNN
+F 3 "~" H 8365 2906 50  0001 C CNN
+	1    8365 2906
+	1    0    0    -1  
+$EndComp
+Connection ~ 8165 2906
+Wire Wire Line
+	8165 2906 8166 2906
+$Comp
+L Connector:Conn_01x01_Female J7
+U 1 1 5DEA8AF3
+P 8366 3106
+F 0 "J7" H 8398 3106 50  0000 L CNN
+F 1 "Ignition coil -" H 8393 3041 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 8366 3106 50  0001 C CNN
+F 3 "~" H 8366 3106 50  0001 C CNN
+	1    8366 3106
+	1    0    0    -1  
+$EndComp
+Connection ~ 8166 3106
+$Comp
+L Mechanical:MountingHole MH4
+U 1 1 5DEB0FB5
+P 738 7825
+F 0 "MH4" H 838 7825 50  0000 L CNN
+F 1 "MountingHole" H 838 7780 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 738 7825 50  0001 C CNN
+F 3 "~" H 738 7825 50  0001 C CNN
+	1    738  7825
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4274 2293
+NoConn ~ 4475 2293
 $EndSCHEMATC

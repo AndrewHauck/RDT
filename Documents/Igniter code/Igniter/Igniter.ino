@@ -149,5 +149,6 @@ void loop()
     else
       inputString[i] = inByte;
     i++;
+
   }
 }

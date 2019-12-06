@@ -54,6 +54,7 @@ window = sg.Window('RocketView', layout, grab_anywhere=True)
 
 # Open serial port and print which port is connected
 # Also declare buffer string to store serial data
+
 ser = serial.Serial('COM3',9600,timeout=1)
 print(ser.name)
 buffer = ""

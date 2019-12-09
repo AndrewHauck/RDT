@@ -2209,7 +2209,7 @@ AR Path="/5DB4D508/5DFAB896" Ref="J?"  Part="1"
 AR Path="/5DFAB896" Ref="J1"  Part="1" 
 F 0 "J1" H 1929 3242 50  0000 C CNN
 F 1 "PT" H 1925 3315 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 1927 3540 50  0001 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1927 3540 50  0001 C CNN
 F 3 "~" H 1927 3540 50  0001 C CNN
 	1    1927 3540
 	1    0    0    1   
@@ -2235,7 +2235,7 @@ AR Path="/5DB4D508/5DFB167C" Ref="J?"  Part="1"
 AR Path="/5DFB167C" Ref="J3"  Part="1" 
 F 0 "J3" H 1806 3818 50  0000 C CNN
 F 1 "PT" H 1806 3909 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 1914 4143 50  0001 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1914 4143 50  0001 C CNN
 F 3 "~" H 1914 4143 50  0001 C CNN
 	1    1914 4143
 	1    0    0    1   
@@ -2261,7 +2261,7 @@ AR Path="/5DB4D508/5DFB50B7" Ref="J?"  Part="1"
 AR Path="/5DFB50B7" Ref="J2"  Part="1" 
 F 0 "J2" H 2472 3229 50  0000 C CNN
 F 1 "PT" H 2473 3303 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 2473 3534 50  0001 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2473 3534 50  0001 C CNN
 F 3 "~" H 2473 3534 50  0001 C CNN
 	1    2473 3534
 	1    0    0    1   
@@ -2287,7 +2287,7 @@ AR Path="/5DB4D508/5DFB50CB" Ref="J?"  Part="1"
 AR Path="/5DFB50CB" Ref="J4"  Part="1" 
 F 0 "J4" H 2352 3812 50  0000 C CNN
 F 1 "PT" H 2352 3903 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 2460 4137 50  0001 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2460 4137 50  0001 C CNN
 F 3 "~" H 2460 4137 50  0001 C CNN
 	1    2460 4137
 	1    0    0    1   

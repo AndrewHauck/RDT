@@ -325,7 +325,7 @@
 
   (net_class 24V ""
     (clearance 0.2)
-    (trace_width 0.4)
+    (trace_width 1)
     (via_dia 0.8)
     (via_drill 0.4)
     (uvia_dia 0.3)

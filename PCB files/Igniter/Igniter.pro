@@ -1,4 +1,4 @@
-update=12/1/2019 1:34:08 AM
+update=12/10/2019 12:22:47 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -279,7 +279,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=24V
 Clearance=0.2
-TrackWidth=0.4
+TrackWidth=1
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3

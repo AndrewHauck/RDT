@@ -1975,10 +1975,10 @@ $EndComp
 Wire Wire Line
 	2477 2282 2477 2395
 $Comp
-L Connector:Conn_01x03_Female J9
+L Connector:Conn_01x03_Female J8
 U 1 1 5DF28FFB
 P 1898 2622
-F 0 "J9" H 1790 2297 50  0000 C CNN
+F 0 "J8" H 1790 2297 50  0000 C CNN
 F 1 "SL1" H 1790 2388 50  0000 C CNN
 F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 1898 2622 50  0001 C CNN
 F 3 "~" H 1898 2622 50  0001 C CNN
@@ -2103,10 +2103,10 @@ $EndComp
 Wire Wire Line
 	3730 2306 3730 2419
 $Comp
-L Connector:Conn_01x03_Female J10
+L Connector:Conn_01x03_Female J9
 U 1 1 5DF5A5C1
 P 3151 2646
-F 0 "J10" H 3043 2321 50  0000 C CNN
+F 0 "J9" H 3043 2321 50  0000 C CNN
 F 1 "SL2" H 3043 2412 50  0000 C CNN
 F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 3151 2646 50  0001 C CNN
 F 3 "~" H 3151 2646 50  0001 C CNN
@@ -2231,10 +2231,10 @@ $EndComp
 Wire Wire Line
 	4967 2330 4967 2443
 $Comp
-L Connector:Conn_01x03_Female J11
+L Connector:Conn_01x03_Female J10
 U 1 1 5DF5F5EE
 P 4388 2670
-F 0 "J11" H 4280 2345 50  0000 C CNN
+F 0 "J10" H 4280 2345 50  0000 C CNN
 F 1 "SL3" H 4280 2436 50  0000 C CNN
 F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 4388 2670 50  0001 C CNN
 F 3 "~" H 4388 2670 50  0001 C CNN
@@ -2359,10 +2359,10 @@ $EndComp
 Wire Wire Line
 	2541 4113 2541 4226
 $Comp
-L Connector:Conn_01x03_Female J12
+L Connector:Conn_01x03_Female J11
 U 1 1 5DF79BA0
 P 1962 4453
-F 0 "J12" H 1854 4128 50  0000 C CNN
+F 0 "J11" H 1854 4128 50  0000 C CNN
 F 1 "SL4" H 1854 4219 50  0000 C CNN
 F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 1962 4453 50  0001 C CNN
 F 3 "~" H 1962 4453 50  0001 C CNN
@@ -2487,10 +2487,10 @@ $EndComp
 Wire Wire Line
 	3794 4137 3794 4250
 $Comp
-L Connector:Conn_01x03_Female J13
+L Connector:Conn_01x03_Female J12
 U 1 1 5DF79C01
 P 3215 4477
-F 0 "J13" H 3107 4152 50  0000 C CNN
+F 0 "J12" H 3107 4152 50  0000 C CNN
 F 1 "SL5" H 3107 4243 50  0000 C CNN
 F 2 "Connector_Molex:Molex_Nano-Fit_105309-xx03_1x03_P2.50mm_Vertical" H 3215 4477 50  0001 C CNN
 F 3 "~" H 3215 4477 50  0001 C CNN

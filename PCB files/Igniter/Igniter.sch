@@ -2008,8 +2008,8 @@ L Igniter-rescue:Micro_SD_Card-Connector J?
 U 1 1 5DF09A80
 P 1778 1453
 AR Path="/5DC64D13/5DF09A80" Ref="J?"  Part="1" 
-AR Path="/5DF09A80" Ref="J14"  Part="1" 
-F 0 "J14" H 1728 636 50  0000 C CNN
+AR Path="/5DF09A80" Ref="J13"  Part="1" 
+F 0 "J13" H 1728 636 50  0000 C CNN
 F 1 "Micro_SD_Card" H 1728 727 50  0000 C CNN
 F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H 2928 1753 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1778 1453 50  0001 C CNN
@@ -2126,32 +2126,10 @@ Wire Wire Line
 Wire Wire Line
 	4174 1553 4174 2292
 $Comp
-L Connector:Conn_01x01_Female J5
-U 1 1 5DEA7B33
-P 1801 7104
-F 0 "J5" H 1833 7104 50  0000 L CNN
-F 1 "Battery +" H 1828 7039 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 1801 7104 50  0001 C CNN
-F 3 "~" H 1801 7104 50  0001 C CNN
-	1    1801 7104
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x01_Female J6
-U 1 1 5DEA7B7D
-P 1801 7204
-F 0 "J6" H 1829 7204 50  0000 L CNN
-F 1 "Battery -" H 1828 7139 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 1801 7204 50  0001 C CNN
-F 3 "~" H 1801 7204 50  0001 C CNN
-	1    1801 7204
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J7
 U 1 1 5DEA8937
 P 8365 2906
-F 0 "J7" H 8397 2906 50  0000 L CNN
+F 0 "J6" H 8397 2906 50  0000 L CNN
 F 1 "Ignition Coil +" H 8392 2841 50  0001 L CNN
 F 2 "IgniterCustom:BananaJack15.5mm" H 8365 2906 50  0001 C CNN
 F 3 "~" H 8365 2906 50  0001 C CNN
@@ -2162,10 +2140,10 @@ Connection ~ 8165 2906
 Wire Wire Line
 	8165 2906 8166 2906
 $Comp
-L Connector:Conn_01x01_Female J8
+L Connector:Conn_01x01_Female J7
 U 1 1 5DEA8AF3
 P 8366 3106
-F 0 "J8" H 8398 3106 50  0000 L CNN
+F 0 "J7" H 8398 3106 50  0000 L CNN
 F 1 "Ignition coil -" H 8393 3041 50  0001 L CNN
 F 2 "IgniterCustom:BananaJack15.5mm" H 8366 3106 50  0001 C CNN
 F 3 "~" H 8366 3106 50  0001 C CNN
@@ -2355,5 +2333,16 @@ F 2 "" H 2260 4037 50  0001 C CNN
 F 3 "" H 2260 4037 50  0001 C CNN
 	1    2260 4037
 	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J5
+U 1 1 5DF0B34B
+P 1801 7104
+F 0 "J5" H 1829 7080 50  0000 L CNN
+F 1 "Battery" H 1829 6989 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 1801 7104 50  0001 C CNN
+F 3 "~" H 1801 7104 50  0001 C CNN
+	1    1801 7104
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

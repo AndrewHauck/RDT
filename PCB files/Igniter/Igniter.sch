@@ -106,18 +106,7 @@ Wire Wire Line
 Wire Wire Line
 	1526 7104 1601 7104
 Text Notes 1001 6839 0    50   ~ 0
-5A
-$Comp
-L power:+24V #PWR01
-U 1 1 5DBB64EE
-P 1046 6559
-F 0 "#PWR01" H 1046 6409 50  0001 C CNN
-F 1 "+24V" H 1061 6732 50  0000 C CNN
-F 2 "" H 1046 6559 50  0001 C CNN
-F 3 "" H 1046 6559 50  0001 C CNN
-	1    1046 6559
-	1    0    0    -1  
-$EndComp
+3A
 $Comp
 L power:+24V #PWR08
 U 1 1 5DBB6589
@@ -220,8 +209,8 @@ $Comp
 L Igniter-rescue:BladeFuse F1
 U 1 1 5DCA7861
 P 1196 6809
-F 0 "F1" V 1150 6897 50  0000 L CNN
-F 1 "BladeFuse" V 1241 6897 50  0000 L CNN
+F 0 "F1" V 1075 6892 50  0000 L CNN
+F 1 "BladeFuse" V 1149 6891 50  0000 L CNN
 F 2 "IgniterCustom:FuseHolder" H 1196 6809 50  0001 C CNN
 F 3 "" H 1196 6809 50  0001 C CNN
 	1    1196 6809
@@ -242,12 +231,7 @@ Wire Wire Line
 Connection ~ 1096 7059
 Wire Wire Line
 	896  6559 996  6559
-Wire Wire Line
-	996  6559 1046 6559
 Connection ~ 996  6559
-Wire Wire Line
-	1046 6559 1096 6559
-Connection ~ 1046 6559
 Wire Wire Line
 	1096 6559 1196 6559
 Connection ~ 1096 6559
@@ -2274,17 +2258,6 @@ Wire Notes Line
 	4667 2560 472  2560
 Wire Notes Line
 	4667 2560 4667 471 
-$Comp
-L power:+24V #PWR0122
-U 1 1 5DFBEE1E
-P 1727 3440
-F 0 "#PWR0122" H 1727 3290 50  0001 C CNN
-F 1 "+24V" H 1727 3585 50  0000 C CNN
-F 2 "" H 1727 3440 50  0001 C CNN
-F 3 "" H 1727 3440 50  0001 C CNN
-	1    1727 3440
-	-1   0    0    -1  
-$EndComp
 Text Label 2924 4042 2    50   ~ 0
 PT0
 Text Label 2924 4142 2    50   ~ 0
@@ -2302,6 +2275,33 @@ PT2
 Text Label 2260 4137 2    50   ~ 0
 PT3
 $Comp
+L Connector:Conn_01x02_Female J5
+U 1 1 5DF0B34B
+P 1801 7104
+F 0 "J5" H 1829 7080 50  0000 L CNN
+F 1 "Battery" H 1829 6989 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 1801 7104 50  0001 C CNN
+F 3 "~" H 1801 7104 50  0001 C CNN
+	1    1801 7104
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1046 6559 1096 6559
+Wire Wire Line
+	996  6559 1046 6559
+Connection ~ 1046 6559
+$Comp
+L power:+24V #PWR01
+U 1 1 5DBB64EE
+P 1046 6559
+F 0 "#PWR01" H 1046 6409 50  0001 C CNN
+F 1 "+24V" H 1061 6732 50  0000 C CNN
+F 2 "" H 1046 6559 50  0001 C CNN
+F 3 "" H 1046 6559 50  0001 C CNN
+	1    1046 6559
+	1    0    0    -1  
+$EndComp
+$Comp
 L power:+24V #PWR0123
 U 1 1 5DFC5913
 P 2273 3434
@@ -2310,17 +2310,6 @@ F 1 "+24V" H 2273 3579 50  0000 C CNN
 F 2 "" H 2273 3434 50  0001 C CNN
 F 3 "" H 2273 3434 50  0001 C CNN
 	1    2273 3434
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+24V #PWR0124
-U 1 1 5DFD2F0A
-P 1714 4043
-F 0 "#PWR0124" H 1714 3893 50  0001 C CNN
-F 1 "+24V" H 1714 4188 50  0000 C CNN
-F 2 "" H 1714 4043 50  0001 C CNN
-F 3 "" H 1714 4043 50  0001 C CNN
-	1    1714 4043
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -2335,14 +2324,25 @@ F 3 "" H 2260 4037 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Female J5
-U 1 1 5DF0B34B
-P 1801 7104
-F 0 "J5" H 1829 7080 50  0000 L CNN
-F 1 "Battery" H 1829 6989 50  0000 L CNN
-F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 1801 7104 50  0001 C CNN
-F 3 "~" H 1801 7104 50  0001 C CNN
-	1    1801 7104
-	1    0    0    -1  
+L power:+24V #PWR0124
+U 1 1 5DFD2F0A
+P 1714 4043
+F 0 "#PWR0124" H 1714 3893 50  0001 C CNN
+F 1 "+24V" H 1714 4188 50  0000 C CNN
+F 2 "" H 1714 4043 50  0001 C CNN
+F 3 "" H 1714 4043 50  0001 C CNN
+	1    1714 4043
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0122
+U 1 1 5DFBEE1E
+P 1727 3440
+F 0 "#PWR0122" H 1727 3290 50  0001 C CNN
+F 1 "+24V" H 1727 3585 50  0000 C CNN
+F 2 "" H 1727 3440 50  0001 C CNN
+F 3 "" H 1727 3440 50  0001 C CNN
+	1    1727 3440
+	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=12/10/2019 12:22:47 PM
+update=12/17/2019 8:11:04 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -277,7 +277,7 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
-Name=24V
+Name=PWR
 Clearance=0.2
 TrackWidth=1
 ViaDiameter=0.8

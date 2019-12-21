@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 21)
+    (drawings 26)
     (tracks 4)
     (zones 0)
     (modules 56)
@@ -2791,6 +2791,13 @@
     )
   )
 
+  (gr_text "Check diameter" (at 244.53342 150.71598) (layer Dwgs.User)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (gr_line (start 208.9785 150.71598) (end 237.97768 150.71598) (layer Dwgs.User) (width 0.15))
+  (gr_line (start 208.81594 150.63216) (end 219.95638 157.84068) (layer Dwgs.User) (width 0.15))
+  (gr_line (start 218.8083 145.14576) (end 208.81594 150.63216) (layer Dwgs.User) (width 0.15))
+  (gr_line (start 208.73466 150.79726) (end 218.8083 145.14576) (layer Dwgs.User) (width 0.15))
   (gr_text "Igniter ->" (at 200.56348 114.64544) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )

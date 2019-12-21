@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 20)
+    (drawings 21)
     (tracks 4)
     (zones 0)
     (modules 56)
@@ -2791,6 +2791,9 @@
     )
   )
 
+  (gr_text "Igniter ->" (at 200.56348 114.64544) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_text Solenoids (at 181.37378 153.90876) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )

@@ -28,12 +28,12 @@ class serialBuffer
 {
   public:
     serialBuffer();
-    void checkForCommand(char _inChar);
     void flushBuffer();
     void updateBuffer();
     bool isComplete() const;
     String& getBuffer();
   private:
+    bool checkForCommand(char _inChar);
     String m_serialRaw;
     bool m_stringComplete;
 };

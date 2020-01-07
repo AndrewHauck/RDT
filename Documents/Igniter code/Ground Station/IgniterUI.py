@@ -62,6 +62,12 @@ buffer = ""
 # Command to open valves for ARM event
 arm = "ARM"
 fire = "FIRE"
+dataString = ""
+
+###FIGURE OUT HOW TO ADD A DROP DOWN MENU FOR SELECTING COM PORTS
+
+##FIND WAY TO ADD "ENQUIRE" BUTTON
+
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -70,17 +76,14 @@ while True:
     if event is None:
         break
     if event == 'ARM':
-        print('ARMED')
+        print("arming...")
         isValveOpen[1] = True
         isValveOpen[2] = True
         # Send command to arm
-        print("Sending" + arm)
-        ser.write(bytearray(arm, 'utf-8'))
-        ser.write(bytearray('\3', 'utf-8'))
+        packet = [0x01, 0x43, 0x30, 0x33, 0x02, 0x41, 0x52, 0x4d, 0x04]
+        ser.write(bytearray(packet))
     elif event == 'FIRE':
-        #print('FIRING')
-        # timer = threading.Timer(1, igniterLoop)
-        # timer.start()
+        print("firing...")
         isValveOpen[3] = True
         isValveOpen[4] = True
         isValveOpen[0] = True
@@ -89,18 +92,21 @@ while True:
         isValveOpen[1] = False
         isValveOpen[2] = False
         isValveOpen[0] = False
-        ser.write(bytearray(fire, 'utf-8'))
-        ser.write(bytearray('\3', 'utf-8'))
+        packet = [0x01, 0x43, 0x30, 0x34, 0x02, 0x46, 0x49, 0x52, 0x45, 0x04]
+        ser.write(bytearray(packet))
     elif event == 'PURGE':
-        #print('Valve 5 open')
+        print("purging...")
         isValveOpen[5] = True
-        # ser.write('3')
+        packet = [0x01, 0x43, 0x30, 0x35, 0x02, 0x50, 0x55, 0x52, 0x47, 0x45, 0x04]
+        ser.write(bytearray(packet))
     elif event == 'CLOSE ALL':
         #print('Valve 5 closed')
         #print('Valve 3 closed. Valve 4 closed.')
+        print("closing...")
         for x in range(6):
             isValveOpen[x] = False
-        # ser.write('4')
+        packet = [0x01, 0x43, 0x30, 0x35, 0x02, 0x43, 0x4c, 0x4f, 0x53, 0x45, 0x04]
+        ser.write(bytearray(packet))
 
     # Updating GUI to reflect valve states
     for x in range(6):
@@ -110,32 +116,57 @@ while True:
             window.FindElement(x).Update(button_color=('White', 'Red'))
 
     #*****UPDATE PRESSURE READINGS*****
-    buffer = buffer + ser.read().decode('utf-8') #assmble string buffer of inbound serial data
-    # s = ser.read()
-    #hex_string = binascii.hexlify(s).decode('utf-8')
-
     # Parses serial buffer from microcontroller
-    # Expects serial data w/ ',' as delimiter between data elements
-    # Ex: 123a,456b,789c,...
     # Converts raw data into float value, used to update GUI
-    print(buffer)
-    if '\3' in buffer:
-        buffer = buffer.replace('\3','')                 # Remove delimiter from buffer string
-        print(buffer)
-        identifier = buffer[len(buffer)-1]              # Store identifier
-        buffer = buffer[:-1]                            # Remove identifier from buffer string
-        pressureVal = float(buffer)*(7.0/256.0)         # See calculation note below
-            #Pressure Calculation = pdata#*(5.0/1023.0)(14000/2500)
-            #Simplified to constant: (7.0/256.0)
-        pressureVal = round(pressureVal, 2)             # Round value to 2 decimal places
-        if identifier == 'a':
-            window.Element('P1').Update(pressureVal)
-        elif identifier == 'b':
-             window.Element('P2').Update(pressureVal)
-        elif identifier == 'c':
-             window.Element('P3').Update(pressureVal)
-        elif identifier == 'd':
-             window.Element('P4').Update(pressureVal)
-        buffer = ""                                     # Clear buffer
+    while ser.in_waiting:
+        inChar = ser.read().decode('ASCII')
+        buffer = buffer + inChar
+        if(inChar == chr(4)):
+            if(buffer.find(chr(1)) >= 0):
+                buffer = buffer[buffer.find(chr(1)):(buffer.find(chr(4))+1)] # Trim off excess characters before and after packet
+                packet_type = buffer[1]
+
+                upperNibble: int = ord(buffer[2])
+                lowerNibble: int = ord(buffer[3])
+                # UPPER NIBBLE
+                if (upperNibble > 0x40): # if a letter
+                    upperNibble = upperNibble & 0b00001111 # strip off upper nibble(only indicates that value is a letter)
+                    upperNibble = upperNibble + 0b00001001 # upperNibble now equals 0x0A - 0x0F
+                else:
+                    upperNibble = upperNibble & 0b00001111 # upperNibble now equals 0x00 - 0x09
+                upperNibble = upperNibble << 4 # upperNibble now represents upper byte of dataBytes
+                # LOWER NIBBLE
+                if (lowerNibble > 0x40): # if letter
+                    lowerNibble = lowerNibble & 0b00001111 # strip off upper nibble
+                    lowerNibble = lowerNibble + 0b00001001 # lowerNibble now equals 0x0A - 0x0F
+                lowerNibble = lowerNibble & 0b00001111 # lowerNibble now equals 0x00 - 0x09 if it was a number
+
+                packet_dataSize = upperNibble | lowerNibble # combining upper and lower bytes to make final char(UUUU LLLL)
+                dataString = buffer[5:-1] # sets data string of packet to data pulled from _inputString
+                buffer = "" # Clear buffer
+
+                # ***  UPDATE PRESSURE READINGS ***
+                # ***  CAN WE CHECK THESE CALCULATIONS???
+                # ***  5V ON PIN = 28 PSI???
+                if(packet_type == 'D'):
+                    pdata1 = dataString[dataString.find('A')+1:dataString.find('B')]
+                    pdata1 = int(pdata1)*(5.0/1023.0)*(14000.0/2500.0)
+                    window.Element('P1').Update(round(pdata1, 2))
+
+                    pdata2 = dataString[dataString.find('B')+1:dataString.find('C')]
+                    pdata2 = int(pdata2)*(5.0/1023.0)*(14000.0/2500.0)
+                    window.Element('P2').Update(round(pdata2, 2))
+
+                    pdata3 = dataString[dataString.find('C')+1:dataString.find('D')]
+                    pdata3 = int(pdata3)*(5.0/1023.0)*(14000.0/2500.0)
+                    window.Element('P3').Update(round(pdata3, 2))
+
+                    pdata4 = dataString[dataString.find('D')+1:]
+                    pdata4 = int(pdata4)*(5.0/1023.0)*(14000.0/2500.0)
+                    window.Element('P4').Update(round(pdata4, 2))
+                if(packet_type == 'M'):
+                    print(dataString)
+            else:
+                buffer = "" # If only 1 end of packet is found, data somehow corrupted, clear buffer
 window.close()
 

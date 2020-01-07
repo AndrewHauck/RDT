@@ -19,6 +19,11 @@ serialPacket::serialPacket(String _string, unsigned char _type)
   setData(_string);
   setType(_type);
 }
+serialPacket::serialPacket(serialBuffer _buffer)
+{
+  serialPacket();
+  receive(_buffer.getBuffer());
+}
 serialPacket::serialPacket(unsigned char _type)
 {
   serialPacket();  
@@ -63,15 +68,15 @@ void serialPacket::clearData()
   m_dataSize = 0;
   return;
 }
-void serialPacket::setType(unsigned char _byte)
+void serialPacket::setType(char _byte)
 {
   m_type = _byte;
   return;
 }
-void serialPacket::reset()
+void serialPacket::configure(String _string, char _byte)
 {
-	clearData();
-	setType(0x00);
+	setData(_string);
+	setType(_byte);
 }
 //----------END OF MUTATOR FUNCTIONS----------
 
@@ -86,9 +91,13 @@ unsigned char serialPacket::getSize() const
 {
   return m_dataSize;
 }
-unsigned char serialPacket::getType() const
+char serialPacket::getType() const
 {
   return m_type;
+}
+String serialPacket::getData() const
+{
+	return m_dataString;
 }
 //----------END OF ACCESSOR FUNCTIONS----------
 
@@ -112,12 +121,11 @@ bool serialPacket::transmit()
       Serial.print(upperNibble);
       
       char lowerNibble = m_dataSize & 0b00001111;  //strip off upper nibble
-      lowerNibble = lowerNibble >> 4; //now storing lower nibble as char (0b0000xxxx)
       if(lowerNibble > 0x09)  //if a letter (A-F)
         lowerNibble = lowerNibble + 0x37; //ascii offset for characters
       else //if a number
         lowerNibble = lowerNibble + 0x30; //ascii offset for numbers
-      Serial.print(lowerNibble);
+	  Serial.print(lowerNibble);
 
       //****PRINT START OF DATA CHARACTER****
       Serial.write(0x02);

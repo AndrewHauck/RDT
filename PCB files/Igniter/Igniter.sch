@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -54,7 +54,7 @@ P 1346 5614
 AR Path="/5D9BEB88/5DAC3A7D" Ref="D?"  Part="1" 
 AR Path="/5DAC3A7D" Ref="D13"  Part="1" 
 F 0 "D13" V 1346 5549 50  0000 R CNN
-F 1 "24V_ARMED" V 1293 5497 50  0001 R CNN
+F 1 "24V" V 1293 5497 50  0001 R CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 1346 5614 50  0001 C CNN
 F 3 "~" H 1346 5614 50  0001 C CNN
 	1    1346 5614
@@ -85,7 +85,7 @@ U 1 1 5DB4BE36
 P 1120 7649
 F 0 "MH2" H 1220 7649 50  0000 L CNN
 F 1 "MountingHole" H 1220 7604 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7649 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1120 7649 50  0001 C CNN
 F 3 "~" H 1120 7649 50  0001 C CNN
 	1    1120 7649
 	1    0    0    -1  
@@ -96,7 +96,7 @@ U 1 1 5DB4BEEA
 P 745 7649
 F 0 "MH1" H 645 7649 50  0000 R CNN
 F 1 "MountingHole" H 845 7604 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7649 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 745 7649 50  0001 C CNN
 F 3 "~" H 745 7649 50  0001 C CNN
 	1    745  7649
 	-1   0    0    1   
@@ -106,18 +106,7 @@ Wire Wire Line
 Wire Wire Line
 	1526 7104 1601 7104
 Text Notes 1001 6839 0    50   ~ 0
-5A
-$Comp
-L power:+24V #PWR01
-U 1 1 5DBB64EE
-P 1046 6559
-F 0 "#PWR01" H 1046 6409 50  0001 C CNN
-F 1 "+24V" H 1061 6732 50  0000 C CNN
-F 2 "" H 1046 6559 50  0001 C CNN
-F 3 "" H 1046 6559 50  0001 C CNN
-	1    1046 6559
-	1    0    0    -1  
-$EndComp
+3A
 $Comp
 L power:+24V #PWR08
 U 1 1 5DBB6589
@@ -172,7 +161,7 @@ P 1026 5614
 AR Path="/5D9BEB88/5DC81323" Ref="D?"  Part="1" 
 AR Path="/5DC81323" Ref="D12"  Part="1" 
 F 0 "D12" V 1026 5559 50  0000 R CNN
-F 1 "3V3_GOOD" V 973 5497 50  0001 R CNN
+F 1 "3V3" V 973 5497 50  0001 R CNN
 F 2 "LED_SMD:LED_1206_3216Metric" H 1026 5614 50  0001 C CNN
 F 3 "~" H 1026 5614 50  0001 C CNN
 	1    1026 5614
@@ -220,8 +209,8 @@ $Comp
 L Igniter-rescue:BladeFuse F1
 U 1 1 5DCA7861
 P 1196 6809
-F 0 "F1" V 1150 6897 50  0000 L CNN
-F 1 "BladeFuse" V 1241 6897 50  0000 L CNN
+F 0 "F1" V 1075 6892 50  0000 L CNN
+F 1 "BladeFuse" V 1149 6891 50  0000 L CNN
 F 2 "IgniterCustom:FuseHolder" H 1196 6809 50  0001 C CNN
 F 3 "" H 1196 6809 50  0001 C CNN
 	1    1196 6809
@@ -242,12 +231,7 @@ Wire Wire Line
 Connection ~ 1096 7059
 Wire Wire Line
 	896  6559 996  6559
-Wire Wire Line
-	996  6559 1046 6559
 Connection ~ 996  6559
-Wire Wire Line
-	1046 6559 1096 6559
-Connection ~ 1046 6559
 Wire Wire Line
 	1096 6559 1196 6559
 Connection ~ 1096 6559
@@ -1786,7 +1770,7 @@ U 1 1 5DCE1DBE
 P 1490 7649
 F 0 "MH3" H 1590 7649 50  0000 L CNN
 F 1 "MountingHole" H 1590 7604 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7649 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1490 7649 50  0001 C CNN
 F 3 "~" H 1490 7649 50  0001 C CNN
 	1    1490 7649
 	1    0    0    -1  
@@ -1797,57 +1781,8 @@ Wire Notes Line
 	640  7920 1780 7920
 Wire Notes Line
 	640  7550 1780 7550
-Text Notes 6130 7845 2    118  ~ 0
+Text Notes 6208 8766 2    118  ~ 0
 Figure out a Kicad BoM, not just google drive
-Wire Wire Line
-	2924 4342 2458 4342
-Wire Wire Line
-	2458 4242 2924 4242
-Wire Wire Line
-	2458 4042 2924 4042
-Wire Wire Line
-	2458 4142 2924 4142
-Wire Notes Line
-	2232 4602 2232 4601
-Wire Notes Line
-	2041 4568 2745 4568
-Wire Notes Line
-	2041 3715 2746 3715
-Wire Notes Line
-	2041 3715 2041 4568
-$Comp
-L power:GNDREF #PWR012
-U 1 1 5DEBAFC0
-P 2458 4442
-F 0 "#PWR012" H 2458 4192 50  0001 C CNN
-F 1 "GNDREF" H 2463 4269 50  0001 C CNN
-F 2 "" H 2458 4442 50  0001 C CNN
-F 3 "" H 2458 4442 50  0001 C CNN
-	1    2458 4442
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+24V #PWR07
-U 1 1 5DEBA11C
-P 2458 3942
-F 0 "#PWR07" H 2458 3792 50  0001 C CNN
-F 1 "+24V" H 2458 4087 50  0000 C CNN
-F 2 "" H 2458 3942 50  0001 C CNN
-F 3 "" H 2458 3942 50  0001 C CNN
-	1    2458 3942
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x06_Female J5
-U 1 1 5DEB9566
-P 2258 4142
-F 0 "J5" H 2286 4118 50  0000 L CNN
-F 1 "PT" H 2286 4027 50  0000 L CNN
-F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.54mm_EdgePinOffset9.40mm" H 2258 4142 50  0001 C CNN
-F 3 "~" H 2258 4142 50  0001 C CNN
-	1    2258 4142
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7801 3841 7866 3841
 Connection ~ 7801 3841
@@ -1903,8 +1838,6 @@ Wire Wire Line
 	5524 2842 6144 2842
 Wire Wire Line
 	5524 2742 6144 2742
-Text Notes 1983 3683 0    50   ~ 0
-Pressure Transducers
 $Sheet
 S 6144 2647 505  585 
 U 5DB4D508
@@ -2003,7 +1936,7 @@ AR Path="/5D9BEB88/5DAB7515" Ref="Q?"  Part="1"
 AR Path="/5DAB7515" Ref="Q1"  Part="1" 
 F 0 "Q1" H 8272 3887 50  0000 L CNN
 F 1 "N MOSFET" H 8272 3841 50  0001 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 8266 3941 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 8266 3941 50  0001 C CNN
 F 3 "~" H 8066 3841 50  0001 C CNN
 	1    8066 3841
 	1    0    0    -1  
@@ -2059,8 +1992,8 @@ L Igniter-rescue:Micro_SD_Card-Connector J?
 U 1 1 5DF09A80
 P 1778 1453
 AR Path="/5DC64D13/5DF09A80" Ref="J?"  Part="1" 
-AR Path="/5DF09A80" Ref="J1"  Part="1" 
-F 0 "J1" H 1728 636 50  0000 C CNN
+AR Path="/5DF09A80" Ref="J13"  Part="1" 
+F 0 "J13" H 1728 636 50  0000 C CNN
 F 1 "Micro_SD_Card" H 1728 727 50  0000 C CNN
 F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H 2928 1753 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1778 1453 50  0001 C CNN
@@ -2177,28 +2110,6 @@ Wire Wire Line
 Wire Wire Line
 	4174 1553 4174 2292
 $Comp
-L Connector:Conn_01x01_Female J2
-U 1 1 5DEA7B33
-P 1801 7104
-F 0 "J2" H 1833 7104 50  0000 L CNN
-F 1 "Battery +" H 1828 7039 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 1801 7104 50  0001 C CNN
-F 3 "~" H 1801 7104 50  0001 C CNN
-	1    1801 7104
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J3
-U 1 1 5DEA7B7D
-P 1801 7204
-F 0 "J3" H 1829 7204 50  0000 L CNN
-F 1 "Battery -" H 1828 7139 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 1801 7204 50  0001 C CNN
-F 3 "~" H 1801 7204 50  0001 C CNN
-	1    1801 7204
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x01_Female J6
 U 1 1 5DEA8937
 P 8365 2906
@@ -2230,11 +2141,208 @@ U 1 1 5DEB0FB5
 P 738 7825
 F 0 "MH4" H 838 7825 50  0000 L CNN
 F 1 "MountingHole" H 838 7780 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 738 7825 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 738 7825 50  0001 C CNN
 F 3 "~" H 738 7825 50  0001 C CNN
 	1    738  7825
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4274 2293
 NoConn ~ 4475 2293
+Text Notes 1693 3088 0    50   ~ 0
+Pressure Transducers
+$Comp
+L power:GNDREF #PWR0118
+U 1 1 5DFAB89C
+P 1727 3640
+AR Path="/5DFAB89C" Ref="#PWR0118"  Part="1" 
+AR Path="/5DB4D508/5DFAB89C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0118" H 1727 3390 50  0001 C CNN
+F 1 "GNDREF" H 1732 3467 50  0001 C CNN
+F 2 "" H 1727 3640 50  0001 C CNN
+F 3 "" H 1727 3640 50  0001 C CNN
+	1    1727 3640
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5DFAB896
+P 1927 3540
+AR Path="/5DB4D508/5DFAB896" Ref="J?"  Part="1" 
+AR Path="/5DFAB896" Ref="J1"  Part="1" 
+F 0 "J1" H 1929 3242 50  0000 C CNN
+F 1 "PT" H 1925 3315 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1927 3540 50  0001 C CNN
+F 3 "~" H 1927 3540 50  0001 C CNN
+	1    1927 3540
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR0119
+U 1 1 5DFB1672
+P 1714 4243
+AR Path="/5DFB1672" Ref="#PWR0119"  Part="1" 
+AR Path="/5DB4D508/5DFB1672" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0119" H 1714 3993 50  0001 C CNN
+F 1 "GNDREF" H 1719 4070 50  0001 C CNN
+F 2 "" H 1714 4243 50  0001 C CNN
+F 3 "" H 1714 4243 50  0001 C CNN
+	1    1714 4243
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5DFB167C
+P 1914 4143
+AR Path="/5DB4D508/5DFB167C" Ref="J?"  Part="1" 
+AR Path="/5DFB167C" Ref="J3"  Part="1" 
+F 0 "J3" H 1806 3818 50  0000 C CNN
+F 1 "PT" H 1806 3909 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1914 4143 50  0001 C CNN
+F 3 "~" H 1914 4143 50  0001 C CNN
+	1    1914 4143
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR0120
+U 1 1 5DFB50AD
+P 2273 3634
+AR Path="/5DFB50AD" Ref="#PWR0120"  Part="1" 
+AR Path="/5DB4D508/5DFB50AD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0120" H 2273 3384 50  0001 C CNN
+F 1 "GNDREF" H 2278 3461 50  0001 C CNN
+F 2 "" H 2273 3634 50  0001 C CNN
+F 3 "" H 2273 3634 50  0001 C CNN
+	1    2273 3634
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5DFB50B7
+P 2473 3534
+AR Path="/5DB4D508/5DFB50B7" Ref="J?"  Part="1" 
+AR Path="/5DFB50B7" Ref="J2"  Part="1" 
+F 0 "J2" H 2472 3229 50  0000 C CNN
+F 1 "PT" H 2473 3303 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2473 3534 50  0001 C CNN
+F 3 "~" H 2473 3534 50  0001 C CNN
+	1    2473 3534
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR0121
+U 1 1 5DFB50C1
+P 2260 4237
+AR Path="/5DFB50C1" Ref="#PWR0121"  Part="1" 
+AR Path="/5DB4D508/5DFB50C1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0121" H 2260 3987 50  0001 C CNN
+F 1 "GNDREF" H 2265 4064 50  0001 C CNN
+F 2 "" H 2260 4237 50  0001 C CNN
+F 3 "" H 2260 4237 50  0001 C CNN
+	1    2260 4237
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5DFB50CB
+P 2460 4137
+AR Path="/5DB4D508/5DFB50CB" Ref="J?"  Part="1" 
+AR Path="/5DFB50CB" Ref="J4"  Part="1" 
+F 0 "J4" H 2352 3812 50  0000 C CNN
+F 1 "PT" H 2352 3903 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2460 4137 50  0001 C CNN
+F 3 "~" H 2460 4137 50  0001 C CNN
+	1    2460 4137
+	1    0    0    1   
+$EndComp
+Wire Notes Line
+	4667 2560 472  2560
+Wire Notes Line
+	4667 2560 4667 471 
+Text Label 2924 4042 2    50   ~ 0
+PT0
+Text Label 2924 4142 2    50   ~ 0
+PT1
+Text Label 2924 4242 2    50   ~ 0
+PT2
+Text Label 2924 4342 2    50   ~ 0
+PT3
+Text Label 1727 3540 2    50   ~ 0
+PT0
+Text Label 2273 3534 2    50   ~ 0
+PT1
+Text Label 1714 4143 2    50   ~ 0
+PT2
+Text Label 2260 4137 2    50   ~ 0
+PT3
+$Comp
+L Connector:Conn_01x02_Female J5
+U 1 1 5DF0B34B
+P 1801 7104
+F 0 "J5" H 1829 7080 50  0000 L CNN
+F 1 "Battery" H 1829 6989 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 1801 7104 50  0001 C CNN
+F 3 "~" H 1801 7104 50  0001 C CNN
+	1    1801 7104
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1046 6559 1096 6559
+Wire Wire Line
+	996  6559 1046 6559
+Connection ~ 1046 6559
+$Comp
+L power:+24V #PWR01
+U 1 1 5DBB64EE
+P 1046 6559
+F 0 "#PWR01" H 1046 6409 50  0001 C CNN
+F 1 "+24V" H 1061 6732 50  0000 C CNN
+F 2 "" H 1046 6559 50  0001 C CNN
+F 3 "" H 1046 6559 50  0001 C CNN
+	1    1046 6559
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0123
+U 1 1 5DFC5913
+P 2273 3434
+F 0 "#PWR0123" H 2273 3284 50  0001 C CNN
+F 1 "+24V" H 2273 3579 50  0000 C CNN
+F 2 "" H 2273 3434 50  0001 C CNN
+F 3 "" H 2273 3434 50  0001 C CNN
+	1    2273 3434
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0125
+U 1 1 5DFD3DEC
+P 2260 4037
+F 0 "#PWR0125" H 2260 3887 50  0001 C CNN
+F 1 "+24V" H 2260 4182 50  0000 C CNN
+F 2 "" H 2260 4037 50  0001 C CNN
+F 3 "" H 2260 4037 50  0001 C CNN
+	1    2260 4037
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0124
+U 1 1 5DFD2F0A
+P 1714 4043
+F 0 "#PWR0124" H 1714 3893 50  0001 C CNN
+F 1 "+24V" H 1714 4188 50  0000 C CNN
+F 2 "" H 1714 4043 50  0001 C CNN
+F 3 "" H 1714 4043 50  0001 C CNN
+	1    1714 4043
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0122
+U 1 1 5DFBEE1E
+P 1727 3440
+F 0 "#PWR0122" H 1727 3290 50  0001 C CNN
+F 1 "+24V" H 1727 3585 50  0000 C CNN
+F 2 "" H 1727 3440 50  0001 C CNN
+F 3 "" H 1727 3440 50  0001 C CNN
+	1    1727 3440
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -85,7 +85,7 @@ U 1 1 5DB4BE36
 P 1120 7649
 F 0 "MH2" H 1220 7649 50  0000 L CNN
 F 1 "MountingHole" H 1220 7604 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1120 7649 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1120 7649 50  0001 C CNN
 F 3 "~" H 1120 7649 50  0001 C CNN
 	1    1120 7649
 	1    0    0    -1  
@@ -96,7 +96,7 @@ U 1 1 5DB4BEEA
 P 745 7649
 F 0 "MH1" H 645 7649 50  0000 R CNN
 F 1 "MountingHole" H 845 7604 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 745 7649 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 745 7649 50  0001 C CNN
 F 3 "~" H 745 7649 50  0001 C CNN
 	1    745  7649
 	-1   0    0    1   
@@ -1770,7 +1770,7 @@ U 1 1 5DCE1DBE
 P 1490 7649
 F 0 "MH3" H 1590 7649 50  0000 L CNN
 F 1 "MountingHole" H 1590 7604 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 1490 7649 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1490 7649 50  0001 C CNN
 F 3 "~" H 1490 7649 50  0001 C CNN
 	1    1490 7649
 	1    0    0    -1  
@@ -1936,7 +1936,7 @@ AR Path="/5D9BEB88/5DAB7515" Ref="Q?"  Part="1"
 AR Path="/5DAB7515" Ref="Q1"  Part="1" 
 F 0 "Q1" H 8272 3887 50  0000 L CNN
 F 1 "N MOSFET" H 8272 3841 50  0001 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 8266 3941 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 8266 3941 50  0001 C CNN
 F 3 "~" H 8066 3841 50  0001 C CNN
 	1    8066 3841
 	1    0    0    -1  
@@ -2141,7 +2141,7 @@ U 1 1 5DEB0FB5
 P 738 7825
 F 0 "MH4" H 838 7825 50  0000 L CNN
 F 1 "MountingHole" H 838 7780 50  0001 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 738 7825 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 738 7825 50  0001 C CNN
 F 3 "~" H 738 7825 50  0001 C CNN
 	1    738  7825
 	1    0    0    -1  

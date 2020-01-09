@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 23)
+    (drawings 21)
     (tracks 3)
     (zones 0)
     (modules 56)
@@ -605,7 +605,7 @@
   )
 
   (module IgniterCustom:FuseHolder (layer F.Cu) (tedit 5DCB80D8) (tstamp 5DBF33C3)
-    (at 188.80582 149.81174 180)
+    (at 198.96074 127.7112 180)
     (path /5DCA7861)
     (fp_text reference F1 (at 0 4.1529) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2796,8 +2796,6 @@
   (gr_text SOL1 (at 132.8039 153.51252) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_line (start 188.82868 124.23902) (end 203.31938 124.23902) (layer Dwgs.User) (width 0.15))
-  (gr_line (start 188.82868 144.95272) (end 188.82868 124.23902) (layer Dwgs.User) (width 0.15))
   (gr_text "Igniter ->" (at 218.95308 108.52912) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )

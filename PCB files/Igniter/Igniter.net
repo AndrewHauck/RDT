@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\AAH\\Documents\\GitHub\\LRDT\\PCB files\\Igniter\\Igniter.sch")
-    (date "1/5/2020 12:43:20 PM")
+    (date "1/9/2020 9:43:17 AM")
     (tool "Eeschema (5.1.2)-2")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -56,7 +56,7 @@
       (tstamp 5DB4BEEA))
     (comp (ref SW1)
       (value ARM)
-      (footprint Button_Switch_THT:KSA_Tactile_SPST)
+      (footprint IgniterFootprints:C&K_S101031MS02Q)
       (datasheet ~)
       (libsource (lib Switch) (part SW_SPST) (description "Single Pole Single Throw (SPST) switch"))
       (sheetpath (names /) (tstamps /))

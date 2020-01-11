@@ -39,8 +39,8 @@ class serialPacket
     serialPacket(unsigned char _type);
 	serialPacket(serialBuffer _buffer);
     serialPacket(String _string, unsigned char _type);
-    void append(char &_byte);   //append 1 byte to end of data string
-    void append(char _bytes); //append byte array to end of data string
+    void append(char _byte);   //append 1 byte to end of data string
+    //void append(char _bytes); //append byte array to end of data string
     void append(String _bytes); //append string to end of data string
     bool isValid() const; //check if packet is complete enough to be sent
     unsigned char getSize() const;  //returns size (num of bytes) of data string

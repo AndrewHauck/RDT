@@ -29,7 +29,7 @@ class serialBuffer
   public:
     serialBuffer();
     void flushBuffer();
-    void updateBuffer();
+    bool updateBuffer();
     bool isComplete() const;
     String& getBuffer();
   private:

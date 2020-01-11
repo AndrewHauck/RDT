@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d4b1fbf3-557e-44e1-a234-194693a1f2ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/ArduinoIgniter.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/ArduinoIgniter.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Serial/Igniter_Serial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Serial/Igniter_Serial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Serial/SerialEvent/SerialEvent.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../Serial/SerialEvent/SerialEvent.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IgniterUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/IgniterUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,21 +42,20 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Igniter_Serial">
-    <configuration name="Igniter UI" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.IgniterUI">
+    <configuration name="GraphTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IgniterUI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\AAH\AppData\Local\Programs\Python\Python38-32\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GSModules" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Igniter UI.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GSModules/GraphTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +85,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Igniter_Serial" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="MovingGraphTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IgniterUI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -92,11 +93,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Serial" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GSModules" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Serial/Igniter_Serial.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GSModules/MovingGraphTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,11 +106,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="menutest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IgniterUI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/menutest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.IgniterUI" />
+      <item itemvalue="Python.GraphTest" />
+      <item itemvalue="Python.menutest" />
+      <item itemvalue="Python.MovingGraphTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Igniter_Serial" />
         <item itemvalue="Python.IgniterUI" />
-        <item itemvalue="Python.Igniter UI" />
+        <item itemvalue="Python.GraphTest" />
+        <item itemvalue="Python.MovingGraphTest" />
+        <item itemvalue="Python.menutest" />
       </list>
     </recent_temporary>
   </component>
@@ -159,25 +188,49 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="936" height="281" key="GridCell.Tab.0.bottom" timestamp="1575620886083">
+    <state x="339" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578714587771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1575620886083" />
-    <state width="936" height="281" key="GridCell.Tab.0.center" timestamp="1575620886083">
+    <state x="339" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578714587771" />
+    <state width="936" height="276" key="GridCell.Tab.0.bottom" timestamp="1578730832395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1575620886083" />
-    <state width="936" height="281" key="GridCell.Tab.0.left" timestamp="1575620886083">
+    <state width="936" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
+    <state width="936" height="276" key="GridCell.Tab.0.center" timestamp="1578730832395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1575620886083" />
-    <state width="936" height="281" key="GridCell.Tab.0.right" timestamp="1575620886083">
+    <state width="936" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
+    <state width="936" height="276" key="GridCell.Tab.0.left" timestamp="1578730832395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1575620886083" />
+    <state width="936" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
+    <state width="936" height="276" key="GridCell.Tab.0.right" timestamp="1578730832395">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
+    <state width="936" height="345" key="GridCell.Tab.1.bottom" timestamp="1578717182634">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
+    <state width="936" height="345" key="GridCell.Tab.1.center" timestamp="1578717182634">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
+    <state width="936" height="345" key="GridCell.Tab.1.left" timestamp="1578717182634">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
+    <state width="936" height="345" key="GridCell.Tab.1.right" timestamp="1578717182634">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
     <state x="661" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1575513628087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1575513628086" />
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1578639620583">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578639620583" />
   </component>
 </project>

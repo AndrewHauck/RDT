@@ -1,4 +1,6 @@
 import sys
+import os
+from os import path
 import glob
 import serial
 import PySimpleGUI as sg
@@ -6,7 +8,8 @@ from GSModules import ListComPorts
 
 # Sets background and button color
 sg.change_look_and_feel('DarkAmber')
-
+filePath = path.dirname(__file__)
+rootPath = path.abspath(path.join(filePath, "..", "Pressure Logs"))
 COMSelector = [[sg.Text('COM Ports:')],
                [sg.Combo(values=ListComPorts.serial_ports(), enable_events=False, size=(20, 3), key='COM_Combo'),
                 sg.Button('Refresh', button_color=('Black', "#FDCB52"), key='COM_Refresh'),
@@ -64,9 +67,8 @@ pressure_graph = [[sg.Graph(canvas_size=(400, 400),
 
 #ADD KEYS TO FILE BROWSER
 file_browser = [
-    [sg.Text('Select Log File:', size=(9, 1), auto_size_text=False, justification='right'),
-     sg.InputText('Default Folder'), sg.FileBrowse()],
-    [sg.Submit(tooltip='Click to submit this window'), sg.Cancel()]]
+    [sg.Text('Select Log Folder:', size=(13, 1), auto_size_text=False, justification='right'),
+     sg.In(rootPath, key='input'), sg.FolderBrowse(target='input'), sg.Button('Start Recording', button_color=('White', 'Red'), key='filein')]]
 
     # Combination of all elements
 layout = dropdown_menu + valves + COMSelector + diagram + stages + readings + file_browser

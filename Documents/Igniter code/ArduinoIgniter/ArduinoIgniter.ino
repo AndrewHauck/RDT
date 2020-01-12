@@ -1,6 +1,14 @@
+/*Begining of Auto generated code by Atmel studio */
+#include <Arduino.h>
+
+/*End of auto generated code by Atmel studio */
+
 #include "src/serialPacket/serialPacket.h"
 #include "src/serialBuffer/serialBuffer.h"
 #include "src/valves/valves.h"
+//Beginning of Auto generated function prototypes by Atmel Studio
+void serialEvent();
+//End of Auto generated function prototypes by Atmel Studio
 
 #define OPEN HIGH
 #define CLOSE LOW
@@ -35,13 +43,11 @@ void loop() {
   
   delay(300);
 
-  if(buffer1.isComplete()) //if incoming buffer throws flag
-  {
+  if(buffer1.isComplete()){ //if incoming buffer throws flag
     serialPacket inPacket(buffer1);
     buffer1.flushBuffer();  //clear buffer1
     
-    if(inPacket.getType() == 'C')
-    {
+    if(inPacket.getType() == 'C'){
       if(inPacket.getData() == "ARM")
       {
         digitalWrite(LED_BUILTIN, HIGH);
@@ -83,8 +89,7 @@ void loop() {
         outPacket.transmit();
       }
     }
-    if(inPacket.getType() == 'V')
-    {
+    if(inPacket.getType() == 'V'){
       char pin = inPacket.getData().toInt();
       vs.toggleSingle(pin);
       vs.transmit();

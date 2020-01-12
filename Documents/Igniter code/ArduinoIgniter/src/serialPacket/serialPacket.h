@@ -50,7 +50,6 @@ class serialPacket
     bool receive(String &_inputString);	//parses through given string and trys to populate itself
 	void configure(String _string, char _byte);  //set packet type and data
 	
-	//****RECEIVE() STILL NEEDS TO VERIFY IF GIVEN STRING IS VALID****
   private:
     void clearData();	//empty packet of data
     void setData(String _string); //clear and set data string

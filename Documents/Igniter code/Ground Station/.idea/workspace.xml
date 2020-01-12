@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b1fbf3-557e-44e1-a234-194693a1f2ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/ArduinoIgniter.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/ArduinoIgniter.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IgniterUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/IgniterUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,38 +189,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="339" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578714587771" />
-    <state width="936" height="276" key="GridCell.Tab.0.bottom" timestamp="1578730832395">
+    <state width="936" height="273" key="GridCell.Tab.0.bottom" timestamp="1578801843147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
-    <state width="936" height="276" key="GridCell.Tab.0.center" timestamp="1578730832395">
+    <state width="936" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578801843147" />
+    <state width="936" height="273" key="GridCell.Tab.0.center" timestamp="1578801843147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
-    <state width="936" height="276" key="GridCell.Tab.0.left" timestamp="1578730832395">
+    <state width="936" height="273" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578801843147" />
+    <state width="936" height="273" key="GridCell.Tab.0.left" timestamp="1578801843146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
-    <state width="936" height="276" key="GridCell.Tab.0.right" timestamp="1578730832395">
+    <state width="936" height="273" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578801843146" />
+    <state width="936" height="273" key="GridCell.Tab.0.right" timestamp="1578801843147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578730832395" />
-    <state width="936" height="345" key="GridCell.Tab.1.bottom" timestamp="1578717182634">
+    <state width="936" height="273" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578801843147" />
+    <state width="936" height="345" key="GridCell.Tab.1.bottom" timestamp="1578732085076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
-    <state width="936" height="345" key="GridCell.Tab.1.center" timestamp="1578717182634">
+    <state width="936" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578732085076" />
+    <state width="936" height="345" key="GridCell.Tab.1.center" timestamp="1578732085076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="345" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
-    <state width="936" height="345" key="GridCell.Tab.1.left" timestamp="1578717182634">
+    <state width="936" height="345" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578732085076" />
+    <state width="936" height="345" key="GridCell.Tab.1.left" timestamp="1578732085076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="345" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
-    <state width="936" height="345" key="GridCell.Tab.1.right" timestamp="1578717182634">
+    <state width="936" height="345" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578732085076" />
+    <state width="936" height="345" key="GridCell.Tab.1.right" timestamp="1578732085076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="345" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578717182634" />
+    <state width="936" height="345" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578732085076" />
     <state x="661" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1575513628087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

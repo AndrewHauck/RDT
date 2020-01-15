@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -126,7 +126,7 @@ AR Path="/5D9BEB88/5DAB7506" Ref="SW?"  Part="1"
 AR Path="/5DAB7506" Ref="SW1"  Part="1" 
 F 0 "SW1" H 1326 6879 50  0001 C CNN
 F 1 "ARM" H 1326 7229 50  0000 C CNN
-F 2 "Button_Switch_THT:KSA_Tactile_SPST" H 1326 7104 50  0001 C CNN
+F 2 "IgniterCustom:R1966ABLKBLKFR-SPST" H 1326 7104 50  0001 C CNN
 F 3 "~" H 1326 7104 50  0001 C CNN
 	1    1326 7104
 	-1   0    0    1   
@@ -203,8 +203,6 @@ Wire Notes Line
 	761  4789 1551 4789
 Wire Notes Line
 	761  5999 1551 5999
-Text Notes 11065 4645 0    50   ~ 0
-Disassembly:\n-Remove power to board FIRST\n-Then remove spark plug\nNEVER remove spark plug with energized primary
 $Comp
 L Igniter-rescue:BladeFuse F1
 U 1 1 5DCA7861
@@ -1807,8 +1805,6 @@ F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4924 7642 60  0001 C CNN
 $EndComp
 Wire Wire Line
 	8081 3106 8166 3106
-Wire Wire Line
-	8081 2906 8165 2906
 $Comp
 L Device:D_Small D1
 U 1 1 5DD0D731
@@ -1928,19 +1924,6 @@ Wire Notes Line
 	7226 2576 7226 4761
 Wire Notes Line
 	8951 4751 8951 2566
-$Comp
-L Device:Q_NMOS_GDS Q?
-U 1 1 5DAB7515
-P 8066 3841
-AR Path="/5D9BEB88/5DAB7515" Ref="Q?"  Part="1" 
-AR Path="/5DAB7515" Ref="Q1"  Part="1" 
-F 0 "Q1" H 8272 3887 50  0000 L CNN
-F 1 "N MOSFET" H 8272 3841 50  0001 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 8266 3941 50  0001 C CNN
-F 3 "~" H 8066 3841 50  0001 C CNN
-	1    8066 3841
-	1    0    0    -1  
-$EndComp
 Text Notes 7886 2546 0    50   ~ 0
 Igniter Driver
 $Comp
@@ -2109,32 +2092,6 @@ Wire Wire Line
 	3791 1553 4174 1553
 Wire Wire Line
 	4174 1553 4174 2292
-$Comp
-L Connector:Conn_01x01_Female J6
-U 1 1 5DEA8937
-P 8365 2906
-F 0 "J6" H 8397 2906 50  0000 L CNN
-F 1 "Ignition Coil +" H 8392 2841 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 8365 2906 50  0001 C CNN
-F 3 "~" H 8365 2906 50  0001 C CNN
-	1    8365 2906
-	1    0    0    -1  
-$EndComp
-Connection ~ 8165 2906
-Wire Wire Line
-	8165 2906 8166 2906
-$Comp
-L Connector:Conn_01x01_Female J7
-U 1 1 5DEA8AF3
-P 8366 3106
-F 0 "J7" H 8398 3106 50  0000 L CNN
-F 1 "Ignition coil -" H 8393 3041 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 8366 3106 50  0001 C CNN
-F 3 "~" H 8366 3106 50  0001 C CNN
-	1    8366 3106
-	1    0    0    -1  
-$EndComp
-Connection ~ 8166 3106
 $Comp
 L Mechanical:MountingHole MH4
 U 1 1 5DEB0FB5
@@ -2345,4 +2302,60 @@ F 3 "" H 1727 3440 50  0001 C CNN
 	1    1727 3440
 	-1   0    0    -1  
 $EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q1
+U 1 1 5E1E71F4
+P 8066 3841
+F 0 "Q1" H 8353 3887 50  0000 L CNN
+F 1 "IGN" H 8353 3796 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 8266 3941 50  0001 C CNN
+F 3 "~" H 8066 3841 50  0001 C CNN
+	1    8066 3841
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8266 3641 8166 3641
+Connection ~ 8166 3641
+$Comp
+L Connector:Conn_01x02_Female J7
+U 1 1 5E1E97CA
+P 8446 3066
+F 0 "J7" H 8474 2996 50  0000 L CNN
+F 1 "COIL" H 8473 2951 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 8446 3066 50  0001 C CNN
+F 3 "~" H 8446 3066 50  0001 C CNN
+	1    8446 3066
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J6
+U 1 1 5E1E982C
+P 8445 2855
+F 0 "J6" H 8473 2785 50  0000 L CNN
+F 1 "COIL" H 8472 2740 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 8445 2855 50  0001 C CNN
+F 3 "~" H 8445 2855 50  0001 C CNN
+	1    8445 2855
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8081 2906 8166 2906
+Wire Wire Line
+	8166 2906 8245 2906
+Wire Wire Line
+	8245 2855 8245 2906
+Connection ~ 8166 2906
+Connection ~ 8245 2906
+Wire Wire Line
+	8245 2906 8245 2955
+Wire Wire Line
+	8246 3066 8246 3106
+Wire Wire Line
+	8166 3106 8246 3106
+Connection ~ 8166 3106
+Connection ~ 8246 3106
+Wire Wire Line
+	8246 3106 8246 3166
+Text Notes 11000 4700 0    79   ~ 0
+-Create KiCAD BOM from pcbnew and convert to csv manually in notepad++\n-When you make a schematic that has everything snapped to grid, easier viewing for someone else opening the schematic\n-For multi-sheet schematics, can just make page size larger for schematic to fit more stuff\n
 $EndSCHEMATC

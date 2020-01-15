@@ -203,8 +203,6 @@ Wire Notes Line
 	761  4789 1551 4789
 Wire Notes Line
 	761  5999 1551 5999
-Text Notes 11065 4645 0    50   ~ 0
-Disassembly:\n-Remove power to board FIRST\n-Then remove spark plug\nNEVER remove spark plug with energized primary
 $Comp
 L Igniter-rescue:BladeFuse F1
 U 1 1 5DCA7861
@@ -2358,4 +2356,6 @@ Connection ~ 8166 3106
 Connection ~ 8246 3106
 Wire Wire Line
 	8246 3106 8246 3166
+Text Notes 11000 4700 0    79   ~ 0
+-Create KiCAD BOM from pcbnew and convert to csv manually in notepad++\n-When you make a schematic that has everything snapped to grid, easier viewing for someone else opening the schematic\n-For multi-sheet schematics, can just make page size larger for schematic to fit more stuff\n
 $EndSCHEMATC

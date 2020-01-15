@@ -5,7 +5,7 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -129,7 +129,7 @@ F 1 "ARM" H 1326 7229 50  0000 C CNN
 F 2 "IgniterCustom:R1966ABLKBLKFR-SPST" H 1326 7104 50  0001 C CNN
 F 3 "~" H 1326 7104 50  0001 C CNN
 	1    1326 7104
-	-1   0    0    1   
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	1046 7104 1126 7104

@@ -32,7 +32,7 @@ serialPacket::serialPacket(unsigned char _type)
 //----------END OF DEFAULT CONSTRUCTORS----------
 
 //----------APPEND FUNCTIONS----------
-void serialPacket::append(char &_byte)
+void serialPacket::append(char _byte)
 {
   m_dataString += _byte;
   m_dataSize++; //size increased by 1 byte

@@ -7,11 +7,11 @@ serialBuffer::serialBuffer()
   m_stringComplete = false;
   m_serialRaw.reserve(200);   // reserve 200 bytes for the serialRaw string
 }
-void serialBuffer::updateBuffer()
+bool serialBuffer::updateBuffer()
 {
   char inChar = (char)Serial.read();    // get the new byte
   m_serialRaw += inChar;    // add it to the serialRaw
-  checkForCommand(inChar);
+  return checkForCommand(inChar);
 }
 bool serialBuffer::checkForCommand(char _inChar)
 {

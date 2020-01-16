@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector:Conn_01x02_Female
+# Connector_Conn_01x02_Female
 #
-DEF Connector:Conn_01x02_Female J 0 40 Y N 1 F N
+DEF Connector_Conn_01x02_Female J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector:Conn_01x02_Female" 0 -200 50 H V C CNN
+F1 "Connector_Conn_01x02_Female" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -21,11 +21,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector:Conn_01x03_Female
+# Connector_Conn_01x03_Female
 #
-DEF Connector:Conn_01x03_Female J 0 40 Y N 1 F N
+DEF Connector_Conn_01x03_Female J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector:Conn_01x03_Female" 0 -200 50 H V C CNN
+F1 "Connector_Conn_01x03_Female" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -44,11 +44,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:D
+# Device_D
 #
-DEF Device:D D 0 40 N N 1 F N
+DEF Device_D D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device:D" 0 -100 50 H V C CNN
+F1 "Device_D" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -66,11 +66,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:D_Small
+# Device_D_Small
 #
-DEF Device:D_Small D 0 10 N N 1 F N
+DEF Device_D_Small D 0 10 N N 1 F N
 F0 "D" -50 80 50 H V L CNN
-F1 "Device:D_Small" -150 -80 50 H V L CNN
+F1 "Device_D_Small" -150 -80 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -88,11 +88,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:LED
+# Device_LED
 #
-DEF Device:LED D 0 40 N N 1 F N
+DEF Device_LED D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device:LED" 0 -100 50 H V C CNN
+F1 "Device_LED" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -111,11 +111,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:Q_NMOS_GDSD
+# Device_Q_NMOS_GDSD
 #
-DEF Device:Q_NMOS_GDSD Q 0 0 Y N 1 F N
+DEF Device_Q_NMOS_GDSD Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device:Q_NMOS_GDSD" 200 -50 50 H V L CNN
+F1 "Device_Q_NMOS_GDSD" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -145,11 +145,11 @@ X D 4 200 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R
+# Device_R
 #
-DEF Device:R R 0 0 N Y 1 F N
+DEF Device_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device:R" 0 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -162,11 +162,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Igniter-rescue:74HC4050-7400-ic
+# Igniter-rescue_74HC4050-7400-ic
 #
-DEF Igniter-rescue:74HC4050-7400-ic IC 0 40 Y Y 1 F N
+DEF Igniter-rescue_74HC4050-7400-ic IC 0 40 Y Y 1 F N
 F0 "IC" -200 650 60 H V C CNN
-F1 "Igniter-rescue:74HC4050-7400-ic" 0 -650 60 H V C CNN
+F1 "Igniter-rescue_74HC4050-7400-ic" 0 -650 60 H V C CNN
 F2 "" -100 0 60 H I C CNN
 F3 "" -50 0 60 H I C CNN
 $FPLIST
@@ -196,11 +196,11 @@ X 4A 9 -400 -250 150 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Igniter-rescue:Arduino_Mega2560_Shield-arduino
+# Igniter-rescue_Arduino_Mega2560_Shield-arduino
 #
-DEF Igniter-rescue:Arduino_Mega2560_Shield-arduino XA 0 40 Y Y 1 F N
+DEF Igniter-rescue_Arduino_Mega2560_Shield-arduino XA 0 40 Y Y 1 F N
 F0 "XA" 100 0 60 V V C CNN
-F1 "Igniter-rescue:Arduino_Mega2560_Shield-arduino" -100 0 60 V V C CNN
+F1 "Igniter-rescue_Arduino_Mega2560_Shield-arduino" -100 0 60 V V C CNN
 F2 "" 700 2750 60 H I C CNN
 F3 "" 700 2750 60 H I C CNN
 $FPLIST
@@ -343,11 +343,11 @@ X VIN VIN -1300 -2150 300 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Igniter-rescue:BladeFuse
+# Igniter-rescue_BladeFuse
 #
-DEF Igniter-rescue:BladeFuse F 0 40 Y Y 1 F N
+DEF Igniter-rescue_BladeFuse F 0 40 Y Y 1 F N
 F0 "F" 0 250 50 H V C CNN
-F1 "Igniter-rescue:BladeFuse" 0 150 50 H V C CNN
+F1 "Igniter-rescue_BladeFuse" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -363,11 +363,11 @@ X B 8 250 -300 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Igniter-rescue:FDS8984
+# Igniter-rescue_FDS8984
 #
-DEF Igniter-rescue:FDS8984 U 0 40 Y Y 1 F N
+DEF Igniter-rescue_FDS8984 U 0 40 Y Y 1 F N
 F0 "U" 0 350 50 H V C CNN
-F1 "Igniter-rescue:FDS8984" 0 250 50 H V C CNN
+F1 "Igniter-rescue_FDS8984" 0 250 50 H V C CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -383,11 +383,11 @@ X Drain1 8 -300 -150 100 R 50 24 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Igniter-rescue:Micro_SD_Card-Connector
+# Igniter-rescue_Micro_SD_Card-Connector
 #
-DEF Igniter-rescue:Micro_SD_Card-Connector J 0 40 Y Y 1 F N
+DEF Igniter-rescue_Micro_SD_Card-Connector J 0 40 Y Y 1 F N
 F0 "J" -650 600 50 H V C CNN
-F1 "Igniter-rescue:Micro_SD_Card-Connector" 650 600 50 H V R CNN
+F1 "Igniter-rescue_Micro_SD_Card-Connector" 650 600 50 H V R CNN
 F2 "" 1150 300 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -416,11 +416,11 @@ X SHIELD 9 800 -600 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Mechanical:MountingHole
+# Mechanical_MountingHole
 #
-DEF Mechanical:MountingHole MH 0 40 Y Y 1 F N
-F0 "MH" 0 200 50 H V C CNN
-F1 "Mechanical:MountingHole" 0 125 50 H V C CNN
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -431,11 +431,11 @@ C 0 0 50 0 1 50 N
 ENDDRAW
 ENDDEF
 #
-# Switch:SW_SPST
+# Switch_SW_SPST
 #
-DEF Switch:SW_SPST SW 0 0 Y N 1 F N
+DEF Switch_SW_SPST SW 0 0 Y N 1 F N
 F0 "SW" 0 125 50 H V C CNN
-F1 "Switch:SW_SPST" 0 -100 50 H V C CNN
+F1 "Switch_SW_SPST" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -447,11 +447,11 @@ X B 2 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power:+24V
+# power_+24V
 #
-DEF power:+24V #PWR 0 0 Y Y 1 F P
+DEF power_+24V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+24V" 0 140 50 H V C CNN
+F1 "power_+24V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -462,11 +462,11 @@ X +24V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:+3V3
+# power_+3V3
 #
-DEF power:+3V3 #PWR 0 0 Y Y 1 F P
+DEF power_+3V3 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+3V3" 0 140 50 H V C CNN
+F1 "power_+3V3" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 ALIAS +3.3V
@@ -478,11 +478,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:GNDREF
+# power_GNDREF
 #
-DEF power:GNDREF #PWR 0 0 Y Y 1 F P
+DEF power_GNDREF #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GNDREF" 0 -150 50 H V C CNN
+F1 "power_GNDREF" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW

@@ -5,11 +5,11 @@ LIBS:74xx
 LIBS:audio
 LIBS:interface
 LIBS:Igniter-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
-$Descr A 11000 8500
+$Descr USLegal 14000 8500
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -62,8 +62,6 @@ F 3 "" H 1340 5770 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	1551 5999 1551 4789
-Text Notes 6690 7725 0    50   ~ 0
-Igniter Arduino Shield
 $Comp
 L Mechanical:MountingHole MH2
 U 1 1 5DB4BE36
@@ -116,10 +114,6 @@ Wire Notes Line
 	681  7349 2136 7349
 Text Notes 930  7535 0    50   ~ 0
 Board Standoffs
-Text Notes 11030 2770 0    118  ~ 0
--Make unused pins available from the top of shield
-Text Notes 11055 3520 0    118  ~ 0
-Vcc 200mA max current draw for ATmega2560\n-Keep total current draw below this value\n-SD card powered by atmega 3V3 pin\n-Everything else powered by 5V regulator
 $Comp
 L Device:R R?
 U 1 1 5DC8131D
@@ -168,10 +162,6 @@ F 3 "" H 1020 5030 50  0001 C CNN
 	1    1020 5030
 	1    0    0    -1  
 $EndComp
-Text Notes 11045 2540 0    118  ~ 0
--Board sits at test operator area
-Text Notes 11050 2265 0    118  ~ 24
-NOTES
 Wire Notes Line
 	761  5999 761  4789
 Wire Notes Line
@@ -195,8 +185,395 @@ Wire Notes Line
 	681  6299 681  7349
 Wire Notes Line
 	2136 6299 2136 7349
+Wire Notes Line
+	640  7560 640  7920
+$Comp
+L Mechanical:MountingHole MH3
+U 1 1 5DCE1DBE
+P 1500 7650
+F 0 "MH3" H 1600 7650 50  0000 L CNN
+F 1 "MountingHole" H 1600 7605 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 1500 7650 50  0001 C CNN
+F 3 "~" H 1500 7650 50  0001 C CNN
+	1    1500 7650
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	1780 7550 1780 7920
+Wire Notes Line
+	640  7920 1780 7920
+Wire Notes Line
+	640  7550 1780 7550
+Text Notes 6208 8766 2    118  ~ 0
+Figure out a Kicad BoM, not just google drive
+Text Label 5520 7050 0    50   ~ 0
+CS
+NoConn ~ 2924 6942
+NoConn ~ 2924 6842
+NoConn ~ 2924 6742
+$Comp
+L power:+3V3 #PWR04
+U 1 1 5DC4F427
+P 2720 6650
+F 0 "#PWR04" H 2720 6500 50  0001 C CNN
+F 1 "+3V3" H 2720 6790 50  0000 C CNN
+F 2 "" H 2720 6650 50  0001 C CNN
+F 3 "" H 2720 6650 50  0001 C CNN
+	1    2720 6650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2920 5650
+$Comp
+L power:GNDREF #PWR02
+U 1 1 5DB796A8
+P 4560 2270
+F 0 "#PWR02" H 4560 2020 50  0001 C CNN
+F 1 "GNDREF" H 4565 2097 50  0001 C CNN
+F 2 "" H 4560 2270 50  0001 C CNN
+F 3 "" H 4560 2270 50  0001 C CNN
+	1    4560 2270
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2924 7042
+$Comp
+L power:GNDREF #PWR022
+U 1 1 5DB58C89
+P 2730 6150
+F 0 "#PWR022" H 2730 5900 50  0001 C CNN
+F 1 "GNDREF" H 2735 5977 50  0001 C CNN
+F 2 "" H 2730 6150 50  0001 C CNN
+F 3 "" H 2730 6150 50  0001 C CNN
+	1    2730 6150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 978  2053
+NoConn ~ 2680 1160
+NoConn ~ 2680 1860
+$Comp
+L Igniter-rescue:Micro_SD_Card-Connector J?
+U 1 1 5DF09A80
+P 1780 1460
+AR Path="/5DC64D13/5DF09A80" Ref="J?"  Part="1" 
+AR Path="/5DF09A80" Ref="J13"  Part="1" 
+F 0 "J13" H 1730 643 50  0000 C CNN
+F 1 "Micro_SD_Card" H 1730 734 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H 2930 1760 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1780 1460 50  0001 C CNN
+	1    1780 1460
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR06
+U 1 1 5DF09A7A
+P 2740 2100
+AR Path="/5DF09A7A" Ref="#PWR06"  Part="1" 
+AR Path="/5DC64D13/5DF09A7A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR06" H 2740 1850 50  0001 C CNN
+F 1 "GNDREF" H 2745 1927 50  0001 C CNN
+F 2 "" H 2740 2100 50  0001 C CNN
+F 3 "" H 2740 2100 50  0001 C CNN
+	1    2740 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR05
+U 1 1 5DF09A62
+P 2740 1050
+AR Path="/5DF09A62" Ref="#PWR05"  Part="1" 
+AR Path="/5DC64D13/5DF09A62" Ref="#PWR?"  Part="1" 
+F 0 "#PWR05" H 2740 900 50  0001 C CNN
+F 1 "+3V3" H 2740 1190 50  0000 C CNN
+F 2 "" H 2740 1050 50  0001 C CNN
+F 3 "" H 2740 1050 50  0001 C CNN
+	1    2740 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH4
+U 1 1 5DEB0FB5
+P 750 7825
+F 0 "MH4" H 850 7825 50  0000 L CNN
+F 1 "MountingHole" H 850 7780 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 750 7825 50  0001 C CNN
+F 3 "~" H 750 7825 50  0001 C CNN
+	1    750  7825
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4270 2300
+Text Notes 1693 3088 0    50   ~ 0
+Pressure Transducers
+$Comp
+L power:GNDREF #PWR0118
+U 1 1 5DFAB89C
+P 1720 3640
+AR Path="/5DFAB89C" Ref="#PWR0118"  Part="1" 
+AR Path="/5DB4D508/5DFAB89C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0118" H 1720 3390 50  0001 C CNN
+F 1 "GNDREF" H 1725 3467 50  0001 C CNN
+F 2 "" H 1720 3640 50  0001 C CNN
+F 3 "" H 1720 3640 50  0001 C CNN
+	1    1720 3640
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5DFAB896
+P 1920 3540
+AR Path="/5DB4D508/5DFAB896" Ref="J?"  Part="1" 
+AR Path="/5DFAB896" Ref="J1"  Part="1" 
+F 0 "J1" H 1922 3242 50  0000 C CNN
+F 1 "PT" H 1918 3315 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1920 3540 50  0001 C CNN
+F 3 "~" H 1920 3540 50  0001 C CNN
+	1    1920 3540
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR0119
+U 1 1 5DFB1672
+P 1710 4240
+AR Path="/5DFB1672" Ref="#PWR0119"  Part="1" 
+AR Path="/5DB4D508/5DFB1672" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0119" H 1710 3990 50  0001 C CNN
+F 1 "GNDREF" H 1715 4067 50  0001 C CNN
+F 2 "" H 1710 4240 50  0001 C CNN
+F 3 "" H 1710 4240 50  0001 C CNN
+	1    1710 4240
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5DFB167C
+P 1910 4140
+AR Path="/5DB4D508/5DFB167C" Ref="J?"  Part="1" 
+AR Path="/5DFB167C" Ref="J3"  Part="1" 
+F 0 "J3" H 1802 3815 50  0000 C CNN
+F 1 "PT" H 1802 3906 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1910 4140 50  0001 C CNN
+F 3 "~" H 1910 4140 50  0001 C CNN
+	1    1910 4140
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+24V #PWR01
+U 1 1 5DBB64EE
+P 1050 6530
+F 0 "#PWR01" H 1050 6380 50  0001 C CNN
+F 1 "+24V" H 1065 6703 50  0000 C CNN
+F 2 "" H 1050 6530 50  0001 C CNN
+F 3 "" H 1050 6530 50  0001 C CNN
+	1    1050 6530
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0124
+U 1 1 5DFD2F0A
+P 1710 4040
+F 0 "#PWR0124" H 1710 3890 50  0001 C CNN
+F 1 "+24V" H 1710 4185 50  0000 C CNN
+F 2 "" H 1710 4040 50  0001 C CNN
+F 3 "" H 1710 4040 50  0001 C CNN
+	1    1710 4040
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR0122
+U 1 1 5DFBEE1E
+P 1720 3440
+F 0 "#PWR0122" H 1720 3290 50  0001 C CNN
+F 1 "+24V" H 1720 3585 50  0000 C CNN
+F 2 "" H 1720 3440 50  0001 C CNN
+F 3 "" H 1720 3440 50  0001 C CNN
+	1    1720 3440
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J5
+U 1 1 5DF0B34B
+P 1800 7110
+F 0 "J5" H 1828 7086 50  0000 L CNN
+F 1 "Battery" H 1828 6995 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 1800 7110 50  0001 C CNN
+F 3 "~" H 1800 7110 50  0001 C CNN
+	1    1800 7110
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR03
+U 1 1 5DA63712
+P 1600 7210
+F 0 "#PWR03" H 1600 6960 50  0001 C CNN
+F 1 "GNDREF" H 1605 7037 50  0001 C CNN
+F 2 "" H 1600 7210 50  0001 C CNN
+F 3 "" H 1600 7210 50  0001 C CNN
+	1    1600 7210
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1530 7110 1600 7110
+Wire Wire Line
+	900  6560 1000 6560
+Wire Wire Line
+	1100 6560 1050 6560
+Connection ~ 1000 6560
+Wire Wire Line
+	1050 6530 1050 6560
+Connection ~ 1050 6560
+Wire Wire Line
+	1050 6560 1000 6560
+Wire Wire Line
+	1100 6560 1200 6560
+Connection ~ 1100 6560
+Wire Wire Line
+	900  7060 1000 7060
+Wire Wire Line
+	1000 7060 1060 7060
+Connection ~ 1000 7060
+Wire Wire Line
+	1100 7060 1200 7060
+Connection ~ 1100 7060
+Wire Wire Line
+	1060 7060 1060 7110
+Wire Wire Line
+	1060 7110 1130 7110
+Connection ~ 1060 7060
+Wire Wire Line
+	1060 7060 1100 7060
+Wire Wire Line
+	1020 5470 1020 5400
+Wire Wire Line
+	1020 5100 1020 5030
+Wire Wire Line
+	1340 5100 1340 5030
+Wire Wire Line
+	1340 5470 1340 5400
+Text Label 5520 6750 0    50   ~ 0
+MISO
+Wire Wire Line
+	2730 6150 2920 6150
+Text Label 5520 6850 0    50   ~ 0
+MOSI
+Text Label 5520 6950 0    50   ~ 0
+CLK
+Wire Wire Line
+	4560 2270 4370 2270
+Wire Wire Line
+	4370 2270 4370 2300
+Wire Wire Line
+	2800 1860 2800 1760
+Wire Wire Line
+	2800 1760 2680 1760
+Wire Wire Line
+	2680 1660 2740 1660
+Wire Wire Line
+	2740 1660 2740 2100
+Wire Wire Line
+	2770 1660 2770 1360
+Wire Wire Line
+	2770 1360 2680 1360
+Wire Wire Line
+	2680 1460 2740 1460
+Wire Wire Line
+	2740 1460 2740 1050
+Wire Wire Line
+	2870 1760 2870 1260
+Wire Wire Line
+	2870 1260 2680 1260
+$Comp
+L power:+3V3 #PWR09
+U 1 1 5DF09A74
+P 5040 1160
+F 0 "#PWR09" H 5040 1010 50  0001 C CNN
+F 1 "+3V3" H 5040 1300 50  0000 C CNN
+F 2 "" H 5040 1160 50  0001 C CNN
+F 3 "" H 5040 1160 50  0001 C CNN
+	1    5040 1160
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR013
+U 1 1 5DF09A89
+P 5040 2060
+AR Path="/5DF09A89" Ref="#PWR013"  Part="1" 
+AR Path="/5DC64D13/5DF09A89" Ref="#PWR?"  Part="1" 
+F 0 "#PWR013" H 5040 1810 50  0001 C CNN
+F 1 "GNDREF" H 5045 1887 50  0001 C CNN
+F 2 "" H 5040 2060 50  0001 C CNN
+F 3 "" H 5040 2060 50  0001 C CNN
+	1    5040 2060
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR010
+U 1 1 5DF09A6E
+P 5040 1360
+F 0 "#PWR010" H 5040 1110 50  0001 C CNN
+F 1 "GNDREF" H 5045 1187 50  0001 C CNN
+F 2 "" H 5040 1360 50  0001 C CNN
+F 3 "" H 5040 1360 50  0001 C CNN
+	1    5040 1360
+	-1   0    0    -1  
+$EndComp
+Text Label 5040 1760 0    50   ~ 0
+CS
+$Comp
+L Igniter-rescue:74HC4050-7400-ic IC?
+U 1 1 5DF09A68
+P 4640 1610
+AR Path="/5DC64D13/5DF09A68" Ref="IC?"  Part="1" 
+AR Path="/5DF09A68" Ref="IC1"  Part="1" 
+F 0 "IC1" H 4640 2347 60  0000 C CNN
+F 1 "74HC4050" H 4640 2241 60  0000 C CNN
+F 2 "Package_SO:SOP-16_4.4x10.4mm_P1.27mm" H 4540 1610 60  0001 C CNN
+F 3 "" H 4590 1610 60  0001 C CNN
+	1    4640 1610
+	-1   0    0    -1  
+$EndComp
+Text Label 5040 1860 0    50   ~ 0
+MISO
+Text Label 5040 1660 0    50   ~ 0
+MOSI
+Text Label 5040 1560 0    50   ~ 0
+CLK
+Wire Wire Line
+	2680 1560 4240 1560
+Wire Wire Line
+	2770 1660 4240 1660
+NoConn ~ 4240 1960
+NoConn ~ 4240 2060
+Wire Notes Line
+	4670 2560 5510 2560
+Wire Notes Line
+	5497 2560 5497 471 
+Wire Wire Line
+	2720 6650 2920 6650
+$Comp
+L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
+U 1 1 5DB49E1D
+P 4220 4900
+F 0 "XA1" H 4220 2520 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 4220 2414 60  0000 C CNN
+F 2 "Arduino:Arduino_Mega2560_Modified" H 4920 7650 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4920 7650 60  0001 C CNN
+	1    4220 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2920 6450 2920 6550
+Text Notes 5680 -2360 0    118  ~ 0
+-Make unused pins available from the top of shield
+Text Notes 5705 -1610 0    118  ~ 0
+Vcc 200mA max current draw for ATmega2560\n-Keep total current draw below this value\n-SD card powered by atmega 3V3 pin\n-Everything else powered by 5V regulator
+Text Notes 5695 -2590 0    118  ~ 0
+-Board sits at test operator area
+Text Notes 5700 -2865 0    118  ~ 24
+NOTES
+Text Notes 5650 -430 0    79   ~ 0
+-Create KiCAD BOM from pcbnew and convert to csv manually in notepad++\n-When you make a schematic that has everything snapped to grid, easier viewing for someone else opening the schematic\n-For multi-sheet schematics, can just make page size larger for schematic to fit more stuff\n
+Text Notes 9680 7735 0    50   ~ 0
+Igniter Arduino Shield
 $Bitmap
-Pos 10155 7080
+Pos 13145 7090
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 00 B0 00 00 00 8F 08 02 00 00 00 D5 F9 C6 
@@ -754,7 +1131,7 @@ DF AE 48 ED 27 65 BA 9B 53 1F FE 7F 92 B3 3F E1 7A 59 39 6F 00 00 00 00 49 45 4E
 EndData
 $EndBitmap
 $Bitmap
-Pos 7190 7070
+Pos 10180 7080
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 1D 00 00 00 B0 08 02 00 00 00 24 1F 4B 
@@ -1716,638 +2093,1314 @@ F4 70 04 05 7D 39 1C 24 B1 C9 CB 05 58 AE 60 30 18 0C C6 9B 60 3D 0E 83 C1 60 30
 FF 01 19 E2 CA 14 FF BF 05 C1 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
+Text Notes 11290 8000 0    50   ~ 0
+10 mil grid
 Wire Notes Line
-	640  7560 640  7920
-$Comp
-L Mechanical:MountingHole MH3
-U 1 1 5DCE1DBE
-P 1500 7650
-F 0 "MH3" H 1600 7650 50  0000 L CNN
-F 1 "MountingHole" H 1600 7605 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.5mm" H 1500 7650 50  0001 C CNN
-F 3 "~" H 1500 7650 50  0001 C CNN
-	1    1500 7650
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	1780 7550 1780 7920
-Wire Notes Line
-	640  7920 1780 7920
-Wire Notes Line
-	640  7550 1780 7550
-Text Notes 6208 8766 2    118  ~ 0
-Figure out a Kicad BoM, not just google drive
-$Comp
-L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
-U 1 1 5DB49E1D
-P 4220 4900
-F 0 "XA1" H 4220 2520 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 4220 2414 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Modified" H 4920 7650 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4920 7650 60  0001 C CNN
-	1    4220 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Small D1
-U 1 1 5DD0D731
-P 8080 3010
-F 0 "D1" V 8080 2860 50  0000 L CNN
-F 1 "D_Small" V 8125 3078 50  0001 L CNN
-F 2 "Diode_SMD:D_SOD-123F" V 8080 3010 50  0001 C CNN
-F 3 "~" V 8080 3010 50  0001 C CNN
-	1    8080 3010
-	0    1    1    0   
-$EndComp
-Text Label 5520 7050 0    50   ~ 0
-CS
-$Sheet
-S 6150 2650 505  585 
-U 5DB4D508
-F0 "solenoids" 50
-F1 "solenoids.sch" 50
-F2 "SOL1" I L 6150 2750 50 
-F3 "SOL2" I L 6150 2850 50 
-F4 "SOL3" I L 6150 2950 50 
-F5 "SOL4" I L 6150 3050 50 
-F6 "SOL5" I L 6150 3150 50 
-$EndSheet
-NoConn ~ 2924 6942
-NoConn ~ 2924 6842
-NoConn ~ 2924 6742
-Wire Notes Line
-	7226 4751 8951 4751
-Wire Notes Line
-	7226 2576 8951 2576
-$Comp
-L power:+3V3 #PWR04
-U 1 1 5DC4F427
-P 2720 6650
-F 0 "#PWR04" H 2720 6500 50  0001 C CNN
-F 1 "+3V3" H 2720 6790 50  0000 C CNN
-F 2 "" H 2720 6650 50  0001 C CNN
-F 3 "" H 2720 6650 50  0001 C CNN
-	1    2720 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+24V #PWR021
-U 1 1 5DBB7502
-P 8170 2840
-F 0 "#PWR021" H 8170 2690 50  0001 C CNN
-F 1 "+24V" H 8185 3013 50  0000 C CNN
-F 2 "" H 8170 2840 50  0001 C CNN
-F 3 "" H 8170 2840 50  0001 C CNN
-	1    8170 2840
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2920 5650
-$Comp
-L power:GNDREF #PWR02
-U 1 1 5DB796A8
-P 4560 2270
-F 0 "#PWR02" H 4560 2020 50  0001 C CNN
-F 1 "GNDREF" H 4565 2097 50  0001 C CNN
-F 2 "" H 4560 2270 50  0001 C CNN
-F 3 "" H 4560 2270 50  0001 C CNN
-	1    4560 2270
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2924 7042
-$Comp
-L power:GNDREF #PWR022
-U 1 1 5DB58C89
-P 2730 6150
-F 0 "#PWR022" H 2730 5900 50  0001 C CNN
-F 1 "GNDREF" H 2735 5977 50  0001 C CNN
-F 2 "" H 2730 6150 50  0001 C CNN
-F 3 "" H 2730 6150 50  0001 C CNN
-	1    2730 6150
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	7226 2576 7226 4761
-Wire Notes Line
-	8951 4751 8951 2566
-Text Notes 7886 2546 0    50   ~ 0
-Igniter Driver
-$Comp
-L power:GNDREF #PWR024
-U 1 1 5DABC8A2
-P 8170 4220
-F 0 "#PWR024" H 8170 3970 50  0001 C CNN
-F 1 "GNDREF" H 8175 4047 50  0000 C CNN
-F 2 "" H 8170 4220 50  0001 C CNN
-F 3 "" H 8170 4220 50  0001 C CNN
-	1    8170 4220
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5DAB751B
-P 7960 4120
-AR Path="/5D9BEB88/5DAB751B" Ref="R?"  Part="1" 
-AR Path="/5DAB751B" Ref="R6"  Part="1" 
-F 0 "R6" V 7753 4120 50  0001 C CNN
-F 1 "10k" V 7845 4120 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 7890 4120 50  0001 C CNN
-F 3 "~" H 7960 4120 50  0001 C CNN
-	1    7960 4120
-	0    1    1    0   
-$EndComp
-NoConn ~ 978  2053
-NoConn ~ 2680 1160
-NoConn ~ 2680 1860
-$Comp
-L Igniter-rescue:Micro_SD_Card-Connector J?
-U 1 1 5DF09A80
-P 1780 1460
-AR Path="/5DC64D13/5DF09A80" Ref="J?"  Part="1" 
-AR Path="/5DF09A80" Ref="J13"  Part="1" 
-F 0 "J13" H 1730 643 50  0000 C CNN
-F 1 "Micro_SD_Card" H 1730 734 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Hirose_DM3BT-DSF-PEJS" H 2930 1760 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 1780 1460 50  0001 C CNN
-	1    1780 1460
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR06
-U 1 1 5DF09A7A
-P 2740 2100
-AR Path="/5DF09A7A" Ref="#PWR06"  Part="1" 
-AR Path="/5DC64D13/5DF09A7A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR06" H 2740 1850 50  0001 C CNN
-F 1 "GNDREF" H 2745 1927 50  0001 C CNN
-F 2 "" H 2740 2100 50  0001 C CNN
-F 3 "" H 2740 2100 50  0001 C CNN
-	1    2740 2100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR05
-U 1 1 5DF09A62
-P 2740 1050
-AR Path="/5DF09A62" Ref="#PWR05"  Part="1" 
-AR Path="/5DC64D13/5DF09A62" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 2740 900 50  0001 C CNN
-F 1 "+3V3" H 2740 1190 50  0000 C CNN
-F 2 "" H 2740 1050 50  0001 C CNN
-F 3 "" H 2740 1050 50  0001 C CNN
-	1    2740 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR09
-U 1 1 5DF09A74
-P 3800 1160
-F 0 "#PWR09" H 3800 1010 50  0001 C CNN
-F 1 "+3V3" H 3800 1300 50  0000 C CNN
-F 2 "" H 3800 1160 50  0001 C CNN
-F 3 "" H 3800 1160 50  0001 C CNN
-	1    3800 1160
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 3000 1960
-$Comp
-L power:GNDREF #PWR013
-U 1 1 5DF09A89
-P 3800 2060
-AR Path="/5DF09A89" Ref="#PWR013"  Part="1" 
-AR Path="/5DC64D13/5DF09A89" Ref="#PWR?"  Part="1" 
-F 0 "#PWR013" H 3800 1810 50  0001 C CNN
-F 1 "GNDREF" H 3805 1887 50  0001 C CNN
-F 2 "" H 3800 2060 50  0001 C CNN
-F 3 "" H 3800 2060 50  0001 C CNN
-	1    3800 2060
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 3000 2060
-$Comp
-L power:GNDREF #PWR010
-U 1 1 5DF09A6E
-P 3800 1360
-F 0 "#PWR010" H 3800 1110 50  0001 C CNN
-F 1 "GNDREF" H 3805 1187 50  0001 C CNN
-F 2 "" H 3800 1360 50  0001 C CNN
-F 3 "" H 3800 1360 50  0001 C CNN
-	1    3800 1360
-	-1   0    0    -1  
-$EndComp
-Text Label 3800 1760 0    50   ~ 0
-CS
-$Comp
-L Mechanical:MountingHole MH4
-U 1 1 5DEB0FB5
-P 750 7825
-F 0 "MH4" H 850 7825 50  0000 L CNN
-F 1 "MountingHole" H 850 7780 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.5mm" H 750 7825 50  0001 C CNN
-F 3 "~" H 750 7825 50  0001 C CNN
-	1    750  7825
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4270 2300
-Text Notes 1693 3088 0    50   ~ 0
-Pressure Transducers
-$Comp
-L power:GNDREF #PWR0118
-U 1 1 5DFAB89C
-P 1720 3640
-AR Path="/5DFAB89C" Ref="#PWR0118"  Part="1" 
-AR Path="/5DB4D508/5DFAB89C" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0118" H 1720 3390 50  0001 C CNN
-F 1 "GNDREF" H 1725 3467 50  0001 C CNN
-F 2 "" H 1720 3640 50  0001 C CNN
-F 3 "" H 1720 3640 50  0001 C CNN
-	1    1720 3640
-	-1   0    0    -1  
-$EndComp
+	12947 7065 12950 7065
+Text Label 5710 2750 2    50   ~ 0
+SOL1
+Wire Wire Line
+	5520 2750 5710 2750
+Text Label 5730 3850 2    50   ~ 0
+SPRK
+Wire Wire Line
+	5520 3850 5730 3850
+Text Label 5710 2850 2    50   ~ 0
+SOL2
+Text Label 5710 2950 2    50   ~ 0
+SOL3
+Text Label 5710 3050 2    50   ~ 0
+SOL4
+Text Label 5710 3150 2    50   ~ 0
+SOL5
+Wire Wire Line
+	5710 2850 5520 2850
+Wire Wire Line
+	5710 2950 5520 2950
+Wire Wire Line
+	5710 3050 5520 3050
+Wire Wire Line
+	5710 3150 5520 3150
+Text Label 2770 4050 0    50   ~ 0
+PT0
+Text Label 2770 4150 0    50   ~ 0
+PT1
+Text Label 2770 4250 0    50   ~ 0
+PT2
+Text Label 2770 4350 0    50   ~ 0
+PT3
+Wire Wire Line
+	2920 4050 2770 4050
+Wire Wire Line
+	2920 4150 2770 4150
+Wire Wire Line
+	2920 4250 2770 4250
+Wire Wire Line
+	2920 4350 2770 4350
+Text Label 1550 3540 0    50   ~ 0
+PT0
+Wire Wire Line
+	1720 3540 1550 3540
+Text Label 2120 3540 0    50   ~ 0
+PT1
 $Comp
 L Connector:Conn_01x03_Female J?
-U 1 1 5DFAB896
-P 1920 3540
-AR Path="/5DB4D508/5DFAB896" Ref="J?"  Part="1" 
-AR Path="/5DFAB896" Ref="J1"  Part="1" 
-F 0 "J1" H 1922 3242 50  0000 C CNN
-F 1 "PT" H 1918 3315 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1920 3540 50  0001 C CNN
-F 3 "~" H 1920 3540 50  0001 C CNN
-	1    1920 3540
+U 1 1 5DFB50B7
+P 2470 3540
+AR Path="/5DB4D508/5DFB50B7" Ref="J?"  Part="1" 
+AR Path="/5DFB50B7" Ref="J2"  Part="1" 
+F 0 "J2" H 2469 3235 50  0000 C CNN
+F 1 "PT" H 2470 3309 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2470 3540 50  0001 C CNN
+F 3 "~" H 2470 3540 50  0001 C CNN
+	1    2470 3540
 	1    0    0    1   
 $EndComp
+Wire Wire Line
+	2270 3540 2120 3540
 $Comp
-L power:GNDREF #PWR0119
-U 1 1 5DFB1672
-P 1710 4240
-AR Path="/5DFB1672" Ref="#PWR0119"  Part="1" 
-AR Path="/5DB4D508/5DFB1672" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0119" H 1710 3990 50  0001 C CNN
-F 1 "GNDREF" H 1715 4067 50  0001 C CNN
-F 2 "" H 1710 4240 50  0001 C CNN
-F 3 "" H 1710 4240 50  0001 C CNN
-	1    1710 4240
+L power:+24V #PWR0123
+U 1 1 5DFC5913
+P 2270 3440
+F 0 "#PWR0123" H 2270 3290 50  0001 C CNN
+F 1 "+24V" H 2270 3585 50  0000 C CNN
+F 2 "" H 2270 3440 50  0001 C CNN
+F 3 "" H 2270 3440 50  0001 C CNN
+	1    2270 3440
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5DFB167C
-P 1910 4140
-AR Path="/5DB4D508/5DFB167C" Ref="J?"  Part="1" 
-AR Path="/5DFB167C" Ref="J3"  Part="1" 
-F 0 "J3" H 1802 3815 50  0000 C CNN
-F 1 "PT" H 1802 3906 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 1910 4140 50  0001 C CNN
-F 3 "~" H 1910 4140 50  0001 C CNN
-	1    1910 4140
-	1    0    0    1   
 $EndComp
 $Comp
 L power:GNDREF #PWR0120
 U 1 1 5DFB50AD
-P 2273 3634
+P 2270 3640
 AR Path="/5DFB50AD" Ref="#PWR0120"  Part="1" 
 AR Path="/5DB4D508/5DFB50AD" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0120" H 2273 3384 50  0001 C CNN
-F 1 "GNDREF" H 2278 3461 50  0001 C CNN
-F 2 "" H 2273 3634 50  0001 C CNN
-F 3 "" H 2273 3634 50  0001 C CNN
-	1    2273 3634
+F 0 "#PWR0120" H 2270 3390 50  0001 C CNN
+F 1 "GNDREF" H 2275 3467 50  0001 C CNN
+F 2 "" H 2270 3640 50  0001 C CNN
+F 3 "" H 2270 3640 50  0001 C CNN
+	1    2270 3640
 	-1   0    0    -1  
 $EndComp
+Text Label 1550 4140 0    50   ~ 0
+PT2
+Wire Wire Line
+	1550 4140 1710 4140
+Text Label 2100 4140 0    50   ~ 0
+PT3
 $Comp
 L Connector:Conn_01x03_Female J?
-U 1 1 5DFB50B7
-P 2473 3534
-AR Path="/5DB4D508/5DFB50B7" Ref="J?"  Part="1" 
-AR Path="/5DFB50B7" Ref="J2"  Part="1" 
-F 0 "J2" H 2472 3229 50  0000 C CNN
-F 1 "PT" H 2473 3303 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2473 3534 50  0001 C CNN
-F 3 "~" H 2473 3534 50  0001 C CNN
-	1    2473 3534
+U 1 1 5DFB50CB
+P 2460 4140
+AR Path="/5DB4D508/5DFB50CB" Ref="J?"  Part="1" 
+AR Path="/5DFB50CB" Ref="J4"  Part="1" 
+F 0 "J4" H 2352 3815 50  0000 C CNN
+F 1 "PT" H 2352 3906 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2460 4140 50  0001 C CNN
+F 3 "~" H 2460 4140 50  0001 C CNN
+	1    2460 4140
 	1    0    0    1   
 $EndComp
 $Comp
 L power:GNDREF #PWR0121
 U 1 1 5DFB50C1
-P 2260 4237
+P 2260 4240
 AR Path="/5DFB50C1" Ref="#PWR0121"  Part="1" 
 AR Path="/5DB4D508/5DFB50C1" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0121" H 2260 3987 50  0001 C CNN
-F 1 "GNDREF" H 2265 4064 50  0001 C CNN
-F 2 "" H 2260 4237 50  0001 C CNN
-F 3 "" H 2260 4237 50  0001 C CNN
-	1    2260 4237
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J?
-U 1 1 5DFB50CB
-P 2460 4137
-AR Path="/5DB4D508/5DFB50CB" Ref="J?"  Part="1" 
-AR Path="/5DFB50CB" Ref="J4"  Part="1" 
-F 0 "J4" H 2352 3812 50  0000 C CNN
-F 1 "PT" H 2352 3903 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 2460 4137 50  0001 C CNN
-F 3 "~" H 2460 4137 50  0001 C CNN
-	1    2460 4137
-	1    0    0    1   
-$EndComp
-Wire Notes Line
-	4667 2560 472  2560
-Wire Notes Line
-	4667 2560 4667 471 
-Text Label 2920 4050 2    50   ~ 0
-PT0
-Text Label 2920 4150 2    50   ~ 0
-PT1
-Text Label 2920 4250 2    50   ~ 0
-PT2
-Text Label 2920 4350 2    50   ~ 0
-PT3
-Text Label 1720 3540 2    50   ~ 0
-PT0
-Text Label 2273 3534 2    50   ~ 0
-PT1
-Text Label 1710 4140 2    50   ~ 0
-PT2
-Text Label 2260 4137 2    50   ~ 0
-PT3
-$Comp
-L power:+24V #PWR01
-U 1 1 5DBB64EE
-P 1050 6530
-F 0 "#PWR01" H 1050 6380 50  0001 C CNN
-F 1 "+24V" H 1065 6703 50  0000 C CNN
-F 2 "" H 1050 6530 50  0001 C CNN
-F 3 "" H 1050 6530 50  0001 C CNN
-	1    1050 6530
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+24V #PWR0123
-U 1 1 5DFC5913
-P 2273 3434
-F 0 "#PWR0123" H 2273 3284 50  0001 C CNN
-F 1 "+24V" H 2273 3579 50  0000 C CNN
-F 2 "" H 2273 3434 50  0001 C CNN
-F 3 "" H 2273 3434 50  0001 C CNN
-	1    2273 3434
+F 0 "#PWR0121" H 2260 3990 50  0001 C CNN
+F 1 "GNDREF" H 2265 4067 50  0001 C CNN
+F 2 "" H 2260 4240 50  0001 C CNN
+F 3 "" H 2260 4240 50  0001 C CNN
+	1    2260 4240
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+24V #PWR0125
 U 1 1 5DFD3DEC
-P 2260 4037
-F 0 "#PWR0125" H 2260 3887 50  0001 C CNN
-F 1 "+24V" H 2260 4182 50  0000 C CNN
-F 2 "" H 2260 4037 50  0001 C CNN
-F 3 "" H 2260 4037 50  0001 C CNN
-	1    2260 4037
+P 2260 4040
+F 0 "#PWR0125" H 2260 3890 50  0001 C CNN
+F 1 "+24V" H 2260 4185 50  0000 C CNN
+F 2 "" H 2260 4040 50  0001 C CNN
+F 3 "" H 2260 4040 50  0001 C CNN
+	1    2260 4040
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4140 2260 4140
+$Comp
+L Device:LED D?
+U 1 1 5E33A16C
+P 8970 5330
+AR Path="/5DB4D508/5E33A16C" Ref="D?"  Part="1" 
+AR Path="/5E33A16C" Ref="D7"  Part="1" 
+F 0 "D7" H 8970 5245 50  0000 C CNN
+F 1 "LED" H 8970 5430 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 8970 5330 50  0001 C CNN
+F 3 "~" H 8970 5330 50  0001 C CNN
+	1    8970 5330
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E33A172
+P 9160 4980
+AR Path="/5DB4D508/5E33A172" Ref="R?"  Part="1" 
+AR Path="/5E33A172" Ref="R5"  Part="1" 
+F 0 "R5" V 9080 4980 50  0000 C CNN
+F 1 "1k2" V 9160 4980 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9090 4980 50  0001 C CNN
+F 3 "~" H 9160 4980 50  0001 C CNN
+	1    9160 4980
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E33A178
+P 8970 5480
+AR Path="/5DB4D508/5E33A178" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A178" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 8970 5230 50  0001 C CNN
+F 1 "GNDREF" H 8975 5307 50  0001 C CNN
+F 2 "" H 8970 5480 50  0001 C CNN
+F 3 "" H 8970 5480 50  0001 C CNN
+	1    8970 5480
+	-1   0    0    -1  
+$EndComp
+Text Notes 10015 4550 0    50   ~ 0
+Solenoid indicators
+$Comp
+L Device:LED D?
+U 1 1 5E33A181
+P 9240 5330
+AR Path="/5DB4D508/5E33A181" Ref="D?"  Part="1" 
+AR Path="/5E33A181" Ref="D8"  Part="1" 
+F 0 "D8" H 9240 5245 50  0000 C CNN
+F 1 "LED" H 9240 5430 50  0001 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 9240 5330 50  0001 C CNN
+F 3 "~" H 9240 5330 50  0001 C CNN
+	1    9240 5330
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E33A187
+P 9390 5180
+AR Path="/5DB4D508/5E33A187" Ref="R?"  Part="1" 
+AR Path="/5E33A187" Ref="R8"  Part="1" 
+F 0 "R8" V 9310 5180 50  0000 C CNN
+F 1 "1k2" V 9390 5180 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9320 5180 50  0001 C CNN
+F 3 "~" H 9390 5180 50  0001 C CNN
+	1    9390 5180
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E33A18D
+P 9240 5480
+AR Path="/5DB4D508/5E33A18D" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A18D" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 9240 5230 50  0001 C CNN
+F 1 "GNDREF" H 9245 5307 50  0001 C CNN
+F 2 "" H 9240 5480 50  0001 C CNN
+F 3 "" H 9240 5480 50  0001 C CNN
+	1    9240 5480
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+24V #PWR0124
-U 1 1 5DFD2F0A
-P 1710 4040
-F 0 "#PWR0124" H 1710 3890 50  0001 C CNN
-F 1 "+24V" H 1710 4185 50  0000 C CNN
-F 2 "" H 1710 4040 50  0001 C CNN
-F 3 "" H 1710 4040 50  0001 C CNN
-	1    1710 4040
+L power:+24V #PWR035
+U 1 1 5E33A193
+P 10140 4840
+AR Path="/5E33A193" Ref="#PWR035"  Part="1" 
+AR Path="/5DB4D508/5E33A193" Ref="#PWR?"  Part="1" 
+F 0 "#PWR035" H 10140 4690 50  0001 C CNN
+F 1 "+24V" H 10155 5013 50  0000 C CNN
+F 2 "" H 10140 4840 50  0001 C CNN
+F 3 "" H 10140 4840 50  0001 C CNN
+	1    10140 4840
+	1    0    0    -1  
+$EndComp
+$Comp
+L Igniter-rescue:FDS8984 U2
+U 1 1 5E33A19A
+P 9840 5030
+AR Path="/5E33A19A" Ref="U2"  Part="1" 
+AR Path="/5DB4D508/5E33A19A" Ref="U?"  Part="1" 
+F 0 "U2" H 9840 5405 50  0000 C CNN
+F 1 "FDS8984" H 9840 5314 50  0000 C CNN
+F 2 "Package_SO:SO-8_5.3x6.2mm_P1.27mm" H 9840 5130 50  0001 C CNN
+F 3 "" H 9840 5130 50  0001 C CNN
+	1    9840 5030
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+24V #PWR0122
-U 1 1 5DFBEE1E
-P 1720 3440
-F 0 "#PWR0122" H 1720 3290 50  0001 C CNN
-F 1 "+24V" H 1720 3585 50  0000 C CNN
-F 2 "" H 1720 3440 50  0001 C CNN
-F 3 "" H 1720 3440 50  0001 C CNN
-	1    1720 3440
+L Device:LED D?
+U 1 1 5E33A1A6
+P 10720 5410
+AR Path="/5DB4D508/5E33A1A6" Ref="D?"  Part="1" 
+AR Path="/5E33A1A6" Ref="D11"  Part="1" 
+F 0 "D11" H 10720 5325 50  0000 C CNN
+F 1 "LED" H 10720 5510 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 10720 5410 50  0001 C CNN
+F 3 "~" H 10720 5410 50  0001 C CNN
+	1    10720 5410
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E33A1AC
+P 10720 5560
+AR Path="/5DB4D508/5E33A1AC" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A1AC" Ref="#PWR039"  Part="1" 
+F 0 "#PWR039" H 10720 5310 50  0001 C CNN
+F 1 "GNDREF" H 10725 5387 50  0001 C CNN
+F 2 "" H 10720 5560 50  0001 C CNN
+F 3 "" H 10720 5560 50  0001 C CNN
+	1    10720 5560
 	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+24V #PWR036
+U 1 1 5E33A1B2
+P 11760 5100
+AR Path="/5E33A1B2" Ref="#PWR036"  Part="1" 
+AR Path="/5DB4D508/5E33A1B2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR036" H 11760 4950 50  0001 C CNN
+F 1 "+24V" H 11775 5273 50  0000 C CNN
+F 2 "" H 11760 5100 50  0001 C CNN
+F 3 "" H 11760 5100 50  0001 C CNN
+	1    11760 5100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11640 5000
+NoConn ~ 11640 4900
+$Comp
+L power:+24V #PWR040
+U 1 1 5E33A1E6
+P 10240 5750
+AR Path="/5E33A1E6" Ref="#PWR040"  Part="1" 
+AR Path="/5DB4D508/5E33A1E6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR040" H 10240 5600 50  0001 C CNN
+F 1 "+24V" H 10255 5923 50  0000 C CNN
+F 2 "" H 10240 5750 50  0001 C CNN
+F 3 "" H 10240 5750 50  0001 C CNN
+	1    10240 5750
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8795 4585 8795 6520
+Wire Notes Line
+	8795 6520 11935 6520
+Wire Notes Line
+	11935 6520 11935 4585
+Wire Notes Line
+	11935 4585 8795 4585
+$Comp
+L Igniter-rescue:FDS8984 U4
+U 1 1 5E33A36C
+P 11340 5050
+AR Path="/5E33A36C" Ref="U4"  Part="1" 
+AR Path="/5DB4D508/5E33A36C" Ref="U?"  Part="1" 
+F 0 "U4" H 11340 5425 50  0000 C CNN
+F 1 "FDS8984" H 11340 5334 50  0000 C CNN
+F 2 "Package_SO:SO-8_5.3x6.2mm_P1.27mm" H 11340 5150 50  0001 C CNN
+F 3 "" H 11340 5150 50  0001 C CNN
+	1    11340 5050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8970 5180 8970 4980
+Wire Wire Line
+	8970 4980 9010 4980
+Text Label 9330 5080 0    50   ~ 0
+SOL1
+Text Label 9330 4880 0    50   ~ 0
+SOL2
+Wire Wire Line
+	9330 5080 9540 5080
+Wire Wire Line
+	9310 4980 9540 4980
+Wire Wire Line
+	9330 4880 9540 4880
+Wire Wire Line
+	10140 4840 10140 4880
+Wire Wire Line
+	10140 4980 10140 4880
+Connection ~ 10140 4880
+Wire Wire Line
+	10140 5080 10140 4980
+Wire Wire Line
+	10140 5180 10140 5080
+Connection ~ 10140 4980
+Connection ~ 10140 5080
+$Comp
+L Device:D_Small D1
+U 1 1 5DD0D731
+P 6760 4820
+F 0 "D1" V 6760 4670 50  0000 L CNN
+F 1 "D_Small" V 6805 4888 50  0001 L CNN
+F 2 "Diode_SMD:D_SOD-123F" V 6760 4820 50  0001 C CNN
+F 3 "~" V 6760 4820 50  0001 C CNN
+	1    6760 4820
+	0    1    1    0   
+$EndComp
+Wire Notes Line
+	5906 6561 7631 6561
+Wire Notes Line
+	5906 4386 7631 4386
+$Comp
+L power:+24V #PWR021
+U 1 1 5DBB7502
+P 6850 4650
+F 0 "#PWR021" H 6850 4500 50  0001 C CNN
+F 1 "+24V" H 6865 4823 50  0000 C CNN
+F 2 "" H 6850 4650 50  0001 C CNN
+F 3 "" H 6850 4650 50  0001 C CNN
+	1    6850 4650
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	5906 4386 5906 6571
+Wire Notes Line
+	7631 6561 7631 4376
+Text Notes 6566 4356 0    50   ~ 0
+Igniter Driver
+$Comp
+L power:GNDREF #PWR024
+U 1 1 5DABC8A2
+P 6850 6030
+F 0 "#PWR024" H 6850 5780 50  0001 C CNN
+F 1 "GNDREF" H 6855 5857 50  0000 C CNN
+F 2 "" H 6850 6030 50  0001 C CNN
+F 3 "" H 6850 6030 50  0001 C CNN
+	1    6850 6030
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DAB751B
+P 6640 5930
+AR Path="/5D9BEB88/5DAB751B" Ref="R?"  Part="1" 
+AR Path="/5DAB751B" Ref="R6"  Part="1" 
+F 0 "R6" V 6433 5930 50  0001 C CNN
+F 1 "10k" V 6525 5930 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6570 5930 50  0001 C CNN
+F 3 "~" H 6640 5930 50  0001 C CNN
+	1    6640 5930
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:Q_NMOS_GDSD Q1
 U 1 1 5E1E71F4
-P 8070 3850
-F 0 "Q1" H 8357 3896 50  0000 L CNN
-F 1 "IGN" H 8357 3805 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 8270 3950 50  0001 C CNN
-F 3 "~" H 8070 3850 50  0001 C CNN
-	1    8070 3850
+P 6750 5660
+F 0 "Q1" H 7037 5706 50  0000 L CNN
+F 1 "IGN" H 7037 5615 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 6950 5760 50  0001 C CNN
+F 3 "~" H 6750 5660 50  0001 C CNN
+	1    6750 5660
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x02_Female J7
 U 1 1 5E1E97CA
-P 8470 3070
-F 0 "J7" H 8498 3000 50  0000 L CNN
-F 1 "COIL" H 8497 2955 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 8470 3070 50  0001 C CNN
-F 3 "~" H 8470 3070 50  0001 C CNN
-	1    8470 3070
+P 7150 4880
+F 0 "J7" H 7178 4810 50  0000 L CNN
+F 1 "COIL" H 7177 4765 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 7150 4880 50  0001 C CNN
+F 3 "~" H 7150 4880 50  0001 C CNN
+	1    7150 4880
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x02_Female J6
 U 1 1 5E1E982C
-P 8470 2860
-F 0 "J6" H 8498 2790 50  0000 L CNN
-F 1 "COIL" H 8497 2745 50  0001 L CNN
-F 2 "IgniterCustom:BananaJack15.5mm" H 8470 2860 50  0001 C CNN
-F 3 "~" H 8470 2860 50  0001 C CNN
-	1    8470 2860
-	1    0    0    -1  
-$EndComp
-Text Notes 11000 4700 0    79   ~ 0
--Create KiCAD BOM from pcbnew and convert to csv manually in notepad++\n-When you make a schematic that has everything snapped to grid, easier viewing for someone else opening the schematic\n-For multi-sheet schematics, can just make page size larger for schematic to fit more stuff\n
-$Comp
-L Connector:Conn_01x02_Female J5
-U 1 1 5DF0B34B
-P 1800 7110
-F 0 "J5" H 1828 7086 50  0000 L CNN
-F 1 "Battery" H 1828 6995 50  0000 L CNN
-F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-02A_2x01_P4.20mm_Vertical" H 1800 7110 50  0001 C CNN
-F 3 "~" H 1800 7110 50  0001 C CNN
-	1    1800 7110
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR03
-U 1 1 5DA63712
-P 1600 7210
-F 0 "#PWR03" H 1600 6960 50  0001 C CNN
-F 1 "GNDREF" H 1605 7037 50  0001 C CNN
-F 2 "" H 1600 7210 50  0001 C CNN
-F 3 "" H 1600 7210 50  0001 C CNN
-	1    1600 7210
+P 7150 4670
+F 0 "J6" H 7178 4600 50  0000 L CNN
+F 1 "COIL" H 7177 4555 50  0001 L CNN
+F 2 "IgniterCustom:BananaJack15.5mm" H 7150 4670 50  0001 C CNN
+F 3 "~" H 7150 4670 50  0001 C CNN
+	1    7150 4670
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1530 7110 1600 7110
+	6850 6030 6850 5930
 Wire Wire Line
-	900  6560 1000 6560
+	6790 5930 6850 5930
+Connection ~ 6850 5930
 Wire Wire Line
-	1100 6560 1050 6560
-Connection ~ 1000 6560
+	6490 5930 6490 5660
 Wire Wire Line
-	1050 6530 1050 6560
-Connection ~ 1050 6560
+	6490 5660 6550 5660
 Wire Wire Line
-	1050 6560 1000 6560
+	6850 5460 6950 5460
 Wire Wire Line
-	1100 6560 1200 6560
-Connection ~ 1100 6560
+	6850 5860 6850 5930
 Wire Wire Line
-	900  7060 1000 7060
+	6760 4720 6850 4720
 Wire Wire Line
-	1000 7060 1060 7060
-Connection ~ 1000 7060
+	6850 4720 6850 4650
 Wire Wire Line
-	1100 7060 1200 7060
-Connection ~ 1100 7060
+	6950 4670 6950 4720
 Wire Wire Line
-	1060 7060 1060 7110
+	6850 4720 6950 4720
+Connection ~ 6850 4720
+Connection ~ 6950 4720
 Wire Wire Line
-	1060 7110 1130 7110
-Connection ~ 1060 7060
+	6950 4720 6950 4770
 Wire Wire Line
-	1060 7060 1100 7060
-Text Notes 8300 7990 0    50   ~ 0
-10 mil grid
+	6760 4920 6850 4920
 Wire Wire Line
-	1020 5470 1020 5400
+	6850 4920 6850 5460
+Connection ~ 6850 5460
 Wire Wire Line
-	1020 5100 1020 5030
+	6850 4920 6950 4920
 Wire Wire Line
-	1340 5100 1340 5030
+	6950 4920 6950 4880
+Connection ~ 6850 4920
 Wire Wire Line
-	1340 5470 1340 5400
+	6950 4920 6950 4980
+Connection ~ 6950 4920
+Text Label 6250 5660 0    50   ~ 0
+SPRK
+Connection ~ 6490 5660
+Wire Wire Line
+	6250 5660 6490 5660
+Text Notes 8650 720  0    50   ~ 0
+Solenoid Drivers
 $Comp
-L Igniter-rescue:74HC4050-7400-ic IC?
-U 1 1 5DF09A68
-P 3400 1610
-AR Path="/5DC64D13/5DF09A68" Ref="IC?"  Part="1" 
-AR Path="/5DF09A68" Ref="IC1"  Part="1" 
-F 0 "IC1" H 3400 2347 60  0000 C CNN
-F 1 "74HC4050" H 3400 2241 60  0000 C CNN
-F 2 "Package_SO:SOP-16_4.4x10.4mm_P1.27mm" H 3300 1610 60  0001 C CNN
-F 3 "" H 3350 1610 60  0001 C CNN
-	1    3400 1610
+L power:GNDREF #PWR025
+U 1 1 5E33A207
+P 7330 2200
+AR Path="/5E33A207" Ref="#PWR025"  Part="1" 
+AR Path="/5DB4D508/5E33A207" Ref="#PWR?"  Part="1" 
+F 0 "#PWR025" H 7330 1950 50  0001 C CNN
+F 1 "GNDREF" H 7335 2027 50  0001 C CNN
+F 2 "" H 7330 2200 50  0001 C CNN
+F 3 "" H 7330 2200 50  0001 C CNN
+	1    7330 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5E33A20D
+P 7330 2030
+AR Path="/5E33A20D" Ref="R15"  Part="1" 
+AR Path="/5DB4D508/5E33A20D" Ref="R?"  Part="1" 
+F 0 "R15" V 7250 1980 50  0000 L CNN
+F 1 "10k" V 7330 1960 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7260 2030 50  0001 C CNN
+F 3 "~" H 7330 2030 50  0001 C CNN
+	1    7330 2030
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E33A21B
+P 7670 1420
+AR Path="/5DB4D508/5E33A21B" Ref="D?"  Part="1" 
+AR Path="/5E33A21B" Ref="D2"  Part="1" 
+F 0 "D2" V 7624 1499 50  0000 L CNN
+F 1 "D" V 7715 1499 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7670 1420 50  0001 C CNN
+F 3 "~" H 7670 1420 50  0001 C CNN
+	1    7670 1420
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5E33A222
+P 7670 1090
+AR Path="/5DB4D508/5E33A222" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A222" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 7670 940 50  0001 C CNN
+F 1 "+24V" H 7685 1263 50  0000 C CNN
+F 2 "" H 7670 1090 50  0001 C CNN
+F 3 "" H 7670 1090 50  0001 C CNN
+	1    7670 1090
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5E33A229
+P 7090 1440
+AR Path="/5DB4D508/5E33A229" Ref="J?"  Part="1" 
+AR Path="/5E33A229" Ref="J8"  Part="1" 
+F 0 "J8" H 6982 1115 50  0000 C CNN
+F 1 "SL1" H 6982 1206 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 7090 1440 50  0001 C CNN
+F 3 "~" H 7090 1440 50  0001 C CNN
+	1    7090 1440
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR017
+U 1 1 5E33A230
+P 7290 1540
+AR Path="/5E33A230" Ref="#PWR017"  Part="1" 
+AR Path="/5DB4D508/5E33A230" Ref="#PWR?"  Part="1" 
+F 0 "#PWR017" H 7290 1290 50  0001 C CNN
+F 1 "GNDREF" H 7295 1367 50  0001 C CNN
+F 2 "" H 7290 1540 50  0001 C CNN
+F 3 "" H 7290 1540 50  0001 C CNN
+	1    7290 1540
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	6920 4020 10990 4020
+Wire Notes Line
+	11000 740  6930 740 
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E33A215
+P 7670 2200
+AR Path="/5DB4D508/5E33A215" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A215" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 7670 1950 50  0001 C CNN
+F 1 "GNDREF" H 7675 2027 50  0001 C CNN
+F 2 "" H 7670 2200 50  0001 C CNN
+F 3 "" H 7670 2200 50  0001 C CNN
+	1    7670 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7330 2200 7330 2180
+Wire Wire Line
+	7330 1880 7370 1880
+Text Label 7120 1880 0    50   ~ 0
+SOL1
+Wire Wire Line
+	7330 1880 7120 1880
+Connection ~ 7330 1880
+Wire Wire Line
+	7670 1680 7770 1680
+Wire Wire Line
+	7670 2080 7670 2200
+Wire Wire Line
+	7670 1680 7670 1570
+Connection ~ 7670 1680
+Wire Wire Line
+	7670 1570 7430 1570
+Wire Wire Line
+	7430 1570 7430 1440
+Wire Wire Line
+	7430 1440 7290 1440
+Connection ~ 7670 1570
+Wire Wire Line
+	7670 1270 7670 1090
+Wire Wire Line
+	7670 1270 7430 1270
+Wire Wire Line
+	7430 1270 7430 1340
+Wire Wire Line
+	7430 1340 7290 1340
+Connection ~ 7670 1270
+$Comp
+L power:GNDREF #PWR020
+U 1 1 5E46D87F
+P 8510 2180
+AR Path="/5E46D87F" Ref="#PWR020"  Part="1" 
+AR Path="/5DB4D508/5E46D87F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR020" H 8510 1930 50  0001 C CNN
+F 1 "GNDREF" H 8515 2007 50  0001 C CNN
+F 2 "" H 8510 2180 50  0001 C CNN
+F 3 "" H 8510 2180 50  0001 C CNN
+	1    8510 2180
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E46D889
+P 8510 2010
+AR Path="/5E46D889" Ref="R2"  Part="1" 
+AR Path="/5DB4D508/5E46D889" Ref="R?"  Part="1" 
+F 0 "R2" V 8430 1960 50  0000 L CNN
+F 1 "10k" V 8510 1940 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 8440 2010 50  0001 C CNN
+F 3 "~" H 8510 2010 50  0001 C CNN
+	1    8510 2010
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E46D893
+P 8850 1400
+AR Path="/5DB4D508/5E46D893" Ref="D?"  Part="1" 
+AR Path="/5E46D893" Ref="D3"  Part="1" 
+F 0 "D3" V 8804 1479 50  0000 L CNN
+F 1 "D" V 8895 1479 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 8850 1400 50  0001 C CNN
+F 3 "~" H 8850 1400 50  0001 C CNN
+	1    8850 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5E46D89D
+P 8850 1070
+AR Path="/5DB4D508/5E46D89D" Ref="#PWR?"  Part="1" 
+AR Path="/5E46D89D" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 8850 920 50  0001 C CNN
+F 1 "+24V" H 8865 1243 50  0000 C CNN
+F 2 "" H 8850 1070 50  0001 C CNN
+F 3 "" H 8850 1070 50  0001 C CNN
+	1    8850 1070
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5E46D8A7
+P 8270 1420
+AR Path="/5DB4D508/5E46D8A7" Ref="J?"  Part="1" 
+AR Path="/5E46D8A7" Ref="J9"  Part="1" 
+F 0 "J9" H 8162 1095 50  0000 C CNN
+F 1 "SL1" H 8162 1186 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 8270 1420 50  0001 C CNN
+F 3 "~" H 8270 1420 50  0001 C CNN
+	1    8270 1420
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR016
+U 1 1 5E46D8B1
+P 8470 1520
+AR Path="/5E46D8B1" Ref="#PWR016"  Part="1" 
+AR Path="/5DB4D508/5E46D8B1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR016" H 8470 1270 50  0001 C CNN
+F 1 "GNDREF" H 8475 1347 50  0001 C CNN
+F 2 "" H 8470 1520 50  0001 C CNN
+F 3 "" H 8470 1520 50  0001 C CNN
+	1    8470 1520
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q?
+U 1 1 5E46D8BB
+P 8750 1860
+AR Path="/5DB4D508/5E46D8BB" Ref="Q?"  Part="1" 
+AR Path="/5E46D8BB" Ref="Q3"  Part="1" 
+F 0 "Q3" H 9038 1906 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 9038 1815 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 8950 1960 50  0001 C CNN
+F 3 "~" H 8750 1860 50  0001 C CNN
+	1    8750 1860
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E46D8C5
+P 8850 2180
+AR Path="/5DB4D508/5E46D8C5" Ref="#PWR?"  Part="1" 
+AR Path="/5E46D8C5" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 8850 1930 50  0001 C CNN
+F 1 "GNDREF" H 8855 2007 50  0001 C CNN
+F 2 "" H 8850 2180 50  0001 C CNN
+F 3 "" H 8850 2180 50  0001 C CNN
+	1    8850 2180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8510 2180 8510 2160
+Wire Wire Line
+	8510 1860 8550 1860
+Text Label 8300 1860 0    50   ~ 0
+SOL2
+Wire Wire Line
+	8510 1860 8300 1860
+Connection ~ 8510 1860
+Wire Wire Line
+	8850 1660 8950 1660
+Wire Wire Line
+	8850 2060 8850 2180
+Wire Wire Line
+	8850 1660 8850 1550
+Connection ~ 8850 1660
+Wire Wire Line
+	8850 1550 8610 1550
+Wire Wire Line
+	8610 1550 8610 1420
+Wire Wire Line
+	8610 1420 8470 1420
+Connection ~ 8850 1550
+Wire Wire Line
+	8850 1250 8850 1070
+Wire Wire Line
+	8850 1250 8610 1250
+Wire Wire Line
+	8610 1250 8610 1320
+Wire Wire Line
+	8610 1320 8470 1320
+Connection ~ 8850 1250
+$Comp
+L power:GNDREF #PWR033
+U 1 1 5E4802DD
+P 7360 3880
+AR Path="/5E4802DD" Ref="#PWR033"  Part="1" 
+AR Path="/5DB4D508/5E4802DD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR033" H 7360 3630 50  0001 C CNN
+F 1 "GNDREF" H 7365 3707 50  0001 C CNN
+F 2 "" H 7360 3880 50  0001 C CNN
+F 3 "" H 7360 3880 50  0001 C CNN
+	1    7360 3880
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E4802E7
+P 7360 3710
+AR Path="/5E4802E7" Ref="R11"  Part="1" 
+AR Path="/5DB4D508/5E4802E7" Ref="R?"  Part="1" 
+F 0 "R11" V 7280 3660 50  0000 L CNN
+F 1 "10k" V 7360 3640 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7290 3710 50  0001 C CNN
+F 3 "~" H 7360 3710 50  0001 C CNN
+	1    7360 3710
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E4802F1
+P 7700 3100
+AR Path="/5DB4D508/5E4802F1" Ref="D?"  Part="1" 
+AR Path="/5E4802F1" Ref="D5"  Part="1" 
+F 0 "D5" V 7654 3179 50  0000 L CNN
+F 1 "D" V 7745 3179 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7700 3100 50  0001 C CNN
+F 3 "~" H 7700 3100 50  0001 C CNN
+	1    7700 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5E4802FB
+P 7700 2770
+AR Path="/5DB4D508/5E4802FB" Ref="#PWR?"  Part="1" 
+AR Path="/5E4802FB" Ref="#PWR028"  Part="1" 
+F 0 "#PWR028" H 7700 2620 50  0001 C CNN
+F 1 "+24V" H 7715 2943 50  0000 C CNN
+F 2 "" H 7700 2770 50  0001 C CNN
+F 3 "" H 7700 2770 50  0001 C CNN
+	1    7700 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5E480305
+P 7120 3120
+AR Path="/5DB4D508/5E480305" Ref="J?"  Part="1" 
+AR Path="/5E480305" Ref="J11"  Part="1" 
+F 0 "J11" H 7012 2795 50  0000 C CNN
+F 1 "SL1" H 7012 2886 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 7120 3120 50  0001 C CNN
+F 3 "~" H 7120 3120 50  0001 C CNN
+	1    7120 3120
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR030
+U 1 1 5E48030F
+P 7320 3220
+AR Path="/5E48030F" Ref="#PWR030"  Part="1" 
+AR Path="/5DB4D508/5E48030F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR030" H 7320 2970 50  0001 C CNN
+F 1 "GNDREF" H 7325 3047 50  0001 C CNN
+F 2 "" H 7320 3220 50  0001 C CNN
+F 3 "" H 7320 3220 50  0001 C CNN
+	1    7320 3220
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E480323
+P 7700 3880
+AR Path="/5DB4D508/5E480323" Ref="#PWR?"  Part="1" 
+AR Path="/5E480323" Ref="#PWR034"  Part="1" 
+F 0 "#PWR034" H 7700 3630 50  0001 C CNN
+F 1 "GNDREF" H 7705 3707 50  0001 C CNN
+F 2 "" H 7700 3880 50  0001 C CNN
+F 3 "" H 7700 3880 50  0001 C CNN
+	1    7700 3880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7360 3880 7360 3860
+Wire Wire Line
+	7360 3560 7400 3560
+Text Label 7150 3560 0    50   ~ 0
+SOL4
+Wire Wire Line
+	7360 3560 7150 3560
+Connection ~ 7360 3560
+Wire Wire Line
+	7700 3360 7800 3360
+Wire Wire Line
+	7700 3760 7700 3880
+Wire Wire Line
+	7700 3360 7700 3250
+Connection ~ 7700 3360
+Wire Wire Line
+	7700 3250 7460 3250
+Wire Wire Line
+	7460 3250 7460 3120
+Wire Wire Line
+	7460 3120 7320 3120
+Connection ~ 7700 3250
+Wire Wire Line
+	7700 2950 7700 2770
+Wire Wire Line
+	7700 2950 7460 2950
+Wire Wire Line
+	7460 2950 7460 3020
+Wire Wire Line
+	7460 3020 7320 3020
+Connection ~ 7700 2950
+$Comp
+L power:GNDREF #PWR031
+U 1 1 5E48033F
+P 8540 3860
+AR Path="/5E48033F" Ref="#PWR031"  Part="1" 
+AR Path="/5DB4D508/5E48033F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR031" H 8540 3610 50  0001 C CNN
+F 1 "GNDREF" H 8545 3687 50  0001 C CNN
+F 2 "" H 8540 3860 50  0001 C CNN
+F 3 "" H 8540 3860 50  0001 C CNN
+	1    8540 3860
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E480349
+P 8540 3690
+AR Path="/5E480349" Ref="R12"  Part="1" 
+AR Path="/5DB4D508/5E480349" Ref="R?"  Part="1" 
+F 0 "R12" V 8460 3640 50  0000 L CNN
+F 1 "10k" V 8540 3620 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 8470 3690 50  0001 C CNN
+F 3 "~" H 8540 3690 50  0001 C CNN
+	1    8540 3690
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E480353
+P 8880 3080
+AR Path="/5DB4D508/5E480353" Ref="D?"  Part="1" 
+AR Path="/5E480353" Ref="D6"  Part="1" 
+F 0 "D6" V 8834 3159 50  0000 L CNN
+F 1 "D" V 8925 3159 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 8880 3080 50  0001 C CNN
+F 3 "~" H 8880 3080 50  0001 C CNN
+	1    8880 3080
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5E48035D
+P 8880 2750
+AR Path="/5DB4D508/5E48035D" Ref="#PWR?"  Part="1" 
+AR Path="/5E48035D" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 8880 2600 50  0001 C CNN
+F 1 "+24V" H 8895 2923 50  0000 C CNN
+F 2 "" H 8880 2750 50  0001 C CNN
+F 3 "" H 8880 2750 50  0001 C CNN
+	1    8880 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5E480367
+P 8300 3100
+AR Path="/5DB4D508/5E480367" Ref="J?"  Part="1" 
+AR Path="/5E480367" Ref="J12"  Part="1" 
+F 0 "J12" H 8192 2775 50  0000 C CNN
+F 1 "SL1" H 8192 2866 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 8300 3100 50  0001 C CNN
+F 3 "~" H 8300 3100 50  0001 C CNN
+	1    8300 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR029
+U 1 1 5E480371
+P 8500 3200
+AR Path="/5E480371" Ref="#PWR029"  Part="1" 
+AR Path="/5DB4D508/5E480371" Ref="#PWR?"  Part="1" 
+F 0 "#PWR029" H 8500 2950 50  0001 C CNN
+F 1 "GNDREF" H 8505 3027 50  0001 C CNN
+F 2 "" H 8500 3200 50  0001 C CNN
+F 3 "" H 8500 3200 50  0001 C CNN
+	1    8500 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q?
+U 1 1 5E48037B
+P 8780 3540
+AR Path="/5DB4D508/5E48037B" Ref="Q?"  Part="1" 
+AR Path="/5E48037B" Ref="Q6"  Part="1" 
+F 0 "Q6" H 9068 3586 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 9068 3495 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 8980 3640 50  0001 C CNN
+F 3 "~" H 8780 3540 50  0001 C CNN
+	1    8780 3540
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E480385
+P 8880 3860
+AR Path="/5DB4D508/5E480385" Ref="#PWR?"  Part="1" 
+AR Path="/5E480385" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 8880 3610 50  0001 C CNN
+F 1 "GNDREF" H 8885 3687 50  0001 C CNN
+F 2 "" H 8880 3860 50  0001 C CNN
+F 3 "" H 8880 3860 50  0001 C CNN
+	1    8880 3860
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8540 3860 8540 3840
+Wire Wire Line
+	8540 3540 8580 3540
+Text Label 8330 3540 0    50   ~ 0
+SOL5
+Wire Wire Line
+	8540 3540 8330 3540
+Connection ~ 8540 3540
+Wire Wire Line
+	8880 3340 8980 3340
+Wire Wire Line
+	8880 3740 8880 3860
+Wire Wire Line
+	8880 3340 8880 3230
+Connection ~ 8880 3340
+Wire Wire Line
+	8880 3230 8640 3230
+Wire Wire Line
+	8640 3230 8640 3100
+Wire Wire Line
+	8640 3100 8500 3100
+Connection ~ 8880 3230
+Wire Wire Line
+	8880 2930 8880 2750
+Wire Wire Line
+	8880 2930 8640 2930
+Wire Wire Line
+	8640 2930 8640 3000
+Wire Wire Line
+	8640 3000 8500 3000
+Connection ~ 8880 2930
+$Comp
+L power:GNDREF #PWR018
+U 1 1 5E48E2FB
+P 9760 2170
+AR Path="/5E48E2FB" Ref="#PWR018"  Part="1" 
+AR Path="/5DB4D508/5E48E2FB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR018" H 9760 1920 50  0001 C CNN
+F 1 "GNDREF" H 9765 1997 50  0001 C CNN
+F 2 "" H 9760 2170 50  0001 C CNN
+F 3 "" H 9760 2170 50  0001 C CNN
+	1    9760 2170
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E48E305
+P 9760 2000
+AR Path="/5E48E305" Ref="R3"  Part="1" 
+AR Path="/5DB4D508/5E48E305" Ref="R?"  Part="1" 
+F 0 "R3" V 9680 1950 50  0000 L CNN
+F 1 "10k" V 9760 1930 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9690 2000 50  0001 C CNN
+F 3 "~" H 9760 2000 50  0001 C CNN
+	1    9760 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E48E30F
+P 10100 1390
+AR Path="/5DB4D508/5E48E30F" Ref="D?"  Part="1" 
+AR Path="/5E48E30F" Ref="D4"  Part="1" 
+F 0 "D4" V 10054 1469 50  0000 L CNN
+F 1 "D" V 10145 1469 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123F" H 10100 1390 50  0001 C CNN
+F 3 "~" H 10100 1390 50  0001 C CNN
+	1    10100 1390
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5E48E319
+P 10100 1060
+AR Path="/5DB4D508/5E48E319" Ref="#PWR?"  Part="1" 
+AR Path="/5E48E319" Ref="#PWR07"  Part="1" 
+F 0 "#PWR07" H 10100 910 50  0001 C CNN
+F 1 "+24V" H 10115 1233 50  0000 C CNN
+F 2 "" H 10100 1060 50  0001 C CNN
+F 3 "" H 10100 1060 50  0001 C CNN
+	1    10100 1060
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 5E48E323
+P 9520 1410
+AR Path="/5DB4D508/5E48E323" Ref="J?"  Part="1" 
+AR Path="/5E48E323" Ref="J10"  Part="1" 
+F 0 "J10" H 9412 1085 50  0000 C CNN
+F 1 "SL1" H 9412 1176 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-03A_1x03_P2.50mm_Vertical" H 9520 1410 50  0001 C CNN
+F 3 "~" H 9520 1410 50  0001 C CNN
+	1    9520 1410
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR015
+U 1 1 5E48E32D
+P 9720 1510
+AR Path="/5E48E32D" Ref="#PWR015"  Part="1" 
+AR Path="/5DB4D508/5E48E32D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR015" H 9720 1260 50  0001 C CNN
+F 1 "GNDREF" H 9725 1337 50  0001 C CNN
+F 2 "" H 9720 1510 50  0001 C CNN
+F 3 "" H 9720 1510 50  0001 C CNN
+	1    9720 1510
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E48E341
+P 10100 2170
+AR Path="/5DB4D508/5E48E341" Ref="#PWR?"  Part="1" 
+AR Path="/5E48E341" Ref="#PWR019"  Part="1" 
+F 0 "#PWR019" H 10100 1920 50  0001 C CNN
+F 1 "GNDREF" H 10105 1997 50  0001 C CNN
+F 2 "" H 10100 2170 50  0001 C CNN
+F 3 "" H 10100 2170 50  0001 C CNN
+	1    10100 2170
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9760 2170 9760 2150
+Wire Wire Line
+	9760 1850 9800 1850
+Text Label 9550 1850 0    50   ~ 0
+SOL3
+Wire Wire Line
+	9760 1850 9550 1850
+Connection ~ 9760 1850
+Wire Wire Line
+	10100 1650 10200 1650
+Wire Wire Line
+	10100 2050 10100 2170
+Wire Wire Line
+	10100 1650 10100 1540
+Connection ~ 10100 1650
+Wire Wire Line
+	10100 1540 9860 1540
+Wire Wire Line
+	9860 1540 9860 1410
+Wire Wire Line
+	9860 1410 9720 1410
+Connection ~ 10100 1540
+Wire Wire Line
+	10100 1240 10100 1060
+Wire Wire Line
+	10100 1240 9860 1240
+Wire Wire Line
+	9860 1240 9860 1310
+Wire Wire Line
+	9860 1310 9720 1310
+Connection ~ 10100 1240
+$Comp
+L Igniter-rescue:FDS8984 U3
+U 1 1 5E33A1ED
+P 9880 5900
+AR Path="/5E33A1ED" Ref="U3"  Part="1" 
+AR Path="/5DB4D508/5E33A1ED" Ref="U?"  Part="1" 
+F 0 "U3" H 9880 6275 50  0000 C CNN
+F 1 "FDS8984" H 9880 6184 50  0000 C CNN
+F 2 "Package_SO:SO-8_5.3x6.2mm_P1.27mm" H 9880 6000 50  0001 C CNN
+F 3 "" H 9880 6000 50  0001 C CNN
+	1    9880 5900
 	-1   0    0    -1  
 $EndComp
-Text Label 3800 1860 0    50   ~ 0
-MISO
-Text Label 5520 6750 0    50   ~ 0
-MISO
+$Comp
+L Device:R R?
+U 1 1 5E33A1DA
+P 9400 6050
+AR Path="/5DB4D508/5E33A1DA" Ref="R?"  Part="1" 
+AR Path="/5E33A1DA" Ref="R9"  Part="1" 
+F 0 "R9" V 9320 6050 50  0000 C CNN
+F 1 "1k2" V 9400 6050 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9330 6050 50  0001 C CNN
+F 3 "~" H 9400 6050 50  0001 C CNN
+	1    9400 6050
+	0    1    -1   0   
+$EndComp
 Wire Wire Line
-	2720 6650 2920 6650
+	9550 6050 9580 6050
+$Comp
+L Device:R R?
+U 1 1 5E33A1C8
+P 9160 5850
+AR Path="/5DB4D508/5E33A1C8" Ref="R?"  Part="1" 
+AR Path="/5E33A1C8" Ref="R7"  Part="1" 
+F 0 "R7" V 9080 5850 50  0000 C CNN
+F 1 "1k2" V 9160 5845 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 9090 5850 50  0001 C CNN
+F 3 "~" H 9160 5850 50  0001 C CNN
+	1    9160 5850
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E33A1C2
+P 8970 6220
+AR Path="/5DB4D508/5E33A1C2" Ref="D?"  Part="1" 
+AR Path="/5E33A1C2" Ref="D9"  Part="1" 
+F 0 "D9" H 8970 6135 50  0000 C CNN
+F 1 "LED" H 8970 6320 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 8970 6220 50  0001 C CNN
+F 3 "~" H 8970 6220 50  0001 C CNN
+	1    8970 6220
+	0    1    -1   0   
+$EndComp
 Wire Wire Line
-	2730 6150 2920 6150
+	9010 5850 8970 5850
 Wire Wire Line
-	2920 6150 2920 6250
-Connection ~ 2920 6150
+	8970 5850 8970 6070
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E33A1CE
+P 8970 6370
+AR Path="/5DB4D508/5E33A1CE" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A1CE" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 8970 6120 50  0001 C CNN
+F 1 "GNDREF" H 8975 6197 50  0001 C CNN
+F 2 "" H 8970 6370 50  0001 C CNN
+F 3 "" H 8970 6370 50  0001 C CNN
+	1    8970 6370
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E33A1D4
+P 9240 6220
+AR Path="/5DB4D508/5E33A1D4" Ref="D?"  Part="1" 
+AR Path="/5E33A1D4" Ref="D10"  Part="1" 
+F 0 "D10" H 9240 6135 50  0000 C CNN
+F 1 "LED" H 9240 6320 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 9240 6220 50  0001 C CNN
+F 3 "~" H 9240 6220 50  0001 C CNN
+	1    9240 6220
+	0    1    -1   0   
+$EndComp
 Wire Wire Line
-	2920 6550 2920 6450
+	9240 6070 9240 6050
 Wire Wire Line
-	2920 6450 2920 6350
-Connection ~ 2920 6450
+	9240 6050 9250 6050
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E33A1E0
+P 9240 6370
+AR Path="/5DB4D508/5E33A1E0" Ref="#PWR?"  Part="1" 
+AR Path="/5E33A1E0" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 9240 6120 50  0001 C CNN
+F 1 "GNDREF" H 9245 6197 50  0001 C CNN
+F 2 "" H 9240 6370 50  0001 C CNN
+F 3 "" H 9240 6370 50  0001 C CNN
+	1    9240 6370
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	2920 6250 2920 6350
-Connection ~ 2920 6250
-Connection ~ 2920 6350
-Text Label 3800 1660 0    50   ~ 0
-MOSI
-Text Label 3800 1560 0    50   ~ 0
-CLK
-Text Label 5520 6850 0    50   ~ 0
-MOSI
-Text Label 5520 6950 0    50   ~ 0
-CLK
+	9310 5850 9580 5850
+$Comp
+L Device:Q_NMOS_GDSD Q?
+U 1 1 5E33A32C
+P 7570 1880
+AR Path="/5DB4D508/5E33A32C" Ref="Q?"  Part="1" 
+AR Path="/5E33A32C" Ref="Q2"  Part="1" 
+F 0 "Q2" H 7858 1926 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 7858 1835 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 7770 1980 50  0001 C CNN
+F 3 "~" H 7570 1880 50  0001 C CNN
+	1    7570 1880
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q?
+U 1 1 5E48E337
+P 10000 1850
+AR Path="/5DB4D508/5E48E337" Ref="Q?"  Part="1" 
+AR Path="/5E48E337" Ref="Q4"  Part="1" 
+F 0 "Q4" H 10288 1896 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 10288 1805 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 10200 1950 50  0001 C CNN
+F 3 "~" H 10000 1850 50  0001 C CNN
+	1    10000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GDSD Q?
+U 1 1 5E480319
+P 7600 3560
+AR Path="/5DB4D508/5E480319" Ref="Q?"  Part="1" 
+AR Path="/5E480319" Ref="Q5"  Part="1" 
+F 0 "Q5" H 7888 3606 50  0000 L CNN
+F 1 "Q_NMOS_GDSD" H 7888 3515 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 7800 3660 50  0001 C CNN
+F 3 "~" H 7600 3560 50  0001 C CNN
+	1    7600 3560
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4560 2270 4370 2270
+	10240 5750 10180 5750
 Wire Wire Line
-	4370 2270 4370 2300
+	10180 5750 10180 5850
+Connection ~ 10180 5750
 Wire Wire Line
-	3000 1860 2800 1860
+	10180 5850 10180 5950
 Wire Wire Line
-	2800 1860 2800 1760
+	10180 5950 10180 6050
+Text Label 9380 5750 0    50   ~ 0
+SOL4
+Text Label 9380 5950 0    50   ~ 0
+SOL3
 Wire Wire Line
-	2800 1760 2680 1760
+	9380 5750 9580 5750
 Wire Wire Line
-	2680 1660 2740 1660
+	9380 5950 9580 5950
 Wire Wire Line
-	2740 1660 2740 2100
+	11640 5100 11760 5100
 Wire Wire Line
-	3000 1560 2680 1560
+	11640 5200 11640 5100
+Connection ~ 11640 5100
+Text Label 10830 5100 0    50   ~ 0
+SOL5
 Wire Wire Line
-	3000 1660 2770 1660
+	10830 5100 11040 5100
+$Comp
+L Device:R R?
+U 1 1 5E33A366
+P 10890 5200
+AR Path="/5DB4D508/5E33A366" Ref="R?"  Part="1" 
+AR Path="/5E33A366" Ref="R10"  Part="1" 
+F 0 "R10" V 10810 5200 50  0000 C CNN
+F 1 "1k2" V 10890 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 10820 5200 50  0001 C CNN
+F 3 "~" H 10890 5200 50  0001 C CNN
+	1    10890 5200
+	0    1    -1   0   
+$EndComp
 Wire Wire Line
-	2770 1660 2770 1360
+	10720 5260 10720 5200
 Wire Wire Line
-	2770 1360 2680 1360
+	10720 5200 10740 5200
+Wire Notes Line
+	6930 740  6930 4020
 Wire Wire Line
-	2680 1460 2740 1460
+	2800 1860 4240 1860
 Wire Wire Line
-	2740 1460 2740 1050
-Wire Wire Line
-	3000 1760 2870 1760
-Wire Wire Line
-	2870 1760 2870 1260
-Wire Wire Line
-	2870 1260 2680 1260
-Wire Wire Line
-	6150 2750 5520 2750
-Wire Wire Line
-	5520 2850 6150 2850
-Wire Wire Line
-	5520 2950 6150 2950
-Wire Wire Line
-	5520 3050 6150 3050
-Wire Wire Line
-	5520 3150 6150 3150
-Wire Wire Line
-	8170 4220 8170 4120
-Wire Wire Line
-	8110 4120 8170 4120
-Connection ~ 8170 4120
-Wire Wire Line
-	7810 4120 7810 3850
-Wire Wire Line
-	7810 3850 7870 3850
-Wire Wire Line
-	7810 3850 5520 3850
-Connection ~ 7810 3850
-Wire Wire Line
-	8170 3650 8270 3650
-Wire Wire Line
-	8170 4050 8170 4120
-Wire Wire Line
-	8080 2910 8170 2910
-Wire Wire Line
-	8170 2910 8170 2840
-Wire Wire Line
-	8270 2860 8270 2910
-Wire Wire Line
-	8170 2910 8270 2910
-Connection ~ 8170 2910
-Connection ~ 8270 2910
-Wire Wire Line
-	8270 2910 8270 2960
-Wire Wire Line
-	8080 3110 8170 3110
-Wire Wire Line
-	8170 3110 8170 3650
-Connection ~ 8170 3650
-Wire Wire Line
-	8170 3110 8270 3110
-Wire Wire Line
-	8270 3110 8270 3070
-Connection ~ 8170 3110
-Wire Wire Line
-	8270 3110 8270 3170
-Connection ~ 8270 3110
+	2870 1760 4240 1760
 $EndSCHEMATC

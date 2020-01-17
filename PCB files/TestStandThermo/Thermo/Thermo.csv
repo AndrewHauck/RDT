@@ -1,0 +1,6 @@
+"Id","Designator","Package","Quantity","Designation","Supplier and ref",
+1,"C1,C3,C4,C6,C9,C11,C12,C14","C_1206_3216Metric",8,"0.01u",,,
+2,"C2,C5,C7,C8,C10,C13,C15,C16","C_1206_3216Metric",8,"0.1u",,,
+3,"R1,R2,R3,R4,R11,R12,R13,R14","R_0805_2012Metric",8,"100",,,
+4,"R5,R6,R7,R8,R9,R10,R15,R16,R17,R18,R19,R20","R_0805_2012Metric",12,"10k",,,
+5,"U1,U2,U3,U4","TSSOP-14_4.4x5mm_P0.65mm",4,"MAX31856",,,

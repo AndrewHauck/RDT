@@ -512,7 +512,7 @@ F 3 "" H 4780 1230 50  0001 C CNN
 	1    4780 1230
 	-1   0    0    -1  
 $EndComp
-Text Label 4780 1630 0    50   ~ 0
+Text Label 4880 1630 2    50   ~ 0
 CS
 $Comp
 L Igniter-rescue:74HC4050-7400-ic IC?
@@ -527,11 +527,11 @@ F 3 "" H 4330 1480 60  0001 C CNN
 	1    4380 1480
 	-1   0    0    -1  
 $EndComp
-Text Label 4780 1730 0    50   ~ 0
+Text Label 4970 1730 2    50   ~ 0
 MISO
-Text Label 4780 1530 0    50   ~ 0
+Text Label 4960 1530 2    50   ~ 0
 MOSI
-Text Label 4780 1430 0    50   ~ 0
+Text Label 4920 1430 2    50   ~ 0
 CLK
 Wire Wire Line
 	2420 1430 3980 1430
@@ -3413,4 +3413,12 @@ Text Notes 10565 7640 0    50   ~ 0
 1
 NoConn ~ 10240 4640
 NoConn ~ 10240 4540
+Wire Wire Line
+	4920 1430 4780 1430
+Wire Wire Line
+	4780 1530 4960 1530
+Wire Wire Line
+	4780 1630 4880 1630
+Wire Wire Line
+	4780 1730 4970 1730
 $EndSCHEMATC

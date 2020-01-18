@@ -3411,8 +3411,6 @@ Wire Notes Line
 	5115 2265 5115 470 
 Text Notes 10565 7640 0    50   ~ 0
 1
-Text Label 10095 4540 0    50   ~ 0
-ACT
-Wire Wire Line
-	10095 4540 10240 4540
+NoConn ~ 10240 4640
+NoConn ~ 10240 4540
 $EndSCHEMATC

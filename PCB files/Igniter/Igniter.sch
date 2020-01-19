@@ -541,17 +541,6 @@ NoConn ~ 3980 1830
 NoConn ~ 3980 1930
 Wire Wire Line
 	2770 6840 2970 6840
-$Comp
-L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
-U 1 1 5DB49E1D
-P 4270 5090
-F 0 "XA1" H 4270 2710 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 4270 2604 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Modified" H 4970 7840 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4970 7840 60  0001 C CNN
-	1    4270 5090
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2970 6640 2970 6740
 Text Notes 85   -85  0    118  ~ 0
@@ -3423,4 +3412,21 @@ Connection ~ 7260 1590
 Connection ~ 7260 1480
 Wire Notes Line
 	7230 3700 7220 3700
+$Comp
+L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
+U 1 1 5DB49E1D
+P 4270 5090
+F 0 "XA1" H 4270 2710 60  0000 C CNN
+F 1 "Arduino_Mega2560_Shield" H 4270 2604 60  0000 C CNN
+F 2 "Arduino:Arduino_Mega2560_Modified" H 4970 7840 60  0001 C CNN
+F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4970 7840 60  0001 C CNN
+	1    4270 5090
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2970 6440 2970 6540
+Wire Wire Line
+	2970 6540 2970 6640
+Connection ~ 2970 6540
+Connection ~ 2970 6640
 $EndSCHEMATC

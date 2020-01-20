@@ -3429,4 +3429,8 @@ Wire Wire Line
 	2970 6540 2970 6640
 Connection ~ 2970 6540
 Connection ~ 2970 6640
+Wire Wire Line
+	2970 6440 2970 6340
+Connection ~ 2970 6440
+Connection ~ 2970 6340
 $EndSCHEMATC

@@ -1,6 +1,6 @@
 import serial
 import serial.tools.list_ports
-class SerialBuffer():
+class SerialBuffer:
     def __init__(self):
         self.ser = serial.Serial(None)  # Create serial port object
         self.buffer = ""

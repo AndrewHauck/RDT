@@ -1,0 +1,17 @@
+This document describes the packet protocol used to communicate between the 
+sensor arduino and the python ground station over serial connection
+
+   Packets behave like a bin to throw and assemble data before it is to be sent or recieved via the
+   serial port. Packets need 2 things to function: Data(String), and Type(Hex of ASCII Letter or Number).
+   Packets are formatted and sent via serial when transmit() is called.
+   Packets are unpacked automatically when receive() is given a string containing a packet.
+   The packets, when sent or received via serial, have the following format:
+|----------||---------------||--------------||--------------------------------||-------------||---------------||---------------|
+| Position ||       0       ||       1      ||            2 & 3               ||      4      || 5 + Pos. 2&3  ||     Last      |
+|----------||---------------||--------------||--------------------------------||-------------||---------------||---------------|
+|   Name   ||   Start of    ||    Packet    ||       Num of Data Bytes        ||   Start of  ||     Data      ||    End of     |
+|          ||   Packet      ||     Type     ||       (in hex, max 255)        ||   Data      ||     Bytes     ||    Packet     |
+|----------||---------------||--------------||--------------------------------||-------------||---------------||---------------|
+| Byte In  || 0x01 "Start of|| Hex of ASCII || Ex: if 20 data bytes, 20=0x14, || 0x02 "Start ||  ASCII        || 0x04 "End of  |
+|  ASCII   || Transmission" || Letter/Num   || characters 1 and 4 to be sent  ||   of Text"  ||  Nums/Letters || Transmission" |
+|----------||---------------||--------------||--------------------------------||-------------||---------------||---------------|

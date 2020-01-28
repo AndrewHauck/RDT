@@ -6,7 +6,7 @@ import serial.tools.list_ports
 from datetime import datetime
 from GSModules import ListComPorts
 from GSModules import UIElements
-from GSModules import SerialStuff as sb
+from GSModules import PacketHelper
 from GSModules.Logging import Logger
 from GSModules import ArduinoConfigureWindow as cfg
 
@@ -91,33 +91,28 @@ while True:
         elif "VALVE" in mainEvent:
             for x in range(0,6):
                 if str(x) in mainEvent:
-                    packet = [0x01, 0x56, 0x30, 0x31, 0x02, x+0x30, 0x04]
-                    ser.write(bytearray(packet))
+                    PacketHelper.sendMessage(ser, "V", x)
         elif "STAGE" in mainEvent:
             if str(0) in mainEvent:
                 print("closing...")
                 # Send command to close all valves
-                packet = [0x01, 0x43, 0x30, 0x35, 0x02, 0x43, 0x4c, 0x4f, 0x53, 0x45, 0x04]
-                ser.write(bytearray(packet))
+                PacketHelper.sendMessage(ser, "C", "CLOSE")
                 if (f.is_open()):
                     f.log("Closing..." + "\r")
             elif str(1) in mainEvent:
                 print("arming...")
                 # Send command to arm
-                packet = [0x01, 0x43, 0x30, 0x33, 0x02, 0x41, 0x52, 0x4d, 0x04]
-                ser.write(bytearray(packet))
+                PacketHelper.sendMessage(ser, "C", "ARM")
                 if (f.is_open()):
                     f.log("Arming..." + "\r")
             elif str(2) in mainEvent:
                 print("firing...")
-                packet = [0x01, 0x43, 0x30, 0x34, 0x02, 0x46, 0x49, 0x52, 0x45, 0x04]
-                ser.write(bytearray(packet))
+                PacketHelper.sendMessage(ser, "C", "FIRE")
                 if (f.is_open()):
                     f.log("Firing..." + "\r")
             elif str(3) in mainEvent:
                 print("purging...")
-                packet = [0x01, 0x43, 0x30, 0x35, 0x02, 0x50, 0x55, 0x52, 0x47, 0x45, 0x04]
-                ser.write(bytearray(packet))
+                PacketHelper.sendMessage(ser, "C", "PURGE")
                 if (f.is_open()):
                     f.log("Purging..." + "\r")
 

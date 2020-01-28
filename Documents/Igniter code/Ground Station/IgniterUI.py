@@ -57,14 +57,10 @@ while True:
                 window.FindElement('COM_Combo').update(values=ListComPorts.serial_ports())
                 window.FindElement('COM_Connect').update('Open', button_color=('White', 'Red'))
                 window.FindElement('COM_Enquire').update(button_color=('White', 'Red'))
-                window.Element('P1').Update("XXXXXXXXXX")
-                window.Element('P2').Update("XXXXXXXXXX")
-                window.Element('P3').Update("XXXXXXXXXX")
-                window.Element('P4').Update("XXXXXXXXXX")
-                window.Element("STAGE" + str(1)).Update(button_color=('White', 'Red'))
-                window.Element("STAGE" + str(2)).Update(button_color=('White', 'Red'))
-                window.Element("STAGE" + str(3)).Update(button_color=('White', 'Red'))
-                window.Element("STAGE" + str(4)).Update(button_color=('White', 'Red'))
+                for i in range(1, 4+1):
+                  window.Element('P'+str(i)).Update("XXXXXXXXXX")
+                  window.Element("STAGE" + str(i)).Update(button_color=('White', 'Red'))
+                
                 for x in range(6):
                     window.Element("valve" + str(x)).Update(button_color=('White', 'Red'))
                 if f.is_open():

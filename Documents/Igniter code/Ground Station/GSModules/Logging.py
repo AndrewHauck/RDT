@@ -26,13 +26,13 @@ class Logger(object):
 
     def log(self, *strn, onlyFile: bool=False):
         toWrite = str(round((time.time() - self.startTime), 3)) + ": " + "".join(map(str, strn))
-        if onlyFile:
+        if not onlyFile:
           print(toWrite)
         if self.isOpen:
           self.fil.write(toWrite+"\r\n") # Also include windows line endings
           
     def logFile(self, *strn):
-      return self.log(onlyFile=True)
+      return self.log(*strn, onlyFile=True)
 
     def halt(self):
         self.isOpen = False

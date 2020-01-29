@@ -6,7 +6,7 @@ import serial.tools.list_ports
 from datetime import datetime
 from GSModules import ListComPorts
 from GSModules import UIElements
-from GSModules import SerialStuff as sb
+from GSModules import PacketHelper
 from GSModules.Logging import Logger
 from GSModules import ArduinoConfigureWindow as cfg
 
@@ -57,14 +57,10 @@ while True:
                 window.FindElement('COM_Combo').update(values=ListComPorts.serial_ports())
                 window.FindElement('COM_Connect').update('Open', button_color=('White', 'Red'))
                 window.FindElement('COM_Enquire').update(button_color=('White', 'Red'))
-                window.Element('P1').Update("XXXXXXXXXX")
-                window.Element('P2').Update("XXXXXXXXXX")
-                window.Element('P3').Update("XXXXXXXXXX")
-                window.Element('P4').Update("XXXXXXXXXX")
-                window.Element("STAGE" + str(1)).Update(button_color=('White', 'Red'))
-                window.Element("STAGE" + str(2)).Update(button_color=('White', 'Red'))
-                window.Element("STAGE" + str(3)).Update(button_color=('White', 'Red'))
-                window.Element("STAGE" + str(4)).Update(button_color=('White', 'Red'))
+                for i in range(1, 4+1):
+                  window.Element('P'+str(i)).Update("XXXXXXXXXX")
+                  window.Element("STAGE" + str(i)).Update(button_color=('White', 'Red'))
+                
                 for x in range(6):
                     window.Element("valve" + str(x)).Update(button_color=('White', 'Red'))
                 if f.is_open():
@@ -91,42 +87,28 @@ while True:
         elif "VALVE" in mainEvent:
             for x in range(0,6):
                 if str(x) in mainEvent:
-                    packet = [0x01, 0x56, 0x30, 0x31, 0x02, x+0x30, 0x04]
-                    ser.write(bytearray(packet))
+                    PacketHelper.sendMessage(ser, "V", x)
         elif "STAGE" in mainEvent:
             if str(0) in mainEvent:
-                print("closing...")
                 # Send command to close all valves
-                packet = [0x01, 0x43, 0x30, 0x35, 0x02, 0x43, 0x4c, 0x4f, 0x53, 0x45, 0x04]
-                ser.write(bytearray(packet))
-                if (f.is_open()):
-                    f.log("Closing..." + "\r")
+                f.log("Closing...")
+                PacketHelper.sendMessage(ser, "C", "CLOSE")
             elif str(1) in mainEvent:
-                print("arming...")
                 # Send command to arm
-                packet = [0x01, 0x43, 0x30, 0x33, 0x02, 0x41, 0x52, 0x4d, 0x04]
-                ser.write(bytearray(packet))
-                if (f.is_open()):
-                    f.log("Arming..." + "\r")
+                f.log("Arming...")
+                PacketHelper.sendMessage(ser, "C", "ARM")
             elif str(2) in mainEvent:
-                print("firing...")
-                packet = [0x01, 0x43, 0x30, 0x34, 0x02, 0x46, 0x49, 0x52, 0x45, 0x04]
-                ser.write(bytearray(packet))
-                if (f.is_open()):
-                    f.log("Firing..." + "\r")
+                f.log("Firing...")
+                PacketHelper.sendMessage(ser, "C", "FIRE")
             elif str(3) in mainEvent:
-                print("purging...")
-                packet = [0x01, 0x43, 0x30, 0x35, 0x02, 0x50, 0x55, 0x52, 0x47, 0x45, 0x04]
-                ser.write(bytearray(packet))
-                if (f.is_open()):
-                    f.log("Purging..." + "\r")
+                f.log("Purging...")
+                PacketHelper.sendMessage(ser, "C", "PURGE")
 
         # Updating GUI to reflect valve states
         for x in range(0,6):
-            if isValveOpen[x] == True:
-                window.FindElement("VALVE" + str(x)).Update(button_color=('White', 'Green'))
-            else:
-                window.FindElement("VALVE" + str(x)).Update(button_color=('White', 'Red'))
+            if isValveOpen[x]: color = "Green"
+            else: color = "Red"
+            window.FindElement("VALVE" + str(x)).Update(button_color=('White', color))
 
         #*****UPDATE PRESSURE READINGS*****
         # Parses serial buffer from microcontroller
@@ -167,55 +149,38 @@ while True:
                         # ***  CAN WE CHECK THESE CALCULATIONS???
                         # ***  5V ON PIN = 28 PSI???
                         if (packet_type == 'D'):
-                            pdata1 = dataString[dataString.find('A') + 1:dataString.find('B')]
-                            pdata1 = int(pdata1) * (5.0 / 1023.0) * (14000.0 / 2500.0)
-                            window.Element('P1').Update(round(pdata1, 2))
-                            pdata2 = dataString[dataString.find('B') + 1:dataString.find('C')]
-                            pdata2 = int(pdata2) * (5.0 / 1023.0) * (14000.0 / 2500.0)
-                            window.Element('P2').Update(round(pdata2, 2))
-                            pdata3 = dataString[dataString.find('C') + 1:dataString.find('D')]
-                            pdata3 = int(pdata3) * (5.0 / 1023.0) * (14000.0 / 2500.0)
-                            window.Element('P3').Update(round(pdata3, 2))
-                            pdata4 = dataString[dataString.find('D') + 1:]
-                            pdata4 = int(pdata4) * (5.0 / 1023.0) * (14000.0 / 2500.0)
-                            window.Element('P4').Update(round(pdata4, 2))
-
-                            if(f.is_open()):
-                                f.log("Pressure 1: " + str(round(pdata1, 2)) + "\r")
-                                f.log("Pressure 2: " + str(round(pdata2, 2)) + "\r")
-                                f.log("Pressure 3: " + str(round(pdata3, 2)) + "\r")
-                                f.log("Pressure 4: " + str(round(pdata4, 2)) + "\r")
+                            letterBase = ord('A')-1 # Because i starts at 1, start at letter less than 1
+                            for i in range(1, 4+1):
+                              # Find the position of each letter from A to D 
+                              startLetterPos = dataString.find(chr(letterBase+i))
+                              endLetterPos   = dataString.find(chr(letterBase+i+1))
+                              # Get the data in between the letters. If end letter isn't found, just go to end
+                              pdata = int(dataString[startLetterPos+1 : endLetterPos if endLetterPos > 0 else None])
+                              # Convert from voltage using transformation formula
+                              pdata *= (5.0 / 1023.0) * (14000.0 / 2500.0)
+                              # Update the GUI element
+                              window.Element('P'+str(i)).Update(round(pdata, 2))
+                              # Update the logfile
+                              f.logFile("Pressure {}: {:.2}".format(i, pdata))
 
                         if (packet_type == 'M'):
-                            if (dataString == "IGNITER ARMED"):
-                                window.Element("STAGE" + str(1)).Update(button_color=('White', 'Green'))
-                                window.Element("STAGE" + str(2)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(3)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(0)).Update(button_color=('White', 'Red'))
-                            if (dataString == "IGNITER FIRING"):
-                                window.Element("STAGE" + str(1)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(2)).Update(button_color=('White', 'Green'))
-                                window.Element("STAGE" + str(3)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(0)).Update(button_color=('White', 'Red'))
-                            if (dataString == "IGNITER PURGING"):
-                                window.Element("STAGE" + str(1)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(2)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(3)).Update(button_color=('White', 'Green'))
-                                window.Element("STAGE" + str(0)).Update(button_color=('White', 'Red'))
-                            if (dataString == "IGNITER CLOSED"):
-                                window.Element("STAGE" + str(1)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(2)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(3)).Update(button_color=('White', 'Red'))
-                                window.Element("STAGE" + str(0)).Update(button_color=('White', 'Green'))
-                            print(dataString)
-                            if (f.is_open()):
-                                f.log(dataString + "\r")
+                            # Mapping of dataString to which numbered GUI button should light up
+                            greenStage = {
+                              "IGNITER CLOSED":  0,
+                              "IGNITER ARMED":   1,
+                              "IGNITER FIRING":  2,
+                              "IGNITER PURGING": 3,
+                            }
+                            if dataString in greenStage:
+                              for guiItem in range(4):
+                                if guiItem == greenStage[dataString]: color = "Green"
+                                else: color = "Red"
+                                window.Element("STAGE" + str(i)).Update(button_color=('White', color))
+                            f.log(dataString)
                         if (packet_type == 'V'):
                             for x in range(6):
                                 isValveOpen[x] = bool(int(dataString[x]))
-                            print("Valve States: " + dataString)
-                            if (f.is_open()):
-                                f.log("Valve States: " + dataString + "\r")
+                            f.log("Valve States: ", dataString)
                     else:
                         buffer = ""  # If only 1 end of packet is found, data somehow corrupted, clear buffer
 window.close()

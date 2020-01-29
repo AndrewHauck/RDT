@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
+from os.path import join
 
-diagram = sg.Image('ArduinoUnoImg1.png', key='DIAGRAM')
+diagram = sg.Image(join("..","img",'ArduinoUnoImg1.png'), key='DIAGRAM')
 
 left_col = []
 for i in range(5+1):

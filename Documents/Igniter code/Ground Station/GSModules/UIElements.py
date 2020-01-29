@@ -4,6 +4,7 @@ from os import path
 import glob
 import serial
 import PySimpleGUI as sg
+from os.path import join
 from GSModules import ListComPorts
 
 # Sets background and button color
@@ -32,14 +33,14 @@ valves = [[sg.Text('VALVES')],
 ]
 
 # Igniter diagram
-diagram = [[sg.Image('IgniterDiagram.png', key='DIAGRAM', size=(400, 400))],]
+diagram = [[sg.Image(join("img", 'IgniterDiagram.png'), key='DIAGRAM', size=(400, 400))],]
 
 # Staged buttons
 stages = [[sg.Text('STAGES')],
-          [sg.Button('ARM', button_color=('White', 'Red'), key="STAGE" + str(1)),
-          sg.Button('FIRE', button_color=('White', 'Red'), key="STAGE" + str(2)),
-          sg.Button('PURGE', button_color=('White', 'Red'), key="STAGE" + str(3)),
-          sg.Button('CLOSE ALL', button_color=('White', 'Red'), key="STAGE" + str(0))]]
+          [sg.Button('ARM', button_color=('White', 'Red'), key="STAGE" + str(0)),
+          sg.Button('FIRE', button_color=('White', 'Red'), key="STAGE" + str(1)),
+          sg.Button('PURGE', button_color=('White', 'Red'), key="STAGE" + str(2)),
+          sg.Button('CLOSE ALL', button_color=('White', 'Red'), key="STAGE" + str(3))]]
 
 # Sensor reading text elements
 readings = [[sg.Text('Pressure 1:'), sg.Text('XXXXXXXXXX', key='P1'), sg.Text('PSI')],

@@ -17,9 +17,9 @@ def sendMessage(handle: serial.Serial, msgType: str, msg: str) -> bool:
   returns: True if the message was sent in its entirety, false otherwise
   """
   # Convert all to bytearrays
-  msgType = msgType[0].encode("utf-8")
-  msg     = msg[:255].encode("utf-8")
+  msgType = str(msgType)[0].encode("utf-8")
+  msg     = str(msg)[:255].encode("utf-8")
   # Organize our message according to spec
-  toSend = B_START + msgType + "{:02X}".format(len(msg)) + B_MSG + msg + B_END
+  toSend = B_START + msgType + "{:02X}".format(len(msg)).encode("utf-8") + B_MSG + msg + B_END
   numSent = handle.write(toSend) # Double check that we sent the full message
   return numSent == len(toSend) # Returns true if we sent all bytes

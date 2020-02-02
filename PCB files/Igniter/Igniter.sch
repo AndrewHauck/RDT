@@ -541,8 +541,6 @@ NoConn ~ 3980 1830
 NoConn ~ 3980 1930
 Wire Wire Line
 	2770 6840 2970 6840
-Wire Wire Line
-	2970 6640 2970 6740
 Text Notes 85   -85  0    118  ~ 0
 Vcc 200mA max current draw for ATmega2560\n-SD card powered by atmega 3V3 pin\n
 Text Notes 60   -510 0    118  ~ 0
@@ -3412,27 +3410,6 @@ Connection ~ 7260 1590
 Connection ~ 7260 1480
 Wire Notes Line
 	7230 3700 7220 3700
-$Comp
-L Igniter-rescue:Arduino_Mega2560_Shield-arduino XA1
-U 1 1 5DB49E1D
-P 4270 5090
-F 0 "XA1" H 4270 2710 60  0000 C CNN
-F 1 "Arduino_Mega2560_Shield" H 4270 2604 60  0000 C CNN
-F 2 "Arduino:Arduino_Mega2560_Modified" H 4970 7840 60  0001 C CNN
-F 3 "https://store.arduino.cc/arduino-mega-2560-rev3" H 4970 7840 60  0001 C CNN
-	1    4270 5090
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2970 6440 2970 6540
-Wire Wire Line
-	2970 6540 2970 6640
-Connection ~ 2970 6540
-Connection ~ 2970 6640
-Wire Wire Line
-	2970 6440 2970 6340
-Connection ~ 2970 6440
-Connection ~ 2970 6340
 Text Notes 7200 4510 0    50   ~ 0
 +
 Text Notes 7200 4820 0    50   ~ 0
@@ -3479,4 +3456,17 @@ Wire Wire Line
 	5780 7140 5570 7140
 Wire Wire Line
 	5780 7240 5570 7240
+Wire Wire Line
+	2970 6340 2970 6740
+$Comp
+L teensy:Teensy4.0 U?
+U 1 1 5E37ADC8
+P 4300 4920
+F 0 "U?" H 4300 6535 50  0000 C CNN
+F 1 "Teensy4.0" H 4300 6444 50  0000 C CNN
+F 2 "" H 3900 5120 50  0001 C CNN
+F 3 "" H 3900 5120 50  0001 C CNN
+	1    4300 4920
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

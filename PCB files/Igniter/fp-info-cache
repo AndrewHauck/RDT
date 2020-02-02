@@ -1,4 +1,4 @@
-16243154926534042
+16247896974781322
 Arduino
 Arduino_101_Shield
 https://store.arduino.cc/genuino-101
@@ -46045,6 +46045,27 @@ heatsink
 0
 2
 1
+IgniterCustom
+BananaJack15.5mm
+
+
+0
+2
+2
+IgniterCustom
+FuseHolder
+
+
+0
+9
+8
+IgniterCustom
+R1966ABLKBLKFR-SPST
+
+
+0
+3
+3
 IgniterFootprints
 C&K_S101031MS02Q
 

@@ -204,46 +204,8 @@ Wire Notes Line
 	730  7370 1870 7370
 Wire Notes Line
 	730  7000 1870 7000
-Text Label 5780 7240 2    50   ~ 0
+Text Label 2990 4570 0    50   ~ 0
 CS
-NoConn ~ 2974 7132
-NoConn ~ 2974 7032
-NoConn ~ 2974 6932
-$Comp
-L power:+3V3 #PWR04
-U 1 1 5DC4F427
-P 2770 6840
-F 0 "#PWR04" H 2770 6690 50  0001 C CNN
-F 1 "+3V3" H 2770 6980 50  0000 C CNN
-F 2 "" H 2770 6840 50  0001 C CNN
-F 3 "" H 2770 6840 50  0001 C CNN
-	1    2770 6840
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2970 5840
-$Comp
-L power:GNDREF #PWR02
-U 1 1 5DB796A8
-P 4610 2460
-F 0 "#PWR02" H 4610 2210 50  0001 C CNN
-F 1 "GNDREF" H 4615 2287 50  0001 C CNN
-F 2 "" H 4610 2460 50  0001 C CNN
-F 3 "" H 4610 2460 50  0001 C CNN
-	1    4610 2460
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2974 7232
-$Comp
-L power:GNDREF #PWR022
-U 1 1 5DB58C89
-P 2780 6340
-F 0 "#PWR022" H 2780 6090 50  0001 C CNN
-F 1 "GNDREF" H 2785 6167 50  0001 C CNN
-F 2 "" H 2780 6340 50  0001 C CNN
-F 3 "" H 2780 6340 50  0001 C CNN
-	1    2780 6340
-	1    0    0    -1  
-$EndComp
 NoConn ~ 718  1923
 NoConn ~ 2420 1030
 NoConn ~ 2420 1730
@@ -297,7 +259,6 @@ F 3 "~" H 840 7275 50  0001 C CNN
 	1    840  7275
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4320 2490
 Text Notes 1240 2810 0    50   ~ 0
 Pressure Transducers
 $Comp
@@ -445,18 +406,10 @@ Wire Wire Line
 	1795 4670 1795 4600
 Wire Wire Line
 	1795 5040 1795 4970
-Text Label 5780 6940 2    50   ~ 0
+Text Label 2990 4470 0    50   ~ 0
 MISO
-Wire Wire Line
-	2780 6340 2970 6340
-Text Label 5780 7040 2    50   ~ 0
+Text Label 2990 4370 0    50   ~ 0
 MOSI
-Text Label 5780 7140 2    50   ~ 0
-CLK
-Wire Wire Line
-	4610 2460 4420 2460
-Wire Wire Line
-	4420 2460 4420 2490
 Wire Wire Line
 	2540 1730 2540 1630
 Wire Wire Line
@@ -539,8 +492,6 @@ Wire Wire Line
 	2510 1530 3980 1530
 NoConn ~ 3980 1830
 NoConn ~ 3980 1930
-Wire Wire Line
-	2770 6840 2970 6840
 Text Notes 85   -85  0    118  ~ 0
 Vcc 200mA max current draw for ATmega2560\n-SD card powered by atmega 3V3 pin\n
 Text Notes 60   -510 0    118  ~ 0
@@ -2074,46 +2025,42 @@ Text Notes 9030 7780 0    50   ~ 10
 10 mil grid
 Wire Notes Line
 	10687 6845 10690 6845
-Text Label 5760 2940 2    50   ~ 0
+Text Label 3010 4070 0    50   ~ 0
 SOL1
 Wire Wire Line
-	5570 2940 5760 2940
-Text Label 5780 4040 2    50   ~ 0
+	3200 4070 3010 4070
+Text Label 2990 3970 0    50   ~ 0
 SPRK
 Wire Wire Line
-	5570 4040 5780 4040
-Text Label 5760 3040 2    50   ~ 0
+	3200 3970 2990 3970
+Text Label 3010 4170 0    50   ~ 0
 SOL2
-Text Label 5760 3140 2    50   ~ 0
+Text Label 3010 4270 0    50   ~ 0
 SOL3
-Text Label 5760 3240 2    50   ~ 0
-SOL4
-Text Label 5760 3340 2    50   ~ 0
+Text Label 3010 6270 0    50   ~ 0
 SOL5
 Wire Wire Line
-	5760 3040 5570 3040
+	3010 4170 3200 4170
 Wire Wire Line
-	5760 3140 5570 3140
+	3010 4270 3200 4270
 Wire Wire Line
-	5760 3240 5570 3240
-Wire Wire Line
-	5760 3340 5570 3340
-Text Label 2820 4240 0    50   ~ 0
+	3010 6270 3200 6270
+Text Label 3050 5570 0    50   ~ 0
 PT0
-Text Label 2820 4340 0    50   ~ 0
+Text Label 3050 5670 0    50   ~ 0
 PT1
-Text Label 2820 4440 0    50   ~ 0
+Text Label 3050 5770 0    50   ~ 0
 PT2
-Text Label 2820 4540 0    50   ~ 0
+Text Label 3050 5870 0    50   ~ 0
 PT3
 Wire Wire Line
-	2970 4240 2820 4240
+	3200 5570 3050 5570
 Wire Wire Line
-	2970 4340 2820 4340
+	3200 5670 3050 5670
 Wire Wire Line
-	2970 4440 2820 4440
+	3200 5770 3050 5770
 Wire Wire Line
-	2970 4540 2820 4540
+	3200 5870 3050 5870
 Text Label 1160 3215 0    50   ~ 0
 PT0
 Wire Wire Line
@@ -3449,24 +3396,119 @@ Connection ~ 3670 1630
 Wire Wire Line
 	3670 1630 3980 1630
 Wire Wire Line
-	5780 6940 5570 6940
+	2990 4470 3200 4470
 Wire Wire Line
-	5780 7040 5570 7040
+	2990 4370 3200 4370
 Wire Wire Line
-	5780 7140 5570 7140
-Wire Wire Line
-	5780 7240 5570 7240
-Wire Wire Line
-	2970 6340 2970 6740
+	2990 4570 3200 4570
 $Comp
-L teensy:Teensy4.0 U?
-U 1 1 5E37ADC8
-P 4300 4920
-F 0 "U?" H 4300 6535 50  0000 C CNN
-F 1 "Teensy4.0" H 4300 6444 50  0000 C CNN
-F 2 "" H 3900 5120 50  0001 C CNN
-F 3 "" H 3900 5120 50  0001 C CNN
-	1    4300 4920
+L power:+3V3 #PWR0101
+U 1 1 5E3822D4
+P 5430 6070
+AR Path="/5E3822D4" Ref="#PWR0101"  Part="1" 
+AR Path="/5DC64D13/5E3822D4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0101" H 5430 5920 50  0001 C CNN
+F 1 "+3V3" H 5430 6210 50  0000 C CNN
+F 2 "" H 5430 6070 50  0001 C CNN
+F 3 "" H 5430 6070 50  0001 C CNN
+	1    5430 6070
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 5E38FD36
+P 5200 5970
+F 0 "#PWR0102" H 5200 5720 50  0001 C CNN
+F 1 "GNDREF" V 5205 5842 50  0001 R CNN
+F 2 "" H 5200 5970 50  0001 C CNN
+F 3 "" H 5200 5970 50  0001 C CNN
+	1    5200 5970
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 6070 5430 6070
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 5E3A18E5
+P 3100 5170
+F 0 "#PWR0103" H 3100 4920 50  0001 C CNN
+F 1 "GNDREF" V 3105 5042 50  0001 R CNN
+F 2 "" H 3100 5170 50  0001 C CNN
+F 3 "" H 3100 5170 50  0001 C CNN
+	1    3100 5170
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 5170 3100 5170
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 5E3AA6C6
+P 3100 5070
+AR Path="/5E3AA6C6" Ref="#PWR0104"  Part="1" 
+AR Path="/5DC64D13/5E3AA6C6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0104" H 3100 4920 50  0001 C CNN
+F 1 "+3V3" H 3100 5210 50  0000 C CNN
+F 2 "" H 3100 5070 50  0001 C CNN
+F 3 "" H 3100 5070 50  0001 C CNN
+	1    3100 5070
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5070 3200 5070
+$Comp
+L teensy:Teensy3.2 U1
+U 1 1 5E385019
+P 4200 4920
+F 0 "U1" H 4200 6557 60  0000 C CNN
+F 1 "Teensy3.2" H 4200 6451 60  0000 C CNN
+F 2 "teensy:Teensy30_31_32_LC" H 4200 4170 60  0001 C CNN
+F 3 "" H 4200 4170 60  0000 C CNN
+	1    4200 4920
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3010 6170 3200 6170
+Text Label 3010 6170 0    50   ~ 0
+SOL4
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E3F8688
+P 5270 5070
+F 0 "#PWR?" H 5270 4820 50  0001 C CNN
+F 1 "GNDREF" V 5275 4942 50  0001 R CNN
+F 2 "" H 5270 5070 50  0001 C CNN
+F 3 "" H 5270 5070 50  0001 C CNN
+	1    5270 5070
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5070 5270 5070
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E402203
+P 5350 3970
+AR Path="/5E402203" Ref="#PWR?"  Part="1" 
+AR Path="/5DC64D13/5E402203" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5350 3820 50  0001 C CNN
+F 1 "+3V3" H 5350 4110 50  0000 C CNN
+F 2 "" H 5350 3970 50  0001 C CNN
+F 3 "" H 5350 3970 50  0001 C CNN
+	1    5350 3970
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3970 5350 3970
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E41BD1F
+P 3130 3570
+F 0 "#PWR?" H 3130 3320 50  0001 C CNN
+F 1 "GNDREF" V 3135 3442 50  0001 R CNN
+F 2 "" H 3130 3570 50  0001 C CNN
+F 3 "" H 3130 3570 50  0001 C CNN
+	1    3130 3570
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3130 3570 3200 3570
 $EndSCHEMATC

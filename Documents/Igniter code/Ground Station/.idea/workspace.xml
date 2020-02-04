@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b1fbf3-557e-44e1-a234-194693a1f2ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSModules/ArduinoUnoImg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IgniterUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/IgniterUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/ArduinoIgniter.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/ARMMainCH4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/ARMMainGOX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/CloseAll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/NMEAString1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/NMEAString2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/NMEAString3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/SerialCommands/PressureReading" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialBuffer/serialBuffer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialPacket/serialPacket.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/serialPacket/serialPacket.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/valves/valves.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/src/valves/valves.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,26 +232,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1352" y="275" key="#xdebugger.XInspectDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579567425533" />
-    <state width="936" height="343" key="GridCell.Tab.0.bottom" timestamp="1579584110095">
+    <state width="936" height="266" key="GridCell.Tab.0.bottom" timestamp="1580853048299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
-    <state width="936" height="343" key="GridCell.Tab.0.center" timestamp="1579584110095">
+    <state width="936" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1580853048299" />
+    <state width="936" height="266" key="GridCell.Tab.0.center" timestamp="1580853048299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
-    <state width="936" height="343" key="GridCell.Tab.0.left" timestamp="1579584110095">
+    <state width="936" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1580853048299" />
+    <state width="936" height="266" key="GridCell.Tab.0.left" timestamp="1580853048299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
-    <state width="936" height="343" key="GridCell.Tab.0.right" timestamp="1579584110095">
+    <state width="936" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1580853048299" />
+    <state width="936" height="266" key="GridCell.Tab.0.right" timestamp="1580853048299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
+    <state width="936" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1580853048299" />
     <state width="936" height="343" key="GridCell.Tab.1.bottom" timestamp="1579584110095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -272,16 +282,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578639620583" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/IgniterUI.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

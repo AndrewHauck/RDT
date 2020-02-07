@@ -17,12 +17,29 @@ bool serialBuffer::checkForCommand(char _inChar)
 {
     if(_inChar == 0x05)  //if computer sent enquiry
     {
-      Serial.write(0x06);  //acknowledge
-      flushBuffer(); //clear buffer
-      //this is incase of error
-      //receiving data could get corrupted or incomplete, sending 0x05 (enquiry character) to arduino
-      //will clear the stored data and returns if arduino is running and listening
-	  return true;
+	    Serial.write(0x01);	//start of message
+	    Serial.write("Q");	//acknowledgment
+	    Serial.write(0x30);	//"0"
+	    Serial.write(0x34);	//"4"
+	    Serial.write(0x02);	//start of data
+	    #if defined(__AVR_ATmega1280__)
+	    Serial.print("1280");
+	    #endif
+	    #if defined(__AVR_ATmega2560__)
+	    Serial.print("2560");
+	    #endif
+	    #if defined(__AVR_ATmega328P__)
+	    Serial.print("328P");
+	    #endif
+	    #if defined(__AVR_ATmega168__)
+	    Serial.print("0168");
+	    #endif
+		Serial.write(0x04);
+	    flushBuffer(); //clear buffer
+	    //this is incase of error
+	    //receiving data could get corrupted or incomplete, sending 0x05 (enquiry character) to arduino
+	    //will clear the stored data and returns if arduino is running and listening
+	    return true;
     }
     
     // if end of transmission, set a flag so the main loop can do something with data

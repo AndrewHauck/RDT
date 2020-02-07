@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b1fbf3-557e-44e1-a234-194693a1f2ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ArduinoIgniter/IgniterAtmelProject/ArduinoIgniterProject/ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ArduinoIgniter/IgniterAtmelProject/ArduinoIgniterProject/ArduinoIgniter/src/serialBuffer/serialBuffer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArduinoMegaImg.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSModules/ArduinoUnoImg1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IgniterUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/IgniterUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,26 +223,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1352" y="275" key="#xdebugger.XInspectDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579567425533" />
-    <state width="936" height="343" key="GridCell.Tab.0.bottom" timestamp="1579584110095">
+    <state width="1899" height="266" key="GridCell.Tab.0.bottom" timestamp="1581039257523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
-    <state width="936" height="343" key="GridCell.Tab.0.center" timestamp="1579584110095">
+    <state width="1899" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581039257523" />
+    <state width="1899" height="266" key="GridCell.Tab.0.center" timestamp="1581039257523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
-    <state width="936" height="343" key="GridCell.Tab.0.left" timestamp="1579584110095">
+    <state width="1899" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581039257523" />
+    <state width="1899" height="266" key="GridCell.Tab.0.left" timestamp="1581039257523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
-    <state width="936" height="343" key="GridCell.Tab.0.right" timestamp="1579584110095">
+    <state width="1899" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581039257523" />
+    <state width="1899" height="266" key="GridCell.Tab.0.right" timestamp="1581039257523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="936" height="343" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579584110095" />
+    <state width="1899" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581039257523" />
     <state width="936" height="343" key="GridCell.Tab.1.bottom" timestamp="1579584110095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -272,16 +273,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1578639620583" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/IgniterUI.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

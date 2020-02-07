@@ -27,15 +27,20 @@ while True:
     if mainEvent is None:
         break
     if not cfg.config_active and "Configure" in mainEvent:
-        cfg.config_active = True
+        ser.write(bytearray([0x05]))
         layout = cfg.layout
+    if not cfg.config_active and connectedMC:
         configureWindow = sg.Window('Arduino Configuration', layout, grab_anywhere=True, resizable=True)
-    if cfg.config_active:
+        cfg.config_active = True
+    elif cfg.config_active:
         cfgEvent, cfgValues = configureWindow.read(timeout=10)
         if cfgEvent is None:
             cfg.config_active = False
             configureWindow.Close()
         elif "ConfigPin" in cfgEvent:
+            if(connectedMC == "328P"):
+                print("328P")
+            configureWindow.Element('DIAGRAM').update('ArduinoMegaImg.png')
             print("Button Pressed")
     # Button Reactions
     #if "Configure" in event:
@@ -43,7 +48,6 @@ while True:
         if mainEvent == 'COM_Connect':
             try:  # OPENING SERIAL PORT
                 ser = serial.Serial(mainValues['COM_Combo'], 9600, timeout=1)
-                ser.write(bytearray([0x05]))
                 if __name__ == '__main__':
                     window.FindElement('COM_Combo').update(values=ListComPorts.serial_ports())
                     window.FindElement('COM_Connect').update(mainValues['COM_Combo'], button_color=('White', 'Green'))
@@ -144,6 +148,9 @@ while True:
                         packet_dataSize = upperNibble | lowerNibble  # combining upper and lower bytes to make final char(UUUU LLLL)
                         dataString = buffer[5:-1]  # sets data string of packet to data pulled from _inputString
                         buffer = ""  # Clear buffer
+
+                        if (packet_type == 'Q'):
+                            connectedMC = dataString
 
                         # ***  UPDATE PRESSURE READINGS ***
                         # ***  CAN WE CHECK THESE CALCULATIONS???

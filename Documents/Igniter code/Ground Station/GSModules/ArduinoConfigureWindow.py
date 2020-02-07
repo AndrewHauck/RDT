@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 
+connectedMC = ""    #Connected microcontroller type
 diagram = sg.Image('ArduinoUnoImg1.png', key='DIAGRAM')
 
 left_col = []

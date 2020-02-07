@@ -204,7 +204,7 @@ Wire Notes Line
 	730  7370 1870 7370
 Wire Notes Line
 	730  7000 1870 7000
-Text Label 5570 7240 0    50   ~ 0
+Text Label 5780 7240 2    50   ~ 0
 CS
 NoConn ~ 2974 7132
 NoConn ~ 2974 7032
@@ -445,13 +445,13 @@ Wire Wire Line
 	1795 4670 1795 4600
 Wire Wire Line
 	1795 5040 1795 4970
-Text Label 5570 6940 0    50   ~ 0
+Text Label 5780 6940 2    50   ~ 0
 MISO
 Wire Wire Line
 	2780 6340 2970 6340
-Text Label 5570 7040 0    50   ~ 0
+Text Label 5780 7040 2    50   ~ 0
 MOSI
-Text Label 5570 7140 0    50   ~ 0
+Text Label 5780 7140 2    50   ~ 0
 CLK
 Wire Wire Line
 	4610 2460 4420 2460
@@ -3349,9 +3349,9 @@ Wire Wire Line
 Wire Notes Line
 	6520 680  6520 3960
 Wire Wire Line
-	2540 1730 3980 1730
+	2540 1730 2980 1730
 Wire Wire Line
-	2610 1630 3980 1630
+	2610 1630 3670 1630
 Connection ~ 9380 5490
 Connection ~ 9380 5590
 Wire Notes Line
@@ -3437,4 +3437,46 @@ Text Notes 7200 4510 0    50   ~ 0
 +
 Text Notes 7200 4820 0    50   ~ 0
 -
+$Comp
+L Device:R R13
+U 1 1 5E29FC99
+P 3520 1230
+F 0 "R13" V 3430 1230 50  0000 C CNN
+F 1 "1k" V 3520 1230 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3450 1230 50  0001 C CNN
+F 3 "~" H 3520 1230 50  0001 C CNN
+	1    3520 1230
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 5E2A230E
+P 3130 1230
+F 0 "D14" H 3130 1330 50  0000 C CNN
+F 1 "ACT" H 3130 1140 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 3130 1230 50  0001 C CNN
+F 3 "~" H 3130 1230 50  0001 C CNN
+	1    3130 1230
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2980 1230 2980 1730
+Connection ~ 2980 1730
+Wire Wire Line
+	2980 1730 3980 1730
+Wire Wire Line
+	3280 1230 3370 1230
+Wire Wire Line
+	3670 1230 3670 1630
+Connection ~ 3670 1630
+Wire Wire Line
+	3670 1630 3980 1630
+Wire Wire Line
+	5780 6940 5570 6940
+Wire Wire Line
+	5780 7040 5570 7040
+Wire Wire Line
+	5780 7140 5570 7140
+Wire Wire Line
+	5780 7240 5570 7240
 $EndSCHEMATC

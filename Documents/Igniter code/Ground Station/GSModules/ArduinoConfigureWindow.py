@@ -1,7 +1,9 @@
 import PySimpleGUI as sg
 from os.path import join
 
-diagram = sg.Image(join("..","img",'ArduinoUnoImg1.png'), key='DIAGRAM')
+connectedMC = ""    #Connected microcontroller type
+
+diagram = sg.Image(join("img",'ArduinoUnoImg1.png'), key='DIAGRAM', size=(300,400))
 
 left_col = []
 for i in range(5+1):

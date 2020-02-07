@@ -5,16 +5,18 @@ import math
 import serial.tools.list_ports
 from datetime import datetime
 from GSModules import ListComPorts
-from GSModules import UIElements
+from GSModules import UIElements as ui
 from GSModules import PacketHelper
 from GSModules.Logging import Logger
 from GSModules import ArduinoConfigureWindow as cfg
+from copy import deepcopy
 
 # Valve states
 isValveOpen = [False, False, False, False, False, False]
 # Create the Window and Finalize it. Then fullscreen
-window = sg.Window('RocketView', UIElements.layout, grab_anywhere=False, resizable=True)
-
+window = sg.Window('RocketView', ui.layout, grab_anywhere=False, resizable=True)
+window.Finalize()
+window.Element("graph").DrawImage(filename=("img\IgniterDiagram.png"), location=(0, 0))
 # Declaring buffer string to store serial data
 buffer = ""
 dataString = ""
@@ -27,15 +29,21 @@ while True:
     if mainEvent is None:
         break
     if not cfg.config_active and "Configure" in mainEvent:
-        cfg.config_active = True
-        layout = cfg.layout
+        ser.write(bytearray([0x05]))
+        #layout = deepcopy(cfg.layout)
+        layout = deepcopy(cfg.layout)
+    if not cfg.config_active and cfg.connectedMC:
         configureWindow = sg.Window('Arduino Configuration', layout, grab_anywhere=True, resizable=True)
-    if cfg.config_active:
+        cfg.config_active = True
+    elif cfg.config_active:
         cfgEvent, cfgValues = configureWindow.read(timeout=10)
         if cfgEvent is None:
             cfg.config_active = False
             configureWindow.Close()
         elif "ConfigPin" in cfgEvent:
+            if(cfg.connectedMC == "328P"):
+                print("328P")
+            configureWindow.Element('DIAGRAM').update(data='ArduinoMegaImg.png')
             print("Button Pressed")
     # Button Reactions
     #if "Configure" in event:
@@ -43,7 +51,6 @@ while True:
         if mainEvent == 'COM_Connect':
             try:  # OPENING SERIAL PORT
                 ser = serial.Serial(mainValues['COM_Combo'], 9600, timeout=1)
-                ser.write(bytearray([0x05]))
                 if __name__ == '__main__':
                     window.FindElement('COM_Combo').update(values=ListComPorts.serial_ports())
                     window.FindElement('COM_Connect').update(mainValues['COM_Combo'], button_color=('White', 'Green'))
@@ -69,11 +76,7 @@ while True:
             elif "Refresh" in mainEvent:
                 if __name__ == '__main__':
                     window.FindElement('COM_Combo').update(values=ListComPorts.serial_ports())
-            elif "Enquire" in mainEvent:
-                try:
-                    ser.write(bytearray([0x05]))
-                except serial.SerialException:
-                    print("Port Closed")
+            #elif "Enquire" in mainEvent:
         elif "dropdown" in mainEvent:
             #filename = sg.popup_get_file('file to open', no_window=True)
             print("Got em")
@@ -105,11 +108,13 @@ while True:
                 PacketHelper.sendMessage(ser, "C", "CLOSE")
 
         # Updating GUI to reflect valve states
+        window.Element("graph").erase()
+        window.Element("graph").DrawImage(filename=("img\IgniterDiagram.png"), location=(0, 0))
         for x in range(0,6):
             if isValveOpen[x]: color = "Green"
             else: color = "Red"
             window.FindElement("VALVE" + str(x)).Update(button_color=('White', color))
-
+            window.Element("graph").DrawImage(filename=(ui.valves_imgs[color][x]), location=ui.valves_pos[x])
         #*****UPDATE PRESSURE READINGS*****
         # Parses serial buffer from microcontroller
         # Converts raw data into float value, used to update GUI
@@ -145,6 +150,9 @@ while True:
                         dataString = buffer[5:-1]  # sets data string of packet to data pulled from _inputString
                         buffer = ""  # Clear buffer
 
+                        if (packet_type == 'Q'):
+                            cfg.connectedMC = dataString
+
                         # ***  UPDATE PRESSURE READINGS ***
                         # ***  CAN WE CHECK THESE CALCULATIONS???
                         # ***  5V ON PIN = 28 PSI???
@@ -157,7 +165,7 @@ while True:
                               # Get the data in between the letters. If end letter isn't found, just go to end
                               pdata = int(dataString[startLetterPos+1 : endLetterPos if endLetterPos > 0 else None])
                               # Convert from voltage using transformation formula
-                              pdata *= (5.0 / 1023.0) * (14000.0 / 2500.0)
+                              pdata = 1250*(pdata*(5/1023))-1250
                               # Update the GUI element
                               window.Element('P'+str(i+1)).Update(round(pdata, 2))
                               # Update the logfile

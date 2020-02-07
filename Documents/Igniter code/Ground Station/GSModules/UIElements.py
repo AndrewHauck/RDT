@@ -31,9 +31,38 @@ valves = [[sg.Text('VALVES')],
           sg.Button('N2', button_color=('White', 'Red'), key="VALVE" + str(4)),
           sg.Button('Igniter', button_color=('White', 'Red'), key="VALVE" + str(5)),]
 ]
+valves_imgs = {'Green':{
+                    0: join("img", 'GreenValveVert.png'),
+                    1: join("img", 'GreenValveVert.png'),
+                    2: join("img", 'GreenValveHorz.png'),
+                    3: join("img", 'GreenValveHorz.png'),
+                    4: join("img", 'GreenValveVert.png'),
+                    5: join("img", 'GreenIgniter.png'),},
+               'Red':{
+                    0: join("img", 'RedValveVert.png'),
+                    1: join("img", 'RedValveVert.png'),
+                    2: join("img", 'RedValveHorz.png'),
+                    3: join("img", 'RedValveHorz.png'),
+                    4: join("img", 'RedValveVert.png'),
+                    5: join("img", 'RedIgniter.png'),}}
+valves_pos = {
+    0: (21,196),
+    1: (183,197),
+    2: (57,42),
+    3: (138,41),
+    4: (102,178),
+    5: (98,105),
+}
 
+#sg.Image(join("img", 'IgniterDiagram.png'), key='IMAGE', size=(400, 400))
 # Igniter diagram
-diagram = [[sg.Image(join("img", 'IgniterDiagram.png'), key='DIAGRAM', size=(400, 400))],]
+diagram = [[sg.Graph(
+            canvas_size=(300, 300),
+            graph_bottom_left=(0, 300),
+            graph_top_right=(300, 0),
+            key="graph"
+)],]
+
 
 # Staged buttons
 stages = [[sg.Text('STAGES')],

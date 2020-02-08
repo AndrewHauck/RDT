@@ -1,3 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP TMP102
+D Temperature Sensor with I2C/SMBus Interface, SOT-23-6
+K temperature sensor i2c smbus
+F http://www.ti.com/lit/gpn/tmp100
+$ENDCMP
+#
 #End Doc Library

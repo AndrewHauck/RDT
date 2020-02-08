@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name TestStand)(type Legacy)(uri ${KICAD_STAND_LIBRARY}/TestStand.lib)(options "")(descr ""))
+  (lib (name TestStand-rescue)(type Legacy)(uri ${KIPRJMOD}/TestStand-rescue.lib)(options "")(descr ""))
 )

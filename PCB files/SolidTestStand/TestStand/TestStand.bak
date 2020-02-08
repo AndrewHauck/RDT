@@ -1,7 +1,8 @@
 EESchema Schematic File Version 4
+LIBS:Thermo-cache
 EELAYER 29 0
 EELAYER END
-$Descr A2 23386 16535
+$Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
@@ -14,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Bitmap
-Pos 22530 15130
+Pos 10800 6850
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 00 B0 00 00 00 8F 08 02 00 00 00 D5 F9 C6 
@@ -572,7 +573,7 @@ DF AE 48 ED 27 65 BA 9B 53 1F FE 7F 92 B3 3F E1 7A 59 39 6F 00 00 00 00 49 45 4E
 EndData
 $EndBitmap
 $Bitmap
-Pos 19640 15135
+Pos 7910 6855
 Scale 1.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 1D 00 00 00 B0 08 02 00 00 00 24 1F 4B 
@@ -1534,8 +1535,8 @@ F4 70 04 05 7D 39 1C 24 B1 C9 CB 05 58 AE 60 30 18 0C C6 9B 60 3D 0E 83 C1 60 30
 FF 01 19 E2 CA 14 FF BF 05 C1 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 19090 15770 0    50   ~ 0
-Test Stand Controller Rev1\n
+Text Notes 7360 7490 0    50   ~ 0
+Adafruit MAX 31856 Shield\n
 $Comp
 L Sensor_Temperature:MAX31856 U1
 U 1 1 5E211ECC
@@ -1567,7 +1568,7 @@ Wire Wire Line
 Wire Wire Line
 	3150 3130 3150 3060
 Connection ~ 3050 3130
-Text Notes 20470 16020 0    50   ~ 0
+Text Notes 8740 7740 0    50   ~ 0
 10 mil grid
 $Comp
 L Connector:Conn_01x08_Female J3

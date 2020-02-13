@@ -1,2 +1,5 @@
 # Python Bytecode files
 *.pyc
+# Whatever these are
+*.xml
+*.atsuo

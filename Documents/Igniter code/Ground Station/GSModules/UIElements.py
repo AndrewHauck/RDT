@@ -56,11 +56,13 @@ valves_pos = {
 
 #sg.Image(join("img", 'IgniterDiagram.png'), key='IMAGE', size=(400, 400))
 # Igniter diagram
-diagram = [[sg.Graph(
+graph = [[sg.Graph(
             canvas_size=(300, 300),
             graph_bottom_left=(0, 300),
             graph_top_right=(300, 0),
-            key="graph"
+            key="DIAGRAM",
+            change_submits=True,
+            drag_submits=True
 )],]
 
 
@@ -103,4 +105,4 @@ file_browser = [
      sg.In(rootPath, key='input'), sg.FolderBrowse(target='input'), sg.Button('Start Recording', button_color=('White', 'Red'), key='filein')]]
 
     # Combination of all elements
-layout = dropdown_menu + valves + COMSelector + diagram + stages + readings + file_browser
+layout = dropdown_menu + valves + COMSelector + graph + stages + readings + file_browser

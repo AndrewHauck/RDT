@@ -11,17 +11,38 @@ from GSModules.Logging import Logger
 from GSModules import ArduinoConfigureWindow as cfg
 from copy import deepcopy
 
-# Valve states
-isValveOpen = [False, False, False, False, False, False]
-# Create the Window and Finalize it. Then fullscreen
-window = sg.Window('RocketView', ui.layout, grab_anywhere=False, resizable=True)
-window.Finalize()
-window.Element("graph").DrawImage(filename=("img\IgniterDiagram.png"), location=(0, 0))
+# Valves
+valves = {
+    "State":{
+        0: False,
+        1: False,
+        2: False,
+        3: False,
+        4: False,
+        5: False,},
+    "ID": {
+        0: None,
+        1: None,
+        2: None,
+        3: None,
+        4: None,
+        5: None,},
+}
+# Create the Window and Finalize it
+window = sg.Window('RocketView', ui.layout, grab_anywhere=False, resizable=True, finalize=True)
+window.Element("DIAGRAM").DrawImage(filename=("img\IgniterDiagram.png"), location=(0, 0), )
 # Declaring buffer string to store serial data
 buffer = ""
 dataString = ""
 ser = serial.Serial(None) #Create serial port object
-f = Logger()
+fileLogger = Logger()
+for x in range(0, 6):
+    if valves["State"][x]:
+        color = "Green"
+    else:
+        color = "Red"
+    window.FindElement("VALVE" + str(x)).Update(button_color=('White', color))
+    valves["ID"][x] = window.Element("DIAGRAM").DrawImage(filename=(ui.valves_imgs[color][x]), location=ui.valves_pos[x])
 
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
@@ -58,6 +79,14 @@ while True:
             except serial.SerialException: #IF PORT CAN'T BE OPENED
                 print("Unable to Open Port")
     else:
+        if "DIAGRAM" in mainEvent:
+            if mainEvent.endswith('+UP'):   #Effect takes place on mouse-click up event
+                x, y = mainValues["DIAGRAM"]    #X and Y coordinates of mouse-click up event
+                valveSelect = window.Element("DIAGRAM").GetFiguresAtLocation((x, y))    #Returns tuple of elements clicked on
+                for x in range(0, 6):
+                    if valveSelect[1] == valves["ID"][x]:
+                        PacketHelper.sendMessage(ser, "V", str(x))
+
         if "COM" in mainEvent:
             if "Connect" in mainEvent:  # CLOSING SERIAL PORT
                 ser.close()
@@ -70,22 +99,24 @@ while True:
                 
                 for x in range(6):
                     window.Element("VALVE" + str(x)).Update(button_color=('White', 'Red'))
-                if f.is_open():
-                    f.halt()
+                if fileLogger.is_open():
+                    fileLogger.halt()
                     window.Element('filein').update('Start Recording', button_color=('White', 'Red'))
             elif "Refresh" in mainEvent:
                 if __name__ == '__main__':
                     window.FindElement('COM_Combo').update(values=ListComPorts.serial_ports())
-            #elif "Enquire" in mainEvent:
+            elif "Enquire" in mainEvent:
+                print(valves)
+                window.Element("DIAGRAM").delete_figure(valves[2])
         elif "dropdown" in mainEvent:
             #filename = sg.popup_get_file('file to open', no_window=True)
             print("Got em")
         elif "filein" in mainEvent:
-            if not f.is_open():
-                f.start(mainValues['input'])
+            if not fileLogger.is_open():
+                fileLogger.start(mainValues['input'])
                 window.Element('filein').update('Recording', button_color=('White', 'Green'))
             else:
-                f.halt()
+                fileLogger.halt()
                 window.Element('filein').update('Start Recording', button_color=('White', 'Red'))
         elif "VALVE" in mainEvent:
             for x in range(0,6):
@@ -94,27 +125,21 @@ while True:
         elif "STAGE" in mainEvent:
             if str(0) in mainEvent:
                 # Send command to arm
-                f.log("Arming...")
+                fileLogger.log("Arming...")
                 PacketHelper.sendMessage(ser, "C", "ARM")
             elif str(1) in mainEvent:
-                f.log("Firing...")
+                fileLogger.log("Firing...")
                 PacketHelper.sendMessage(ser, "C", "FIRE")
             elif str(2) in mainEvent:
-                f.log("Purging...")
+                fileLogger.log("Purging...")
                 PacketHelper.sendMessage(ser, "C", "PURGE")
             elif str(3) in mainEvent:
                 # Send command to close all valves
-                f.log("Closing...")
+                fileLogger.log("Closing...")
                 PacketHelper.sendMessage(ser, "C", "CLOSE")
 
         # Updating GUI to reflect valve states
-        window.Element("graph").erase()
-        window.Element("graph").DrawImage(filename=("img\IgniterDiagram.png"), location=(0, 0))
-        for x in range(0,6):
-            if isValveOpen[x]: color = "Green"
-            else: color = "Red"
-            window.FindElement("VALVE" + str(x)).Update(button_color=('White', color))
-            window.Element("graph").DrawImage(filename=(ui.valves_imgs[color][x]), location=ui.valves_pos[x])
+
         #*****UPDATE PRESSURE READINGS*****
         # Parses serial buffer from microcontroller
         # Converts raw data into float value, used to update GUI
@@ -169,7 +194,7 @@ while True:
                               # Update the GUI element
                               window.Element('P'+str(i+1)).Update(round(pdata, 2))
                               # Update the logfile
-                              f.logFile("Pressure {}: {:.2}".format(i+1, pdata))
+                              fileLogger.logFile("Pressure {}: {:.2}".format(i + 1, pdata))
 
                         if (packet_type == 'M'):
                             # Mapping of dataString to which numbered GUI button should light up
@@ -186,11 +211,18 @@ while True:
                                 else:
                                   color = "Red"
                                 window.Element("STAGE" + str(i)).Update(button_color=('White', color))
-                            f.log(dataString)
+                            fileLogger.log(dataString)
                         if (packet_type == 'V'):
-                            for x in range(6):
-                                isValveOpen[x] = bool(int(dataString[x]))
-                            f.log("Valve States: ", dataString)
+                            for x in range(0, 6):
+                                valves["State"][x] = bool(int(dataString[x]))
+                                if valves["State"][x]:
+                                    color = "Green"
+                                else:
+                                    color = "Red"
+                                window.FindElement("VALVE" + str(x)).Update(button_color=('White', color))
+                                window.Element("DIAGRAM").delete_figure(valves["ID"][x])
+                                valves["ID"][x] = window.Element("DIAGRAM").DrawImage(filename=(ui.valves_imgs[color][x]), location=ui.valves_pos[x])
+                            fileLogger.log("Valve States: ", dataString)
                     else:
                         buffer = ""  # If only 1 end of packet is found, data somehow corrupted, clear buffer
 window.close()

@@ -362,8 +362,6 @@ Wire Wire Line
 	1795 4670 1795 4600
 Wire Wire Line
 	1795 5040 1795 4970
-Text Notes 85   -85  0    118  ~ 0
-Vcc 200mA max current draw for ATmega2560\n-SD card powered by atmega 3V3 pin\n
 Text Notes 60   -510 0    118  ~ 0
 -Board sits at test operator area
 Text Notes 65   -785 0    118  ~ 24

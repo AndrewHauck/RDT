@@ -1,8 +1,0 @@
-Serial Terminal for Debugging: RealTerm 
-    https://sourceforge.net/projects/realterm/
-Arduino Development Environment: Atmel Studio 7 
-    https://www.microchip.com/mplab/avr-support/atmel-studio-7
-Arduino IDE (Used for uploading to board: Arduino IDE 1.8.11
-    https://www.arduino.cc/en/main/software
-
-Thomas Francois (KX0STL) - 2/4/2020

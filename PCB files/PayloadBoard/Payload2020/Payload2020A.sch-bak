@@ -5558,15 +5558,4 @@ F 3 "" H 8450 2000 50  0001 C CNN
 	1    8600 1950
 	1    0    0    -1  
 $EndComp
-$Comp
-L PayloadBoard:HX711_Breakout U?
-U 1 1 5E4A481B
-P 8600 3050
-F 0 "U?" H 8600 3425 50  0000 C CNN
-F 1 "HX711_Breakout" H 8600 3334 50  0000 C CNN
-F 2 "" H 8600 3450 50  0001 C CNN
-F 3 "" H 8600 3450 50  0001 C CNN
-	1    8600 3050
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC

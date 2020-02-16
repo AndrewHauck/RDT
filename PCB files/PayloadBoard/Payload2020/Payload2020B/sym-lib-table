@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PayloadBoard)(type Legacy)(uri "/home/andrew/Documents/RocketGitHub/RDT/PCB files/PayloadBoard/Payload2020/PayloadBoard.lib")(options "")(descr ""))
+)

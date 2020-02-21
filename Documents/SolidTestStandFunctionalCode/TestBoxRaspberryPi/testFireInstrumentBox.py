@@ -3,7 +3,7 @@ import serial
 import serial.tools.list_ports as list_ports
 import atexit
 from datetime import datetime
-import time
+from time import time
 import re
 
 # COMMAND LINE USAGE
@@ -24,7 +24,7 @@ SERIAL_NUMBER_FILE = "testFireSerialNumber.txt"
 COMPONENT_BAUD = {
   "ARDUINO":   115200,
   "OPENSCALE": 115200,
-  "XBEE_BAUD": 9600,
+  "XBEE": 115200,
 }
 
 OUTPUT_DIR = "Test_Fire_Runs"
@@ -49,7 +49,7 @@ def loadSerialNumbers(serialNumbers = None, serialFile = SERIAL_NUMBER_FILE):
       for line in file:
         line = line.rstrip() # Strip trailing newline
         if line.startswith("["):
-          currentHeading = line
+          currentHeading = line[1:-1]
         elif currentHeading: # Ignore other lines if we have no heading
           # If we don't have this heading, add an entry
           if currentHeading not in serialNumbers:
@@ -65,6 +65,8 @@ def loadSerialNumbers(serialNumbers = None, serialFile = SERIAL_NUMBER_FILE):
       
     print("ERROR: No serial number file found, blank one created")
     raise e
+    
+  return serialNumbers
 
 
 def findMatchingPort(serialList):
@@ -74,11 +76,13 @@ def findMatchingPort(serialList):
   :returns: A string address of the COM port matching the serial number, or None
   """
   portList = list_ports.comports()
+  print("Serials: ", serialList)
   for port in portList:
+    print("Port:", port)
     if any(serialNum in port[2] for serialNum in serialList):
       return port[0]
 
-def componentThread(serialComponent, serialXbee, fileObj, xbeeLock: threading.Lock, stopEvent: threading.Event):
+def componentThread(serialComponent, serialXbee, xbeeLock: threading.Lock, fileObj, stopEvent: threading.Event):
   """
   This function represents a thread that will take in serial data from serialComponent, then forward it to a file
     and to serialXbee. Cleans up all file handles and serial connections when done.
@@ -101,14 +105,14 @@ def componentThread(serialComponent, serialXbee, fileObj, xbeeLock: threading.Lo
         break # Exit our own loop with getting a line
       
       # Add in the current time just printed as a float with 4 decimal precision
-      fullLine = "{:.4}\t".format(time()).encode() + line
+      fullLine = "{:.4f}\t".format(time()).encode() + line
       # Write to our file
-      fileObj.write(fullLine)
+      fileObj.write(bytearray(filter(lambda byte: byte != 0, fullLine)))
       # Wait for xbee if in use and write to xbee
       with xbeeLock:
         serialXbee.write(fullLine)
       # For good measure, print it out to terminal
-      print("Arduino - " + line)
+      print(threading.current_thread().name + line.decode("utf-8"))
   finally: # However this code exits, still close our ports and files
     # When done, close all of our ports and files
     serialComponent.close()
@@ -122,7 +126,7 @@ def printComComponents():
   """
   portList = list_ports.comports()
   for port in portList:
-    print("\t|\t".join(port))
+    print(" | ".join(port))
 
 def main():
   # Will contain a mapping of component: serial.Serial object
@@ -134,10 +138,11 @@ def main():
   # This will be a dictionary of component string: list of serial numbers
   defaultDict = {val: [] for val in COMPONENT_BAUD}
   serialNumbers = loadSerialNumbers(defaultDict)
+  print(serialNumbers)
 
   print("Looking for COM Port Components!")
   for component, baud in COMPONENT_BAUD.items():
-    port = findMatchingPort(serialNumbers)
+    port = findMatchingPort(serialNumbers[component])
     # If there was no component here we can't continue
     if not port:
       print("ERROR: No component found matching a serial number for:", component)
@@ -199,7 +204,7 @@ def main():
 
 
 if __name__ == "__main__":
-  if sys.argv[1][0].lower() == "p":
+  if len(sys.argv) > 1 and sys.argv[1][0].lower() == "p":
     printComComponents()
   else:
     main()

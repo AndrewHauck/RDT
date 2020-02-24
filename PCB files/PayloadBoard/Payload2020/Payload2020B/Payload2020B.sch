@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Payload2020B-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1956,28 +1955,53 @@ A9 44 9E 23 74 14 AD 56 AB 50 28 54 2A 95 44 22 A1 41 CC 14 E1 70 58 2E 97 E3 B6
 5E 01 E0 E4 15 00 4E 5E 01 E0 14 ED DD B7 39 3F 38 C5 BC 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Notes 4100 2450 0    50   ~ 0
-change symbol pinout to match xbee module directly\n
 $Comp
 L PayloadBoard:Xbee_XBP9B U?
 U 1 1 5E49EA3B
-P 4300 3550
-F 0 "U?" H 4425 4225 50  0000 C CNN
-F 1 "Xbee_XBP9B" H 4425 4134 50  0000 C CNN
-F 2 "" H 3900 4100 50  0001 C CNN
-F 3 "" H 3900 4100 50  0001 C CNN
-	1    4300 3550
+P 5100 2200
+F 0 "U?" H 5225 2875 50  0000 C CNN
+F 1 "Xbee_XBP9B" H 5225 2784 50  0000 C CNN
+F 2 "" H 4700 2750 50  0001 C CNN
+F 3 "" H 4700 2750 50  0001 C CNN
+	1    5100 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L PayloadBoard:BerryIMUv3 U?
 U 1 1 5E536455
-P 6770 3570
-F 0 "U?" H 6745 4285 50  0000 C CNN
-F 1 "BerryIMUv3" H 6745 4194 50  0000 C CNN
-F 2 "" H 6770 4270 50  0001 C CNN
-F 3 "" H 6770 4270 50  0001 C CNN
-	1    6770 3570
+P 5350 4250
+F 0 "U?" H 5325 4965 50  0000 C CNN
+F 1 "BerryIMUv3" H 5325 4874 50  0000 C CNN
+F 2 "" H 5350 4950 50  0001 C CNN
+F 3 "" H 5350 4950 50  0001 C CNN
+	1    5350 4250
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Counter_Clockwise J?
+U 1 1 5E544EC7
+P 7300 3200
+F 0 "J?" H 7350 3817 50  0000 C CNN
+F 1 "Conn_02x10_Counter_Clockwise" H 7350 3726 50  0000 C CNN
+F 2 "" H 7300 3200 50  0001 C CNN
+F 3 "~" H 7300 3200 50  0001 C CNN
+	1    7300 3200
+	1    0    0    -1  
+$EndComp
+Text Label 4100 3900 0    50   ~ 0
+Berry_SDA
+Text Label 4100 4000 0    50   ~ 0
+Berry_SCL
+Wire Wire Line
+	4100 4000 4500 4000
+Wire Wire Line
+	4100 3900 4500 3900
+Text Label 6700 2800 0    50   ~ 0
+Berry_SDA
+Wire Wire Line
+	6700 2800 7100 2800
+Text Label 6700 2900 0    50   ~ 0
+Berry_SCL
+Wire Wire Line
+	6700 2900 7100 2900
 $EndSCHEMATC

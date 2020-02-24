@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Payload2020B-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1966,6 +1967,17 @@ F 1 "Xbee_XBP9B" H 4425 4134 50  0000 C CNN
 F 2 "" H 3900 4100 50  0001 C CNN
 F 3 "" H 3900 4100 50  0001 C CNN
 	1    4300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L PayloadBoard:BerryIMUv3 U?
+U 1 1 5E536455
+P 6770 3570
+F 0 "U?" H 6745 4285 50  0000 C CNN
+F 1 "BerryIMUv3" H 6745 4194 50  0000 C CNN
+F 2 "" H 6770 4270 50  0001 C CNN
+F 3 "" H 6770 4270 50  0001 C CNN
+	1    6770 3570
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

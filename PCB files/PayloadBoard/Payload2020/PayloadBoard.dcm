@@ -1,3 +1,8 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AP7370-50W5-7
+D Diodes Inc 300mA 3.3V LDO regulator
+F https://www.diodes.com/assets/Datasheets/AP7370.pdf
+$ENDCMP
+#
 #End Doc Library

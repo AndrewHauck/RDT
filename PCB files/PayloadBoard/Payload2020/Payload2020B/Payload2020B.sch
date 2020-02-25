@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Payload2020B-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1982,7 +1983,7 @@ L Connector_Generic:Conn_02x10_Counter_Clockwise J?
 U 1 1 5E544EC7
 P 7300 3200
 F 0 "J?" H 7350 3817 50  0000 C CNN
-F 1 "Conn_02x10_Counter_Clockwise" H 7350 3726 50  0000 C CNN
+F 1 "BridgeConn" H 7350 3726 50  0000 C CNN
 F 2 "" H 7300 3200 50  0001 C CNN
 F 3 "~" H 7300 3200 50  0001 C CNN
 	1    7300 3200
@@ -2004,4 +2005,88 @@ Text Label 6700 2900 0    50   ~ 0
 Berry_SCL
 Wire Wire Line
 	6700 2900 7100 2900
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 5E54854E
+P 4650 1700
+F 0 "#PWR?" H 4650 1550 50  0001 C CNN
+F 1 "+3.3VA" H 4665 1873 50  0000 C CNN
+F 2 "" H 4650 1700 50  0001 C CNN
+F 3 "" H 4650 1700 50  0001 C CNN
+	1    4650 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1700 4650 1750
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E5493FD
+P 4500 3700
+F 0 "#PWR?" H 4500 3550 50  0001 C CNN
+F 1 "+3V3" H 4515 3873 50  0000 C CNN
+F 2 "" H 4500 3700 50  0001 C CNN
+F 3 "" H 4500 3700 50  0001 C CNN
+	1    4500 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3700 4500 3800
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E54A258
+P 6800 3900
+F 0 "#PWR?" H 6800 3650 50  0001 C CNN
+F 1 "GNDREF" H 6805 3727 50  0000 C CNN
+F 2 "" H 6800 3900 50  0001 C CNN
+F 3 "" H 6800 3900 50  0001 C CNN
+	1    6800 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3900 6150 3900
+Text Label 6450 4000 2    50   ~ 0
+RX_GPS
+Wire Wire Line
+	6450 4000 6150 4000
+Text Label 6700 3000 0    50   ~ 0
+RX_GPS
+Wire Wire Line
+	6700 3000 7100 3000
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E54D3B7
+P 4650 2690
+F 0 "#PWR?" H 4650 2440 50  0001 C CNN
+F 1 "GNDREF" H 4655 2517 50  0000 C CNN
+F 2 "" H 4650 2690 50  0001 C CNN
+F 3 "" H 4650 2690 50  0001 C CNN
+	1    4650 2690
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2690 4650 2650
+Text Label 6220 2150 2    50   ~ 0
+XBEE_RTS
+Text Label 6220 2550 2    50   ~ 0
+XBEE_CTS
+Wire Wire Line
+	5800 2150 6220 2150
+Wire Wire Line
+	6220 2550 5800 2550
+Text Label 4230 2550 0    50   ~ 0
+XBEE_DTR
+Wire Wire Line
+	4230 2550 4650 2550
+Text Label 6700 3100 0    50   ~ 0
+XBEE_RTS
+Text Label 6700 3200 0    50   ~ 0
+XBEE_CTS
+Text Label 6700 3300 0    50   ~ 0
+XBEE_DTR
+Wire Wire Line
+	6700 3100 7100 3100
+Wire Wire Line
+	7100 3200 6700 3200
+Wire Wire Line
+	6700 3300 7100 3300
 $EndSCHEMATC

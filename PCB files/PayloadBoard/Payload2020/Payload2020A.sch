@@ -5922,4 +5922,17 @@ Wire Wire Line
 	5090 1770 4680 1770
 Text Notes 7520 760  0    79   ~ 0
 3V3A - Power to Xbee from battery\n3V3 - Power to ArduCam, HX711, and BerryIMU from Teensy
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 5E5BD94E
+P 7900 2300
+F 0 "#PWR?" H 7900 2150 50  0001 C CNN
+F 1 "+3.3VA" H 7915 2473 50  0000 C CNN
+F 2 "" H 7900 2300 50  0001 C CNN
+F 3 "" H 7900 2300 50  0001 C CNN
+	1    7900 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8490 2300 7900 2300
 $EndSCHEMATC

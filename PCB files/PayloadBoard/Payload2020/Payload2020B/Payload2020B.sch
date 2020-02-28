@@ -2098,7 +2098,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 3280 7070 3280
 Text Notes 6460 2260 0    50   ~ 0
-Xbee\nSerial pins\nDOUT\nDIN\nCTS\nRTS
+Xbee Serial pins\nDOUT\nDIN\nCTS\nRTS
 Text Label 6450 4100 2    50   ~ 0
 TX_GPS
 Wire Wire Line

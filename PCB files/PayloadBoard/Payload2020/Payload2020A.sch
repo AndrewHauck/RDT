@@ -5709,61 +5709,22 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x02_Female J?
 U 1 1 5E5498CC
-P 1220 1360
-F 0 "J?" H 1112 1545 50  0000 C CNN
-F 1 "BATTERY" H 1112 1454 50  0000 C CNN
-F 2 "" H 1220 1360 50  0001 C CNN
-F 3 "~" H 1220 1360 50  0001 C CNN
-	1    1220 1360
+P 1120 1130
+F 0 "J?" H 1012 1315 50  0000 C CNN
+F 1 "BATTERY" H 1012 1224 50  0000 C CNN
+F 2 "" H 1120 1130 50  0001 C CNN
+F 3 "~" H 1120 1130 50  0001 C CNN
+	1    1120 1130
 	-1   0    0    -1  
 $EndComp
-Text Notes 1120 1390 0    50   ~ 0
+Text Notes 1010 1170 0    50   ~ 0
 +
-Text Notes 1120 1490 0    50   ~ 0
+Text Notes 1010 1270 0    50   ~ 0
 -
-$Comp
-L power:GNDREF #PWR?
-U 1 1 5E54B0A0
-P 1530 1460
-F 0 "#PWR?" H 1530 1210 50  0001 C CNN
-F 1 "GNDREF" H 1535 1287 50  0001 C CNN
-F 2 "" H 1530 1460 50  0001 C CNN
-F 3 "" H 1530 1460 50  0001 C CNN
-	1    1530 1460
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1420 1460 1530 1460
-$Comp
-L PayloadBoard:AP7370-50W5-7 U?
-U 1 1 5E54C67E
-P 2660 1560
-F 0 "U?" H 2660 1985 50  0000 C CNN
-F 1 "AP7370-50W5-7" H 2660 1894 50  0000 C CNN
-F 2 "" H 2610 1910 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP7370.pdf" H 2610 1910 50  0001 C CNN
-	1    2660 1560
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3010 1660
-NoConn ~ 2310 1760
-$Comp
-L power:GNDREF #PWR?
-U 1 1 5E54D5EC
-P 2260 1560
-F 0 "#PWR?" H 2260 1310 50  0001 C CNN
-F 1 "GNDREF" H 2265 1387 50  0001 C CNN
-F 2 "" H 2260 1560 50  0001 C CNN
-F 3 "" H 2260 1560 50  0001 C CNN
-	1    2260 1560
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2260 1560 2310 1560
-Text Notes 1510 1360 0    50   ~ 0
-6-8.4V IN
-Text Notes 1020 1640 0    50   ~ 0
-2sXp LiON
+Text Notes 1410 1130 0    50   ~ 0
+3-4.2V
+Text Notes 890  1350 0    50   ~ 0
+1sXp LiON
 Wire Wire Line
 	2920 4130 4490 4130
 Wire Wire Line
@@ -5816,52 +5777,6 @@ Text Label 4590 1370 0    50   ~ 0
 HX_OUT
 Wire Wire Line
 	4590 1370 5090 1370
-Wire Wire Line
-	1420 1360 1940 1360
-$Comp
-L PayloadBoard:AP2210N-5.0TRG1 U?
-U 1 1 5E598D25
-P 2640 2440
-F 0 "U?" H 2640 2755 50  0000 C CNN
-F 1 "AP2210N-5.0TRG1" H 2640 2664 50  0000 C CNN
-F 2 "" H 2490 2640 50  0001 C CNN
-F 3 "" H 2490 2640 50  0001 C CNN
-	1    2640 2440
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1940 1360 1940 2390
-Connection ~ 1940 1360
-Wire Wire Line
-	1940 1360 2310 1360
-$Comp
-L power:GNDREF #PWR?
-U 1 1 5E59A364
-P 2640 2790
-F 0 "#PWR?" H 2640 2540 50  0001 C CNN
-F 1 "GNDREF" H 2645 2617 50  0001 C CNN
-F 2 "" H 2640 2790 50  0001 C CNN
-F 3 "" H 2640 2790 50  0001 C CNN
-	1    2640 2790
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2640 2790 2640 2740
-$Comp
-L power:+5V #PWR?
-U 1 1 5E59BE17
-P 3140 2390
-F 0 "#PWR?" H 3140 2240 50  0001 C CNN
-F 1 "+5V" H 3155 2563 50  0000 C CNN
-F 2 "" H 3140 2390 50  0001 C CNN
-F 3 "" H 3140 2390 50  0001 C CNN
-	1    3140 2390
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3040 2390 3140 2390
-Wire Wire Line
-	1940 2390 2240 2390
 $Comp
 L power:+5V #PWR?
 U 1 1 5E5AB95C
@@ -5902,16 +5817,14 @@ Wire Wire Line
 $Comp
 L power:+3.3VA #PWR?
 U 1 1 5E5B7BCF
-P 3190 1460
-F 0 "#PWR?" H 3190 1310 50  0001 C CNN
-F 1 "+3.3VA" H 3205 1633 50  0000 C CNN
-F 2 "" H 3190 1460 50  0001 C CNN
-F 3 "" H 3190 1460 50  0001 C CNN
-	1    3190 1460
+P 3680 2650
+F 0 "#PWR?" H 3680 2500 50  0001 C CNN
+F 1 "+3.3VA" H 3695 2823 50  0000 C CNN
+F 2 "" H 3680 2650 50  0001 C CNN
+F 3 "" H 3680 2650 50  0001 C CNN
+	1    3680 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3010 1460 3190 1460
 Text Label 4680 1770 0    50   ~ 0
 Berry_SDA
 Text Label 4680 1670 0    50   ~ 0
@@ -5935,4 +5848,83 @@ F 3 "" H 7900 2300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8490 2300 7900 2300
+Text Notes 3120 1580 0    50   ~ 0
+Add Boost converter here
+Wire Wire Line
+	3500 2650 3680 2650
+Wire Wire Line
+	2750 2750 2800 2750
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E54D5EC
+P 2750 2750
+F 0 "#PWR?" H 2750 2500 50  0001 C CNN
+F 1 "GNDREF" H 2755 2577 50  0001 C CNN
+F 2 "" H 2750 2750 50  0001 C CNN
+F 3 "" H 2750 2750 50  0001 C CNN
+	1    2750 2750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2800 2950
+NoConn ~ 3500 2850
+$Comp
+L PayloadBoard:AP7370-50W5-7 U?
+U 1 1 5E54C67E
+P 3150 2750
+F 0 "U?" H 3150 3175 50  0000 C CNN
+F 1 "AP7370-50W5-7" H 3150 3084 50  0000 C CNN
+F 2 "" H 3100 3100 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP7370.pdf" H 3100 3100 50  0001 C CNN
+	1    3150 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 5E59244E
+P 1100 1880
+F 0 "J?" H 992 2065 50  0000 C CNN
+F 1 "BATTERY" H 992 1974 50  0000 C CNN
+F 2 "" H 1100 1880 50  0001 C CNN
+F 3 "~" H 1100 1880 50  0001 C CNN
+	1    1100 1880
+	-1   0    0    -1  
+$EndComp
+Text Notes 990  1910 0    50   ~ 0
++
+Text Notes 990  2010 0    50   ~ 0
+-
+Text Notes 630  2120 0    50   ~ 0
+Flat LiPo 180 mAh
+Wire Wire Line
+	1320 1230 1430 1230
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E54B0A0
+P 1430 1230
+F 0 "#PWR?" H 1430 980 50  0001 C CNN
+F 1 "GNDREF" H 1435 1057 50  0001 C CNN
+F 2 "" H 1430 1230 50  0001 C CNN
+F 3 "" H 1430 1230 50  0001 C CNN
+	1    1430 1230
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E594677
+P 1410 1980
+F 0 "#PWR?" H 1410 1730 50  0001 C CNN
+F 1 "GNDREF" H 1415 1807 50  0001 C CNN
+F 2 "" H 1410 1980 50  0001 C CNN
+F 3 "" H 1410 1980 50  0001 C CNN
+	1    1410 1980
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1410 1980 1300 1980
+Text Notes 1820 1570 0    50   ~ 0
+Add switching circuit here
+Text Notes 7620 4640 0    50   ~ 0
+<--- from boost converter
+Text Notes 1400 1850 0    50   ~ 0
+3-4.2V
 $EndSCHEMATC

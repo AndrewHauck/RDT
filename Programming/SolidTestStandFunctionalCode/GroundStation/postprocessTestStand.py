@@ -111,7 +111,7 @@ tempBuffer = []
 loadBuffer = []
 for reading in loadCell:
   if startEvent <= reading[0] <= stopEvent:
-    loadBuffer.append((reading[0]-startEvent,) + reading[1:])
+    loadBuffer.append((reading[0]-startEvent, reading[1]-average, reading[2]))
 for reading in temps:
   if startEvent <= reading[0] <= stopEvent:
     tempBuffer.append((reading[0]-startEvent,) + reading[1:])
@@ -128,3 +128,42 @@ with open(modifyFilename(filename, "output", ".csv"), "w") as file:
     else:
       file.write(",".join(map(str, tempBuffer[lineNumber])))
     file.write("\n")
+    
+    
+try:
+  import xlsxwriter as excel
+except ImportError:
+  print("No excel writer detected, not writing excel")
+else:
+  print("Writing excel file with pretty graphs!")
+  workbook = excel.Workbook(modifyFilename(filename, "Excel", ".xlsx"))
+  worksheet = workbook.add_worksheet()
+  # First write the section headers
+  for i, val in enumerate(["Load Timestamp", "Load (lbs)", "Ambient Temp (ºC)", "", "Temp Timestamp"] + ["Thermocouple "+str(i)+" (ºC)" for i in range(1,4+1)]):
+    if 0 <= i <= 2:
+      worksheet.write_column(chr(ord("A")+i)+"1", [val]+[v[i] for v in loadBuffer])
+    if 4 <= i:
+      worksheet.write_column(chr(ord("A")+i)+"1", [val]+[v[i-4] for v in tempBuffer])
+      
+  chart = workbook.add_chart({"type": "scatter", "subtype": "straight"})
+  
+  loadCategories = ["Sheet1", 1, 0, len(loadBuffer)+1, 0]
+  tempCategories = ["Sheet1", 1, 4, len(tempBuffer)+1, 4]
+  
+  chart.add_series({"categories": loadCategories, "values": ["Sheet1", 1, 1, len(loadBuffer)+1, 1], "name": ["Sheet1", 0, 1]})
+  chart.add_series({"categories": loadCategories, "values": ["Sheet1", 1, 2, len(loadBuffer)+1, 2], "name": ["Sheet1", 0, 2], 'y2_axis': True,})
+  chart.add_series({"categories": tempCategories, "values": ["Sheet1", 1, 5, len(tempBuffer)+1, 5], "name": ["Sheet1", 0, 5], 'y2_axis': True,})
+  chart.add_series({"categories": tempCategories, "values": ["Sheet1", 1, 6, len(tempBuffer)+1, 6], "name": ["Sheet1", 0, 6], 'y2_axis': True,})
+  chart.add_series({"categories": tempCategories, "values": ["Sheet1", 1, 7, len(tempBuffer)+1, 7], "name": ["Sheet1", 0, 7], 'y2_axis': True,})
+  chart.add_series({"categories": tempCategories, "values": ["Sheet1", 1, 8, len(tempBuffer)+1, 8], "name": ["Sheet1", 0, 8], 'y2_axis': True,})
+  
+  chart.set_size({"width": 1200, "height": 400})
+  chart.set_legend({"position": "bottom"})
+  chart.set_x_axis({"name": "Time Since Event Start"})
+  chart.set_y_axis({"name": "Force (lbs)"})
+  chart.set_y2_axis({"name": "Temperature (ºC)"})
+  
+  worksheet.insert_chart("A1", chart)
+  
+  workbook.close()
+  # Then write the load cell values

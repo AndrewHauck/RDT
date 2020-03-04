@@ -5,4 +5,8 @@ D Diodes Inc 300mA 3.3V LDO regulator
 F https://www.diodes.com/assets/Datasheets/AP7370.pdf
 $ENDCMP
 #
+$CMP TPS613222ADBVR
+D 5V boost converter
+$ENDCMP
+#
 #End Doc Library

@@ -8,8 +8,10 @@ from GSModules import ListComPorts
 from GSModules import UIElements as ui
 from GSModules import PacketHelper
 from GSModules.Logging import Logger
+from GSModules.ArduinoConfigureWindow import CFGWindow
 from GSModules import ArduinoConfigureWindow as cfg
 from copy import deepcopy
+from os.path import join
 
 # Valves
 valves = {
@@ -30,12 +32,14 @@ valves = {
 }
 # Create the Window and Finalize it
 window = sg.Window('RocketView', ui.layout, grab_anywhere=False, resizable=True, finalize=True)
-window.Element("DIAGRAM").DrawImage(filename=("img\IgniterDiagram.png"), location=(0, 0), )
+window.Element("DIAGRAM").DrawImage(filename=("img\IgniterDiagram1.png"), location=(0, 0))
 # Declaring buffer string to store serial data
 buffer = ""
 dataString = ""
 ser = serial.Serial(None) #Create serial port object
 fileLogger = Logger()
+#config = CFGWindowBuilder()
+config = CFGWindow()
 for x in range(0, 6):
     if valves["State"][x]:
         color = "Green"
@@ -47,27 +51,11 @@ for x in range(0, 6):
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     mainEvent, mainValues = window.read(timeout=10)
-    if mainEvent is None:
+    if mainEvent is None or mainEvent == "Exit":
         break
-    if not cfg.config_active and "Configure" in mainEvent:
+    if not config.isActive() and "Configure" in mainEvent:
         ser.write(bytearray([0x05]))
-        #layout = deepcopy(cfg.layout)
-        layout = deepcopy(cfg.layout)
-    if not cfg.config_active and cfg.connectedMC:
-        configureWindow = sg.Window('Arduino Configuration', layout, grab_anywhere=True, resizable=True)
-        cfg.config_active = True
-    elif cfg.config_active:
-        cfgEvent, cfgValues = configureWindow.read(timeout=10)
-        if cfgEvent is None:
-            cfg.config_active = False
-            configureWindow.Close()
-        elif "ConfigPin" in cfgEvent:
-            if(cfg.connectedMC == "328P"):
-                print("328P")
-            configureWindow.Element('DIAGRAM').update(data='ArduinoMegaImg.png')
-            print("Button Pressed")
-    # Button Reactions
-    #if "Configure" in event:
+    config.read()
     if not ser.is_open:
         if mainEvent == 'COM_Connect':
             try:  # OPENING SERIAL PORT
@@ -83,9 +71,10 @@ while True:
             if mainEvent.endswith('+UP'):   #Effect takes place on mouse-click up event
                 x, y = mainValues["DIAGRAM"]    #X and Y coordinates of mouse-click up event
                 valveSelect = window.Element("DIAGRAM").GetFiguresAtLocation((x, y))    #Returns tuple of elements clicked on
-                for x in range(0, 6):
-                    if valveSelect[1] == valves["ID"][x]:
-                        PacketHelper.sendMessage(ser, "V", str(x))
+                if len(valveSelect) > 1:
+                    for x in range(0, 6):
+                        if valveSelect[1] == valves["ID"][x]:
+                            PacketHelper.sendMessage(ser, "V", str(x))
 
         if "COM" in mainEvent:
             if "Connect" in mainEvent:  # CLOSING SERIAL PORT
@@ -176,25 +165,28 @@ while True:
                         buffer = ""  # Clear buffer
 
                         if (packet_type == 'Q'):
-                            cfg.connectedMC = dataString
+                            config.setMC(dataString)
 
                         # ***  UPDATE PRESSURE READINGS ***
                         # ***  CAN WE CHECK THESE CALCULATIONS???
                         # ***  5V ON PIN = 28 PSI???
                         if (packet_type == 'D'):
                             letterBase = ord('A') # Because i starts at 1, start at letter less than 1
-                            for i in range(4):
-                              # Find the position of each letter from A to D 
-                              startLetterPos = dataString.find(chr(letterBase+i))
-                              endLetterPos   = dataString.find(chr(letterBase+i+1))
-                              # Get the data in between the letters. If end letter isn't found, just go to end
-                              pdata = int(dataString[startLetterPos+1 : endLetterPos if endLetterPos > 0 else None])
-                              # Convert from voltage using transformation formula
-                              pdata = 1250*(pdata*(5/1023))-1250
-                              # Update the GUI element
-                              window.Element('P'+str(i+1)).Update(round(pdata, 2))
-                              # Update the logfile
-                              fileLogger.logFile("Pressure {}: {:.2}".format(i + 1, pdata))
+                            try:
+                                for i in range(4):
+                                  # Find the position of each letter from A to D
+                                  startLetterPos = dataString.find(chr(letterBase+i))
+                                  endLetterPos   = dataString.find(chr(letterBase+i+1))
+                                  # Get the data in between the letters. If end letter isn't found, just go to end
+                                  pdata = int(dataString[startLetterPos+1 : endLetterPos if endLetterPos > 0 else None])
+                                  # Convert from voltage using transformation formula
+                                  pdata = 1250*(pdata*(5/1023))-1250
+                                  # Update the GUI element
+                                  window.Element('P'+str(i+1)).Update(round(pdata, 2))
+                                  # Update the logfile
+                                  fileLogger.logFile("Pressure {}: {:.2}".format(i + 1, pdata))
+                            except:
+                                print("Invalid Literal for int() with base 10")
 
                         if (packet_type == 'M'):
                             # Mapping of dataString to which numbered GUI button should light up

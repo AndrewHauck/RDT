@@ -32,24 +32,24 @@ valves = [[sg.Text('VALVES')],
           sg.Button('Igniter', button_color=('White', 'Red'), key="VALVE" + str(5)),]
 ]
 valves_imgs = {'Green':{
-                    0: join("img", 'GreenValveVert.png'),
-                    1: join("img", 'GreenValveVert.png'),
-                    2: join("img", 'GreenValveHorz.png'),
-                    3: join("img", 'GreenValveHorz.png'),
-                    4: join("img", 'GreenValveVert.png'),
+                    0: join("img", 'GreenValveVert1.png'),
+                    1: join("img", 'GreenValveVert1.png'),
+                    2: join("img", 'GreenValveHorz1.png'),
+                    3: join("img", 'GreenValveHorz1.png'),
+                    4: join("img", 'GreenValveVert1.png'),
                     5: join("img", 'GreenIgniter.png'),},
                'Red':{
-                    0: join("img", 'RedValveVert.png'),
-                    1: join("img", 'RedValveVert.png'),
-                    2: join("img", 'RedValveHorz.png'),
-                    3: join("img", 'RedValveHorz.png'),
-                    4: join("img", 'RedValveVert.png'),
+                    0: join("img", 'RedValveVert1.png'),
+                    1: join("img", 'RedValveVert1.png'),
+                    2: join("img", 'RedValveHorz1.png'),
+                    3: join("img", 'RedValveHorz1.png'),
+                    4: join("img", 'RedValveVert1.png'),
                     5: join("img", 'RedIgniter.png'),}}
 valves_pos = {
-    0: (21,196),
+    0: (20,196),
     1: (183,197),
-    2: (57,42),
-    3: (138,41),
+    2: (55,42),
+    3: (137,41),
     4: (102,178),
     5: (98,105),
 }

@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d4b1fbf3-557e-44e1-a234-194693a1f2ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GSModules/UIElements.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSModules/UIElements.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IgniterUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/IgniterUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/ArduinoUnoImg.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/ArduinoUnoImg.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,27 +42,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.IgniterUI">
-    <configuration name="ArduinoConfigureWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="IgniterUI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GSModules" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Demo_Graph_Drag_Rectangle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IgniterUI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,6 +105,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="MultipleWindows" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IgniterUI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/MultipleWindows.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="dragRectangle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IgniterUI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,19 +148,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.ArduinoConfigureWindow" />
-      <item itemvalue="Python.IgniterUI" />
-      <item itemvalue="Python.dragRectangle" />
       <item itemvalue="Python.Demo_Graph_Drag_Rectangle" />
       <item itemvalue="Python.Demo_Graph_Drawing_And_Dragging_Figures" />
+      <item itemvalue="Python.IgniterUI" />
+      <item itemvalue="Python.MultipleWindows" />
+      <item itemvalue="Python.dragRectangle" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.IgniterUI" />
+        <item itemvalue="Python.MultipleWindows" />
         <item itemvalue="Python.Demo_Graph_Drag_Rectangle" />
         <item itemvalue="Python.Demo_Graph_Drawing_And_Dragging_Figures" />
         <item itemvalue="Python.dragRectangle" />
-        <item itemvalue="Python.ArduinoConfigureWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -221,52 +223,60 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1352" y="275" key="#xdebugger.XInspectDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579567425533" />
-    <state width="1899" height="265" key="GridCell.Tab.0.bottom" timestamp="1581558028564">
+    <state width="936" height="262" key="GridCell.Tab.0.bottom" timestamp="1582084558333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="1899" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581558028564" />
-    <state width="1899" height="265" key="GridCell.Tab.0.center" timestamp="1581558028564">
+    <state width="936" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1582084558333" />
+    <state width="936" height="262" key="GridCell.Tab.0.center" timestamp="1582084558332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="1899" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581558028564" />
-    <state width="1899" height="265" key="GridCell.Tab.0.left" timestamp="1581558028564">
+    <state width="936" height="262" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1582084558332" />
+    <state width="936" height="262" key="GridCell.Tab.0.left" timestamp="1582084558332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="1899" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581558028564" />
-    <state width="1899" height="265" key="GridCell.Tab.0.right" timestamp="1581558028564">
+    <state width="936" height="262" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1582084558332" />
+    <state width="936" height="262" key="GridCell.Tab.0.right" timestamp="1582084558332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="617" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579127733428" />
-    <state width="1899" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581558028564" />
-    <state width="1899" height="343" key="GridCell.Tab.1.bottom" timestamp="1581542717839">
+    <state width="936" height="262" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1582084558332" />
+    <state width="1899" height="342" key="GridCell.Tab.1.bottom" timestamp="1581758759497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="343" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581542717839" />
-    <state width="1899" height="343" key="GridCell.Tab.1.center" timestamp="1581542717839">
+    <state width="1899" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581758759497" />
+    <state width="1899" height="342" key="GridCell.Tab.1.center" timestamp="1581758759497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="343" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581542717839" />
-    <state width="1899" height="343" key="GridCell.Tab.1.left" timestamp="1581542717839">
+    <state width="1899" height="342" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581758759497" />
+    <state width="1899" height="342" key="GridCell.Tab.1.left" timestamp="1581758759497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="343" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581542717839" />
-    <state width="1899" height="343" key="GridCell.Tab.1.right" timestamp="1581542717839">
+    <state width="1899" height="342" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581758759497" />
+    <state width="1899" height="342" key="GridCell.Tab.1.right" timestamp="1581758759497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="343" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581542717839" />
+    <state width="1899" height="342" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581758759497" />
     <state x="213" y="0" key="SettingsEditor" timestamp="1579214844925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579122829397" />
     <state x="213" y="0" key="SettingsEditor/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1579214844925" />
+    <state width="502" height="446" key="SwitcherDM" timestamp="1581756689291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="502" height="446" key="SwitcherDM/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1581756689291" />
     <state x="441" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1579122679768">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="441" y="224" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579122679768" />
     <state x="661" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1575513628086" />
+    <state x="-967" y="-121" width="974" height="1167" key="dock-window-1" timestamp="1582084542080">
+      <screen x="-1920" y="-121" width="1920" height="1160" />
+    </state>
+    <state x="-967" y="-121" width="974" height="1167" key="dock-window-1/0.0.1920.1040/-1920.-121.1920.1160@0.0.1920.1040" timestamp="1582084542080" />
     <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1578639620583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -276,11 +286,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/IgniterUI.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/GSModules/ArduinoConfigureWindow.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.graph_items['ID']" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

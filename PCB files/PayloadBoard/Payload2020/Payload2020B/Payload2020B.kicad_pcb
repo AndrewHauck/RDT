@@ -60,7 +60,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFFF7F)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -150,7 +150,7 @@
   )
 
   (module Connector_JST:JST_EH_S9B-EH_1x09_P2.50mm_Horizontal (layer F.Cu) (tedit 5C281426) (tstamp 5E611327)
-    (at 109.22 73.787 270)
+    (at 149.71014 41.9862 270)
     (descr "JST EH series connector, S9B-EH (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH horizontal")
     (path /5E544EC7)
@@ -282,7 +282,7 @@
   )
 
   (module SparkFunRF:XBEE-1 (layer F.Cu) (tedit 200000) (tstamp 5E611350)
-    (at 93.726 60.579)
+    (at 133.70814 60.9092)
     (path /5E49EA3B)
     (attr virtual)
     (fp_text reference U1 (at -7.874 -2.7432) (layer B.SilkS)
@@ -351,7 +351,7 @@
   )
 
   (module Payload:BerryGPS-IMU_V3 (layer F.Cu) (tedit 5E5F33BA) (tstamp 5E611358)
-    (at 100.711 143.256)
+    (at 139.55014 124.0282)
     (path /5E536455)
     (fp_text reference U2 (at -0.17272 -35.09772) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -365,9 +365,9 @@
     (fp_line (start -15.89024 31.02496) (end 14.10976 31.02496) (layer F.SilkS) (width 0.12))
   )
 
-  (gr_line (start 68.438 30.734) (end 68.438 180.734) (layer Edge.Cuts) (width 0.05) (tstamp 5E610DD5))
-  (gr_line (start 118.438 180.734) (end 118.438 30.734) (layer Edge.Cuts) (width 0.05) (tstamp 5E610DC7))
-  (gr_line (start 68.438 180.734) (end 118.438 180.734) (layer Edge.Cuts) (width 0.05) (tstamp 5E610DB3))
-  (gr_line (start 68.438 30.734) (end 118.438 30.734) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 119.85014 31.6992) (end 119.85014 158.6992) (layer Edge.Cuts) (width 0.05) (tstamp 5E629F7E))
+  (gr_line (start 157.95014 158.6992) (end 157.95014 31.6992) (layer Edge.Cuts) (width 0.05) (tstamp 5E610DC7))
+  (gr_line (start 119.85014 158.6992) (end 157.95014 158.6992) (layer Edge.Cuts) (width 0.05) (tstamp 5E610DB3))
+  (gr_line (start 119.85014 31.6992) (end 157.95014 31.6992) (layer Edge.Cuts) (width 0.05))
 
 )

@@ -235,7 +235,7 @@
   )
 
   (module teensy:Teensy35_36 (layer F.Cu) (tedit 5D52142A) (tstamp 5E527AB8)
-    (at 99.314 117.602 90)
+    (at 132.715 92.964 90)
     (path /5E49B291)
     (fp_text reference U1 (at 0 -10.16 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -420,7 +420,7 @@
   )
 
   (module Payload:ArduCam (layer F.Cu) (tedit 5E4C9138) (tstamp 5E527AC8)
-    (at 100.203 44.196 180)
+    (at 143.891 37.465 180)
     (path /5E4A2FC8)
     (fp_text reference U2 (at 0 3.302) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -451,7 +451,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E607E7B)
-    (at 95.123 77.851 90)
+    (at 125.095 55.499 90)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5E5E839B)
@@ -487,7 +487,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E607E8C)
-    (at 106.68 77.724 270)
+    (at 136.652 55.372 270)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5E5E7EDC)
@@ -523,7 +523,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E607E9D)
-    (at 82.210001 69.747001)
+    (at 126.025001 47.522001)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5E5E74CE)
@@ -559,7 +559,7 @@
   )
 
   (module Capacitor_SMD:C_1206_3216Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E607EAE)
-    (at 87.820001 69.747001)
+    (at 131.635001 47.522001)
     (descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5E606AD0)
@@ -595,7 +595,7 @@
   )
 
   (module Connector_JST:JST_EH_S2B-EH_1x02_P2.50mm_Horizontal (layer F.Cu) (tedit 5C281425) (tstamp 5E607EE1)
-    (at 115.57 72.517 270)
+    (at 145.034 55.753 270)
     (descr "JST EH series connector, S2B-EH (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH horizontal")
     (path /5E5498CC)
@@ -664,7 +664,7 @@
   )
 
   (module Inductor_SMD:L_1210_3225Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5E607EF2)
-    (at 93.430001 70.207001)
+    (at 137.245001 47.982001)
     (descr "Inductor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags inductor)
     (path /5E5D5DE2)
@@ -700,7 +700,7 @@
   )
 
   (module Payload:HX711_Breakout (layer F.Cu) (tedit 5E5229D3) (tstamp 5E607F05)
-    (at 104.521 170.688)
+    (at 138.303 146.177)
     (path /5E539E03)
     (fp_text reference U3 (at -12.54252 9.20496) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -736,7 +736,7 @@
   )
 
   (module Package_TO_SOT_SMD:SOT-23-5 (layer F.Cu) (tedit 5A02FF57) (tstamp 5E607F1A)
-    (at 101.6 77.597)
+    (at 131.572 55.245)
     (descr "5-pin SOT23 package")
     (tags SOT-23-5)
     (path /5E54C67E)
@@ -779,7 +779,7 @@
   )
 
   (module Package_TO_SOT_SMD:SOT-23-5 (layer F.Cu) (tedit 5A02FF57) (tstamp 5E607F2F)
-    (at 101.473 70.358)
+    (at 145.288 48.133)
     (descr "5-pin SOT23 package")
     (tags SOT-23-5)
     (path /5E5D4830)
@@ -821,12 +821,12 @@
     )
   )
 
-  (gr_text "TOP of BAY" (at 100.076 25.019) (layer Dwgs.User)
+  (gr_text "TOP of BAY" (at 145.415 27.305) (layer Dwgs.User)
     (effects (font (size 5 5) (thickness 0.15)))
   )
-  (gr_line (start 75.222 30.626) (end 125.222 30.626) (layer Edge.Cuts) (width 0.1) (tstamp 5E52805B))
-  (gr_line (start 75.222 30.626) (end 75.222 182.626) (layer Edge.Cuts) (width 0.1) (tstamp 5E527FBD))
-  (gr_line (start 125.222 30.626) (end 125.222 182.626) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 75.222 182.626) (end 125.222 182.626) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 120.561 32.912) (end 158.661 32.912) (layer Edge.Cuts) (width 0.1) (tstamp 5E52805B))
+  (gr_line (start 120.561 32.912) (end 120.561 159.912) (layer Edge.Cuts) (width 0.1) (tstamp 5E527FBD))
+  (gr_line (start 158.661 32.912) (end 158.661 159.912) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 120.561 159.912) (end 158.661 159.912) (layer Edge.Cuts) (width 0.1))
 
 )

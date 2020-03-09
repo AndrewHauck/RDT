@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Payload2020B-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1979,12 +1978,12 @@ F 3 "" H 5400 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x09 J1
+L Connector_Generic:Conn_01x10 J1
 U 1 1 5E544EC7
 P 7750 3680
 F 0 "J1" H 7800 4297 50  0000 C CNN
 F 1 "BridgeConn" H 7800 4206 50  0000 C CNN
-F 2 "Connector_JST:JST_SH_BM09B-SRSS-TB_1x09-1MP_P1.00mm_Vertical" H 7750 3680 50  0001 C CNN
+F 2 "Connector_JST:JST_SH_BM10B-SRSS-TB_1x10-1MP_P1.00mm_Vertical" H 7750 3680 50  0001 C CNN
 F 3 "~" H 7750 3680 50  0001 C CNN
 	1    7750 3680
 	1    0    0    -1  
@@ -2122,4 +2121,19 @@ Wire Wire Line
 	7120 3580 7550 3580
 NoConn ~ 6200 4400
 NoConn ~ 4550 4700
+Wire Wire Line
+	7550 4180 6950 4180
+Wire Wire Line
+	6950 4180 6950 4170
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5E66C1CB
+P 6950 4170
+F 0 "#PWR0106" H 6950 4020 50  0001 C CNN
+F 1 "+3V3" H 6965 4343 50  0000 C CNN
+F 2 "" H 6950 4170 50  0001 C CNN
+F 3 "" H 6950 4170 50  0001 C CNN
+	1    6950 4170
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

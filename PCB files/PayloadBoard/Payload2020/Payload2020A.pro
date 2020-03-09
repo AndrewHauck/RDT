@@ -1,6 +1,6 @@
-update=3/8/2020 10:37:35 PM
+update=Mon 09 Mar 2020 04:17:30 PM CDT
 version=1
-last_client=kicad
+last_client=eeschema
 [general]
 version=1
 RootSch=
@@ -242,7 +242,7 @@ PageLayoutDescrFile=
 PlotDirectoryName=Board images/
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
 LabSize=118
 ERC_TestSimilarLabels=1

@@ -116,8 +116,9 @@ def componentThread(serialComponent, serialXbee, xbeeLock: threading.Lock, fileO
   finally: # However this code exits, still close our ports and files
     # When done, close all of our ports and files
     serialComponent.close()
-    if serialXbee.isOpen():
-      serialXbee.close()
+    with xbeeLock: # Only one should close it at a time, else errors
+      if serialXbee.isOpen():
+        serialXbee.close()
     fileObj.close()
 
 def printComComponents():
@@ -173,7 +174,7 @@ def main():
   runNumber = str(maxNum + 1)
   print("This is run number", runNumber,"!")
 
-  # Now we make our files
+  # Now we make our files. These will be closed in each individual thread
   arduinoFile   = open(os.path.join(OUTPUT_DIR, ARDUINO_BASE+runNumber+FILE_EXT), "wb")
   openscaleFile = open(os.path.join(OUTPUT_DIR, OPENSCALE_BASE+runNumber+FILE_EXT), "wb")
 

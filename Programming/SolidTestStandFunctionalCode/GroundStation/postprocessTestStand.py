@@ -44,7 +44,7 @@ def parseLoadCellFile(filename):
           print("Improper load cell line:", line)
           numBad += 1
           continue
-        loadCell.append(tuple(map(float, (sepLine[0], sepLine[1], sepLine[4]))))
+        loadCell.append(tuple(map(float, (sepLine[0], sepLine[1], sepLine[4], sepLine[3]))))
         
   except FileNotFoundError:
     print("This selected file: '", filename,"' does not exist")
@@ -119,7 +119,7 @@ def parseXbeeFile(filename):
             print("Improper load cell line:", line)
             numBad += 1
             continue
-          loadCell.append((sepLine[0], sepLine[1], sepLine[4]))
+          loadCell.append((sepLine[0], sepLine[1], sepLine[4], sepLine[3]))
         else: # If the line did not have "lbs" in it
           try:
             if any(not (-200 < val < 1000) for val in map(float, sepLine[1:])) or len(sepLine) != NUM_THERMOCOUPLES+1:
@@ -261,32 +261,44 @@ if __name__ == "__main__":
   Format of arguments should be
   [none]: Display help
   -x XbeeFile [startTime]: Takes in a processed Xbee file which contains mixed load and thermometer readings
-  LoadCellFile ThermocoupleFile [startTime]: Two arguments, one is the raw load cell file, the other is the raw thermocouple file
+  LoadCellFile ThermocoupleFile OutputFile [startTime]: Three arguments, one is the raw load cell file, the other is the raw thermocouple file, last is output file name
   
   The "startTime" argument indicates a timestamp from which we start checking for the test fire
   """
   if len(argv) == 1:
     print(help)
     exit(0)
-  if len(argv) not in (3, 4):
-    print("Program must have exactly two or 3 arguments. Call without arguments to see help")
+  def askHelp():
+    print("Program must have necessary number of arguments. Call without arguments to see help")
     exit(1)
   
   # For each of these, the following format is expected
-  # loadCellVals: list of tuples (each value is a float) - [timestamp, load (lbs), ambient temp (ºC)]
+  # loadCellVals: list of tuples (each value is a float) - [timestamp, load (lbs), ambient temp (ºC), raw voltage counts]
   # tempVals: list of tuples (each value is a float) - [timestamp, *temps for each temp reader (ºC)]. Variable number of temp sensors
-  if len(argv) == 4:
-    startTime = float(argv[3])
-  else:
-    startTime = None
+  startTime = None # Initialize this to none in case its not set
   if argv[1] == "-x": # Xbee Mode
+    if len(argv) == 3:
+      pass
+    elif len(argv) == 4:
+      startTime = float(argv[-1])
+    else: # Improper number of arguments
+      askHelp()
+    filenameBase = argv[2] # Just use the xbee file name
     loadCellVals, tempVals = parseXbeeFile(argv[2])
-  else:
-    loadCellVals = parseLoadCellFile(argv[1])
-    print("Press Enter to parse temperature")
-    input()
-    tempVals = parseTemperatureFile(argv[2])
     
+  else: # Two files for thermocouples and load cells
+    if len(argv) == 4:
+      pass # Just fine
+    elif len(argv) == 5:
+      startTime = float(argv[-1])
+    else: # Improper number of arguments
+      askHelp()
+    filenameBase = argv[3] # Must be specified separately
+    loadCellVals = parseLoadCellFile(argv[1])
+    time.sleep(3) # Wait for reading the error values for a bit
+    tempVals = parseTemperatureFile(argv[2])
+
+  
   if startTime:
     print("Start Time of",startTime,"used. Dropping readings")
     for i in range(len(loadCellVals)):
@@ -300,9 +312,10 @@ if __name__ == "__main__":
         print("Cutting off temps after",i,"values")
         break
     
+  print("Writing basic CSV files")
   # This will just write out the processed values to CSV with nice descriptive timestamps and column titles
-  writeRawCSV(loadCellVals, tempVals, argv[2])
+  writeRawCSV(loadCellVals, tempVals, filenameBase)
 
   # This will find the most likely occurance of an event (the first time 1-second average thrust is >5 lbs the average overall)
   # Then it will write to both CSV and an actual excel file making the graph all nicely :)
-  writePostProcessCSV(loadCellVals, tempVals, argv[2])
+  writePostProcessCSV(loadCellVals, tempVals, filenameBase)

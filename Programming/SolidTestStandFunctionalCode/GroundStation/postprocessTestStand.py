@@ -103,7 +103,7 @@ def parseXbeeFile(filename):
       for line in file:
         numLines += 1
         line = line.rstrip() # Remove trailing newline
-        sepLine = line.split(",")
+        sepLine = line.replace("\t",",").split(",")
         if len(sepLine[0]) != 15:
           print("Improper Timestamp Line, skipping:", sepLine)
           numBad += 1
@@ -111,7 +111,7 @@ def parseXbeeFile(filename):
         
         if "lbs" in line: # All the lines from the load cell have "lbs" in the line
           try:
-            if any(not (-200 < val < 1000) for val in map(float, [sepLine[1], sepLine[4]])) or len(sepLine) != 6:
+            if len(sepLine) != 6 or any(not (-200 < val < 1000) for val in map(float, [sepLine[1], sepLine[4]])):
               print("Improper load cell line:", line)
               numBad += 1
               continue

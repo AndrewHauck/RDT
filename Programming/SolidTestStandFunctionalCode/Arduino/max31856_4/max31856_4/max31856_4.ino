@@ -1,10 +1,10 @@
 #include <Adafruit_MAX31856.h>
 
 // Use software SPI: CS, DI, DO, CLK
-Adafruit_MAX31856 maxthermo1 = Adafruit_MAX31856(10, 11, 12, 13);
-Adafruit_MAX31856 maxthermo2 = Adafruit_MAX31856(9, 11, 4, 13);
-Adafruit_MAX31856 maxthermo3 = Adafruit_MAX31856(8, 11, 5, 13);
-Adafruit_MAX31856 maxthermo4 = Adafruit_MAX31856(7, 11, 6, 13);
+Adafruit_MAX31856 maxthermo1 = Adafruit_MAX31856(11, 12, 7, 13);
+Adafruit_MAX31856 maxthermo2 = Adafruit_MAX31856(10, 12, 6, 13);
+Adafruit_MAX31856 maxthermo3 = Adafruit_MAX31856(9, 12, 5, 13);
+Adafruit_MAX31856 maxthermo4 = Adafruit_MAX31856(8, 12, 4, 13);
 
 // use hardware SPI, just pass in the CS pin
 //Adafruit_MAX31856 maxthermo = Adafruit_MAX31856(10);
@@ -154,9 +154,11 @@ void loop() {
     if (fault4 & MAX31856_FAULT_OVUV)    Serial.println("Over/Under Voltage Fault (4)");
     if (fault4 & MAX31856_FAULT_OPEN)    Serial.println("Thermocouple Open Fault (4)");
   }
+  
   fault1 = 0;
   fault2 = 0;
   fault3 = 0;
   fault4 = 0;
+  
   delay(1000);
 }

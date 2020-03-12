@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Payload2020B-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -2134,6 +2135,50 @@ F 1 "+3V3" H 6965 4343 50  0000 C CNN
 F 2 "" H 6950 4170 50  0001 C CNN
 F 3 "" H 6950 4170 50  0001 C CNN
 	1    6950 4170
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E698CBA
+P 960 7030
+F 0 "H1" H 1060 7076 50  0000 L CNN
+F 1 "Corner" H 1060 6985 50  0000 L CNN
+F 2 "" H 960 7030 50  0001 C CNN
+F 3 "~" H 960 7030 50  0001 C CNN
+	1    960  7030
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E699A8A
+P 960 7290
+F 0 "H2" H 1060 7336 50  0000 L CNN
+F 1 "Corner" H 1060 7245 50  0000 L CNN
+F 2 "" H 960 7290 50  0001 C CNN
+F 3 "~" H 960 7290 50  0001 C CNN
+	1    960  7290
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5E699E54
+P 1470 7020
+F 0 "H3" H 1570 7066 50  0000 L CNN
+F 1 "Corner" H 1570 6975 50  0000 L CNN
+F 2 "" H 1470 7020 50  0001 C CNN
+F 3 "~" H 1470 7020 50  0001 C CNN
+	1    1470 7020
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5E69A3B4
+P 1470 7290
+F 0 "H4" H 1570 7336 50  0000 L CNN
+F 1 "Corner" H 1570 7245 50  0000 L CNN
+F 2 "" H 1470 7290 50  0001 C CNN
+F 3 "~" H 1470 7290 50  0001 C CNN
+	1    1470 7290
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:Payload2020A-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -6410,4 +6411,70 @@ F 3 "" H 8870 2650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8870 2650 9530 2650
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E69D126
+P 4370 7650
+F 0 "H2" H 4470 7696 50  0000 L CNN
+F 1 "Corner" H 4470 7605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4370 7650 50  0001 C CNN
+F 3 "~" H 4370 7650 50  0001 C CNN
+	1    4370 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E69D7F4
+P 4370 7420
+F 0 "H1" H 4470 7466 50  0000 L CNN
+F 1 "Corner" H 4470 7375 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4370 7420 50  0001 C CNN
+F 3 "~" H 4370 7420 50  0001 C CNN
+	1    4370 7420
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5E6A359E
+P 4830 7650
+F 0 "H4" H 4930 7696 50  0000 L CNN
+F 1 "Corner" H 4930 7605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4830 7650 50  0001 C CNN
+F 3 "~" H 4830 7650 50  0001 C CNN
+	1    4830 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5E6A35A4
+P 4830 7420
+F 0 "H3" H 4930 7466 50  0000 L CNN
+F 1 "Corner" H 4930 7375 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 4830 7420 50  0001 C CNN
+F 3 "~" H 4830 7420 50  0001 C CNN
+	1    4830 7420
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5E6B8F67
+P 5410 7420
+F 0 "H5" H 5510 7466 50  0000 L CNN
+F 1 "HX711" H 5510 7375 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 5410 7420 50  0001 C CNN
+F 3 "~" H 5410 7420 50  0001 C CNN
+	1    5410 7420
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5E6B9A49
+P 5410 7650
+F 0 "H6" H 5510 7696 50  0000 L CNN
+F 1 "HX711" H 5510 7605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 5410 7650 50  0001 C CNN
+F 3 "~" H 5410 7650 50  0001 C CNN
+	1    5410 7650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

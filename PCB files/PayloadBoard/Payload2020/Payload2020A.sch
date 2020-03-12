@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Payload2020A-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -6417,7 +6416,7 @@ U 1 1 5E69D126
 P 4370 7650
 F 0 "H2" H 4470 7696 50  0000 L CNN
 F 1 "Corner" H 4470 7605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4370 7650 50  0001 C CNN
+F 2 "Payload2020:MountingHole_4-40" H 4370 7650 50  0001 C CNN
 F 3 "~" H 4370 7650 50  0001 C CNN
 	1    4370 7650
 	1    0    0    -1  
@@ -6428,7 +6427,7 @@ U 1 1 5E69D7F4
 P 4370 7420
 F 0 "H1" H 4470 7466 50  0000 L CNN
 F 1 "Corner" H 4470 7375 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4370 7420 50  0001 C CNN
+F 2 "Payload2020:MountingHole_4-40" H 4370 7420 50  0001 C CNN
 F 3 "~" H 4370 7420 50  0001 C CNN
 	1    4370 7420
 	1    0    0    -1  
@@ -6439,7 +6438,7 @@ U 1 1 5E6A359E
 P 4830 7650
 F 0 "H4" H 4930 7696 50  0000 L CNN
 F 1 "Corner" H 4930 7605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4830 7650 50  0001 C CNN
+F 2 "Payload2020:MountingHole_4-40" H 4830 7650 50  0001 C CNN
 F 3 "~" H 4830 7650 50  0001 C CNN
 	1    4830 7650
 	1    0    0    -1  
@@ -6450,7 +6449,7 @@ U 1 1 5E6A35A4
 P 4830 7420
 F 0 "H3" H 4930 7466 50  0000 L CNN
 F 1 "Corner" H 4930 7375 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 4830 7420 50  0001 C CNN
+F 2 "Payload2020:MountingHole_4-40" H 4830 7420 50  0001 C CNN
 F 3 "~" H 4830 7420 50  0001 C CNN
 	1    4830 7420
 	1    0    0    -1  

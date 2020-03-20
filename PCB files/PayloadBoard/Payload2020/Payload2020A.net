@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\AAH\\Documents\\GitHub\\LRDT\\PCB files\\PayloadBoard\\Payload2020\\Payload2020A.sch")
-    (date "3/19/2020 8:57:21 PM")
+    (date "3/20/2020 3:17:24 PM")
     (tool "Eeschema (5.1.2)-2")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -35,7 +35,7 @@
       (tstamp 5E539E03))
     (comp (ref J2)
       (value BridgeConn)
-      (footprint Connector_JST:JST_SH_BM10B-SRSS-TB_1x10-1MP_P1.00mm_Vertical)
+      (footprint Connector_Molex:Molex_PicoBlade_53047-1010_1x10_P1.25mm_Vertical)
       (datasheet ~)
       (libsource (lib Connector_Generic) (part Conn_01x10) (description "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))

@@ -6455,26 +6455,4 @@ F 3 "~" H 4830 7420 50  0001 C CNN
 	1    4830 7420
 	1    0    0    -1  
 $EndComp
-$Comp
-L Mechanical:MountingHole H5
-U 1 1 5E6B8F67
-P 5410 7420
-F 0 "H5" H 5510 7466 50  0000 L CNN
-F 1 "HX711" H 5510 7375 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 5410 7420 50  0001 C CNN
-F 3 "~" H 5410 7420 50  0001 C CNN
-	1    5410 7420
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H6
-U 1 1 5E6B9A49
-P 5410 7650
-F 0 "H6" H 5510 7696 50  0000 L CNN
-F 1 "HX711" H 5510 7605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 5410 7650 50  0001 C CNN
-F 3 "~" H 5410 7650 50  0001 C CNN
-	1    5410 7650
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC

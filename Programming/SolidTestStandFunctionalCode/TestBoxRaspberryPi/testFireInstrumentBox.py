@@ -1,7 +1,6 @@
 import threading, os, sys
 import serial
 import serial.tools.list_ports as list_ports
-import atexit
 from datetime import datetime
 from time import time
 import re
@@ -33,7 +32,7 @@ FILE_EXT = ".txt"
 ARDUINO_BASE   = "Thermocouple "
 OPENSCALE_BASE = "Load Cell    "
 
-def loadSerialNumbers(serialNumbers = None, serialFile = SERIAL_NUMBER_FILE):
+def loadSerialNumbers(serialFile, serialNumbers = None):
   """
   Loads a serial number file into our dict.
   A serial file should consist of component names in brackets [ARDUINO]
@@ -121,7 +120,7 @@ def componentThread(serialComponent, serialXbee, xbeeLock: threading.Lock, fileO
         serialXbee.close()
     fileObj.close()
 
-def printComComponents():
+def printComPorts():
   """
   Displays information about the components attached to the computer's COM ports
   """
@@ -138,7 +137,7 @@ def main():
   # These will be found after a "SER=" line in list_ports.comports
   # This will be a dictionary of component string: list of serial numbers
   defaultDict = {val: [] for val in COMPONENT_BAUD}
-  serialNumbers = loadSerialNumbers(defaultDict)
+  serialNumbers = loadSerialNumbers(SERIAL_NUMBER_FILE, serialNumbers = defaultDict)
   print(serialNumbers)
 
   print("Looking for COM Port Components!")
@@ -206,6 +205,6 @@ def main():
 
 if __name__ == "__main__":
   if len(sys.argv) > 1 and sys.argv[1][0].lower() == "p":
-    printComComponents()
+    printComPorts()
   else:
     main()

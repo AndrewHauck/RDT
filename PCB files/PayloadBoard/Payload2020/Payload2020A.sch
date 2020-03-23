@@ -5680,19 +5680,19 @@ Wire Wire Line
 Wire Wire Line
 	8350 3820 8880 3820
 $Comp
-L Connector_Generic:Conn_01x10 J2
+L Connector_Generic:Conn_01x15 J2
 U 1 1 5E53BD04
-P 9730 2150
-F 0 "J2" H 9780 2767 50  0000 C CNN
-F 1 "BridgeConn" H 9780 2676 50  0000 C CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53047-1010_1x10_P1.25mm_Vertical" H 9730 2150 50  0001 C CNN
-F 3 "~" H 9730 2150 50  0001 C CNN
-	1    9730 2150
+P 9420 2030
+F 0 "J2" H 9430 2930 50  0000 C CNN
+F 1 "BridgeConn" H 9430 2850 50  0000 C CNN
+F 2 "Connector_JST:JST_SH_SM15B-SRSS-TB_1x15-1MP_P1.00mm_Horizontal" H 9420 2030 50  0001 C CNN
+F 3 "~" H 9420 2030 50  0001 C CNN
+	1    9420 2030
 	1    0    0    -1  
 $EndComp
-Text Label 9080 1750 0    50   ~ 0
+Text Label 8770 1330 0    50   ~ 0
 Berry_SDA
-Text Label 9080 1850 0    50   ~ 0
+Text Label 8770 1430 0    50   ~ 0
 Berry_SCL
 Text Label 7730 6220 2    50   ~ 0
 Ardu_SDA
@@ -5805,16 +5805,16 @@ Text Notes 9300 7320 0    39   ~ 0
 $Comp
 L power:+3.3VA #PWR020
 U 1 1 5E5BD94E
-P 8870 2150
-F 0 "#PWR020" H 8870 2000 50  0001 C CNN
-F 1 "+3.3VA" H 8885 2323 50  0000 C CNN
-F 2 "" H 8870 2150 50  0001 C CNN
-F 3 "" H 8870 2150 50  0001 C CNN
-	1    8870 2150
+P 8560 1730
+F 0 "#PWR020" H 8560 1580 50  0001 C CNN
+F 1 "+3.3VA" H 8575 1903 50  0000 C CNN
+F 2 "" H 8560 1730 50  0001 C CNN
+F 3 "" H 8560 1730 50  0001 C CNN
+	1    8560 1730
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9530 2150 8870 2150
+	9220 1730 8560 1730
 Wire Wire Line
 	1040 1210 1150 1210
 $Comp
@@ -5987,33 +5987,33 @@ F 3 "" H 3240 1460 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3240 1460 3240 1400
-Text Label 9080 2450 0    50   ~ 0
+Text Label 8770 2030 0    50   ~ 0
 XBEE_DOUT
-Text Label 9080 2550 0    50   ~ 0
+Text Label 8770 2130 0    50   ~ 0
 XBEE_DIN
 Wire Wire Line
-	9080 1750 9530 1750
+	8770 1330 9220 1330
 Wire Wire Line
-	9080 1850 9530 1850
+	8770 1430 9220 1430
 Wire Wire Line
-	9080 2350 9530 2350
+	8770 1930 9220 1930
 Wire Wire Line
-	9080 2450 9530 2450
+	8770 2030 9220 2030
 Wire Wire Line
-	9080 2550 9530 2550
+	8770 2130 9220 2130
 Wire Wire Line
-	9080 1950 9530 1950
-Text Label 9080 1950 0    50   ~ 0
+	8770 1530 9220 1530
+Text Label 8770 1530 0    50   ~ 0
 RX_GPS
 Wire Wire Line
-	9080 2050 9530 2050
-Text Label 9080 2050 0    50   ~ 0
+	8770 1630 9220 1630
+Text Label 8770 1630 0    50   ~ 0
 TX_GPS
 Wire Wire Line
-	9080 2250 9530 2250
-Text Label 9080 2350 0    50   ~ 0
+	8770 1830 9220 1830
+Text Label 8770 1930 0    50   ~ 0
 XBEE_CTS
-Text Label 9080 2250 0    50   ~ 0
+Text Label 8770 1830 0    50   ~ 0
 XBEE_RTS
 Text Label 4630 3920 0    50   ~ 0
 XBEE_DOUT
@@ -6113,7 +6113,7 @@ U 1 1 5E609CC0
 P 10140 4120
 F 0 "J3" H 10032 3695 50  0000 C CNN
 F 1 "LoadCell" H 10032 3786 50  0000 C CNN
-F 2 "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical" H 10140 4120 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53047-0410_1x04_P1.25mm_Vertical" H 10140 4120 50  0001 C CNN
 F 3 "~" H 10140 4120 50  0001 C CNN
 	1    10140 4120
 	1    0    0    1   
@@ -6401,16 +6401,16 @@ $EndComp
 $Comp
 L power:+3V3 #PWR0101
 U 1 1 5E670EE5
-P 8870 2650
-F 0 "#PWR0101" H 8870 2500 50  0001 C CNN
-F 1 "+3V3" H 8885 2823 50  0000 C CNN
-F 2 "" H 8870 2650 50  0001 C CNN
-F 3 "" H 8870 2650 50  0001 C CNN
-	1    8870 2650
+P 8560 2230
+F 0 "#PWR0101" H 8560 2080 50  0001 C CNN
+F 1 "+3V3" H 8575 2403 50  0000 C CNN
+F 2 "" H 8560 2230 50  0001 C CNN
+F 3 "" H 8560 2230 50  0001 C CNN
+	1    8560 2230
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8870 2650 9530 2650
+	8560 2230 9220 2230
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5E69D126
@@ -6455,4 +6455,44 @@ F 3 "~" H 4830 7420 50  0001 C CNN
 	1    4830 7420
 	1    0    0    -1  
 $EndComp
+Text Label 8770 2330 0    50   ~ 0
+DEN_G
+Text Label 8770 2430 0    50   ~ 0
+INT_G
+Text Label 8770 2530 0    50   ~ 0
+DRDY_G
+Text Label 8770 2630 0    50   ~ 0
+INT1_XM
+Text Label 8770 2730 0    50   ~ 0
+INT2_XM
+Wire Wire Line
+	8770 2330 9220 2330
+Wire Wire Line
+	8770 2430 9220 2430
+Wire Wire Line
+	9220 2530 8770 2530
+Wire Wire Line
+	8770 2630 9220 2630
+Wire Wire Line
+	8770 2730 9220 2730
+Text Label 4630 2620 0    50   ~ 0
+DEN_G
+Wire Wire Line
+	4630 2620 5080 2620
+Text Label 4630 2820 0    50   ~ 0
+INT_G
+Wire Wire Line
+	4630 2820 5080 2820
+Text Label 4630 2920 0    50   ~ 0
+DRDY_G
+Wire Wire Line
+	4630 2920 5080 2920
+Text Label 4630 3120 0    50   ~ 0
+INT1_XM
+Wire Wire Line
+	4630 3120 5080 3120
+Text Label 4630 3420 0    50   ~ 0
+INT2_XM
+Wire Wire Line
+	4630 3420 5080 3420
 $EndSCHEMATC

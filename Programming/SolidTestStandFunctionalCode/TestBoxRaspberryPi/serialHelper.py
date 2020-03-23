@@ -79,3 +79,8 @@ def printComPorts():
   portList = list_ports.comports()
   for port in portList:
     print(" | ".join(port))
+    
+    
+if __name__ == "__main__":
+  print("Printing out information on serial ports")
+  printComPorts()
